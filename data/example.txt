@@ -1,0 +1,74 @@
+# Copyright (c) 2015 by Michael Zahniser
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+
+# Note: the above copyright statement is suggested in any plugins you create.
+# Of course, instead of my name you would fill in your own.
+
+# If you are creating a new ship, the easiest way to do that is to copy one of
+# the existing ships and modify it. There is also documentation on creating
+# ships at: https://github.com/endless-sky/endless-sky/wiki/CreatingShips
+ship Exemplar
+	# The sprite path is relative to the "images" directory, and does not
+	# include the file extension, animation frame, etc. For example, if the
+	# sprite uses ships/exemplar-0.png and ships/exemplar-1.png, just put this:
+	sprite "ship/exemplar"
+	attributes
+		category "Interceptor"
+		"cost" 720000
+		"shields" 2700
+		"hull" 700
+		"required crew" 3
+		"bunks" 5
+		"mass" 190
+		"drag" 2.4
+		"heat dissipation" .7
+		"fuel capacity" 400
+		"cargo space" 20
+		"outfit space" 210
+		"weapon capacity" 40
+		"engine capacity" 80
+		weapon
+			# Rule of thumb for explosion strength:
+			# shield damage = (shields + hull) / 10.
+			# hull damage = shield damage / 2.
+			# hit force = shield damage + hull damage.
+			# blast radius = shield damage / 10.
+			"blast radius" 44
+			"shield damage" 440
+			"hull damage" 220
+			"hit force" 660
+	outfits
+		"Beam Laser" 4
+		"RT-I Radiothermal"
+		"Supercapacitor"
+		"D23-QP Shield Generator"
+		"Greyhound Plasma Thruster"
+		"Impala Plasma Steering"
+		"Hyperdrive"
+	# These coordinates are relative to the center of the image, and are in
+	# image pixels (which are scaled down to half a screen pixel when drawing).
+	engine -10 32
+	engine 10 32
+	gun -18 -10 "Beam Laser"
+	gun 18 -10 "Beam Laser"
+	gun -26 -9 "Beam Laser"
+	gun 26 -9 "Beam Laser"
+	explode "tiny explosion" 15
+	explode "small explosion" 25
+	description "The Exemplar is an example ship created to test if the plugin system is working."
+
+
+
+# This line expands the "Basic Ships" shipyard to also include the Exemplar. If
+# instead you want to replace all the existing ships, the first line of your new
+# shipyard definition should be the keyword "clear".
+shipyard "Basic Ships"
+	"Exemplar"
