@@ -1,12 +1,12 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: endless-sky
-Upstream-Contact: Michael Zahniser <mzahniser@gmail.com>
+Upstream-Name: es-low-tech-worlds
+Upstream-Contact: Samuel Dennis <samuel@dennistribe.nz>
 Source: https://github.com/endless-sky/endless-sky
 
 Files: *
-Copyright: Copyright Michael Zahniser <mzahniser@gmail.com>
+Copyright: Copyright Samuel Dennis <samuel@dennistribe.nz>
 License: GPL-3+
 
 Files: images/*
-Copyright: Copyright Michael Zahniser <mzahniser@gmail.com>
+Copyright: Copyright Samuel Dennis <samuel@dennistribe.nz>
 License: CC-BY-SA-4.0
