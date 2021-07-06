@@ -1,0 +1,14 @@
+// Outline of story
+
+digraph {
+	label = "Story and job progression"
+	labelloc = "t"
+	
+	// Story
+	"First landing" -> Leave [label = "no"]
+	"First landing" -> "Learn language" [label = "yes"]
+	"Learn language" -> "Explore system"
+	"Explore system" -> {"Explore adjacent systems",Money,"Small ships","Mining laser"}
+	Money -> {Trading,Outfitter,Shipyard}
+	
+	}
