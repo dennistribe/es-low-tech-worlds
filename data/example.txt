@@ -15,11 +15,11 @@
 # If you are creating a new ship, the easiest way to do that is to copy one of
 # the existing ships and modify it. There is also documentation on creating
 # ships at: https://github.com/endless-sky/endless-sky/wiki/CreatingShips
-ship Exemplar
+ship beard
 	# The sprite path is relative to the "images" directory, and does not
 	# include the file extension, animation frame, etc. For example, if the
 	# sprite uses ships/exemplar-0.png and ships/exemplar-1.png, just put this:
-	sprite "ship/exemplar"
+	sprite "ship/box"
 	attributes
 		category "Interceptor"
 		"cost" 720000
@@ -71,4 +71,4 @@ ship Exemplar
 # instead you want to replace all the existing ships, the first line of your new
 # shipyard definition should be the keyword "clear".
 shipyard "Basic Ships"
-	"Exemplar"
+	"beard"
