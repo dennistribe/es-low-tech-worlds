@@ -15,25 +15,26 @@
 # If you are creating a new ship, the easiest way to do that is to copy one of
 # the existing ships and modify it. There is also documentation on creating
 # ships at: https://github.com/endless-sky/endless-sky/wiki/CreatingShips
-ship beard
+ship "Kateni"
 	# The sprite path is relative to the "images" directory, and does not
 	# include the file extension, animation frame, etc. For example, if the
 	# sprite uses ships/exemplar-0.png and ships/exemplar-1.png, just put this:
-	sprite "ship/box"
+	sprite "ship/box3"
 	attributes
-		category "Interceptor"
-		"cost" 720000
-		"shields" 2700
-		"hull" 700
-		"required crew" 3
-		"bunks" 5
-		"mass" 190
-		"drag" 2.4
-		"heat dissipation" .7
-		"fuel capacity" 400
-		"cargo space" 20
-		"outfit space" 210
-		"weapon capacity" 40
+		category "Light Freighter"
+		"cost" 500000
+		"shields" 357
+		"hull" 600
+		"required crew" 1
+		"automaton" 0
+		"bunks" 1
+		"mass" 50
+		"drag" 1.5
+		"heat dissipation" 2
+		"fuel capacity" 0
+		"cargo space" 50
+		"outfit space" 140
+		"weapon capacity" 0
 		"engine capacity" 80
 		weapon
 			# Rule of thumb for explosion strength:
@@ -41,34 +42,25 @@ ship beard
 			# hull damage = shield damage / 2.
 			# hit force = shield damage + hull damage.
 			# blast radius = shield damage / 10.
-			"blast radius" 44
-			"shield damage" 440
-			"hull damage" 220
-			"hit force" 660
+			"blast radius" 12
+			"shield damage" 120
+			"hull damage" 60
+			"hit force" 180
 	outfits
-		"Beam Laser" 4
-		"RT-I Radiothermal"
-		"Supercapacitor"
-		"D23-QP Shield Generator"
-		"Greyhound Plasma Thruster"
-		"Impala Plasma Steering"
-		"Hyperdrive"
+		outfits
+		"Greyhound Plasma Thruster" 1
+		"Impala Plasma Steering" 1
+		"RT-I Radiothermal" 1
 	# These coordinates are relative to the center of the image, and are in
 	# image pixels (which are scaled down to half a screen pixel when drawing).
-	engine -10 32
-	engine 10 32
-	gun -18 -10 "Beam Laser"
-	gun 18 -10 "Beam Laser"
-	gun -26 -9 "Beam Laser"
-	gun 26 -9 "Beam Laser"
+ engine 0.5 40
+ engine 0.5 40
 	explode "tiny explosion" 15
 	explode "small explosion" 25
-	description "The Exemplar is an example ship created to test if the plugin system is working."
-
-
+	description "The kateni is an alien ship."
 
 # This line expands the "Basic Ships" shipyard to also include the Exemplar. If
 # instead you want to replace all the existing ships, the first line of your new
 # shipyard definition should be the keyword "clear".
 shipyard "Basic Ships"
-	"beard"
+	"Kateni"
