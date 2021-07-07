@@ -8,7 +8,8 @@ digraph {
 	"First landing" -> Leave [label = "no"]
 	"First landing" -> "Learn language" [label = "yes"]
 	"Learn language" -> "Explore system"
-	"Explore system" -> {"Explore adjacent systems",Money,"Small ships","Mining laser"}
-	Money -> {Trading,Outfitter,Shipyard}
+	"Explore system" -> {"Explore adjacent systems","Secret delegation","Small ships","Mining laser","Educational materials"}
+	"Secret delegation" -> {Money,"Human shipyard"} -> Shipyard
+	Money -> {Trading,Outfitter}
 	
 	}
