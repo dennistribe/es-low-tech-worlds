@@ -24,7 +24,7 @@ digraph {
 	MoneyA -> "Asteroid mining"
 	"Colonise" -> "Colonist transport A"
 	
-	{ShipyardB,ShipyardA} -> "Pirate Attack"
+	{ShipyardB,ShipyardA} -> "Pirate Attack" -> "Negotiations" -> "Alliance guarding wormhole"
 	
 	// Organise
 	subgraph cluster1 {
