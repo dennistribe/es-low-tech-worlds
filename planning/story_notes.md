@@ -60,6 +60,7 @@ Massive political upheaval, random assassinations etc, complete change of govern
 
 New government wants to engage with outside world to catch up with people B and surpass them again.
 
+- Quickly adapt ships to fight if necessary. Basic small fighter & suicide drone options.
 - Set up banking - can finally trade in credits.
 - Start sales of early ships (previously you had helped develop but couldn't buy)
 - Seek new technology and educational material to inform own development. Bring them technology from all over human and hai space - but not from shipyard associated with People B, who are contractually obliged not to deal with them.
