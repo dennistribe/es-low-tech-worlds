@@ -56,6 +56,10 @@ Rapid, successful colonisation, people far more prosporous than before and have 
 
 People A now find that rather than reducing People B to impoverished outcasts, People B suddenly have space travel, an entire planet of their own, and a navy that is tiny by human standards (maybe one Fury) but could shoot down every ship and satellite they own whenever they liked. They've already rejected the spaceships People A were so proud of as obsolete - which is taken as a major embarrassment. People B cannot rule planet 1, but could imprison and oppress People A. 
 
+Realisation that the terms placed on People B were too harsh - so harsh that they forced People B to seek support from humans. Had been driven by emotion, political grandstanding and pride without considering the consequences. The terms of the surrender have set the stage for possible future war. Many thinkers want to avoid this.
+
+(This is similar to the situation between Germany and France after WW1. France (and the other allies) seized disputed territory from Germany and placed incredibly harsh financial penalties on Germany, forcing them to pay for the cost of the war. The result was that Germany ended up determined to right these wrongs, elected a dictatorial government, grew economically much faster than other Western powers, becoming a great force again, resulting in WW2.)
+
 Massive political upheaval, random assassinations etc, complete change of government.
 
 New government wants to engage with outside world to catch up with people B and surpass them again.
@@ -67,6 +71,8 @@ New government wants to engage with outside world to catch up with people B and 
 - Rapid development of new ships and outfits.
 - Exploration of adjacent star systems.
 - Colonisation of at least one other planet, using their own ships and technology.
+
+Will there be fighting between the two peoples, in space? Not sure yet.
 
 # Pirate threat
 
