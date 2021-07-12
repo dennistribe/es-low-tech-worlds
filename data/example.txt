@@ -59,8 +59,53 @@ ship "Kateni"
 	explode "small explosion" 25
 	description "The kateni is an alien ship."
 
+
+shipyard "Basic Ships"
+	"Kateni"
+
+
+
+ship "Line"
+	sprite "ship/line"
+	
+	attributes
+		category "Light Freighter"
+		"cost" 7800000
+		"shields" 7600
+		"hull" 6300
+		"required crew" 12
+		"automaton" 0
+		"bunks" 30
+		"mass" 540
+		"drag" 11.7
+		"heat dissipation" 0.4
+		"fuel capacity" 600
+		"cargo space" 490
+		"outfit space" 510
+		"weapon capacity" 280
+		"engine capacity" 90
+		weapon
+			"blast radius" 140
+			"shield damage" 1400
+			"hull damage" 700
+			"hit force" 2100
+	outfits
+		"Chipmunk Plasma Steering"
+		"Chipmunk Plasma Thruster"
+		"LP036a Battery Pack"
+		"nGVF-BB Fuel Cell"
+		"Blaster Turret" 2
+	turret -639.5 -207 "Blaster Turret"
+	turret 613 -177.5 "Blaster Turret"
+	engine -75 298.5
+	explode "big explosion" 5
+	explode "nuke explosion" 5
+	description ""
+
+
 # This line expands the "Basic Ships" shipyard to also include the Exemplar. If
 # instead you want to replace all the existing ships, the first line of your new
 # shipyard definition should be the keyword "clear".
 shipyard "Basic Ships"
-	"Kateni"
+	"Line"
+
