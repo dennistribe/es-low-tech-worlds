@@ -17,6 +17,8 @@ system Itikotiko
 	asteroids "medium metal" 8 4.2775
 	asteroids "large metal" 6 9.4975
 	minables gold 2 8.26374
+	minables aluminum 6 1.77898
+	minables uranium 12 2.24339
 	trade Clothing 247
 	trade Electronics 642
 	trade Equipment 469
@@ -98,7 +100,7 @@ system Katuba
 		offset 295.313
 	
 	object "Na yava Wormhole"
-		sprite planet/wormhole
+		sprite planet/wormhole-red
 		distance 1620.49
 		period 1182.79
 
@@ -151,7 +153,7 @@ system vakacurumau
 		offset 39.8775
 	
 	object "Na yava Wormhole"
-		sprite planet/wormhole
+		sprite planet/wormhole-red
 		distance 1469.44
 		period 695.026
 
