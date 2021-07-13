@@ -409,6 +409,7 @@ planet "Wasa"
 	description `this planet is mostly sea.`
 
 planet "Na yava Wormhole"
+	attributes "requires: quantum keystone"
 	description ``
 
 # ------------
