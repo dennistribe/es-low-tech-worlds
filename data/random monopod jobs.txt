@@ -1,0 +1,24 @@
+
+mission "Monopod transport"
+		repeat
+		name "Monopod to Skymoot"
+		description "This monopod has finaly found someone generous enough to take him and his family to Skymoot in the Hadar system. You. Payment is 100000 credits."
+		source "Imatai"
+		destination "Skymoot"
+		passengers 6
+		cargo "monopod luggage" 2
+		on offer
+				conversation
+						`As you walk out of your ship, a monopod quikly thumps up to you.
+						`	"'scuse me sir, I've been trying to find someone to take me and my family to the free world planet Skymoot, but no one wants to. I'll offer you 100000 if you would take us with our luggage."`
+						choice
+								`	"Of course!"`
+								`	"Sorry I'm doing other jobs right now."`
+									decline
+			
+						`	"Thank you so much!" He says, and hops of. half an hour later, his family are shoving their suitcases into your cargo hold, and getting ready for the flight.`
+							accept
+		on complete
+			payment 100000
+			dialog "'Thank you Captain <last>!' The monopod says as he shakes your hand. 'Without your help we would never have got here!' he then hops off to help his family unload their luggage."
+

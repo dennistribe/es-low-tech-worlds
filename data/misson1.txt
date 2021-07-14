@@ -22,10 +22,10 @@
 
 
 mission "DB test 2"
+	landing
 	name "Transport strange person"
 	description "Take strange person to <destination>."
 	repeat
-	source "New Tibet"
 	destination "New Boston"
 	passengers 1
 	on offer
