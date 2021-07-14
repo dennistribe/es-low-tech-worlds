@@ -46,5 +46,22 @@ mission "DB test 2"
 		dialog `The strange person pulls off his smelly sock and gives it to you. It is full of money.`
 
 
-
-
+mission "Useless job"
+	job
+	
+mission "Useless landing"
+	landing
+	
+mission "Give me money"
+	job
+	repeat
+	on complete
+		payment 100000
+		
+mission "Give me money automatically"
+	landing
+	repeat
+	on offer
+		dialog `Do you want free money?`
+	on complete
+		payment 1000000
