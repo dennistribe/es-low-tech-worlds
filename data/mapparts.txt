@@ -4,7 +4,7 @@
 
 system Itikotiko
 	pos -237.549 740.338
-	government "Na yava"
+	government "Monopod1"
 	habitable 625
 	belt 1228
 	link "Ka vou"
@@ -19,16 +19,6 @@ system Itikotiko
 	minables gold 2 8.26374
 	minables aluminum 6 1.77898
 	minables uranium 12 2.24339
-	trade Clothing 247
-	trade Electronics 642
-	trade Equipment 469
-	trade Food 440
-	trade "Heavy Metals" 722
-	trade Industrial 811
-	trade "Luxury Goods" 1220
-	trade Medical 849
-	trade Metal 335
-	trade Plastic 286
 	object
 		sprite star/g5
 		period 10
@@ -320,28 +310,24 @@ system Iotioti
 # -----------
 
 planet "Imatai"
-	attributes monopod's home planet
+	attributes monopod1
 	landscape land/canyon1
 	description `This is the monopod's home.`
 	spaceport `The spaceport (or what you call a spaceport) is just a bar with a few monopods siting around at the tables drinking the local drink, Gunu.`
 
 planet "Uca cevata"
-	attributes icy and cold
 	landscape land/mountain8
 	description `This planet's surface is covered with snow and ice.`
 
 planet "Kata"
-	attributes africa like
 	landscape land/canyon5
 	description `this planet is like africa.`
 
 planet "Vura"
-	attributes earth like
 	landscape land/feilds6
 	description `this planet is like earth.`
 
 planet "Wasa"
-	attributes almost all sea
 	landscape land/beach1
 	description `this planet is mostly sea.`
 
