@@ -74,17 +74,6 @@ system Katuba
 	asteroids "large metal" 1 1.027
 	minables aluminum 6 1.77898
 	minables uranium 12 2.24339
-	trade Clothing 290
-	trade Electronics 740
-	trade Equipment 530
-	trade Food 350
-	trade "Heavy Metals" 960
-	trade Industrial 720
-	trade "Luxury Goods" 1220
-	trade Medical 680
-	trade Metal 390
-	trade Plastic 390
-	hidden
 	object
 		sprite star/k0
 		period 10
@@ -116,17 +105,6 @@ system vakacurumau
 	asteroids "small metal" 14 5.76
 	asteroids "medium metal" 28 11.61
 	asteroids "large metal" 23 13.05
-	trade Clothing 247
-	trade Electronics 642
-	trade Equipment 469
-	trade Food 440
-	trade "Heavy Metals" 722
-	trade Industrial 811
-	trade "Luxury Goods" 1220
-	trade Medical 849
-	trade Metal 335
-	trade Plastic 286
-	hidden
 	object
 		sprite star/g5
 		distance 35.6649
@@ -172,17 +150,6 @@ system "Kai nona"
 	minables lead 34 7.75009
 	minables silver 42 8.04013
 	minables tungsten 18 9.78036
-	trade Clothing 247
-	trade Electronics 642
-	trade Equipment 469
-	trade Food 440
-	trade "Heavy Metals" 722
-	trade Industrial 811
-	trade "Luxury Goods" 1220
-	trade Medical 849
-	trade Metal 335
-	trade Plastic 286
-	hidden
 	object
 		sprite star/g0
 		period 10
@@ -230,17 +197,6 @@ system "Kosha nona"
 	minables tungsten 4 2.74119
 	minables neodymium 7 1.74803
 	minables tungsten 7 3.24111
-	trade Clothing 247
-	trade Electronics 642
-	trade Equipment 469
-	trade Food 440
-	trade "Heavy Metals" 722
-	trade Industrial 811
-	trade "Luxury Goods" 1220
-	trade Medical 849
-	trade Metal 335
-	trade Plastic 286
-	hidden
 	object
 		sprite star/f5
 		period 10
@@ -281,17 +237,6 @@ system "Ka vou"
 	minables gold 6 3.21249
 	minables iron 9 4.58668
 	minables titanium 1 3.10098
-	trade Clothing 247
-	trade Electronics 642
-	trade Equipment 469
-	trade Food 440
-	trade "Heavy Metals" 722
-	trade Industrial 811
-	trade "Luxury Goods" 1220
-	trade Medical 849
-	trade Metal 335
-	trade Plastic 286
-	hidden
 	object
 		sprite star/g0
 		period 10
@@ -337,17 +282,6 @@ system Iotioti
 	asteroids "large metal" 11 1.9635
 	minables lead 2 4.43243
 	minables tungsten 4 4.87157
-	trade Clothing 247
-	trade Electronics 642
-	trade Equipment 469
-	trade Food 440
-	trade "Heavy Metals" 722
-	trade Industrial 811
-	trade "Luxury Goods" 1220
-	trade Medical 849
-	trade Metal 335
-	trade Plastic 286
-	hidden
 	object
 		sprite star/g5
 		distance 53.4101
@@ -412,7 +346,6 @@ planet "Wasa"
 	description `this planet is mostly sea.`
 
 planet "Na yava Wormhole"
-	attributes "requires: quantum keystone"
 	description ``
 
 # ------------
