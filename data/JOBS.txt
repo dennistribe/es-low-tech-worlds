@@ -15,5 +15,4 @@ mission "Monopod into space"
 							`	Uhh... okay?`
 					label talk
 					`	Soon you enter a large room with a table in the middle. there are half a dozen monopods seated around it. "Here's the space alien." Tokani says to the other monopods. Most of them look in amusement and interest at your two legs... something you've gotten used to by now. `
-	on complete
-		payment 100000
+
