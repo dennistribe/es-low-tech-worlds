@@ -1,4 +1,4 @@
-mission "Monopod into space"
+mission "MP1: Monopod into space"
 	name "Monopod into space"
 	description "Take this monopod into space."
 	repeat

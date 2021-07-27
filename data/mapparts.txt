@@ -83,7 +83,7 @@ system Katuba
 		distance 1620.49
 		period 1182.79
 
-system vakacurumau
+system Vakacurumau
 	pos -171.549 724.338
 	government Uninhabited
 	habitable 1050.92
@@ -131,7 +131,7 @@ system "Kai nona"
 	habitable 1080
 	belt 1317
 	link Itikotiko
-	link vakacurumau
+	link Vakacurumau
 	asteroids "medium rock" 5 5.586
 	asteroids "large rock" 1 7.4676
 	asteroids "small metal" 114 5.9388
