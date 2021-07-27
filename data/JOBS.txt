@@ -4,18 +4,17 @@ mission "Monopod into space"
 	passengers 1
 	on offer
 			conversation
-					'As you enter the bar, you see your friend Tokani sitting at the back, drinking that awful drink... Ugh! It makes your stomach lurch even to think about it! you order a small bite to eat then go and sit next to Tokani. you start talking together for a bit,until Tokani finishes his mug. he looks at you, then quietly whispers to you, "Wait a moment and then follow me out." He then hops to the front of the room, hands in his mug, and walks out the door. this all seems very suspicious but you do as Tokani said. when you walk out the door you see him standing a we bit away, he becans to you. You follow him to a building on the outskirts of the town. It has guards posted in all the doorways. and you enter it through a hidden back door. you are soon following Tokani through a labrenth of hallways, going somwhere you do not know.'
+					`As you enter the bar, you see your friend Tokani sitting at the back, drinking that awful drink... Ugh! It makes your stomach lurch even to think about it! you order a small bite to eat then go and sit next to Tokani. you start talking together for a bit,until Tokani finishes his mug. he looks at you, then quietly whispers to you, "Wait a moment and then follow me out." He then hops to the front of the room, hands in his mug, and bounces out the door. this all seems very suspicious but you do as Tokani said. when you walk out the door you see him standing a we bit away, he becans to you. You follow him to a building on the outskirts of the town. It has guards posted in all the doorways. and you enter it through a hidden back door. you are soon following Tokani through a labrenth of hallways, going somwhere you do not know.`
 					choice
 							`	"Why all the secrecy?"`
-								goto "secret"
 							`	(Just keep following Tokani)`
 								goto "talk"
-					lable "secret"
 					`	Tokani turns and looks at you. "Why not?" he says, then turns and keeps hopping.`
 						choice
 								`	Uhh... okay?`
-									goto "talk"
 					lable "talk"
-					'	Soon you enter a large room with a table in the middle. there are half a dozen monopods seated around it. "Here's the space alien." Tokani says to the other monopods. Most of them look in amusement and interest at your two legs... something you've gotten used to by now. `
-	on complete
-		payment 100000
+					`	Soon you enter a large room with a table in the middle. there are half a dozen monopods seated around it. "Here's the space alien." Tokani says to the other monopods. Most of them look in amusement and interest at your two legs... something you've gotten used to by now. You are shown to a seat, you sit down. one of the monopods starts to speak. `
+					`	"Space alien. we have heard of your landing on our planet and are very exited to learn about all this new technolegy you have brought us. would you be willing to help us advance and be able to do much more things then we are able to do now?`
+						choice
+								`	Of course!`
+								`	I would like to learn more before I agree to anything.`
