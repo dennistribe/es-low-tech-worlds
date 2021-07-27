@@ -4,7 +4,7 @@
 
 system Itikotiko
 	pos -237.549 740.338
-	government "Na yava"
+	government "Monopod1"
 	habitable 625
 	belt 1228
 	link "Ka vou"
@@ -19,16 +19,6 @@ system Itikotiko
 	minables gold 2 8.26374
 	minables aluminum 6 1.77898
 	minables uranium 12 2.24339
-	trade Clothing 247
-	trade Electronics 642
-	trade Equipment 469
-	trade Food 440
-	trade "Heavy Metals" 722
-	trade Industrial 811
-	trade "Luxury Goods" 1220
-	trade Medical 849
-	trade Metal 335
-	trade Plastic 286
 	object
 		sprite star/g5
 		period 10
@@ -74,17 +64,6 @@ system Katuba
 	asteroids "large metal" 1 1.027
 	minables aluminum 6 1.77898
 	minables uranium 12 2.24339
-	trade Clothing 290
-	trade Electronics 740
-	trade Equipment 530
-	trade Food 350
-	trade "Heavy Metals" 960
-	trade Industrial 720
-	trade "Luxury Goods" 1220
-	trade Medical 680
-	trade Metal 390
-	trade Plastic 390
-	hidden
 	object
 		sprite star/k0
 		period 10
@@ -104,7 +83,7 @@ system Katuba
 		distance 1620.49
 		period 1182.79
 
-system vakacurumau
+system Vakacurumau
 	pos -171.549 724.338
 	government Uninhabited
 	habitable 1050.92
@@ -116,17 +95,6 @@ system vakacurumau
 	asteroids "small metal" 14 5.76
 	asteroids "medium metal" 28 11.61
 	asteroids "large metal" 23 13.05
-	trade Clothing 247
-	trade Electronics 642
-	trade Equipment 469
-	trade Food 440
-	trade "Heavy Metals" 722
-	trade Industrial 811
-	trade "Luxury Goods" 1220
-	trade Medical 849
-	trade Metal 335
-	trade Plastic 286
-	hidden
 	object
 		sprite star/g5
 		distance 35.6649
@@ -163,7 +131,7 @@ system "Kai nona"
 	habitable 1080
 	belt 1317
 	link Itikotiko
-	link vakacurumau
+	link Vakacurumau
 	asteroids "medium rock" 5 5.586
 	asteroids "large rock" 1 7.4676
 	asteroids "small metal" 114 5.9388
@@ -172,17 +140,6 @@ system "Kai nona"
 	minables lead 34 7.75009
 	minables silver 42 8.04013
 	minables tungsten 18 9.78036
-	trade Clothing 247
-	trade Electronics 642
-	trade Equipment 469
-	trade Food 440
-	trade "Heavy Metals" 722
-	trade Industrial 811
-	trade "Luxury Goods" 1220
-	trade Medical 849
-	trade Metal 335
-	trade Plastic 286
-	hidden
 	object
 		sprite star/g0
 		period 10
@@ -230,17 +187,6 @@ system "Kosha nona"
 	minables tungsten 4 2.74119
 	minables neodymium 7 1.74803
 	minables tungsten 7 3.24111
-	trade Clothing 247
-	trade Electronics 642
-	trade Equipment 469
-	trade Food 440
-	trade "Heavy Metals" 722
-	trade Industrial 811
-	trade "Luxury Goods" 1220
-	trade Medical 849
-	trade Metal 335
-	trade Plastic 286
-	hidden
 	object
 		sprite star/f5
 		period 10
@@ -281,17 +227,6 @@ system "Ka vou"
 	minables gold 6 3.21249
 	minables iron 9 4.58668
 	minables titanium 1 3.10098
-	trade Clothing 247
-	trade Electronics 642
-	trade Equipment 469
-	trade Food 440
-	trade "Heavy Metals" 722
-	trade Industrial 811
-	trade "Luxury Goods" 1220
-	trade Medical 849
-	trade Metal 335
-	trade Plastic 286
-	hidden
 	object
 		sprite star/g0
 		period 10
@@ -337,17 +272,6 @@ system Iotioti
 	asteroids "large metal" 11 1.9635
 	minables lead 2 4.43243
 	minables tungsten 4 4.87157
-	trade Clothing 247
-	trade Electronics 642
-	trade Equipment 469
-	trade Food 440
-	trade "Heavy Metals" 722
-	trade Industrial 811
-	trade "Luxury Goods" 1220
-	trade Medical 849
-	trade Metal 335
-	trade Plastic 286
-	hidden
 	object
 		sprite star/g5
 		distance 53.4101
@@ -386,33 +310,28 @@ system Iotioti
 # -----------
 
 planet "Imatai"
-	attributes monopod's home planet
+	attributes monopod1
 	landscape land/canyon1
 	description `This is the monopod's home.`
 	spaceport `The spaceport (or what you call a spaceport) is just a bar with a few monopods siting around at the tables drinking the local drink, Gunu.`
 
 planet "Uca cevata"
-	attributes icy and cold
 	landscape land/mountain8
 	description `This planet's surface is covered with snow and ice.`
 
 planet "Kata"
-	attributes africa like
 	landscape land/canyon5
 	description `this planet is like africa.`
 
 planet "Vura"
-	attributes earth like
 	landscape land/feilds6
 	description `this planet is like earth.`
 
 planet "Wasa"
-	attributes almost all sea
 	landscape land/beach1
 	description `this planet is mostly sea.`
 
 planet "Na yava Wormhole"
-	attributes "requires: quantum keystone"
 	description ``
 
 # ------------
