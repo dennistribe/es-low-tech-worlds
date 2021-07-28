@@ -1,6 +1,7 @@
 mission "MP1: Monopod into space"
 	name "Monopod into space"
 	description "Take this monopod into space."
+	source "Imatai"
 	repeat
 	passengers 1
 	on offer
