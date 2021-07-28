@@ -34,7 +34,7 @@ mission "MP wormhole 2: Unlock and return"
 		has "MP wormhole 1: Lock on enter: done"
 	invisible
 	on offer
-		event "MP wormhole: Unlock1"
+		event "MP wormhole: Unlock2"
 	waypoint Vakacurumau
 	on enter Vakacurumau
 		dialog "When entering the system, your sensors detect that the wormhole appears to be open again. It might be a good idea to go through it before it closes."
@@ -42,7 +42,7 @@ mission "MP wormhole 2: Unlock and return"
 	on enter Katuba
 		dialog "You are very relieved to be back in human space. You realise you need to know a lot more about wormholes. Maybe you can find out more information on Zug."
 	
-event "MP wormhole: Unlock1"
+event "MP wormhole: Unlock2"
 	planet "Na yava Wormhole"
 		attributes ""
 
@@ -58,15 +58,78 @@ mission "MP wormhole 3: Lock for a month"
 	to offer
 		has "MP wormhole 2: Unlock and return: offered"
 	on offer
-		event "MP wormhole: Lock2"
-		event "MP wormhole: Unlock2" 40
+		event "MP wormhole: Lock3"
+		event "MP wormhole: Unlock3" 40
 
-event "MP wormhole: Lock2"
+event "MP wormhole: Lock3"
 	planet "Na yava Wormhole"
 		attributes add "requires: quantum keystone"
 
-event "MP wormhole: Unlock2"
+event "MP wormhole: Unlock3"
 	planet "Na yava Wormhole"
 		attributes ""
+
+# After set timeperiod, wormhole will be open next time player visits Katuba.
+# Repeat same procedure of unreliable behaviour once
+
+mission "MP wormhole 4: Lock on enter"
+	source 
+		attributes "monopod1"
+	landing
+	invisible
+	to offer
+		has "event: MP wormhole: Unlock3"
+	on offer
+		event "MP wormhole: Lock4"
+	waypoint Vakacurumau
+	on enter Vakacurumau
+		dialog "When entering the system, your sensors alert you that the wormhole has completely changed. It still exists but there appears to be no way to enter it."
+
+event "MP wormhole: Lock4"
+	planet "Na yava Wormhole"
+		attributes add "requires: quantum keystone"
+
+# When player lands again on a monopod planet, reopen wormhole
+# On return to the wormhole's system, alert user that the wormhole is open again
+# Mission completes when the user lands on Zug. This mission may not complete for some time if the user does not land there.
+	
+mission "MP wormhole 5: Unlock and return"
+	source
+		attributes "monopod1"
+	destination Zug
+	landing
+	to offer
+		has "MP wormhole 4: Lock on enter: done"
+	invisible
+	on offer
+		event "MP wormhole: Unlock5"
+	waypoint Vakacurumau
+	on enter Vakacurumau
+		dialog "When entering the system, your sensors detect that the wormhole appears to be open again. It might be a good idea to go through it before it closes."
+	waypoint Katuba
+	on enter Katuba
+		dialog "You are very relieved to be back in human space. You really need to find some way to stabilise this wormhole.
+	
+event "MP wormhole: Unlock5"
+	planet "Na yava Wormhole"
+		attributes ""
+
+# Once user lands on any human planet, lock wormhole again.
+# This time, leave locked permanently. Can only enter again with quantum keystone.
+# This will occur even if the user has not completed the previous mission, provided they are back in human space
+
+mission "MP wormhole 6: Lock permanently"
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+	landing
+	invisible
+	to offer
+		has "MP wormhole 5: Unlock and return: offered"
+	on offer
+		event "MP wormhole: Lock6"
+
+event "MP wormhole: Lock6"
+	planet "Na yava Wormhole"
+		attributes add "requires: quantum keystone"
 
 
