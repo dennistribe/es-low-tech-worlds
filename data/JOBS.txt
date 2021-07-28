@@ -74,17 +74,11 @@ mission "MP1: Monopod into space"
 							`	"why did you come in disguise?"`
 								goto disguise
 					`	"Thank you." they say as they start looking around your 'space plane'. They are amazed at all the different parts of the ship, especialy the sheilds.`
-					`	"What are these for?" they ask you.`
-					`	"These are sheilds, and they absorb the impact from other ship's guns which are trying to shoot you."`
-					`	"Why would other space planes be trying to shoot you?"`
-					`	"They might be pirates trying to steal your stuff, or they might be the enamy if you are in the middle of a war."`
-					`	"Ahh!" They say, and keep looking round your ship.`
-					`	They are also very interested in the life support systems and the engines. After a while of them looking and you explaining things, they done their clocks and hop out the door.`
-					`	Just as they are leaving, one of them whispers in your ear,`
-					`	"Tokani will come to take you to another meeting shortly. Be ready to come imediatly." he then quickly Jumps out the door.`
+						goto continue
 					label disguise
 					`	"Why not?" they all say. They obviously do not want to answer your question.`
 					`	They soon start looking around your 'space plane'. They are amazed at all the different parts of the ship, especialy the sheilds.`
+					label continue
 					`	"What are these for?" they ask you.`
 					`	"These are sheilds, and they absorb the impact from other ship's guns which are trying to shoot you."`
 					`	"Why would other space planes be trying to shoot you?"`
