@@ -62,4 +62,34 @@ mission "MP1: Monopod into space"
 						`	"Okay!"`
 							goto nextday
 					label nextday
-					`	This is the next day.`
+					`	The next day, you are outside your ship, wipeing the dew off it, when some cloacked figures hop up to you.`
+					`	"Could we come inside you're space plane?" they ask. you have no idea who they are. should you let them in, or should you not?`
+					choice
+							`	"Yes you can come in."`
+							`	"I have no idea who you are, why should I let you in?"`
+							goto noin
+					`	"Thank you" They say as they quickly hop inside. You shut the door. They then take off their cloaks, They are the monopods from the meeting yesterday.`
+					choice
+							`	"Welcome inside!"`
+							`	"why did you come in disguise?"`
+								goto disguise
+					`	"Thank you." they say as they start looking around your 'space plane'. They are amazed at all the different parts of the ship, especialy the sheilds.`
+					`	"What are these for?" they ask you.`
+					`	"These are sheilds, and they absorb the impact from other ship's guns which are trying to shoot you."`
+					`	"Why would other space planes be trying to shoot you?"`
+					`	"They might be pirates trying to steal your stuff, or they might be the enamy if you are in the middle of a war."`
+					`	"Ahh!" They say, and keep looking round your ship.`
+					`	They are also very interested in the life support systems and the engines. After a while of them looking and you explaining things, they done their clocks and hop out the door.`
+					`	Just as they are leaving, one of them whispers in your ear,`
+					`	"Tokani will come to take you to another meeting shortly. Be ready to come imediatly." he then quickly Jumps out the door.`
+					label disguise
+					`	"Why not?" they all say. They obviously do not want to answer your question.`
+					`	They soon start looking around your 'space plane'. They are amazed at all the different parts of the ship, especialy the sheilds.`
+					`	"What are these for?" they ask you.`
+					`	"These are sheilds, and they absorb the impact from other ship's guns which are trying to shoot you."`
+					`	"Why would other space planes be trying to shoot you?"`
+					`	"They might be pirates trying to steal your stuff, or they might be the enamy if you are in the middle of a war."`
+					`	"Ahh!" They say, and keep looking round your ship.`
+					`	They are also very interested in the life support systems and the engines. After a while of them looking and you explaining things, they done their clocks and hop out the door.`
+					`	Just as they are leaving, one of them whispers in your ear,`
+					`	"Tokani will come to take you to another meeting shortly. Be ready to come imediatly." he then quickly Jumps out the door.`
