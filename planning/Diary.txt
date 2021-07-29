@@ -1,9 +1,9 @@
-As you come to land on this strange planet you look down and see small human-like creaters running into strange buildings. You see some running into strange domes. As you look at the domes they turn round. And on the back of them are, GUNS! They start shooting at you and (ship)'s hull goes down, WITHOUT DAMAGEING THE SHIELDS! You crash land in a circle of hedges. 
+As you come to land on this strange planet you look down and see small human-like creatures running into strange buildings. You see some running into strange domes. As you look at the domes they turn round. And on the back of them are, GUNS! They start shooting at you and (ship)'s hull goes down, WITHOUT DAMAGING THE SHIELDS! You crash land in a circle of hedges. 
 
 CHOOSE
 1(Go to the window.)
 
-1(Go to the window.) You go to the window and see that the people are creping back out of the buildings. They are about half as tall as a grown man. There is another thing that doesnt seem right about them but you can't just pin it. Then you spot it, they only have one leg. Then one of them spots your face at the window. It screems something and points at your face. They all look at where the first one pointed, and spot your face. They all screem and bound back into the buildings.
+1(Go to the window.) You go to the window and see that the people are creeping back out of the buildings. They are about half as tall as a grown man. There is another thing that doesn't seem right about them but you can't just pin it. Then you spot it, they only have one leg. Then one of them spots your face at the window. It screams something and points at your face. They all look at where the first one pointed, and spot your face. They all scream and bound back into the buildings.
 
 CHOOSE
 1(Keep looking out the window.) 2(See what damage the aliens have done to (ship).)
@@ -13,14 +13,14 @@ CHOOSE
 CHOOSE
 1(See what damage the aliens have done to (ship).)                           
 
-1/2(See what damage the aliens have done to (ship).) You go down to the engine room to see what was damaged. you find out that the engine is really damaged and will take a few days to fix. You look out the window again and notis that the sun is nerly down. "Only one thing for it" You think as you walk to your bunk. "sleep."
+1/2(See what damage the aliens have done to (ship).) You go down to the engine room to see what was damaged. you find out that the engine is really damaged and will take a few days to fix. You look out the window again and notice that the sun is nearly down. "Only one thing for it" You think as you walk to your bunk. "sleep."
 
-You get up in the morning and look out the window. You see a basket with a type of fruit or somthing below the window where they saw your face yesterday. You also see that there are some aliens peeping over the bush's.
+You get up in the morning and look out the window. You see a basket with a type of fruit or something below the window where they saw your face yesterday. You also see that there are some aliens peeping over the bush's.
 
 CHOOSE
 1(Go get the basket.)
 
-1(Go get the basket.) "Luckily the door isn't far from the window." You think as you go to the airlock door. You go out the door to get the basket. You get it and quickly rush back to the safety of (ship). You look at the fruit. It ressembels a star.
+1(Go get the basket.) "Luckily the door isn't far from the window." You think as you go to the airlock door. You go out the door to get the basket. You get it and quickly rush back to the safety of (ship). You look at the fruit. It resembles a star.
 
 CHOOSE
 1(Look out the window.) 2(Eat the fruit.)
@@ -30,11 +30,27 @@ CHOOSE
 CHOOSE
 1(Eat the fruit.)
 
-1/2(Eat the fruit.) You eat the fruit. It is soft on the outside but hard and crunchy on the inside, and past the crunchy part there is liquid. But it's taste sticks out most. You rush to the toilet to be sick. You come back, nice and refreshed. You disied to eat a proper meal. After your meal you draw a quick picture of you and the aliens sitting down in a circle talking happily, hoping that that whould tell them that you are friendly. You put it in the basket and put it down outside the door that night, then go to bed.
+1/2(Eat the fruit.) You eat the fruit. It is soft on the outside but hard and crunchy on the inside, and past the crunchy part there is liquid. But its taste sticks out most. You rush to the toilet to be sick. You come back, nice and refreshed. You decided to eat a proper meal. After your meal you draw a quick picture of you and the aliens sitting down in a circle talking happily, hoping that that would tell them that you are friendly. You put it in the basket and put it down outside the door that night, then go to bed.
 
-In the morning you get up and look out the window. You see a circle of about six aliens waiting for somthing.
+In the morning you get up and look out the window. You see a circle of about six aliens waiting for something.
 
 CHOOSE
 1(Go out and meet them.)
 
-1(Go out and meet them.) You go out and meet the aliens. It first seemend to give the aliens a fright to see a creature twice as tall as them, but they got used to looking up. They eyed you suspishly, espeshily your legs. You and the aliens tried to teach each other there langedges. Eventully you found out a few words and telled them that your spaceship was a mashean, not a animal as they preveisly thaught.
+1(Go out and meet them.) You go out and meet the aliens. It first seemed to give the aliens a fright to see a creature twice as tall as them, but they got used to looking up. They eyed you suspiciously, especially your legs. You and the aliens try to talk to each other using sign language. They come every day to keep teaching you their language and every day you you work a bit more on fixing (ship). One day they one of them says "We think you have learnt our language sufficiently enough. We have a question for you, what is your name?."
+
+CHOOSE
+1(It's not your business.) 2((first) (last).) 3(Why do you want to know?)
+
+1/2(It's not your business.) "I very well think it is."
+
+CHOOSE
+1((first) (last).) 2(Why do you want to know?)
+
+3/2(Why do you want to know?) "Why not!" They all say in chorus.
+
+CHOOSE
+1((first) (last)) 2(It's not your business.)
+
+1/2((first) (last)) "Ahhhh." He says."(first) (last). Or do I say (first)(last)?" They all went round
+ 
