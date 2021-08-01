@@ -31,7 +31,7 @@ mission "MP1: Monopod into space"
 					`	"Of course Alien!" A second monopod says. "What would you like to know?"
 					choice
 							`	"Who are you?"`
-								goto learnmore
+								goto whoyou
 							`	"Why did you bring me to a secret meeting and not a normal one?"`
 								goto secretmeet
 							`	"what do you want to learn?"`
@@ -65,16 +65,25 @@ mission "MP1: Monopod into space"
 					`	The next day, you are outside your ship, wipeing the dew off it, when some cloacked figures hop up to you.`
 					`	"Could we come inside you're space plane?" they ask. you have no idea who they are. should you let them in, or should you not?`
 					choice
-							`	"Yes you can come in."`
-							`	"I have no idea who you are, why should I let you in?"`
-							goto noin
+							`	Yes you can come in.`
+							`	I have no idea who you are, why should I let you in?`
+								goto noin
 					`	"Thank you" They say as they quickly hop inside. You shut the door. They then take off their cloaks, They are the monopods from the meeting yesterday.`
 					choice
-							`	"Welcome inside!"`
-							`	"why did you come in disguise?"`
+							`	Welcome inside!`
+								goto wellin
+							`	Why did you come in disguise?`
 								goto disguise
+					label wellin
 					`	"Thank you." they say as they start looking around your 'space plane'. They are amazed at all the different parts of the ship, especialy the sheilds.`
 						goto continue
+					label noin
+					`"Why not?" they say, and quickly push past you and hop into your ship, you run inside to find them taking off their cloaks. They are the monopods from the meeting yesterday!`
+					choice
+							`	Welcome inside!`
+								goto wellin
+							`	Why did you come in disguise?`
+								goto disguise
 					label disguise
 					`	"Why not?" they all say. They obviously do not want to answer your question.`
 					`	They soon start looking around your 'space plane'. They are amazed at all the different parts of the ship, especialy the sheilds.`
@@ -87,3 +96,38 @@ mission "MP1: Monopod into space"
 					`	They are also very interested in the life support systems and the engines. After a while of them looking and you explaining things, they done their clocks and hop out the door.`
 					`	Just as they are leaving, one of them whispers in your ear,`
 					`	"Tokani will come to take you to another meeting shortly. Be ready to come imediatly." he then quickly Jumps out the door.`
+					choice
+							`	(Wait for Tokani)`
+					`	After a while, you see Tokani on the eage of the clearing beakoning for you to come with him.`
+					`	You soon find yourself walking into the same building that you went into for the secret meeting yesterday.
+					`	Tokani takes you into the same room that you were in yesterday, where you find all the monopods sitting down at the table, waiting for you.`
+					choice
+							`	Hello!`
+								goto hi
+							`	ANOTHER SECRET MEETING! Why do all these meetings have to be so secret?`
+								goto anotherone
+					label hi
+					`	"Hello to you to!" All the monopods say. `
+						goto spacetalk
+					label anotherone
+					`	"Why not?" They all say to you. `
+						goto spacetalk
+					label spacetalk
+					`	"We have brought you here to ask you something. We have been thinking about this from the first time we saw you, and we beleve you would be willing to do it.
+					`	Would you be willing to take one of us into space?"
+					choice
+							`	Wait. I can see where this is leading, and if I'm going to work with you like this, I might need a place to refuel...`
+								goto fuel
+					label done
+					`	"Good." The monopods say. "We have allways wanted to explore our solar system and have only ever looked at it through telescopes. could you first take up a scientist. he would take measurments and make better use of his time then any of us.
+					choice
+							`	Okay.`
+								goto ready
+					label fuel
+					`	The monopods frown. "We saw what fuel you use in your space plane, and it isn't cheap... But if you do this job for us well, then we could set up a place for you to refuel.
+					choice
+							`	Thank you! that would be perfect!`
+								goto done
+					`	
+					label ready
+					`	"Thank you. we will send the scientist over to you tomorrow."`
