@@ -1,9 +1,9 @@
-As you come to land on this strange planet you look down and see small human-like creatures running into strange buildings. You see some running into strange domes. As you look at the domes they turn round. And on the back of them are, GUNS! They start shooting at you and (ship)'s hull goes down, WITHOUT DAMAGING THE SHIELDS! You crash land in a circle of hedges. 
+As you come to land on this strange planet you look down and see small human-like creatures running into strange buildings. You see some running into strange domes. As you look at the domes they turn around. And on the back of them are GUNS! They start shooting at you and (ship)'s hull goes down, WITHOUT DAMAGING THE SHIELDS! You crash land in a clear area of ground surrounded by hedges. 
 
 CHOOSE
 1(Go to the window.)
 
-1(Go to the window.) You go to the window and see that the people are creeping back out of the buildings. They are about half as tall as a grown man. There is another thing that doesn't seem right about them but you can't just pin it. Then you spot it, they only have one leg. Then one of them spots your face at the window. It screams something and points at your face. They all look at where the first one pointed, and spot your face. They all scream and bound back into the buildings.
+1(Go to the window.) You go to the window and see that the people are creeping back out of the buildings. They are about half as tall as a grown man. There is another thing that doesn't seem right about them but you just can't pin it. Then you spot it: they each have only one leg. Then one of them spots your face at the window. It screams something and points at your face. They all look at where the first one pointed, scream, and bound back into the buildings.
 
 CHOOSE
 1(Keep looking out the window.) 2(See what damage the aliens have done to (ship).)
@@ -13,14 +13,14 @@ CHOOSE
 CHOOSE
 1(See what damage the aliens have done to (ship).)                           
 
-1/2(See what damage the aliens have done to (ship).) You go down to the engine room to see what was damaged. you find out that the engine is really damaged and will take a few days to fix. You look out the window again and notice that the sun is nearly down. "Only one thing for it" You think as you walk to your bunk. "sleep."
+1/2(See what damage the aliens have done to (ship).) You go down to the engine room to see what was damaged. You find out that the engine is quite damaged and will take a few days for you to fix. Fortunately you have enough tools and spare parts with you. You look out the window again and notice that the sun is nearly down. "Only one thing for it" you think as you walk to your bunk. "Sleep."
 
-You get up in the morning and look out the window. You see a basket with a type of fruit or something below the window where they saw your face yesterday. You also see that there are some aliens peeping over the bush's.
+You get up in the morning and look out the window. You see a basket with a type of fruit or something below the window where they saw your face yesterday. You also see that there are some aliens peeping over the bushes.
 
 CHOOSE
 1(Go get the basket.)
 
-1(Go get the basket.) "Luckily the door isn't far from the window." You think as you go to the airlock door. You go out the door to get the basket. You get it and quickly rush back to the safety of (ship). You look at the fruit. It resembles a star.
+1(Go get the basket.) "Luckily the door isn't far from the window" you think, as you go to the airlock door. You open the door and look carefully around for any danger. You then quickly rush to the basket, pick it up, and rush back to the safety of (ship). You look at the fruit. It resembles a star.
 
 CHOOSE
 1(Look out the window.) 2(Eat the fruit.)
@@ -30,14 +30,40 @@ CHOOSE
 CHOOSE
 1(Eat the fruit.)
 
-1/2(Eat the fruit.) You eat the fruit. It is soft on the outside but hard and crunchy on the inside, and past the crunchy part there is liquid. But its taste sticks out most. You rush to the toilet to be sick. You come back, nice and refreshed. You decided to eat a proper meal. After your meal you draw a quick picture of you and the aliens sitting down in a circle talking happily, hoping that that would tell them that you are friendly. You put it in the basket and put it down outside the door that night, then go to bed.
+1/2(Eat the fruit.) You eat the fruit. It is soft on the outside but hard and crunchy on the inside, and past the crunchy part there is liquid. But its taste sticks out most. You rush to the toilet to be sick. You come back, nice and refreshed. You decided to eat a proper meal. After your meal you draw a quick picture of you and the aliens sitting down in a circle talking happily, hoping that that would tell them that you are friendly. 
 
-In the morning you get up and look out the window. You see a circle of about six aliens waiting for something.
+You spend the day working on your engine. This repair job is going to be even more complicated than you first thought, without access to an outfitters. You realise you are going to be stuck on this planet for some time.
 
-CHOOSE
-1(Go out and meet them.)
+As you work, you become more and more aware of the momentous nature of your discovery of this planet. You have never heard even a single rumour of these systems or these aliens before, and realise you are probably the first human to ever discover them. This is so important that it really should be recorded. You decide to start a diary. Finding an empty notebook, you record everything that has happened since you landed on the planet.
 
-1(Go out and meet them.) You go out and meet the aliens. It first seemed to give the aliens a fright to see a creature twice as tall as them, but they got used to looking up. They eyed you suspiciously, especially your legs. You and the aliens try to talk to each other using sign language. They come every day to keep teaching you their language and every day you you work a bit more on fixing (ship). One day they one of them says "We think you have learnt our language sufficiently enough. We have a question for you, what is your name?."
+Before going to bed, you put the picture you have drawn in the basket and put it down outside the door where you found it.
+
+(continue)
+
+Diary entry, day 3: 
+
+When I woke up today, six of these strange aliens were sitting in a circle outside my ship, as if waiting for something. They look a lot like the picture I left in the basket yesterday.
+
+When I opened the door and left the ship, they all appeared frightened to see a creature twice as tall as them. They eyed me suspiciously, especially my legs. We attempted to talk to each other using sign language. I think I was able to give them the impression that I was peaceful. I think they intend to return tomorrow. But they may have meant something quite different.
+
+(continue)
+
+Day 7:
+
+For the past few days, every morning there has been a small group of aliens sitting outside my ship. The number changes, one day there were three and another day there were 10. But there is one alien who is there every day, and who takes the lead in trying to talk to me. I am starting to consider him a friend, although I am still not certain what his name is. He has said several different words while pointing to himself, one is probably his name, one is probably the name of his species, one might be his gender. Trying to communicate with aliens is very difficult! 
+
+They do like to eat chocolate. I have very little left.
+
+I am making very slow process on repairing my engine. 
+
+(continue)
+
+Day 15:
+
+
+
+
+They come every day to keep teaching you their language and every day you you work a bit more on fixing (ship). One day they one of them says "We think you have learnt our language sufficiently enough. We have a question for you, what is your name?."
 
 CHOOSE
 1(It's not your business.) 2((first) (last).) 3(Why do you want to know?)
