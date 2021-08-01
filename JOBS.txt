@@ -1,7 +1,8 @@
 mission "MP1: Monopod into space"
 	name "Monopod into space"
-	description "Take this monopod into space."
+	description "Take this monopod scientist into space."
 	source "Imatai"
+	destination "Imatai"
 	repeat
 	passengers 1
 	on offer
@@ -131,3 +132,21 @@ mission "MP1: Monopod into space"
 					`	
 					label ready
 					`	"Thank you. we will send the scientist over to you tomorrow."`
+					choice
+							`	(Go back to your ship and wait for the scientist)`
+					`	The next morning you wake up to the sound of some-one banging on <ship>'s door.
+					`	"JUST A MOMENT!" you yell as you quickly start to get dressed.
+					`	A minute or so later you answer the door. A very enthusiastic monopod jumps into your ship.
+					`	"Hello Space Alien!" He says. "My name is Kena Galala, pleased to meet you!"
+					` 	"You to." you say. "I expect that you are the scientist who is acompanying me into space."
+					`	The monopod nods entusiasticly. "Of course I am! Leave as soon as you can!"
+					`	You smile. "Okay."
+						accept
+	on enter Itikotiko
+			dialog "Kena Galala is crazely exited to be the very first monopod in space. He takes some measurements but mostly he looks out the cocpit at his home planet in amazment. then suddenly he says to you, 'I wonder if we could land on Uca cevata, the other planet in our solar system, could you take me there?' 'Of course' you say as you turn your ship towards the planet."
+	stopover "Uca cevata"
+	on stopover
+			dialog `As you come down through the atmosphere of this planet you can see that It is mostly made up of rock, snow, and ice. Nothing moves on the planet's surface. In all, it's very boaring. Kena Galala, though, seems to find it the most exiting thing in the world, landing on another planet. You go out and collect some rock for him. after a long time he finaly tells you that it's time to go back home.`
+	on complete
+			dialog
+				`end`
