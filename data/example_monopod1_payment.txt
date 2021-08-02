@@ -17,7 +17,6 @@
 mission "MP example 1: Gold"
 	name "Monopod to Ka vou: Gold"
 	description "Take scientist to explore Ka vou for payment in gold"
-	repeat
 	source Imatai
 	waypoint "Ka vou"
 	passengers 1
@@ -44,7 +43,6 @@ mission "MP example 1a: Gold payment"
 mission "MP example 2: Cargo"
 	name "Monopod to Ka vou: Cargo"
 	description "Take scientist to explore Ka vou for payment in cargo"
-	repeat
 	source Imatai
 	waypoint "Ka vou"
 	passengers 1
