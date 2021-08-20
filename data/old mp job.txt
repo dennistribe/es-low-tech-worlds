@@ -3,6 +3,7 @@ mission "MP sell diamond"
 	description "An old monopod named Qase wants to go to Mere in the Kochab system to sell diamonds."
 	source Imatai
 	destination Mere
+	cargo "diamonds" 5
 	passengers 1
 	on offer
 			conversation
@@ -57,3 +58,10 @@ mission "MP sell diamond"
 					label takethere	
 					`	"I	knew I could count on you!" He cries. "To your Space Plane immediately! By the way, i'm Qase." "I'm..." You start, but are interrupted by Qase. "You don't need to tell me who you are." He says. "We all know who you are, space alien." Laughing, you go off to your ship.`
 						accept
+
+		on complete
+			payment 500000
+			dialog "'Thank you Space Alien! Without you I would never have got here!' He cries. 'Farewell!'"
+					choice
+							`	"Wait! How will you make sure the people don't notice that you are an alien?"`
+					`	He grins broadly at you. "Here." He says, as he pulls away a canvas. Under the canvas was a wheelchair. He rolls away with a small bag and with the words "See you soon! He comes back with the same bag and pases you the same bag. It is full of credits. "It's amazing how much they buy diamonds for." He says, then rolls away.`
