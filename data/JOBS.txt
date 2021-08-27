@@ -149,4 +149,24 @@ mission "MP1: Monopod into space"
 			dialog `As you come down through the atmosphere of this planet you can see that It is mostly made up of rock, snow, and ice. Nothing moves on the planet's surface. In all, it's very boaring. Kena Galala, though, seems to find it the most exiting thing in the world, landing on another planet. You go out and collect some rock for him. after a long time he finaly tells you that it's time to go back home.`
 	on complete
 			dialog
-				`end`
+				`Kena Galala is very exited, and after shaking your hand he hops off the ship. "Thank you!" he waves. "Meet me back at the spaceport later for news on what we are going to do next!"`
+mission "MP1: Engine retreval"
+	name "Engine retreval"
+	description "Take this monopod scientist into space."
+	source "Imatai"
+	destination "Imatai"
+	repeat
+	on offer
+			dialog
+					`You walk into the spaceport and bla bla bla, and now you have to get some engines.`
+	on visit
+			dialog
+					`You have landed back on the planet, but you don't have the engines that your freind Tokani requested... you should probebly buy some from a human planet.`
+	to complete
+			require
+					and 
+						"X1700 Ion Thruster"
+						"X1200 Ion Steering"
+	on complete
+			dialog 
+					`you completed the mission. yay.`
