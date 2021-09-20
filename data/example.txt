@@ -30,7 +30,7 @@ ship "Kateni"
 		"bunks" 1
 		"mass" 50
 		"drag" 1.5
-		"heat dissipation" 2
+		"heat dissipation" 1
 		"fuel capacity" 0
 		"cargo space" 50
 		"outfit space" 140
@@ -48,9 +48,9 @@ ship "Kateni"
 			"hit force" 180
 	outfits
 		outfits
-		"Greyhound Plasma Thruster" 1
-		"Impala Plasma Steering" 1
-		"RT-I Radiothermal" 1
+		"Z07 Bouncer Engines"
+		"G35 Energy Box"
+		"A52 Generator"
 	# These coordinates are relative to the center of the image, and are in
 	# image pixels (which are scaled down to half a screen pixel when drawing).
  engine 0.5 40

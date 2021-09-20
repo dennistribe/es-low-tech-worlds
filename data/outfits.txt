@@ -1,0 +1,58 @@
+outfit "Fly Drive"
+	category "Systems"
+	cost 2000000
+	thumbnail "outfit/jump drive"
+	"mass" 10
+	"outfit space" -10
+	"jump speed" .3
+	"jump fuel" 500
+	"jump drive" 1
+	"jump range" 250
+	description "This thing will make you fly! Yipee!"
+
+outfit "Z07 Bouncer Engines"
+	plural "Z07 Bouncer Engines"
+	category "Engines"
+	"cost" 20000
+	thumbnail "outfit/tiny ion engines"
+	"mass" 20
+	"outfit space" -15
+	"engine capacity" -15
+	"thrust" 3.5
+	"thrusting energy" .5
+	"thrusting heat" 1.
+	"turn" 112
+	"turning energy" .32
+	"turning heat" .8
+	"flare sprite" "effect/ion flare/tiny"
+		"frame rate" 1.2
+	"flare sound" "ion tiny"
+	"steering flare sprite" "effect/ion flare/tiny"
+		"frame rate" 1.2
+	"steering flare sound" "ion tiny"
+	description "The first engine that the monopod's designed."
+
+outfit "A52 Generator"
+	category "Power"
+	cost 40000
+	thumbnail "outfit/tiny fuel cell"
+	"mass" 20
+	"outfit space" -20
+	"energy generation" 1.0
+	"heat generation" 2.3
+	description "This tiny generator should only be used for tiny things."
+	
+outfit "G35 Energy Box"
+	category "Power"
+	cost 12000
+	thumbnail "outfit/tiny battery"
+	"mass" 11
+	"outfit space" -11
+	"energy capacity" 1020
+	description 
+	
+outfitter "Monopod advanced"
+	"Fly Drive"
+	"Z07 Bouncer Engines"
+	"A52 Generator"
+	"G35 Energy Box"

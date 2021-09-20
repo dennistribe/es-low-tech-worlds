@@ -170,9 +170,9 @@ mission "MP1: Engine retrieval"
 					`You have landed back on the planet, but you don't have the engines that your freind Tokani requested... you should probebly buy some from a human planet.`
 	to complete
 			require
-					and 
-						"X1700 Ion Thruster"
-						"X1200 Ion Steering"
+				and 
+					"X1700 Ion Thruster"
+					"X1200 Ion Steering"
 	on complete
 			dialog 
 					`you completed the mission. yay.`
