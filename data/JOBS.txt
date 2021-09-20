@@ -3,6 +3,7 @@ mission "MP1: Monopod into space"
 	description "Take this monopod scientist into space."
 	source "Imatai"
 	destination "Imatai"
+	repeat
 	passengers 1
 	on offer
 			conversation
@@ -152,23 +153,26 @@ mission "MP1: Monopod into space"
 				`You then see a couple of other monopods hopping up to your ship with a long hose.`
 				`"Here's the fuel Space Alien." They say. you direct them to the right hatch and they start pumping fuel into your tanks.`
 				`You streach. It might be a good idea to go to the spaceport to have a bite to eat... But nothing to drink.`
-mission "MP1: Human engine retrevel."
-	name "Engine retrevel."
-	description "collect some human engines for the monopod scientists to study."
+				
+mission "MP1: Engine retrieval"
+	name "Engine retrieval"
+	description "Take this monopod scientist into space."
 	source "Imatai"
-	destination "Zug"
-	to offer
-		has "MP1: Monopod into space: done"
-	landing
+	destination "Imatai"
+	repeat
 	on offer
 			dialog
 				`	As you walk into the bar you see your freind Tokani at the back, quietly eating somthing. you order a few slices of kakana, and go to sit down with tokani. He looks up at you. his eyes are shining.'
 				`	"Kena Galala has told us all about his adventure, and we are very pleased with what he found out about Uca cevata... Although he did take a little less measurements then we would have hoped for, he took enough."'
 				`	He winks at you. "Also, you might have some visitores to your space plane later..." then Your slices of kakana arrive and you start to eat.'
-	stopover "Zug"
-	on stopover
+	on visit
 			dialog
-				`	Now that you have landed on zug, why don't you buy the engines for the monopods on Imatai?"`
+					`You have landed back on the planet, but you don't have the engines that your freind Tokani requested... you should probebly buy some from a human planet.`
+	to complete
+			require
+					and 
+						"X1700 Ion Thruster"
+						"X1200 Ion Steering"
 	on complete
-			dialog
-				`	"yay we have engines"
+			dialog 
+					`you completed the mission. yay.`
