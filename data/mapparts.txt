@@ -314,6 +314,7 @@ planet "Imatai"
 	landscape land/canyon1
 	description `This is the monopod's home.`
 	spaceport `The spaceport (or what you call a spaceport) is just a bar with a few monopods siting around at the tables drinking the local drink, Gunu.`
+	outfitter "Monopod advanced"
 
 planet "Uca cevata"
 	landscape land/mountain8
