@@ -36,7 +36,6 @@ outfit "Shield Defier"
 		"burst reload" 1
 		"firing energy" .03
 		"firing heat" 2.5
-		"homing" 100
 		"submunition" "debullet"
 		"cluster"
 		"hit effect" "bullet impact"
