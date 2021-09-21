@@ -76,7 +76,7 @@ mission "MP1"
 			choice
 				`	Continue`
 			`Day 43:`
-			`	Tokani is now able to communicate with me fairly well, with a similar vocabulary to a primary-aged child. It turns out that he is an expert in linguistics, and a polymath (there are many different languages in use on this planet). He usually teaches languages at something like a university, but when I landed he was immediately given leave from his teaching job in order to focus full-time on learning to communicate with me. Today he brought me to see some of his top students, who have already begun to study my language. I looked up a number of books for them in my archives on my computer, and have given these on a data chip to a computer expert, who has begun working on creating an interface so their computer systems can read my data chips.`
+			`	Tokani is now able to communicate with me fairly well, with a similar vocabulary to a primary-aged child. It turns out that he is an expert in linguistics, and a polyglot (there are many different languages in use on this planet). He usually teaches languages at something like a university, but when I landed he was immediately given leave from his teaching job in order to focus full-time on learning to communicate with me. Today he brought me to see some of his top students, who have already begun to study my language. I looked up a number of books for them in my archives on my computer, and have given these on a data chip to a computer expert, who has begun working on creating an interface so their computer systems can read my data chips.`
 			choice
 				`	Continue`
 			`Day 57:`
