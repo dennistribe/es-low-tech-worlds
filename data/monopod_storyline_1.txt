@@ -86,7 +86,26 @@ mission "MP1"
 			`	We agreed that I would take a trip to their moon in exchange for repairing my engine, and if I took a trip to the other planet in their system they would also refill my hyperspace fuel tanks.`
 			`	The scientist who will accompany me to the moon came onto my ship, with 5 tonnes of sensors, and I prepared to take off.`
 						accept
+	stopover "Uca cevata"
+	on stopover
+		dialog `The scientist and yourself put on pressure suits and exit onto the moon. He is clearly extremely excited, and gets you to film him jumping right over the <ship> in the low gravity! He installs a large sensor array, takes many measurements and photographs, and returns to the <ship>.`
 	on complete
-		dialog "The scientist and yourself are greeted by Tokani and a group of other excited monopods. After a long meeting where the scientist is asked many questions and shows many photographs, you return to your ship to travel to the other planets in this system."
+		dialog "The scientist and yourself are greeted by Tokani and a group of other excited monopods, and have a long meeting where the scientist is asked many questions and shows many photographs. He gives the jumping video to a news reporter. Then you return to your ship to travel to the other planets in this system."
 
-
+mission "MP2"
+	name "Visit Uca cevata"
+	to offer
+		has "MP1: done"
+	landing
+	source "Imatai"
+	stopover "Uca cevata"
+	on stopover
+		event "MP2a: Spaceport" 
+		dialog `The scientist is surprised to find a breathable, although thin, atmosphere. You install another large sensor array, take measurements, and return to the <ship>. Because the atmosphere is so thin, you both find you have to use the oxygen supplies from your pressure suits while working.`
+	on complete
+		dialog `Once again you are greeted by many excited monopods, and the scientist describes his first impressions of the planet. There is considerable excitement about the breathable atmosphere, but this mostly disappears when they are reminded that the planet is extremely cold, in fact covered in ice, and has low gravity meaning the atmosphere is thin and hard to breathe.`
+		
+	
+event "MP2a: Spaceport"
+	planet "Imatai"
+		spaceport `The "spaceport" is simply a corner of a commercial airport, that is usually used by vertical-take-off aircraft similar to helicopters. You have been instructed to land here when visiting Imatai. If you require hyperspace fuel, tanker trucks will be sent from a nearby chemical storage facility, and will drive onto the tarmac to refuel your ship.`
