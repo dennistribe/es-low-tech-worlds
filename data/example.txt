@@ -32,7 +32,7 @@ ship "Kateni"
 		"drag" 1.5
 		"heat dissipation" 1
 		"fuel capacity" 0
-		"cargo space" 50
+		"cargo space" 15
 		"outfit space" 140
 		"weapon capacity" 0
 		"engine capacity" 80
@@ -48,7 +48,7 @@ ship "Kateni"
 			"hit force" 180
 	outfits
 		outfits
-		"Z07 Bouncer Engines"
+		"Z01 Bouncer Engines"
 		"G35 Energy Box"
 		"A52 Generator"
 	# These coordinates are relative to the center of the image, and are in
