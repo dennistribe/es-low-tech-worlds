@@ -4,6 +4,7 @@ mission "MP sell diamond"
 	source Imatai
 	destination Mere
 	passengers 1
+	cargo 5
 	on offer
 			conversation
 					`	When you enter the bar, you see an old Monopod by the wall, despretly trying to sell diamonds. you wonder why he has no buyers.`
@@ -15,8 +16,7 @@ mission "MP sell diamond"
 					`	You walk up to him. He spots you and nearly drops the purple diamond he is holding in surprise. "Space alien!" He cries. Then asks "Whould you like a diamond?".`
 					choice
 							`	"No."`
-							
-							`	He sighs. "No, I thourt you whouldn't. I think I'm just going to give up now." he goes and sits down at a table, and orders a drink!`
+					`	He sighs. "No, I thourt you whouldn't. I think I'm just going to give up now." he goes and sits down at a table, and orders a drink!`
 					choice
 							`	"Why?"`
 							`	"Oh. So sad. Bye bye."`
@@ -57,3 +57,6 @@ mission "MP sell diamond"
 					label takethere	
 					`	"I	knew I could count on you!" He cries. "To your Space Plane emediatly! By the way, i'm Qase." "I'm..." You start, but are interupted by Qase. "You don't need to tell me who you are." He says. "We all know who you are, space alien." Laughing, you go off to your ship.`
 						accept
+	on complete
+		payment 1090				
+		dialog `Qase thanks you gratfully, goes of in his wheelchair (His chosen disceyes), comes back and pays you 1090 credits while muttering to himself, "Why do they like these so much! Their only color-full rocks!" And with he heads of. You watch him until you cannot see him anymore.`
