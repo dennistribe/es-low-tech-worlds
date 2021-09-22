@@ -1,10 +1,9 @@
 # -------------
 #   INHABITED
 # -------------
-
 system Itikotiko
 	pos -237.549 740.338
-	government "Monopod1"
+	government Monopod1
 	habitable 625
 	belt 1228
 	link "Ka vou"
@@ -22,21 +21,25 @@ system Itikotiko
 	object
 		sprite star/g5
 		period 10
-	object "Imatai"
+	object Imatai
 		sprite planet/forest5
-		distance 261.21
-		period 67.5468
-		offset 219.567
+		distance 353.21
+		period 106.211
+		offset 219.351
+		object Jeon
+			sprite planet/dust0
+			distance 138
+			period 17.5047
 	object "Uca cevata"
 		sprite planet/dust5
-		distance 690.85
-		period 290.533
-		offset 355.935
+		distance 874.85
+		period 414.019
+		offset 47.3479
 	object
 		sprite planet/gas10
-		distance 1355.45
-		period 798.446
-		offset 352.255
+		distance 1539.45
+		period 966.425
+		offset 79.4955
 		object
 			sprite planet/rock7
 			distance 182
@@ -49,81 +52,95 @@ system Itikotiko
 # ---------------
 #   UNINHABITED
 # ---------------
-
-system Katuba
-	pos -665.259 325.49
+system Iotioti
+	pos -308.116 708.343
 	government Uninhabited
-	habitable 486.68
-	belt 1862
-	link Ildaria
-	asteroids "small rock" 4 0.988
-	asteroids "medium rock" 5 0.715
-	asteroids "large rock" 9 1.391
-	asteroids "small metal" 1 0.65
-	asteroids "medium metal" 76 1.625
-	asteroids "large metal" 1 1.027
-	minables aluminum 6 1.77898
-	minables uranium 12 2.24339
-	object
-		sprite star/k0
-		period 10
-	object
-		sprite planet/dust0
-		distance 234.92
-		period 65.2857
-		offset 71.3572
-	object
-		sprite planet/cloud6
-		distance 401.48
-		period 145.859
-		offset 295.313
-	
-	object "Na yava Wormhole"
-		sprite planet/wormhole-red
-		distance 1620.49
-		period 1182.79
-
-system Vakacurumau
-	pos -171.549 724.338
-	government Uninhabited
-	habitable 1050.92
-	belt 1142
-	link "Kai nona"
-	asteroids "small rock" 11 9.99
-	asteroids "medium rock" 29 11.34
-	asteroids "large rock" 56 12.78
-	asteroids "small metal" 14 5.76
-	asteroids "medium metal" 28 11.61
-	asteroids "large metal" 23 13.05
+	habitable 1111.68
+	belt 1874
+	link "Ka vou"
+	asteroids "small rock" 19 2.9274
+	asteroids "medium rock" 7 3.1059
+	asteroids "large rock" 27 3.7842
+	asteroids "small metal" 13 4.6053
+	asteroids "medium metal" 14 1.8921
+	asteroids "large metal" 11 1.9635
+	minables lead 2 4.43243
+	minables tungsten 4 4.87157
 	object
 		sprite star/g5
-		distance 35.6649
-		period 10.1859
-	object
-		sprite star/k5
-		distance 52.3351
-		period 10.1859
+		distance 53.4101
+		period 16.1663
 		offset 180
 	object
-		sprite planet/lava2
-		distance 188.025
-		period 31.8126
-		offset 208.955
+		sprite star/k0
+		distance 68.5899
+		period 16.1663
+	object Wasa
+		sprite planet/gas13
+		distance 733.951
+		period 238.545
+		offset 301.641
 	object
-		sprite planet/gas15
-		distance 601.585
-		period 182.063
-		offset 55.5341
+		sprite planet/gas10
+		distance 1945.56
+		period 1029.52
+		offset 103.677
+		object
+			sprite planet/dust1
+			distance 187
+			period 13.4605
+		object
+			sprite planet/rock0
+			distance 332
+			period 31.8423
+		object
+			sprite planet/europa
+			distance 561.361
+			period 37.5469
+			offset 325.873
+system "Ka vou"
+	pos -283.116 755.343
+	government Uninhabited
+	habitable 1080
+	belt 1746
+	link Iotioti
+	link Itikotiko
+	asteroids "small metal" 17 2.346
+	asteroids "medium metal" 12 2.944
+	asteroids "large metal" 10 4.232
+	minables gold 6 3.21249
+	minables iron 9 4.58668
+	minables titanium 1 3.10098
 	object
-		sprite planet/rock10
-		distance 887.195
-		period 326.065
-		offset 39.8775
-	
-	object "Na yava Wormhole"
-		sprite planet/wormhole-red
-		distance 1469.44
-		period 695.026
+		sprite star/g0
+		period 10
+	object Vura
+		sprite planet/cloud3
+		distance 798.653
+		period 274.717
+		offset 187.608
+	object
+		sprite planet/gas8
+		distance 2042.89
+		period 1123.87
+		offset 164.634
+		object
+			sprite planet/dust7
+			distance 216
+			period 16.8989
+		object
+			sprite planet/dust0
+			distance 358
+			period 36.058
+	object
+		sprite planet/gas5
+		distance 3322.16
+		period 2330.66
+		offset 69.5557
+		object
+			sprite planet/rock7
+			distance 254
+			period 13.4616
 
 system "Kai nona"
 	pos -211.549 701.338
@@ -174,6 +191,38 @@ system "Kai nona"
 			period 80.2805
 			offset 45.8205
 
+system Katuba
+	pos -665.259 325.49
+	government Uninhabited
+	habitable 486.68
+	belt 1862
+	link Ildaria
+	asteroids "small rock" 4 0.988
+	asteroids "medium rock" 5 0.715
+	asteroids "large rock" 9 1.391
+	asteroids "small metal" 1 0.65
+	asteroids "medium metal" 76 1.625
+	asteroids "large metal" 1 1.027
+	minables aluminum 6 1.77898
+	minables uranium 12 2.24339
+	object
+		sprite star/k0
+		period 10
+	object
+		sprite planet/dust0
+		distance 234.92
+		period 65.2857
+		offset 71.3572
+	object
+		sprite planet/cloud6
+		distance 401.48
+		period 145.859
+		offset 295.313
+	object "Na yava Wormhole"
+		sprite planet/wormhole-red
+		distance 1620.49
+		period 1182.79
+
 system "Kosha nona"
 	pos -218.116 766.343
 	government Uninhabited
@@ -195,7 +244,7 @@ system "Kosha nona"
 		distance 122
 		period 13.0157
 		offset 230.088
-	object "Kata"
+	object Kata
 		sprite planet/desert2
 		distance 461.014
 		period 95.6091
@@ -214,129 +263,81 @@ system "Kosha nona"
 			distance 389
 			period 24.1094
 
-system "Ka vou"
-	pos -283.116 755.343
+system Vakacurumau
+	pos -171.549 724.338
 	government Uninhabited
-	habitable 1080
-	belt 1746
-	link Iotioti
-	link Itikotiko
-	asteroids "small metal" 17 2.346
-	asteroids "medium metal" 12 2.944
-	asteroids "large metal" 10 4.232
-	minables gold 6 3.21249
-	minables iron 9 4.58668
-	minables titanium 1 3.10098
-	object
-		sprite star/g0
-		period 10
-	object "Vura"
-		sprite planet/cloud3
-		distance 798.653
-		period 274.717
-		offset 187.608
-	object
-		sprite planet/gas8
-		distance 2042.89
-		period 1123.87
-		offset 164.634
-		object
-			sprite planet/dust7
-			distance 216
-			period 16.8989
-		object
-			sprite planet/dust0
-			distance 358
-			period 36.058
-	object
-		sprite planet/gas5
-		distance 3322.16
-		period 2330.66
-		offset 69.5557
-		object
-			sprite planet/rock7
-			distance 254
-			period 13.4616
-
-system Iotioti
-	pos -308.116 708.343
-	government Uninhabited
-	habitable 1111.68
-	belt 1874
-	link "Ka vou"
-	asteroids "small rock" 19 2.9274
-	asteroids "medium rock" 7 3.1059
-	asteroids "large rock" 27 3.7842
-	asteroids "small metal" 13 4.6053
-	asteroids "medium metal" 14 1.8921
-	asteroids "large metal" 11 1.9635
-	minables lead 2 4.43243
-	minables tungsten 4 4.87157
+	habitable 1050.92
+	belt 1142
+	link "Kai nona"
+	asteroids "small rock" 11 9.99
+	asteroids "medium rock" 29 11.34
+	asteroids "large rock" 56 12.78
+	asteroids "small metal" 14 5.76
+	asteroids "medium metal" 28 11.61
+	asteroids "large metal" 23 13.05
 	object
 		sprite star/g5
-		distance 53.4101
-		period 16.1663
+		distance 35.6649
+		period 10.1859
+	object
+		sprite star/k5
+		distance 52.3351
+		period 10.1859
 		offset 180
 	object
-		sprite star/k0
-		distance 68.5899
-		period 16.1663
-	object "Wasa"
-		sprite planet/gas13
-		distance 733.951
-		period 238.545
-		offset 301.641
+		sprite planet/lava2
+		distance 188.025
+		period 31.8126
+		offset 208.955
 	object
-		sprite planet/gas10
-		distance 1945.56
-		period 1029.52
-		offset 103.677
-		object
-			sprite planet/dust1
-			distance 187
-			period 13.4605
-		object
-			sprite planet/rock0
-			distance 332
-			period 31.8423
-		object
-			sprite planet/europa
-			distance 561.361
-			period 37.5469
-			offset 325.873
+		sprite planet/gas15
+		distance 601.585
+		period 182.063
+		offset 55.5341
+	object
+		sprite planet/rock10
+		distance 887.195
+		period 326.065
+		offset 39.8775
+	object "Na yava Wormhole"
+		sprite planet/wormhole-red
+		distance 1469.44
+		period 695.026
 
 # -----------
 #   PLANETS
 # -----------
-
-planet "Imatai"
+planet Imatai
 	attributes monopod1
 	landscape land/canyon1
 	description `This is the monopod's home.`
 	outfitter "Monopod advanced"
 
+planet Kata
+	landscape land/canyon5
+	description `this planet is like africa.`
+
+planet "Na yava Wormhole"
+
 planet "Uca cevata"
 	landscape land/mountain8
 	description `This planet's surface is covered with snow and ice.`
 
-planet "Kata"
-	landscape land/canyon5
-	description `this planet is like africa.`
-
-planet "Vura"
+planet Vura
 	landscape land/feilds6
 	description `this planet is like earth.`
 
-planet "Wasa"
+planet Wasa
 	landscape land/beach1
 	description `this planet is mostly sea.`
 
-planet "Na yava Wormhole"
-	description ``
-
+planet Jeon
+	landscape land/canyon1
+	
 # ------------
 #   OVERRIDE
 # ------------
 
 system Ildaria
-	add link "Katuba"
+	add link Katuba
+
