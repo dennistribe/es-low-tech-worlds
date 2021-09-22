@@ -14,7 +14,7 @@ outfit "Z01 Bouncer Engines"
 	plural "Z01 Bouncer Engines"
 	category "Engines"
 	"cost" 20000
-	thumbnail "outfit/tiny ion engines"
+	thumbnail "Engines/Bouncer-Engine"
 	"mass" 20
 	"outfit space" -20
 	"engine capacity" -20
