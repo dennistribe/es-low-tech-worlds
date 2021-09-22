@@ -93,7 +93,7 @@ mission "MP1"
 			`Day 57:`
 			`	Today the engineer returned with an almost perfect replica of the broken part. I was so happy when I saw it I unexpectedly started to cry - the fact I might actually be able to get off this planet again suddenly made me realise how much I missed talking to other humans.`
 			`	However, one of the leaders was with him, and they made it clear that they would give me the part on condition that I did some jobs for them. They wish to explore their solar system.`
-			`	I explained that I could do this, if they could refill my tanks with hyperspace fuel so I could return to human space afterwards. I was able to print out a chemical formula for the fuel, and the engineer also took a sample from the dregs left in my tanks and sent it with a messenger to a nearby laboratory. The engineer and I then repaired the engine while we awaited a response about the hyperspace fuel. Later that afternoon they confirmed that they do have that compound available, but as they do not use it often it is rare and expensive.`
+			`	I explained that I could do this, if they could refill my tanks with hyperspace fuel so I could return to human space afterwards. I was able to print out a chemical formula for the fuel, and the engineer also took a sample from the dregs left in my tanks and sent it with a messenger to a nearby laboratory. The engineer and I then repaired the engine while we awaited a response about the hyperspace fuel. Later that afternoon they confirmed that they do have that compound available, but as they do not produce it in large quantities it is expensive.`
 			`	We agreed that I would take a trip to their moon in exchange for repairing my engine, and if I took a trip to the other planet in their system they would also refill my hyperspace fuel tanks.`
 			`	The scientist who will accompany me to the moon is named Kena. He cannot speak my language, but with Tokani's help we have a good plan for the trip and should not need to talk to do the job. We will also be taking 5 tonnes of sensors.`
 						accept
@@ -125,11 +125,13 @@ event "MP2a: Spaceport"
 		
 # Could return to human space now - but talk to monopods first (in spaceport).
 # Discuss their interests in human technology. They lack space flight, and lack laser weaponry (only have projectile weapons).
-# - ship of their own for exploration & testing - shuttle
-# - outfits (what? plasma engines, as shuttle will come with ion engine)
+# - plasma engines, ion engines
 # - laser rifles (many, for research)
 # - lasers (for asteroid mining)
 # - missile defence systems (safety of airports & other facilities)
+# - Language teaching materials
+# - Technical educational materials
+# - ship of their own for exploration & testing - shuttle
 # Discuss payment
 # Put jobs on job board to complete at leisure
 
@@ -148,7 +150,7 @@ mission "MP3"
 				`	"I can certainly keep you a secret, but I cannot guarantee my crew will."`
 				`	"I am very excited about discovering these planets, and do not think I will be able to keep it a secret, I am sorry."`
 			`Tokani translates your reply, and the other monopods look worried and frustrated. After some discussion among themselves, Tokani says "That is very disappointing, but we are pleased you were honest. Now we really need to get more technology, to be prepared in case others find us and want to harm us."`
-			`	Tokani asks about simple human ships, and you describe shuttles, sparrows and star barges to him. After some discussion, they all agree that a shuttle would be the most versatile first ship for them to use. You also discuss weaponry, and the monopods are extremely interested in lasers. They already have shield-penetrating projectile weapons, but have not been able to master powerful lasers, which they see as being most useful for defence, especially for anti-missile and anti-drone systems. They settle on a list of equipment that they would like to acquire initially, and place it in your job board.`
+			`	Tokani asks about simple human ships, and you describe shuttles, sparrows and star barges to him. You also discuss engine systems. Finally, you discuss weaponry, and the monopods are extremely interested in lasers. They already have shield-penetrating projectile weapons, but have not been able to master weapons-strength lasers, which they see as being most useful for defence, especially for anti-missile and anti-drone systems. They settle on a list of equipment that they would like to acquire initially, and place it in your job board.`
 			`	"How would you like to be paid for these jobs?", Tokani asks.`
 			choice
 				`	"In credits"`
@@ -157,7 +159,7 @@ mission "MP3"
 			`	"They are just credits. They are themselves. I am not sure what you mean." you reply.`
 			`	"Here, we use gold and silver as money" Tokani explains. "We have electronic money also, but this simply represents the amount of silver you have in the bank. The real money is silver, the electronic version is just easier to carry around without it being stolen. Credits seem to be what we would call a 'fiat' currency, a currency that is based on nothing. Many years ago our planet used fiat currencies, and we found they were too easily manipulated by corrupt banks and governments. Fiat currencies are now completely illegal here, and we can only trade in things of real value - gold, silver, and other precious items."`
 			`	After further discussion among themselves, Tokani informs you that they cannot use credits, because they are not set up to use them, but also because it would be illegal, and this would need to be discussed in their parliament. Even if their parliament wanted to make an exception for you, this would not happen quickly.`
-			`	"When you do a job for us, we will pay you in gold or precious stones, or sometimes by giving you other goods you can sell" Tokani finally tells you. "Please tell us what these are worth in credits, so we can find a fair payment for you. You can then exchange them for credits when you return to alien space."` 
+			`	"For now, when you do a job for us, we will pay you in gold or precious stones, or sometimes by giving you other goods you can sell" Tokani finally tells you. "Please tell us what these are worth in credits, so we can find a fair payment for you. You can then exchange them for credits when you return to alien space."` 
 			`	Remember to check the job board.`
 			
 # Serious problem:
@@ -167,7 +169,7 @@ mission "MP3"
 
 mission "MP4a"
 	name "Bring two shuttles to the monopods"
-	description "Collect two shuttles from Zug (the monopods will give you gold to pay for these), and escort them to <source>, for payment in gold."
+	description "Collect two shuttles from Zug (the monopods will give you gold to pay for these), and escort them to <source>."
 	job
 	source "Imatai"
 	destination "Zug"
@@ -181,7 +183,7 @@ mission "MP4a"
 
 mission "MP4b"
 	name "Bring two shuttles to the monopods"
-	description "Collect two shuttles from Zug (the monopods will give you gold to pay for these), and escort them to <destination>, for payment in gold."
+	description "Collect two shuttles from Zug (the monopods will give you gold to pay for these), and escort them to <destination>."
 	landing
 	source "Zug"
 	destination "Imatai"
@@ -232,12 +234,12 @@ mission "MP4d"
 	on offer
 		conversation
 			`When you come in to land with the two shuttles, you are quickly surrounded by a crowd of airport workers and other onlookers. The authorities have been notified of your arrival, and very soon two monopods in uniforms hop over.`
-			`	"Hello. My name Tirano." says the first monopod - slowly. "Pay, money" she says, handing you a small, heavy bag. She is clearly unfamiliar with your language, but you are surprised to be addressed in your language at all.`
+			`	"Hello. My name Tirano." says the first monopod - slowly. "Money" she says, handing you a small, heavy bag. She is clearly unfamiliar with your language, but you are surprised to be addressed in your language at all.`
 			`	"Where is Tokani?" you reply.`
 			`	"Tokani ... work." she responds. "Tokani teach me. Sorry not speak well. I pilot. He pilot. We fly fast aeroplane. We fly new spaceships."`
-			`	You watch while the two pilots inspect the shuttles carefully, both outside and inside. You start to try and explain the control systems to them, and are having great difficulty, when to your relief Tokani looks in the door.`
+			`	You watch while the two pilots inspect the shuttles carefully and expertly, both outside and inside. You start to try and explain the control systems to them, and are having great difficulty, when to your relief Tokani looks in the door.`
 			`	"I left work as soon as I heard you had landed <first>. It is great to see you again. How are you getting on with Tirano and Ruan?"`
-			`	"I can see they are very experienced pilots" you reply, "but there are so many I am having great difficulty even explaining the simplest details of how to fly these specific shuttles, because of the language barrier. I am impressed they can speak to me at all though."`
+			`	"I can see they are very experienced pilots" you reply, "but I am having great difficulty even explaining the simplest details of how to fly these spaceships, because of the language barrier. I am impressed they can speak to me at all though."`
 			`	"I am currently teaching your language to a carefully selected group of elite pilots, engineers, scientists and diplomats, so that there will soon be more people who can interact with you, and any other aliens that may visit us. Tirano and Ruan are making great progress, considering how little time they have been learning. But they do not yet know any technical language - I do not know enough technical language to teach them either. I really need much more information on your language - let's discuss that later. In the meantime I will help you try and explain these ships to Tirano and Ruan."`
 			`	After several hours of instruction, the two pilots are already feeling confident enough to try and fly the shuttles.`
 			`	"Captain <last>, come with us?" asks Ruan.`
@@ -262,7 +264,7 @@ mission "MP4d"
 		ship "Shuttle" "Ruan"
 	waypoint "Itikotiko"
 	on waypoint
-		dialog `Tirano and Ruan carefully fly a long distance from each other for safety, before executing a number of simple maneouvers to become familiar with the new ships. They then tell you they are ready to land back on Imatai.
+		dialog `Tirano and Ruan carefully fly a long distance from each other for safety, before executing a number of simple maneouvers to become familiar with the new ships, asking you a range of questions as they do so. They then tell you they are ready to land back on Imatai.
 	on complete
 		dialog	`As you expected, Tirano and Ruan managed their shuttles acceptably well, and landed safely. It helps that the autopilot systems on modern ships are so advanced. After landing, Tirano hands you two gold coins, which you add into the money bag she gave you earlier.`
 	
