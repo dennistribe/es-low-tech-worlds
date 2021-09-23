@@ -23,7 +23,7 @@ outfit "Shield Defier"
 	"gun ports" -1
 	"gatling round capacity" 3000
 	weapon
-		sprite "progectile/sheid-defier-flair4"
+		sprite "projectile/shield-defier-flair4"
 			"random start frame"
 		sound "gatling"
 		ammo "Shield Defier Ammo"
@@ -52,7 +52,7 @@ outfit "Shield Defier Ammo"
 	
 outfit "debullet"
 	weapon
-		sprite "progectile/Sheild-Defier-Bullet"
+		sprite "projectile/Shield-Defier-Bullet"
 			"delay" 5
 			"random start frame"
 			"frame rate" 0
