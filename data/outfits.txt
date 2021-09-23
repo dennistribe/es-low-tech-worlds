@@ -45,7 +45,7 @@ outfit "X02 Hopper Engines"
 outfit "A52 Generator"
 	category "Power"
 	cost 40000
-	thumbnail "outfit/tiny fuel cell"
+	thumbnail "Outfits/A52 Generator"
 	"mass" 20
 	"outfit space" -20
 	"energy generation" 1.0
