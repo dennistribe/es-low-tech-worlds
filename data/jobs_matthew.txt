@@ -5,6 +5,8 @@ mission "MP sell diamond"
 	destination Mere
 	passengers 1
 	cargo 5
+	to offer
+		has "MP10 Educational Materials b: done"
 	on offer
 			conversation
 					`	When you enter the bar, you see an old Monopod by the wall, despretly trying to sell diamonds. you wonder why he has no buyers.`
