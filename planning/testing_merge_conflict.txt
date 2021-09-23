@@ -1,3 +1,0 @@
-Testing a file
-This line has been changed differently
-And should conflict
