@@ -60,9 +60,6 @@ ship "Kateni"
 	description "The kateni is an alien ship."
 
 
-shipyard "Basic Ships"
-	"Kateni"
-
 
 
 ship "Line"
@@ -102,10 +99,42 @@ ship "Line"
 	explode "nuke explosion" 5
 	description ""
 
-
+ship "Space-plane"
+	sprite "ship/Aeroplane
+	
+	attributes
+		category "Transport"
+		"cost" 100000
+		"shields" 0
+		"hull" 650
+		"required crew" 3
+		"automaton" 0
+		"bunks" 50
+		"mass" 250
+		"drag" 11.7
+		"heat dissipation" 0.2
+		"fuel capacity" 0
+		"cargo space" 20
+		"outfit space" 100
+		"weapon capacity" 0
+		"engine capacity" 45
+		weapon
+			"blast radius" 140
+			"shield damage" 1400
+			"hull damage" 700
+			"hit force" 2100
+	outfits
+		"Z01 Bouncer Engines"
+		"A52 Generator"
+		"G35 Energy Box"
+	engine -75 298.5
+	explode "big explosion" 20
+	description "This is a plane! It is a space-plane!"
+		
 # This line expands the "Basic Ships" shipyard to also include the Exemplar. If
 # instead you want to replace all the existing ships, the first line of your new
 # shipyard definition should be the keyword "clear".
 shipyard "Basic Ships"
 	"Line"
-
+	"Kateni"
+	"Space-plane"
