@@ -53,8 +53,8 @@ ship "Kateni"
 		"A52 Generator"
 	# These coordinates are relative to the center of the image, and are in
 	# image pixels (which are scaled down to half a screen pixel when drawing).
- engine 0.5 40
- engine 0.5 40
+	engine 0.5 40
+	engine 0.5 40
 	explode "tiny explosion" 15
 	explode "small explosion" 25
 	description "The kateni is an alien ship."
