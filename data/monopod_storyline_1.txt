@@ -646,8 +646,8 @@ mission "MP11a"
 			`	He excitedly hops over to the doors of the hanger, and shouts something in his own language. The hanger doors open, revealing a box-shaped spaceship, about the size of a shuttle.`
 			`	"Simple for you, new happy for us!" he exclaims, and hops quickly over to the rear of the ship. "Our engine! Learn from X1050. More simple but working!"`
 			`	The engine compartment is separated from the main body of the ship, and attached using an interesting series of clamps. "For testing. Drop engine if danger." explains the scientist.`
-			`	The body of the ship is a cube. Inside is an empty space, with a small capsule to one side containing a pilot's seat and controls. "Easy change inside. Cargo or people. Many use. For testing, pilot in escape box."`
-			`	"No fly yet. You follow when fly. Safety. If break, pick up escape box. Agree?"`
+			`	The body of the ship is a cube. Inside is an empty space, with a pilot's seat and controls to one side. "Easy change inside. Cargo or people. Many use."`
+			`	"No fly yet. You follow when fly. Safety. If break, pilot drop engine, you rescue pilot. Agree?"`
 			choice
 				`	"Yes, I would be glad to help."`
 					accept
@@ -685,6 +685,8 @@ mission "MP11b"
 mission "MP11c"
 	name "Kateni second test flight"
 	description "Accompany the monopod's first reusable spaceship on its second flight"
+	to offer
+		has "event: MP11 Kateni2"
 	source "Imatai"
 	waypoint "Itikotiko"
 	landing
@@ -696,45 +698,38 @@ mission "MP11c"
 				`	Not now.`
 					defer
 			`Once again you are welcomed to the hanger by the head of the research team. He shows you the Kateni, which looks largely the same as before. "Better engine. Faster."`
-			`	"Like last time, you follow ship. Safety. Rescue pilot in escape box if bad. Agree?"`
+			`	"Like last time, you follow ship. Safety. Rescue pilot if bad. Agree?"`
 			choice
 				`	"Yes"`
 					accept
 				`	"Not today"`
 					defer
-	npc board
+	on waypoint
+		dialog `Soon after takeoff you receive an urgent message from the Kateni pilot - clearly so agitated he is struggling to remember how to speak to you. "Help! Fire. Geruda bila. Off!" You had better find where he is and board the ship.`
+	npc assist
 		government "Monopod"
 		personality timid
 		ship "Kateni dead" "Kateni"
-	on board
-		dialog `You rescue the pilot`
+		conversation
+			`As you approach the ship, you see the engine looks extremely hot and is starting to melt in places, but is still attached to the ship - the pilot has not released it. Something is seriously wrong and this ship could explode any minute.`
+			`	You dock with the Kateni, and the pilot immediately bounds through the airlock, yelling "Go! Go!"`
+			`	You immediately detach from the Kateni and start flying away.`
 	on accept 
 		event "MP11 hazard on"
-		
-outfit "Safety box"
-	category "Systems"
-	"mass" 5
-	"outfit space" -5
-	
-outfitter "Safety box outfitter"
-	"Safety box"
-
-fleet "Kateni 2"
-	government "Monopod"
-	outfitters "Safety box outfitter"
-	personality escort timid
-	variant
-		"Kateni dead" 1
-
+	on complete
+		event "MP11 hazard off"
+		event "MP11 Kateni3" 10
+		conversation
+			`On landing, you are surrounded by the research team, who are very relieved to see the pilot safe in your ship. After a long conversation among themselves, the team leader approaches you to explain.`
+			`	"During flight, data transmit our computer. With data and pilot words, we see two problem. Engine caught fire - but release system fail. Engine heat maybe damaged release. Very thankyou rescue pilot. Dangerous with engine fire."`
+			`	He hands you another bag of gold. "More. Thankyou."`
+			
 ship "Kateni" "Kateni dead"
 	attributes
 		"hull" 200
 		"shields" 0
 	outfits
 		"Hyperdrive"
-#	cargo
-#		"Safety box" 1
-		
 		
 hazard "Kateni killer"
 	"constant strength"
@@ -747,17 +742,190 @@ event "MP11 hazard on"
 	system "Itikotiko"
 		hazard "Kateni killer" 1
 
+event "MP11 hazard off"
+	system "Itikotiko"
+		remove hazard "Kateni killer"
+			
+event "MP11 Kateni3"
+
+mission "MP11d"
+	name "Exchange gold"
+	description "Exchange the gold you received as payment for monitoring the Kateni and rescuing the pilot."
+	source Imatai
+	destination Mere
+	to offer
+		has "MP11c: done"
+	landing
+	on complete
+		payment 20000
+		dialog "You sell the gold to a precious metals dealer for 20,000 credits."
+		
+mission "MP11e"
+	name "Kateni test flight"
+	description "Accompany the monopod's first reusable spaceship on its maiden flight"
+	source "Imatai"
+	landing
+	to offer
+		has "event: MP11 Kateni3"
+	on offer
+		conversation
+			`On landing you receive another message from the space flight research team. "We have another Kateni to test, please help as before".`
+			choice
+				`	Help test the Kateni.`
+				`	Not now.`
+					defer
+			`You make the same arrangements as before, and prepare to watch the Kateni during its test. Remember to rescue the pilot if anything goes wrong.`
+	npc accompany save
+		government "Monopod"
+		personality escort timid
+		ship "Kateni hyperdrive" "Kateni"
+	waypoint "Itikotiko"
+	on waypoint
+		dialog `The Kateni flies into orbit and the pilot carefully performs his tests. You are very nervous following the disastrous last test flight, but this time everything seems safe. Finally the pilot signals that he is ready to land again.`
+	on complete
+		dialog `When the Kateni safely lands, a scientist hands you another bag of gold. "Ship seems safe now" she says.`
+
+mission "MP11f"
+	name "Exchange gold"
+	description "Exchange the gold you received as payment for monitoring the Kateni."
+	source Imatai
+	destination Mere
+	to offer
+		has "MP11e: done"
+	landing
+	on complete
+		payment 10000
+		dialog "You sell the gold to a precious metals dealer for 10,000 credits."	
+		
+
+
 
 # WAR
 # The anti-missile turrets and laser rifles are actually used to turn the tide in a long-running war.
 # The monopods should have developed space flight before winning the war also.
 
+mission "MP12"
+	name "Kidnap attempt"
+	source "Imatai"
+	to offer
+		has "MP6 Laser Rifle a: done"
+		has "MP10 Educational Materials a: offered"
+		not
+			has "event: MP9 War won"
+	conversation
+		`While wandering around the airport, you are approached by a monopod you have not seen before.`
+		`	"Hello <last>. Come me. See Tokani."`
+		choice
+			`Go with her.`
+			`Don't go.`
+				decline
+		`You follow the monopod through the airport terminal, and out a door you have not been through before. She invites you into a van, in which you sit as uncomfortably as always. It is a shame monopod vehicles are so small.`
+		`	The monopod closes the door, and it clicks differently to normal. When you try to open the door, you find it is locked. You also find there is no way from the back of the van into the front. You are trapped.`
+		`	The van quickly drives through the streets, and seems to be drawing near the edge of the city, when the driver slams on the brakes and stops suddenly, before reversing around and speeding off down a side street. You notice you are being pursued by military vehicles.`
+		`	After a brief but terrifying chase, the van is run off the road into a ditch. The driver starts to hop away, but you hear gunfire and she falls down dead. An armed monopod goes to the front of the van and unlocks the doors, letting you out.`
+		`	He speaks to you in the monopod's tongue - he appears to not have learnt any of your language. You are able to understand that he wants you to go with him.`
+		choice
+			`	Go with the monopod.`
+				goto go
+			`	Refuse.`
+		`The monopod calls over several others, who all aim their weapons at you and make it very clear that you have no choice.`
+		label go
+		`	You get into their truck, and are carried back to the airport. When you arrive, Tokani is there, in his teaching clothes and looking flustered and worried.`
+		`	"<first>, very happy you are safe" he calls as soon as he sees you.`
+		choice
+			`	"Who was the lady in the van?"`
+			`	"What is going on?"`
+		`	"I have been told the woman you went with was a criminal. She was being watched by the authorities, but they did not expect her to kidnap you. An airport security guard noticed you leaving out the back entrance, and raised an alert because that appeared unusual. The authorities quickly worked out what was happening and sent the army to rescue you."`
+		choice
+			`	"Why would she kidnap me?"`
+				goto whykidnap
+			`	"Why did the soldiers point their guns at me and force me to come with them?"`
+		`Tokani glares at the soldiers and has a quick, angry discussion.`
+		`	"Sorry <first>, they shouldn't have been doing that. They were in a hurry, they wanted to get going as soon as possible and it seemed the fastest way to get you to do what they wanted. They don't speak your language. They were not going to actually shoot you."`
+		`	"Why did they shoot the driver?"`
+		goto endkidnap
+		label whykidnap
+		`	Tokani has a brief conversation with the military officer, who seems somewhat nervous about this question. Eventually, Tokani replies "Maybe she wanted money. Maybe she wanted you to do a job for her. I do not know, and she is dead now so we cannot ask her."`
+		`	"Why did they think it was serious enough to kill her?"
+		label endkidnap
+		`	"Sorry <first>, I really have to get back to my lecture. Goodbye."`
+		`	Tokani hurries out the door.`
+		
+			
 mission "MP9 War"
 	invisible
 	to offer
 		has "MP6 Anti-Missile Turret a: done"
 		has "MP6 Laser Rifle e: done"
+		has "MP11a: done"
 	on offer
 		event "MP9 War won" 50
 		
 event "MP9 War won"
+
+mission "MP13"
+	name "War revealed"
+	source "Imatai"
+	passengers 1
+	to offer
+		has "event: MP9 War won"
+	conversation
+		`There appears to be a party happening all over the spaceport today. There are brightly coloured streamers everwhere, and a band playing music on the tarmac. Everybody appears to be excited and overjoyed - although some are crying.`
+		choice
+			`	Find someone to ask what is happening.`
+			`	Contact Tokani.`
+				goto tokani
+		`You try to talk to a few people with your limited knowledge of their language. They give fast, excited responses, but you cannot understand most of it. You can only gather that something bad has ended.
+			`	Contact Tokani.`
+		label tokani
+		`You call Tokani using the communications system, and find he is not available. However a few minutes later you get a call back from him.`
+		`	"<first>, so glad you are here today! It's so exciting!"`
+		`	"What's so exciting?"`
+		`	Tokani stops talking suddenly. "Oh, I forgot you didn't know. Sorry. There is something rather big that I have, until today, been forbidden to discuss with you. But I am sure it doesn't matter now. I will come to the airport immediately and explain everything."`
+		`	Tokani takes longer than expected, and when he finally arrives he is accompanied by one of the planet leaders and a military officer.`
+		choice
+			`"What is the party about?"`
+			`"Why have you been forbidden to tell me about something that is clearly very serious?"`
+		`"We have a lot to explain, and I am very sorry that I had to keep this a secret, I hope it does not damage our friendship." says Tokani. "I will explain from the beginning."`
+		`	"Our planet used to be divided into many different countries, with their own governments. Wars were frequent. Over time, small countries joined together to become larger countries, through conquest or peaceful agreements, until eventually the majority of the world was ruled by one government - our own". Tokani motions towards the government leader who is with him. "But there were still some small countries not under this government."`
+		`	"As long as the planet was divided, there was a risk of war. Because we are a democracy, we had a global vote on whether to have a single, global government. The vote was open to everybody, although some independent countries prevented their people from voting. Fortunately 80% of the world's population were already under our government and were able to vote, and 75% of those voted for a global government. That meant that 60% of the world's population had voted to have a single global government - a very clear democratic result."`
+		`	"From that day forward, all 'countries' ceased to exist by the will of the people, and our government has officially ruled the entire world, democratically."`
+		`	"Unfortunately, some of the rulers of those former countries refused to accept the new government, and fought against the people of the world. They have committed terrible acts. Thousands of innocent civilians died. Some of these groups were quickly defeated, but one - the Yuhavi - has been fighting the people for years."`
+		`	"The evil Yuhavi have finally been defeated, and the people are celebrating, because now we can finally have a world without war."`
+		choice
+			`	"What gave you the authority to take over these other countries?"`
+				goto democracy
+			`	"How did you win the war?`
+				goto weapons
+			`	"Why did you not tell me this earlier?`
+				goto secret
+			`	"Well I'm just glad it's over."`
+				goto next
+		label democracy
+		`Tokani discusses this with the leader for a minute, both look confused by the question.`
+		`	"We did not take over anybody. We had a vote, and the people of the planet voted to dissolve all countries and have a global government. Our government simply organised what the people had chosen to do."`
+		`	"But what about the 40% of the world who did not want global government?"`
+		`	"We expect many of them would have actually wanted global government also, but their governments refused to let them vote. We rescued them from these oppressive governments and gave them democracy, so they can have a say in the future of the planet. Yes, there were some people who genuinely disagreed and did not want global government, but they were outvoted. That is how democracy works."`
+			goto more
+		label weapons
+		`"The cowardly Yuhavi were not just fighting our soldiers, but were fighting innocent civilians. One of their most common ways to attack was to send unmanned drones, filled with explosives, and use them to blow up anything - military facilities, or even shopping centres. We had no effecive way of stopping this. We have energy shields, and used those to protect the most important military targets, but could not put shields around every shopping centre. So the murder continued."`
+		`	"But when you brought us laser weapons, we could finally build anti-drone defence systems. Taking the anti-missile defence turrets you provided as a model, we built our own turrets. We then mounted the laser rifles you brought us onto these turrets, resulting in low-powered but very fast defence systems that were powerful enough to shoot down drones. I understand you brought over 50 laser rifles - a small number were used for research, but most were actually used to make these anti-drone defences."`
+		`	"These turrets were placed on mobile, shield-protected vehicles, and suddenly deployed to surround any site the rebels were sending drones from. With this we were able to elimininate their main weapon."`
+		`	"Our brave army was then able to quickly defeat them before they had recovered and developed a new strategy. The fighting was still fierce and many soldiers died, but it was worth it, as this was the last war, that will end all war on this planet. We can now look forward to peace."`
+			goto more
+		label secret
+		`"We needed your help to advance our technology, and we could see you were willing to help us. We did not know if this situation would make you more or less willing to help us, so we decided not to mention it."`
+			goto more
+		label next
+		`"It's not quite over yet. We do have a major problem that we will need your help with."`
+		`	"The Yuhavi are an easily recognised ethnic group. Over this war, the level of hatred between the rest of the planet and them has grown, to the point where it is impossible to imagine co-existing with them. They cannot disappear into society, but will always be recognised. If we tried to live alongside them, individuals would try and take revenge for the death of their relatives, and the planet would have many years of murderous acts that our security forces would struggle to prevent. This could even turn into another war."`
+		`	"But the government has found a brilliant solution. We will deport them all - to Uca Cevata. This will save their lives from revenge attacks, and give us global peace."`
+		`	"Colonising a planet is a massive undertaking when we have only just started space flight. We will need your assistance in many ways. Are you willing to help us achieve peace?"`
+		choice
+			`	"I'd like to meet with the Yuhavi first before I could give an answer."`
+			`	"No, I do not want to have anything to do with this."`
+				decline
+		`"We thought you would say that, and you would have to work with them to make this happen anyway. There is a Yuhavi woman who I have been secretly giving language lessons to, with the government's agreement, so that we had a translator we could send with you if we ever needed you to interact with them. I will not bring her here openly - the crowd might harm her - but I can send her to your ship later in disguise. `
+		`	"She can guide you to their former capital city, where their king is under house arrest in his palace. You can land at the king's private airfield on the palace grounds." Tokani says the last sentance with a sarcastic tone, obviously disgusted at the unnecessary luxury of having a palace with a private airfield.`
+		`	Some hours after you return to your ship, a small hooded figure hops up to the ship. You quietly open the door and let her in. When she drops her hood, she looks almost identical to any other monopod woman - you cannot see why her ethnic group is so recognisable. But you are not a monopod. "My name Huasi" she says quietly and sadly.`
+		`	You prepare to take off and fly around the planet, to land at the palace on the other side of Imatai.`

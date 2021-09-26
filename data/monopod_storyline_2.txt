@@ -1,0 +1,235 @@
+mission "MP20"
+	name "Meet the Yuhavi"
+	source "Imatai"
+	stopover "Uca Cevata"
+	passengers 5
+	to offer
+		has "MP13: done"
+	conversation
+		`During your short flight, Huasi says very little. She is clearly very nervous around you, and not confident with your language. She also appears grief-stricken, presumably at the entire sitaution.`
+		`	You land on a flat, grass airstrip clearly designed only for small aeroplanes. Your spaceship barely fits. You are greeted by a group of monopods, some armed and in the military uniforms of the central government, and some unarmed in civilian clothing. Huasi points to one monopod who is standing tall in the centre with a grim expression on his face. "Paru King" she says.`
+		`	Huasi says something to the king, and is yelled at by one of the armed guards. She turns to you with a tear in her eye, and says "Told not call Paru King. Just Paru."`
+		choice
+			`	"I must meet with King Paru alone, without the soldiers."`
+		`Huasi nervously translates your message to the soldiers, and they are visibly angry. However, they are under orders to allow you to meet with the Yuhavi leadership, and after a brief discussion allow Huasi and yourself to enter a meeting room in the palace with the former king and his aides. Some stand guard outside the door, while others stand outside the windows watching you.`
+		`	King Paru's aides close the curtains, and you all sit down at the corner of the room furtherest from the door and windows. King Paru speaks quietly to Huasi, who translates to you.`
+		`	"King Paru angry you give weapons to self-appointed 'global government'. Why you help them?"`
+		choice
+			`	"I did not know they were at war. I did not know you existed."`
+			`	"They were worried that if I had found them, other 'aliens' might also. I brought them weapons for self-defence against space pirates."`
+		`Huasi translates, and the king discusses this with his aides. Huasi finally responds "King says you not enemy."`
+		`	The king next says, through Huasi, "Government want send us Uca Cevata. We no want this. We live here. You help us get land back?"`
+		choice
+			`	"No, I do not want to choose sides in your war."`
+			`	"No, you are terrorists who have killed thousands of innocent people. I will not help you."`
+				goto terrorists
+		`The king replies "Understand. You not fight against us, not fight for us."`
+		goto next
+		label terrorists
+		`Huasi is shocked at your reply, but translates for the king. He is also angry, but replies calmly.`
+		`	"Government tell you story first, you believe them. Listen our story."`
+		label next
+		`	"We peaceful country. People happy. Central government grow, we worry, but keep peace. Then government say king not king, land not our land, they rule us. This not true.`
+		`	"For 200 year, Yuhavi live here. Defend land. Nobody take land from Yuhavi. Proud. Try to take land, we fight. We win.`
+		`	"New government army come in, we fight back. But army too big, we too small. Too few people. Desperate.`
+		`	"Smart scientists say, fight with robot. Save people. Make driving robot, flying robot, swimming robot. Boom!`
+		`	"When army come in, boom. Nobody know where boom next, surprise. So army not come in. Peace."`
+		choice
+			`	"Why did you target civilians?"`
+		`"Mostly lie. We target army. But some mistake, some bad decision. Angry robot driver do bad thing, punished. Civilians die both sides. War evil."`
+		choice
+			`	"How were you defeated?"`
+		`"Weapons you give. Stop boom. End peace. Army not scared, come in. Too many. Fight brave, but..." the king is crying quietly now and has stopped talking.`
+		`	The king motions for one of his aides to continue.`
+		`	"Paru King old. Not go Uca Cevata. Take long time, not finish before king die." The aide then talks to the king before making his next statement. "People not happy king. Lose war. Lose respect. People happy king son Pagu." The aide points to the young monopod beside the king. "Pagu lead people Uca Cevata."`
+		`	Pagu now speaks. "Lose land bad. But gain Uca Cevata good. We have whole planet. Bad planet, but all ours. Hard work, but Yuhavi strong. Become great space people."`
+		`	"Cannot do without you help. You take me Uca Cevata?"`
+		choose
+			`"Yes, I will show you the planet."`
+			`"No, I want nothing to do with this."`
+				decline
+		`Pagu says he will collect some other people and equipment, and meet you in your ship shortly.`
+	on stopover
+		conversation
+			`You fly around the planet carefully several times, while one of the monopods with Pagu carefully scans the surface with a camera-like device. Huasi explains they are creating a detailed map of the planet and scanning for near-surface minerals. `
+			`	After considering the map, Pagu selects several landing sites. At each site, Pagu and his aides leave the ship and hop slowly around (they get out of breath quickly in the thin atmosphere), looking at the landscape and thinking. One takes core samples of the soil.`
+			`	Finally Pagu indicates his visit is complete, and you prepare to return to Imatai.`
+	on complete
+		dialog `Pagu states that he has much to consider and many people to talk to. He is keen to meet with you again in a few days to discuss next steps. There is much to organise, as they do not even have a single spaceship. He cannot pay you for this trip as the government has confiscated the entire royal treasury, he suggests you return to them and ask them for payment. He will find a way to pay for future assistance.`
+		event `MP20 continue` 3
+
+event `MP20 continue`
+		
+mission "MP21a"
+	name "Space plane testing"
+	description "Test space plane"
+	source "Imatai"
+	waypoint "Itikotiko"
+	to offer
+		has "MP20: done"
+	landing
+		conversation
+			`On landing back at the main airport, you are quickly met by government representatives and Tocani.`
+			choice
+				`The Yuhavi cannot pay me for helping them visit Uca Cevata, as you have taken their treasury. Will you pay?`
+			`"We have fairly taken their treasury as partial compensation for our damages suffered in the war. We will pay you for any work that we have asked you to do. We will not pay you for anything they have requested, unless we agree to it beforehand. We did not ask you to take a delegation to Uca Cevata yet, so will not pay you for that."`
+			`	"But we do have a job for you we will pay you for. The Yuhavi will need people-carrying spaceships to transport them to Uca Cevata. Our engineers have spent the last two weeks building a suitable spaceship, and we would like you to help test it."`
+			choice
+				` "What sort of a spaceship can you build in two weeks?"`
+			`"We have high altitude aeroplanes that are already pressurised. We have taken an obsolete aeroplane, sealed it better for operation in a full vacuum, and installed the engines we built for the Katani. With these engines it should only take a day to travel to Uca cevata, so the travellers need only seats, not bunks."`
+			`	They take you to a hanger, where you see the scariest looking "spaceship" you have ever seen. It is simply a large aeroplane with the wings chopped off past the engines, and a patchwork of plates welded on to strategic parts that must have needed strengthening.`
+			`	You enter the plane, and find that every emergency exit has been welded shut, leaving only one door, which has been replaced with a heavier duty sealed door. There is no airlock - the one door opens directly into the main cabin.`
+			choice
+				`	"Why have the emergency exits been welded shut?"`
+				`	"What makes you think this is safe?"`
+			`"The weakest points where there could be leaks are the doors. Every door has been welded shut to eliminate the risk of leaks. There is now only one door, which is a spaceship door that another spaceship can dock with. It should be as safe as the Katani.`
+			`	"But this one has remote control for the first test flight. Just in case. The engineers think it is safe, but none of our pilots are willing to fly it.`
+			`	"Please follow it for the first test flight, with one of our engineers. If there are any problems, you can board the ship so the engineer can investigate and fix whatever is wrong."`
+			choice
+				`	"If it is so safe, why doesn't the engineer just go in it as a passenger?"`
+			`The government representatives look at the engineers, who look away nervously. Apparently they are less confident in it than they said.`
+			choice
+				`	"Ok, I will carry your engineer for testing."`
+					accept
+				`	"No, I don't want to help with this."`
+					decline
+	passengers 1
+	npc accompany save
+		government "Monopod"
+		personality escort timid
+		ship "Space-plane hyperdrive" "Space-plane"
+	on waypoint
+		dialog `The Space-plane flies around extremely slowly. You have never before seen a spaceship with such terrible performance. However, nothing explodes, and the engineer finally tells you the tests are complete and it is time to land.`
+		
+ship "Space-plane" "Space-plane hyperdrive"
+	outfits
+		"Hyperdrive"
+
+mission "MP21b"
+	name "Exchange gold"
+	description "Exchange the gold you received as payment for monitoring and delivering the Space-plane."
+	source Imatai
+	destination Mere
+	to offer
+		has "MP21a: done"
+	landing
+	on complete
+		payment 20000
+		dialog "You sell the gold to a precious metals dealer for 20,000 credits."
+	
+mission "MP21c"
+		name "Space plane delivery"
+		description "Deliver space plane to Yuhavi"
+		landing
+		to offer
+			has "MP21a: done"
+		source "Imatai"
+		conversation
+			`On landing, you are greeted by the government leaders. "Thankyou, the Space-plane is now ready to transport the Yuhavi. Please deliver this one to them."`
+			choice
+				`	"Are you sure one test flight is enough?"`
+			`"It will have a second test flight when you deliver it to the Yuhavi. If it reaches them safely, it is ready for them to use."`
+			`	Although nobody actually says it aloud, it is clear they would not mind too much if the space-plane blew up and killed a few Yuhavi.`
+			`	You should visit Pagu again anyway, you may as well escort the space-plane on your way there. You are handed a bag of gold as payment in advance.
+				accept
+		npc accompany save
+			government "Monopod"
+			personality escort timid
+			ship "Space-plane hyperdrive" "Space-plane"
+		
+mission "MP22 spaceplane"
+	name "Yuhavi travel to Southbound Shipyards"
+	description "Take a delegation of Yuhavi to investigate a commercial relationship with Southbound Shipyards."
+	source Imatai
+	destination Zug
+	passengers 5
+	landing
+	to offer
+		has "MP21c: done"
+	conversation
+		`You land at the commercial airport near the palace, which has room to accommodate the space-plane as well as the <ship>. Pagu and Huasi meet you at the airport, and stare at the space-plane with horrified expressions.`
+		`	"This transport spaceship government promised?"`
+		`	"Yes, I am afraid it is."`
+		`	Pagu calls for a Yuhavi pilot and an engineer, and they inspect the space-plane. Eventually Huasi tells you "Pagu say this flying grave. Government want kill Yuhavi. Engineer say remote control. Good. Can use cargo, not people."`
+		`	Pagu invites you to a meeting to discuss their next steps.`
+		choice
+			`	Go to meeting`
+		`"Pagu say cannot trust government. Nobody Imatai know how colonise planet. Also, Yuhavi no money."`
+		`	"Yuhavi smart, strong, hard workers. Can build factories, great machines. Make factories Uca Cevata. But build what? Sell to who?"`
+		`	After a long discussion, it becomes clear that the Yuhasi could be very good at manufacturing high-tech components for spaceships and other equipment. Their war "robots" were able to hold off the much larger government army for years after all.`
+		choice
+			`	"Would you like to trade with other humans?"`
+		`The Yuhavi, like the government, fear that it is dangerous to have contact with 'aliens', because the more contact they have the more likely it is that bad 'aliens' find them. But they feel they have no choice. They ask whether you could suggest some trustworthy humans who may be able to help them. `
+		`	After considering the question, you decide that the smaller human shipyards are probably more trustworthy than the Syndicate. Southbound Shipyards is quite near monopod space, and would be the best option to talk to initially. `
+		choice
+			`	"I know a spaceship manufacturer who may be interested in working with you, would you like me to take you to meet with them?"`
+			`	"Sorry, I cannot help you further."`
+				decline
+		`Pagu discusses this with his aides, and decides to send a small delegation with you to Southbound Shipyards. "We cannot pay you yet, but hope to pay you well in future."`
+		`	Pagu, Huasi, and three specialists (an engineer, an accountant, and one of King Paru's most experienced political advisers) board your spaceship to travel to Zug.`
+		
+mission "MP22 nospaceplane"
+	name "Yuhavi travel to Southbound Shipyards"
+	description "Take a delegation of Yuhavi to investigate a commercial relationship with Southbound Shipyards."
+	source	Imatai
+	destination Zug
+	passengers 5
+	landing
+	to offer
+		has "event: MP20 continue"
+		or
+			has "MP21a: decline"
+			has "MP21a: fail"
+	conversation
+		`You land at the palace again, and are met by Pagu and Huasi. Pagu is clearly agitated, and Huasi quickly translates "Pagu saw Space-plane from government. Says this flying grave. Government want kill Yuhavi. But remote control, may use cargo."`
+		`	Pagu invites you to a meeting to discuss their next steps.`
+		choice
+			`	Go to meeting`
+		`"Pagu say cannot trust government. Nobody Imatai know how colonise planet. Also, Yuhavi no money."`
+		`	"Yuhavi smart, strong, hard workers. Can build factories, great machines. Make factories Uca Cevata. But build what? Sell to who?"`
+		`	After a long discussion, it becomes clear that the Yuhasi could be very good at manufacturing high-tech components for spaceships and other equipment. Their war "robots" were able to hold off the much larger government army for years after all.`
+		choice
+			`	"Would you like to trade with other humans?"`
+		`The Yuhavi, like the government, fear that it is dangerous to have contact with 'aliens', because the more contact they have the more likely it is that bad 'aliens' find them. But they feel they have no choice. They ask whether you could suggest some trustworthy humans who may be able to help them. `
+		`	After considering the question, you decide that the smaller human shipyards are probably more trustworthy than the Syndicate. Southbound Shipyards is quite near monopod space, and would be the best option to talk to initially. `
+		choice
+			`	"I know a spaceship manufacturer who may be interested in working with you, would you like me to take you to meet with them?"`
+			`	"Sorry, I cannot help you further."`
+				decline
+		`Pagu discusses this with his aides, and decides to send a small delegation with you to Southbound Shipyards. "We cannot pay you yet, but hope to pay you well in future."`
+		`	Pagu, Huasi, and three specialists (an engineer, an accountant, and one of King Paru's most experienced political advisers) board your spaceship to travel to Zug.`
+
+mission "MP23"
+	name "Yuhavi meet with Kraz Cybernetics"
+	description "Take a delegation of Yuhavi to meet with Kraz Cybernetics"
+	source Zug
+	destination Rust
+	passengers 5
+	landing
+	to offer
+		or
+			has "MP22 spaceplane: done"
+			has "MP22 nospaceplane: done"
+	conversation
+		`When landing on Zug, you leave the monopods on your ship and travel alone to Southbound Shipyards to meet with their management. You request a confidential meeting with a senior management official about a business opportunity, and after considerable debate with the receptionist (who thinks you are just another travelling salesperson), you are finally given a 5 minute appointment with a member of the shipyard upper management committee.`
+		`	On entering the office, as you have so little time, you get straight to the point.`
+		choice
+			`	"I am representing a newly discovered alien species, who are interested in forming a commercial relationship with a human shipyard. I would like to give you the opportunity first because of your good reputation. This meeting and any commercial arrangements would however need to be made in complete secrecy."`
+		`The official you are talking to is very surprised, and skeptical. "Where do these aliens live?"`
+		`	"I am sorry, I cannot tell you at this stage. They wish to maintain their privacy."`
+		`	"Then how can I know you are telling the truth?" says the official.`
+		`	"How can I know I can trust you with any of the information I am giving you?" you respond.`
+		`	He considers that for a moment, and then says "I suppose you have to trust me, and I have to trust you, to some degree. But I do need to see some evidence this is a real proposal, and not a practical joke being pulled by my junior staff. It's my birthday you see, so it's just the day they'd choose to do something crazy like that."`
+		choice
+			`	"Come and visit my ship, and meet them for yourself."`
+		`The official travels with you to your ship, and comes on board. You call for Huasi to come to you alone, and when she hops into the hallway the official's eyes bulge in surprise.`
+		`	"I won't tell you her name, or any information about her at this stage. But you can see have a real proposal to make to you.", you say.`
+		`	"Yes, very real" mutters the official, clearly deep in thought. "What sort of commercial relationship are we talking about, in broad terms?"`
+		`	"In brief, these aliens wish to provide manufacturing facilities in return for ships and finances."`
+		`	"Why would aliens want human spaceships?"`
+		`	"Let's discuss that later. Might this sort of arrangement fit in with your shipyard?"`
+		`	The official ponders that question for a minute, before replying "Yes, actually, it would. We are highly dependent upon the Syndicate to manufacture many components of our ships. Having another component manufacturer could be beneficial. However, I suspect that Kraz Cybernetics may be also interested in such a relationship, and as the businesses of Southbound and Kraz are heavily interdependent, it would be best to discuss any such arrangements with Kraz also.`
+		`	"I will get a couple of trusted staff from Southbound, and board my personal spaceship. We will accompany you to Kraz Cybernetics for further discussions. I will warn them that we are coming, and arrange for a confidential meeting with selected trusted staff."`
+		
+
+	
