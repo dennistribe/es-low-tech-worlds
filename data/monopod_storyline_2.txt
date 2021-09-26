@@ -159,7 +159,7 @@ mission "MP22 spaceplane"
 		`	After a long discussion, it becomes clear that the Yuhasi could be very good at manufacturing high-tech components for spaceships and other equipment. Their war "robots" were able to hold off the much larger government army for years after all.`
 		choice
 			`	"Would you like to trade with other humans?"`
-		`The Yuhavi, like the government, fear that it is dangerous to have contact with 'aliens', because the more contact they have the more likely it is that bad 'aliens' find them. But they feel they have no choice. They ask whether you could suggest some trustworthy humans who may be able to help them. `
+		`The Yuhavi, like the government, fear that it is dangerous to have contact with 'aliens', because the more contact they have the more likely it is that 'bad aliens' find them. But they feel they have no choice. They ask whether you could suggest some trustworthy humans who may be able to help them. `
 		`	After considering the question, you decide that the smaller human shipyards are probably more trustworthy than the Syndicate. Southbound Shipyards is quite near monopod space, and would be the best option to talk to initially. `
 		choice
 			`	"I know a spaceship manufacturer who may be interested in working with you, would you like me to take you to meet with them?"`
@@ -190,7 +190,7 @@ mission "MP22 nospaceplane"
 		`	After a long discussion, it becomes clear that the Yuhasi could be very good at manufacturing high-tech components for spaceships and other equipment. Their war "robots" were able to hold off the much larger government army for years after all.`
 		choice
 			`	"Would you like to trade with other humans?"`
-		`The Yuhavi, like the government, fear that it is dangerous to have contact with 'aliens', because the more contact they have the more likely it is that bad 'aliens' find them. But they feel they have no choice. They ask whether you could suggest some trustworthy humans who may be able to help them. `
+		`The Yuhavi, like the government, fear that it is dangerous to have contact with 'aliens', because the more contact they have the more likely it is that 'bad aliens' find them. But they feel they have no choice. They ask whether you could suggest some trustworthy humans who may be able to help them. `
 		`	After considering the question, you decide that the smaller human shipyards are probably more trustworthy than the Syndicate. Southbound Shipyards is quite near monopod space, and would be the best option to talk to initially. `
 		choice
 			`	"I know a spaceship manufacturer who may be interested in working with you, would you like me to take you to meet with them?"`
@@ -201,7 +201,7 @@ mission "MP22 nospaceplane"
 
 mission "MP23"
 	name "Yuhavi meet with Kraz Cybernetics"
-	description "Take a delegation of Yuhavi to meet with Kraz Cybernetics"
+	description "Take a delegation of Yuhavi to meet jointly with Kraz Cybernetics and Southbound Shipyards management"
 	source Zug
 	destination Rust
 	passengers 5
@@ -221,15 +221,18 @@ mission "MP23"
 		`	"How can I know I can trust you with any of the information I am giving you?" you respond.`
 		`	He considers that for a moment, and then says "I suppose you have to trust me, and I have to trust you, to some degree. But I do need to see some evidence this is a real proposal, and not a practical joke being pulled by my junior staff. It's my birthday you see, so it's just the day they'd choose to do something crazy like that."`
 		choice
-			`	"Come and visit my ship, and meet them for yourself."`
+			`	"Come and visit my ship, and meet one for yourself."`
 		`The official travels with you to your ship, and comes on board. You call for Huasi to come to you alone, and when she hops into the hallway the official's eyes bulge in surprise.`
 		`	"I won't tell you her name, or any information about her at this stage. But you can see have a real proposal to make to you.", you say.`
 		`	"Yes, very real" mutters the official, clearly deep in thought. "What sort of commercial relationship are we talking about, in broad terms?"`
 		`	"In brief, these aliens wish to provide manufacturing facilities in return for ships and finances."`
 		`	"Why would aliens want human spaceships?"`
 		`	"Let's discuss that later. Might this sort of arrangement fit in with your shipyard?"`
-		`	The official ponders that question for a minute, before replying "Yes, actually, it would. We are highly dependent upon the Syndicate to manufacture many components of our ships. Having another component manufacturer could be beneficial. However, I suspect that Kraz Cybernetics may be also interested in such a relationship, and as the businesses of Southbound and Kraz are heavily interdependent, it would be best to discuss any such arrangements with Kraz also.`
+		`	The official ponders that question for a minute, before replying "Yes, actually, it would. We are highly dependent upon the Syndicate to manufacture many components of our ships. Having another component manufacturer could be beneficial. However, I suspect that our major outfit supplier Kraz Cybernetics may be also interested in such a relationship, and as the businesses of Southbound and Kraz are heavily interdependent, it would be best to discuss any such arrangements with Kraz also.`
 		`	"I will get a couple of trusted staff from Southbound, and board my personal spaceship. We will accompany you to Kraz Cybernetics for further discussions. I will warn them that we are coming, and arrange for a confidential meeting with selected trusted staff."`
-		
+	npc accompany save
+		government "Free Worlds"
+		personality escort timid
+		ship "Clipper" "Gentle Mongoose"
 
 	
