@@ -1,3 +1,0 @@
-government "Monopod1"
-	swizzle 6
-	color .3 1 1

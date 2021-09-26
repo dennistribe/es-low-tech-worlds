@@ -92,7 +92,7 @@ mission "MP wormhole 2a: Investigate"
 				depart
 	waypoint Katuba
 	on enter Katuba
-		dialog "When entering the system, your sensors are unable to detect the wormhole. Paul spends some time studying the sensors, then becomes noticeably angry. 'Take me back to Zug' he grumps, and goes straight back to his bunk."
+		dialog "When entering the system, your sensors are unable to detect the wormhole. Paul spends some time studying the sensors, then becomes noticeably angry. 'Take me back to Zug' he growls, and goes straight back to his bunk."
 		
 mission "MP wormhole 2b: Investigate"
 	to offer
