@@ -762,7 +762,7 @@ mission "MP11d"
 		
 mission "MP11e"
 	name "Kateni test flight"
-	description "Accompany the monopod's first reusable spaceship on its maiden flight"
+	description "Accompany the monopod's first reusable spaceship on its third flight"
 	source "Imatai"
 	landing
 	to offer
