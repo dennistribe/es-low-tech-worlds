@@ -1,8 +1,8 @@
 mission "MP sell diamond"
 	name "Monopod trying to sell diamonds."
 	description "An old monopod named Qase wants to go to Mere in the Kochab system to sell diamonds."
-	source Imatai
-	destination Mere
+	source "Imatai"
+	destination "Mere"
 	cargo "diamonds" 5
 	passengers 1
 	on offer
@@ -17,7 +17,7 @@ mission "MP sell diamond"
 					choice
 							`	"No."`
 							
-							`	He sighs. "No, I thourt you wouldn't. I think I'm just going to give up now." he goes and sits down at a table, and orders a drink!`
+					`	He sighs. "No, I thourt you wouldn't. I think I'm just going to give up now." he goes and sits down at a table, and orders a drink!`
 					choice
 							`	"Why?"`
 							`	"Oh. So sad. Bye bye."`
@@ -49,7 +49,7 @@ mission "MP sell diamond"
 							`	"I'm sure you'l find a way without me"`
 								decline
 					label buy
-					`"There not for sale anymore!" He cries.`
+					`	"There not for sale anymore!" He cries.`
 					choice	
 							`	"I could take you there."`
 								goto takethere
@@ -58,10 +58,7 @@ mission "MP sell diamond"
 					label takethere	
 					`	"I	knew I could count on you!" He cries. "To your Space Plane immediately! By the way, i'm Qase." "I'm..." You start, but are interrupted by Qase. "You don't need to tell me who you are." He says. "We all know who you are, space alien." Laughing, you go off to your ship.`
 						accept
-
 		on complete
 			payment 500000
-			dialog "'Thank you Space Alien! Without you I would never have got here!' He cries. 'Farewell!'"
-					choice
-							`	"Wait! How will you make sure the people don't notice that you are an alien?"`
-					`	He grins broadly at you. "Here." He says, as he pulls away a canvas. Under the canvas was a wheelchair. He rolls away with a small bag and with the words "See you soon! He comes back with the same bag and pases you the same bag. It is full of credits. "It's amazing how much they buy diamonds for." He says, then rolls away.`
+			dialog
+				`'Thank you Space Alien! Without you I would never have got here!' He cries. 'Farewell!' Then he rolls away in a wheel chair, his chosen discuse.`
