@@ -611,7 +611,7 @@ mission "MP10 Educational Materials a"
 		
 mission "MP10 Educational Materials b"
 	name "Teaching materials"
-	description "Take Tokani to Rust to visit the school and university libraries and bookshops, to find educational materials"
+	description "Take Tokani to Skymoot to see the dragons, and then home to Imatai."
 	passengers 1
 	cargo 2
 	source "Rust"
@@ -812,45 +812,46 @@ mission "MP12"
 		has "MP10 Educational Materials a: offered"
 		not
 			has "event: MP9 War won"
-	conversation
-		`While wandering around the airport, you are approached by a monopod you have not seen before.`
-		`	"Hello <last>. Come me. See Tokani."`
-		choice
-			`Go with her.`
-			`Don't go.`
-				decline
-		`You follow the monopod through the airport terminal, and out a door you have not been through before. She invites you into a van, in which you sit as uncomfortably as always. It is a shame monopod vehicles are so small.`
-		`	The monopod closes the door, and it clicks differently to normal. When you try to open the door, you find it is locked. You also find there is no way from the back of the van into the front. You are trapped.`
-		`	The van quickly drives through the streets, and seems to be drawing near the edge of the city, when the driver slams on the brakes and stops suddenly, before reversing around and speeding off down a side street. You notice you are being pursued by military vehicles.`
-		`	After a brief but terrifying chase, the van is run off the road into a ditch. The driver starts to hop away, but you hear gunfire and she falls down dead. An armed monopod goes to the front of the van and unlocks the doors, letting you out.`
-		`	He speaks to you in the monopod's tongue - he appears to not have learnt any of your language. You are able to understand that he wants you to go with him.`
-		choice
-			`	Go with the monopod.`
-				goto go
-			`	Refuse.`
-		`The monopod calls over several others, who all aim their weapons at you and make it very clear that you have no choice.`
-		label go
-		`	You get into their truck, and are carried back to the airport. When you arrive, Tokani is there, in his teaching clothes and looking flustered and worried.`
-		`	"<first>, very happy you are safe" he calls as soon as he sees you.`
-		choice
-			`	"Who was the lady in the van?"`
-			`	"What is going on?"`
-		`	"I have been told the woman you went with was a criminal. She was being watched by the authorities, but they did not expect her to kidnap you. An airport security guard noticed you leaving out the back entrance, and raised an alert because that appeared unusual. The authorities quickly worked out what was happening and sent the army to rescue you."`
-		choice
-			`	"Why would she kidnap me?"`
-				goto whykidnap
-			`	"Why did the soldiers point their guns at me and force me to come with them?"`
-		`Tokani glares at the soldiers and has a quick, angry discussion.`
-		`	"Sorry <first>, they shouldn't have been doing that. They were in a hurry, they wanted to get going as soon as possible and it seemed the fastest way to get you to do what they wanted. They don't speak your language. They were not going to actually shoot you."`
-		`	"Why did they shoot the driver?"`
-		goto endkidnap
-		label whykidnap
-		`	Tokani has a brief conversation with the military officer, who seems somewhat nervous about this question. Eventually, Tokani replies "Maybe she wanted money. Maybe she wanted you to do a job for her. I do not know, and she is dead now so we cannot ask her."`
-		`	"Why did they think it was serious enough to kill her?"
-		label endkidnap
-		`	"Sorry <first>, I really have to get back to my lecture. Goodbye."`
-		`	Tokani hurries out the door.`
-		
+	on offer
+		conversation
+			`While wandering around the airport, you are approached by a monopod you have not seen before.`
+			`	"Hello <last>. Come me. See Tokani."`
+			choice
+				`Go with her.`
+				`Don't go.`
+					decline
+			`You follow the monopod through the airport terminal, and out a door you have not been through before. She invites you into a van, in which you sit as uncomfortably as always. It is a shame monopod vehicles are so small.`
+			`	The monopod closes the door, and it clicks differently to normal. When you try to open the door, you find it is locked. You also find there is no way from the back of the van into the front. You are trapped.`
+			`	The van quickly drives through the streets, and seems to be drawing near the edge of the city, when the driver slams on the brakes and stops suddenly, before reversing around and speeding off down a side street. You notice you are being pursued by military vehicles.`
+			`	After a brief but terrifying chase, the van is run off the road into a ditch. The driver starts to hop away, but you hear gunfire and she falls down dead. An armed monopod goes to the front of the van and unlocks the doors, letting you out.`
+			`	He speaks to you in the monopod's tongue - he appears to not have learnt any of your language. You are able to understand that he wants you to go with him.`
+			choice
+				`	Go with the monopod.`
+					goto go
+				`	Refuse.`
+			`The monopod calls over several others, who all aim their weapons at you and make it very clear that you have no choice.`
+			label go
+			`	You get into their truck, and are carried back to the airport. When you arrive, Tokani is there, in his teaching clothes and looking flustered and worried.`
+			`	"<first>, very happy you are safe" he calls as soon as he sees you.`
+			choice
+				`	"Who was the lady in the van?"`
+				`	"What is going on?"`
+			`	"I have been told the woman you went with was a criminal. She was being watched by the authorities, but they did not expect her to kidnap you. An airport security guard noticed you leaving out the back entrance, and raised an alert because that appeared unusual. The authorities quickly worked out what was happening and sent the army to rescue you."`
+			choice
+				`	"Why would she kidnap me?"`
+					goto whykidnap
+				`	"Why did the soldiers point their guns at me and force me to come with them?"`
+			`Tokani glares at the soldiers and has a quick, angry discussion.`
+			`	"Sorry <first>, they shouldn't have been doing that. They were in a hurry, they wanted to get going as soon as possible and it seemed the fastest way to get you to do what they wanted. They don't speak your language. They were not going to actually shoot you."`
+			`	"Why did they shoot the driver?"`
+			goto endkidnap
+			label whykidnap
+			`	Tokani has a brief conversation with the military officer, who seems somewhat nervous about this question. Eventually, Tokani replies "Maybe she wanted money. Maybe she wanted you to do a job for her. I do not know, and she is dead now so we cannot ask her."`
+			`	"Why did they think it was serious enough to kill her?"`
+			label endkidnap
+			`	"Sorry <first>, I really have to get back to my lecture. Goodbye."`
+			`	Tokani hurries out the door.`
+			
 			
 mission "MP9 War"
 	invisible

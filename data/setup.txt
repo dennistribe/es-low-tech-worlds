@@ -1,3 +1,15 @@
 government "Monopod"
 	swizzle 6
 	color .3 1 1
+	"attitude toward"
+		"Pirate" -.3
+
+government "Yuhavi"
+	swizzle 3
+	"attitude toward"
+		"Pirate" -.3
+
+government "Pirate"
+	"attitude toward"
+		"Monopod" -.1
+		"Yuhavi" -.1

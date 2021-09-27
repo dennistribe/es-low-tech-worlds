@@ -3,6 +3,7 @@ mission "MP20"
 	source "Imatai"
 	stopover "Uca Cevata"
 	passengers 5
+	cargo 2
 	to offer
 		has "MP13: done"
 	conversation
@@ -23,7 +24,7 @@ mission "MP20"
 			`	"No, I do not want to choose sides in your war."`
 			`	"No, you are terrorists who have killed thousands of innocent people. I will not help you."`
 				goto terrorists
-		`The king replies "Understand. You not fight against us, not fight for us."`
+		`The king replies "Understand. You not fight against us, not fight for us. Not your fight. I tell you our story."`
 		goto next
 		label terrorists
 		`Huasi is shocked at your reply, but translates for the king. He is also angry, but replies calmly.`
@@ -31,22 +32,22 @@ mission "MP20"
 		label next
 		`	"We peaceful country. People happy. Central government grow, we worry, but keep peace. Then government say king not king, land not our land, they rule us. This not true.`
 		`	"For 200 year, Yuhavi live here. Defend land. Nobody take land from Yuhavi. Proud. Try to take land, we fight. We win.`
-		`	"New government army come in, we fight back. But army too big, we too small. Too few people. Desperate.`
-		`	"Smart scientists say, fight with robot. Save people. Make driving robot, flying robot, swimming robot. Boom!`
+		`	"New government army come in, we fight back. But army too big, we too small. Too few people. Hard.`
+		`	"Smart scientist say, fight with robot. Save people. Make driving robot, flying robot, swimming robot. Boom!`
 		`	"When army come in, boom. Nobody know where boom next, surprise. So army not come in. Peace."`
 		choice
 			`	"Why did you target civilians?"`
 		`"Mostly lie. We target army. But some mistake, some bad decision. Angry robot driver do bad thing, punished. Civilians die both sides. War evil."`
 		choice
 			`	"How were you defeated?"`
-		`"Weapons you give. Stop boom. End peace. Army not scared, come in. Too many. Fight brave, but..." the king is crying quietly now and has stopped talking.`
+		`"Weapons you give shoot robot. Stop boom. End peace. Army not scared, come in. Too many. Fight brave, but..." the king is crying quietly now and has stopped talking.`
 		`	The king motions for one of his aides to continue.`
 		`	"Paru King old. Not go Uca Cevata. Take long time, not finish before king die." The aide then talks to the king before making his next statement. "People not happy king. Lose war. Lose respect. People happy king son Pagu." The aide points to the young monopod beside the king. "Pagu lead people Uca Cevata."`
 		`	Pagu now speaks. "Lose land bad. But gain Uca Cevata good. We have whole planet. Bad planet, but all ours. Hard work, but Yuhavi strong. Become great space people."`
 		`	"Cannot do without you help. You take me Uca Cevata?"`
 		choose
-			`"Yes, I will show you the planet."`
-			`"No, I want nothing to do with this."`
+			`	"Yes, I will show you the planet."`
+			`	"No, I want nothing to do with this."`
 				decline
 		`Pagu says he will collect some other people and equipment, and meet you in your ship shortly.`
 	on stopover
@@ -137,12 +138,13 @@ mission "MP21c"
 			personality escort timid
 			ship "Space-plane hyperdrive" "Space-plane"
 		
-mission "MP22 spaceplane"
+mission "MP22a spaceplane"
 	name "Yuhavi travel to Southbound Shipyards"
 	description "Take a delegation of Yuhavi to investigate a commercial relationship with Southbound Shipyards."
 	source Imatai
 	destination Zug
 	passengers 5
+	cargo 5
 	landing
 	to offer
 		has "MP21c: done"
@@ -168,12 +170,13 @@ mission "MP22 spaceplane"
 		`Pagu discusses this with his aides, and decides to send a small delegation with you to Southbound Shipyards. "We cannot pay you yet, but hope to pay you well in future."`
 		`	Pagu, Huasi, and three specialists (an engineer, an accountant, and one of King Paru's most experienced political advisers) board your spaceship to travel to Zug.`
 		
-mission "MP22 nospaceplane"
+mission "MP22a nospaceplane"
 	name "Yuhavi travel to Southbound Shipyards"
 	description "Take a delegation of Yuhavi to investigate a commercial relationship with Southbound Shipyards."
 	source	Imatai
 	destination Zug
 	passengers 5
+	cargo 5
 	landing
 	to offer
 		has "event: MP20 continue"
@@ -199,17 +202,18 @@ mission "MP22 nospaceplane"
 		`Pagu discusses this with his aides, and decides to send a small delegation with you to Southbound Shipyards. "We cannot pay you yet, but hope to pay you well in future."`
 		`	Pagu, Huasi, and three specialists (an engineer, an accountant, and one of King Paru's most experienced political advisers) board your spaceship to travel to Zug.`
 
-mission "MP23"
+mission "MP22b"
 	name "Yuhavi meet with Kraz Cybernetics"
 	description "Take a delegation of Yuhavi to meet jointly with Kraz Cybernetics and Southbound Shipyards management"
 	source Zug
 	destination Rust
 	passengers 5
+	cargo 5
 	landing
 	to offer
 		or
-			has "MP22 spaceplane: done"
-			has "MP22 nospaceplane: done"
+			has "MP22a spaceplane: done"
+			has "MP22a nospaceplane: done"
 	conversation
 		`When landing on Zug, you leave the monopods on your ship and travel alone to Southbound Shipyards to meet with their management. You request a confidential meeting with a senior management official about a business opportunity, and after considerable debate with the receptionist (who thinks you are just another travelling salesperson), you are finally given a 5 minute appointment with a member of the shipyard upper management committee.`
 		`	On entering the office, as you have so little time, you get straight to the point.`
@@ -222,17 +226,140 @@ mission "MP23"
 		`	He considers that for a moment, and then says "I suppose you have to trust me, and I have to trust you, to some degree. But I do need to see some evidence this is a real proposal, and not a practical joke being pulled by my junior staff. It's my birthday you see, so it's just the day they'd choose to do something crazy like that."`
 		choice
 			`	"Come and visit my ship, and meet one for yourself."`
-		`The official travels with you to your ship, and comes on board. You call for Huasi to come to you alone, and when she hops into the hallway the official's eyes bulge in surprise.`
+		`"I will come to your ship and see. If you are lying, and this is all a waste of my time, I will ensure you never do business with this shipyard again."`
+		`	The official travels with you to your ship, and comes on board. You call for Huasi to come to you alone, and when she hops into the hallway the official's eyes bulge in surprise.`
 		`	"I won't tell you her name, or any information about her at this stage. But you can see have a real proposal to make to you.", you say.`
 		`	"Yes, very real" mutters the official, clearly deep in thought. "What sort of commercial relationship are we talking about, in broad terms?"`
 		`	"In brief, these aliens wish to provide manufacturing facilities in return for ships and finances."`
 		`	"Why would aliens want human spaceships?"`
 		`	"Let's discuss that later. Might this sort of arrangement fit in with your shipyard?"`
 		`	The official ponders that question for a minute, before replying "Yes, actually, it would. We are highly dependent upon the Syndicate to manufacture many components of our ships. Having another component manufacturer could be beneficial. However, I suspect that our major outfit supplier Kraz Cybernetics may be also interested in such a relationship, and as the businesses of Southbound and Kraz are heavily interdependent, it would be best to discuss any such arrangements with Kraz also.`
-		`	"I will get a couple of trusted staff from Southbound, and board my personal spaceship. We will accompany you to Kraz Cybernetics for further discussions. I will warn them that we are coming, and arrange for a confidential meeting with selected trusted staff."`
+		`	"I will get a couple of trusted staff from Southbound, and board my personal spaceship. We will accompany you to Kraz Cybernetics for further discussions. I will warn them that we are coming, and arrange for a confidential meeting."`
 	npc accompany save
 		government "Free Worlds"
 		personality escort timid
 		ship "Clipper" "Gentle Mongoose"
 
-	
+mission "MP22c"
+	name "Kraz and Southbound visit Yuhavi"
+	description "Take a delegation from Kraz Cybernetics and Southbound Shipyards to view Uca Cevati and Imatai."
+	source Rust
+	destination Imatai
+	stopover Uca Cevati
+	passengers 7
+	cargo 5
+	landing
+	to offer
+		has "MP22b: done"
+	conversation
+		`You land at a private shipyard bay belonging to Kraz Cybernetics, and your ship is pulled into a hanger. The doors are shut, and all workers leave. Then a small group of men and women in business attire enter, carrying a foldup table and chairs, and set them up in the hanger beside your ship.`
+		`	You exit the ship, and are assured this building is completely secure and private. You tell the Yuhasi that it is safe for them to leave the ship also. They hop out of the airlock door, clearly pleased to no longer be cooped up in the ship.`
+		`	Although already warned about the monopods' appearance, the humans are still visibly surprised and stare at them. The monopods stare back - they have never seen any human other than yourself before.`
+		`	The humans introduce themselves, and you forget most of their names, but the Southbound executive you met previously is named Edward. He has brought an engineer and a stock procurement officer. The Kraz delegation includes a member of the board of directors, an engineer, an industrial architect, and a supply chain specialist.`
+		choice
+			`	Explain the situation`
+		`	You first explain that the Yuhavi have never had contact with humans or any other species before, and have not yet developed space flight. They are very concerned about secrecy, and wish to keep the location of their system a closely guarded secret, at least until they have the military strength to resist pirates. You then explain their forced migration to an icy world, and their need for both spaceships for the colonisation, and their need to build a profitable economy on that world.`
+		`	The Yuhavi show some samples of the electronic equipment they produce for their own use, and the Kraz and Southbound engineers are impressed with the quality of their workmanship and innovative approaches. The Kraz delegation show the Yuhavi samples of equipmentt they currently source from the Syndicate, and the Yuhavi indicate that they could manufacture these.`
+		choice
+			`	Negotiate a commercial agreement`
+		`Negotiations are difficult because the Yahavi have so little to offer today, they can only promise what they will do in the future.`
+		`	Finally, a tentative agreement is reached. Southbound will loan the Yuhavi ships, and train their pilots. Kraz will help establish factories producing specific components required by both companies.`
+		`	The Yuhavi in return agree that they will only supply Southbound and Kraz, no other shipyards, and all technical innovations they may develop over the next 50 years (such as novel outfits or ships) will be licenced to Kraz or Southbound and sold exclusively through them.`
+		`	The Yuhavi have always been proudly independent, and it is very difficult for Pagu to agree to such a long-term partnership. But Southbound and Kraz will be investing a lot into this arrangement, and need long-term security for their investments. `
+		`	Southbound and Kraz will sign the agreement once their representatives have visited Uca Cevata and Imatai to verify the situation themselves. The Southbound engineer Sheree, and the Kraz architect Daniel volunteer to travel with you. Their companies authorise them to sign the contract if all appears satisfactory.`
+			accept
+	on stopover
+		dialog	`You land at the site Pagu has selected for his first settlement. Sheree and Daniel walk around the site with the monopods, discussing the layout of factories and shipyards, and also housing and food supplies for workers. Finally they re-board the <ship> to travel to <destination>.`
+
+mission "MP22d"
+	name "Delegation and pilots to Zug"
+	description "Return the Southbound and Kraz representatives to Zug, along with Yuhavi pilots for training."
+	source Imatai
+	destination Zug
+	passengers 6
+	landing
+	to offer
+		has "MP22c: done"
+	conversation
+		`Having spent several days discussing matters on-board your ship, both sides are much clearer about their plans. To keep the arrangement confidential from the government at this stage, you invite King Panu on-board the <ship> to meet Sheree and Daniel rather than having them go outside. After making some minor alterations to the fine details by mutual agreement Sheree and Daniel sign the contract on behalf of their companies, as do Panu and Pagu.`
+		`	King Panu has clearly prepared a small speech, which Huasi does her best to translate. "Captain <last>, thankyou. Great friend of Yuhavi. Once strong again, pay you well for great help."`
+		`	Pagu asks you to return Sheree and Daniel to Zug, along with three pilots to be trained to fly the first ships from Southbound. The pilots are some of the few surviving fighter pilots from the Yuhasi airforce - they should not take long to train. Huasi will accompany them, and stay with them in Zug to translate and help them learn the human common tongue. They will need to know the language as they will be travelling frequently to Zug and Rust.`
+			accept
+	on complete
+		dialog `You land at a private hanger at Southbound Shipyards, which has been set up as a secret facility for interacting with the Yuhavi. Some rooms on the side of the hanger have been converted into living quarters for monopods while visiting Zug. Edward meets you and thanks you for trusting them with the knowledge of the Yuhavi, and facilitating such a historic agreement. He is well aware they are taking a large commercial risk, but is excited and optimistic. He informs you that 50,000 credits will be credited to your account for transporting Sheree and Daniel.`
+		payment 50000
+		
+mission "MP22e"
+	name "Fetch keystones for Southbound"
+	description "Southbound Shipyards needs 10 quantum keystones in order to access the wormhole to monopod space."
+	source Zug
+	landing
+	to offer
+		has "MP22d: done"
+	conversation
+		`During the flight, Sheree asks you how to traverse the wormhole.`
+		choice
+			`	"I use an outfit called a 'Quantum Keystone'"`
+		`"Where do you obtain these keystones?"`
+		choice
+			`	"From an alien race"`
+			`	"I cannot tell you"`
+		`"I understand you not wanting to tell me precisely where - it is clear that the secret of the wormhole must be preserved for the safety of the Yuhavi and the other monopods. Nevertheless, we cannot help them without these keystones. Can you fetch 10 of these for us please, to equip those ships that need to interact with the Yuhavi? We can pay you 500,000 credits for these on your return."`
+		`	This should be a very generous payment. If it seems insufficient, you need to find a cheaper source of keystones, as you are likely to have more of these jobs in future.`
+		choice
+			`	"Certainly I can."`
+				accept
+			`	"No, I am done helping the Yuhavi"`
+				decline
+	on complete
+		outfit "Quantum Keystone" -10
+		dialog `Sheree thanks you for delivering the keystones. You find that 500,000 credits has been added to your account.`
+		payment 500000
+		
+mission "MP23"
+	name "Escort convoy to Uca Cevata and Imatai"
+	description "Escort the three monopod pilots back to Uca Cevata and Imatai with the ships Southbound is loaning to the Yuhavi."
+	source Zug
+	destination Imatai
+	stopover "Uca cevata"
+	landing
+	to offer
+		has "MP22e: done"
+	npc accompany save
+		government "Yuhavi"
+		personality escort timid
+		ship "Clipper keystone" "Triana"
+	npc accompany save
+		government "Yuhavi"
+		personality escort timid
+		ship "Clipper keystone" "Guzai"
+	npc accompany save
+		government "Yuhavi"
+		personality escort timid
+		ship "Clipper keystone" "Ylarra"
+	npc
+		government "Pirate"
+		personality staying harvests plunders
+		ship "Clipper" "Black Gnat"
+		system "Katuba"
+	on offer
+		conversation
+			`this is the mission`
+				accept
+			
+ship "Clipper" "Clipper keystone"
+	outfits
+		"Beam Laser" 2
+		"Javelin Mini Pod" 2
+		"Javelin" 80
+		
+		"nGVF-DD Fuel Cell"
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		
+		"Greyhound Plasma Thruster"
+		"Greyhound Plasma Steering"
+		"Hyperdrive"
+		"Quantum Keystone"
+		
+		
