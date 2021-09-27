@@ -69,3 +69,4 @@ outfitter "Monopod advanced"
 	"Shield Defier Ammo"
 	"Shield Defier"
 	"debullet"
+	"Vakatang

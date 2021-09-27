@@ -12,10 +12,10 @@ outfit "Z01 Bouncer Engines"
 	"turn" 112
 	"turning energy" .32
 	"turning heat" .8
-	"flare sprite" "effects/flame3"
+	"flare sprite" "Effects/flame"
 		"frame rate" 1.2
 	"flare sound" "ion tiny"
-	"steering flare sprite" "effect/ion flare/tiny"
+	"steering flare sprite" "Effects/flame"
 		"frame rate" 1.2
 	"steering flare sound" "ion tiny"
 	description "The first engine that the monopod's designed."
@@ -45,7 +45,7 @@ outfit "X02 Hopper Engines"
 outfit "A52 Generator"
 	category "Power"
 	cost 40000
-	thumbnail "Outfits/A52 Generator"
+	thumbnail "power/A52 Generator"
 	"mass" 20
 	"outfit space" -20
 	"energy generation" 1.0
@@ -60,9 +60,19 @@ outfit "G35 Energy Box"
 	"outfit space" -11
 	"energy capacity" 1020
 	description "This is a small battery"
+
+outfit "Vakatang"
+	category "Hand to Hand"
+	cost 8000
+	thumbnail "Hand to hand/vakatang"
+	"capture attack" .9
+	"capture defense" .3
+	"unplunderable" 1
+	description "This is a small knife like object that also has the ability to shoot a couple of shots. It's blade is positioned just right to let a bullet pass beside it without breaking the blade. It is not the best at defending and is much better at attacking."
 	
 outfitter "Monopod advanced"
 	"X02 Hopper Engines"
 	"Z01 Bouncer Engines"
 	"A52 Generator"
 	"G35 Energy Box"
+	"Laser Rifle"

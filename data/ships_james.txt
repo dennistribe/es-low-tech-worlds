@@ -127,7 +127,8 @@ ship "Space-plane"
 		"Z01 Bouncer Engines"
 		"A52 Generator"
 		"G35 Energy Box"
-	engine -75 298.5
+	engine 47.5 10
+	engine -46.5 9.5
 	explode "big explosion" 20
 	description "This is a plane! It is a space-plane!"
 		
