@@ -664,10 +664,6 @@ mission "MP11a"
 		dialog `When the Kateni safely lands, a large crowd of monopods rush out of the hanger and surround the ship, greeting the pilot enthusiastically when he exits. One approaches you and hands you a bag of gold, telling you "Make changes, test again, tell you when ready".`
 		event "MP11 Kateni2" 10
 
-ship "Kateni" "Kateni hyperdrive"
-	outfits
-		"Hyperdrive"
-
 event "MP11 Kateni2"
 
 mission "MP11b"
@@ -723,13 +719,6 @@ mission "MP11c"
 			`On landing, you are surrounded by the research team, who are very relieved to see the pilot safe in your ship. After a long conversation among themselves, the team leader approaches you to explain.`
 			`	"During flight, data transmit our computer. With data and pilot words, we see two problem. Engine caught fire - but release system fail. Engine heat maybe damaged release. Very thankyou rescue pilot. Dangerous with engine fire."`
 			`	He hands you another bag of gold. "More. Thankyou."`
-			
-ship "Kateni" "Kateni dead"
-	attributes
-		"hull" 200
-		"shields" 0
-	outfits
-		"Hyperdrive"
 		
 hazard "Kateni killer"
 	"constant strength"

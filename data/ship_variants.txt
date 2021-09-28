@@ -1,0 +1,54 @@
+ship "Kateni" "Kateni hyperdrive"
+	outfits
+		"Z01 Bouncer Engines"
+		"G35 Energy Box"
+		"A52 Generator"
+		"Hyperdrive"
+		
+ship "Kateni" "Kateni dead"
+	attributes
+		"hull" 200
+		"shields" 0
+	outfits
+		"Z01 Bouncer Engines"
+		"G35 Energy Box"
+		"A52 Generator"
+		"Hyperdrive"
+		
+ship "Space-plane" "Space-plane hyperdrive"
+	outfits
+		"Z01 Bouncer Engines"
+		"A52 Generator"
+		"G35 Energy Box"
+		"Hyperdrive"
+		
+ship "Clipper" "Clipper keystone"
+	outfits
+		"Beam Laser" 2
+		"Javelin Mini Pod" 2
+		"Javelin" 80
+		
+		"nGVF-DD Fuel Cell"
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		
+		"Greyhound Plasma Thruster"
+		"Greyhound Plasma Steering"
+		"Hyperdrive"
+		"Quantum Keystone"
+
+ship "Star Barge" "Star Barge keystone"
+	outfits
+		"Anti-Missile Turret"
+
+		"nGVF-BB Fuel Cell"
+		"LP036a Battery Pack"
+		"D14-RN Shield Generator"
+		
+		"X1700 Ion Thruster"
+		"X1200 Ion Steering"
+		"Hyperdrive"
+		"Fuel Pod"
+		"Quantum Keystone"
+		
+		

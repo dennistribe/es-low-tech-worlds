@@ -101,10 +101,7 @@ mission "MP21a"
 		ship "Space-plane hyperdrive" "Space-plane"
 	on waypoint
 		dialog `The Space-plane flies around extremely slowly. You have never before seen a spaceship with such terrible performance. However, nothing explodes, and the engineer finally tells you the tests are complete and it is time to land.`
-		
-ship "Space-plane" "Space-plane hyperdrive"
-	outfits
-		"Hyperdrive"
+	
 
 mission "MP21b"
 	name "Exchange gold"
@@ -266,7 +263,11 @@ mission "MP22c"
 		`	Finally, a tentative agreement is reached. Southbound will loan the Yuhavi ships, and train their pilots. Kraz will help establish factories producing specific components required by both companies.`
 		`	The Yuhavi in return agree that they will only supply Southbound and Kraz, no other shipyards, and all technical innovations they may develop over the next 50 years (such as novel outfits or ships) will be licenced to Kraz or Southbound and sold exclusively through them.`
 		`	The Yuhavi have always been proudly independent, and it is very difficult for Pagu to agree to such a long-term partnership. But Southbound and Kraz will be investing a lot into this arrangement, and need long-term security for their investments. `
-		`	Southbound and Kraz will sign the agreement once their representatives have visited Uca Cevata and Imatai to verify the situation themselves. The Southbound engineer Sheree, and the Kraz architect Daniel volunteer to travel with you. Their companies authorise them to sign the contract if all appears satisfactory.`
+		`	Southbound and Kraz will sign the contract once their representatives have visited Uca Cevata and Imatai to verify the situation themselves. The Southbound engineer Sheree, and the Kraz architect Daniel volunteer to travel with you.`
+		choice
+			`	Discuss the transport route`
+		`You explain that their system can only be accessed through a wormhole, which requires a special device to unlock, one of which is installed on your ship.`
+		`	Pagu asks whether you would be willing to obtain these devices for the Yuhavi, Southbound and Kraz. You indicate that you could do so. Edward thanks you, and says they will discuss the practicalities of this once the contract is signed.`
 			accept
 	on stopover
 		dialog	`You land at the site Pagu has selected for his first settlement. Sheree and Daniel walk around the site with the monopods, discussing the layout of factories and shipyards, and also housing and food supplies for workers. Finally they re-board the <ship> to travel to <destination>.`
@@ -276,14 +277,14 @@ mission "MP22d"
 	description "Return the Southbound and Kraz representatives to Zug, along with Yuhavi pilots for training."
 	source Imatai
 	destination Zug
-	passengers 6
+	passengers 7
 	landing
 	to offer
 		has "MP22c: done"
 	conversation
 		`Having spent several days discussing matters on-board your ship, both sides are much clearer about their plans. To keep the arrangement confidential from the government at this stage, you invite King Panu on-board the <ship> to meet Sheree and Daniel rather than having them go outside. After making some minor alterations to the fine details by mutual agreement Sheree and Daniel sign the contract on behalf of their companies, as do Panu and Pagu.`
 		`	King Panu has clearly prepared a small speech, which Huasi does her best to translate. "Captain <last>, thankyou. Great friend of Yuhavi. Once strong again, pay you well for great help."`
-		`	Pagu asks you to return Sheree and Daniel to Zug, along with three pilots to be trained to fly the first ships from Southbound. The pilots are some of the few surviving fighter pilots from the Yuhasi airforce - they should not take long to train. Huasi will accompany them, and stay with them in Zug to translate and help them learn the human common tongue. They will need to know the language as they will be travelling frequently to Zug and Rust.`
+		`	Pagu asks you to return Sheree and Daniel to Zug, along with four pilots to be trained to fly the first ships from Southbound. The pilots are some of the few surviving fighter pilots from the Yuhasi airforce - they should not take long to train. Huasi will accompany them, and stay with them in Zug to translate and help them learn the human common tongue. They will need to know the language as they will be travelling frequently to Zug and Rust.`
 			accept
 	on complete
 		dialog `You land at a private hanger at Southbound Shipyards, which has been set up as a secret facility for interacting with the Yuhavi. Some rooms on the side of the hanger have been converted into living quarters for monopods while visiting Zug. Edward meets you and thanks you for trusting them with the knowledge of the Yuhavi, and facilitating such a historic agreement. He is well aware they are taking a large commercial risk, but is excited and optimistic. He informs you that 50,000 credits will be credited to your account for transporting Sheree and Daniel.`
@@ -297,14 +298,14 @@ mission "MP22e"
 	to offer
 		has "MP22d: done"
 	conversation
-		`During the flight, Sheree asks you how to traverse the wormhole.`
+		`During the flight, Sheree asks you for further information on how to traverse the wormhole.`
 		choice
 			`	"I use an outfit called a 'Quantum Keystone'"`
 		`"Where do you obtain these keystones?"`
 		choice
 			`	"From an alien race"`
 			`	"I cannot tell you"`
-		`"I understand you not wanting to tell me precisely where - it is clear that the secret of the wormhole must be preserved for the safety of the Yuhavi and the other monopods. Nevertheless, we cannot help them without these keystones. Can you fetch 10 of these for us please, to equip those ships that need to interact with the Yuhavi? We can pay you 500,000 credits for these on your return."`
+		`"I understand you not wanting to tell me precisely where - it is clear that the secret of the wormhole must be preserved for the safety of the Yuhavi and the other monopods. Nevertheless, we obviously cannot help them without these keystones. Can you fetch 10 of these for us please, to equip those ships that need to interact with the Yuhavi? We can pay you 500,000 credits for these on your return."`
 		`	This should be a very generous payment. If it seems insufficient, you need to find a cheaper source of keystones, as you are likely to have more of these jobs in future.`
 		choice
 			`	"Certainly I can."`
@@ -320,8 +321,7 @@ mission "MP23"
 	name "Escort convoy to Uca Cevata and Imatai"
 	description "Escort the three monopod pilots back to Uca Cevata and Imatai with the ships Southbound is loaning to the Yuhavi."
 	source Zug
-	destination Imatai
-	stopover "Uca cevata"
+	destination "Uca cevata"
 	landing
 	to offer
 		has "MP22e: done"
@@ -332,34 +332,81 @@ mission "MP23"
 	npc accompany save
 		government "Yuhavi"
 		personality escort timid
-		ship "Clipper keystone" "Guzai"
+		ship "Star Barge keystone" "Guzai"
 	npc accompany save
 		government "Yuhavi"
 		personality escort timid
-		ship "Clipper keystone" "Ylarra"
+		ship "Star Barge keystone" "Ylarra"
+	npc accompany save
+		government "Yuhavi"
+		personality escort timid
+		ship "Star Barge keystone" "Brial"
 	npc
 		government "Pirate"
 		personality staying harvests plunders
-		ship "Clipper" "Black Gnat"
+		ship "Fury" "Black Gnat"
 		system "Katuba"
 	on offer
 		conversation
-			`this is the mission`
-				accept
+			`On landing, you visit the hanger the Yuhavi pilots are using to see how they are getting on.`
+			`	The monopod pilots you left here last time greet you in your own language (hesitantly). Huasi tells you they have finished their flight training and are very confident in the new ships. The ships are loaded with supplies from Kraz Cybernetics for the first settlement on Uca cevati, and they are ready to travel back there as soon as keystones have been installed in their ships. This should only take a few hours.`
+			`	Edward comes to greet you also. "We are initially providing the Yuhavi with three star barges to establish a regular cargo service between Imatai and Uca cevata, and one clipper as a flagship. The clipper gives them a fast, armed transport to and from Zug and Kraz, and can function for planetary defence if needed. All four pilots are familiar with both types of ship."`
+			`	"Grateful if you escort us home Captain <last>." says one of the pilots.`
+			choice
+				`	"I would be glad to escort you."`
+					accept
+				`	"I am sure you can make it there on your own."`
+					decline
+	on complete
+		dialog `You land at the chosen first settlement site, which is still completely empty, and help the pilots and Huasi unload the supplies. It is strange to leave so much expensive equipment lying in the open unguarded. The pilots can make their way to Imatai on their own. You should probably visit Tokani and the central government on Imatai.`
 			
-ship "Clipper" "Clipper keystone"
-	outfits
-		"Beam Laser" 2
-		"Javelin Mini Pod" 2
-		"Javelin" 80
-		
-		"nGVF-DD Fuel Cell"
-		"LP072a Battery Pack"
-		"D23-QP Shield Generator"
-		
-		"Greyhound Plasma Thruster"
-		"Greyhound Plasma Steering"
-		"Hyperdrive"
-		"Quantum Keystone"
-		
+
+
+mission "MP24"
+	name "Monopod government delegation visit Uca cevata"
+	source Imatai
+	destination "Uca cevata"
+	passengers 4
+	landing
+	to offer
+		has "MP23: offered"
+	on offer
+		conversation
+			`Soon after you exit your ship, you are approached by a grim-faced military officer who says "Come with me". You try to talk to him, but he clearly does not know your language. He just keeps repeating one memorised phrase: "Come with me".` 
+			choice
+				`	Go with him.`
+					goto go
+				`	Turn and try to get back into the <ship>.`
+			`As you turn away from him, he quickly grabs your arm and clamps your wrist in a handcuff. The other end is already fastened to his own arm. "Come with me" he repeats.`
+			label go
+			`	You go with him to a military building on the side of the airport, where he leaves you in a small room. The door is locked.`
+			`	After some time you hear vehicles outside, and voices. A door opens, and you are led through into a meeting room. In the meeting room are Tokani, some officials and military officers.`
+			`	Tokani says "Yesterday, four alien ships entered our system, and landed on Uca cevata. They were detected by our satellites, and watched through telescopes by many people."`
+			`	"Then today they left Uca cevata and landed on Imatai - in the former Yuhavi territory. We have seen photographs of them - they appear to be painted in the colour scheme formerly used by the Yuhavi airforce, and one looks like a warship."`
+			`	"You are the only alien who has found where we live, and has been told about the Yuhavi. You must have something to do with this. If you are giving the Yuhavi airforce armed spaceships, that is treason."`
+			`	"Tell us what is happening. You will not leave this room until you tell us everything."`
+			choice
+				`	"You asked me to help them emigrate to Uca cevati. How could they emigrate without spaceships?"`
+			`"We provided them with a spaceship (which they do not appear to have used yet), and we have been building more for them. You also have a spaceship. That should be enough. Why and how do they have alien spaceships?"`
+			choice
+				`	"I have simply helped transport them places to talk to people and make their own arrangements. If you want to know what those arrangements are, you would need to ask King Panu."`
+					goto king
+				`	"Your space-planes are so dangerous even your own engineers refuse to ride in them. Would you ride in them? The Yuhavi wanted something safer."`
+					goto safe
+				`	"To emigrate, they need transport ships. Those spaceships are just transports, not warships, and very basic transports by human standards."`
+			`"So those ships are not armed? Just transports?"`
+			`	"Well, one is armed, for protection from pirates. That is normal for human transports. The smaller ships would not have made it here safely without an armed escort. Most of the ships are unarmed."`
+			goto end
+			label king
+			`"He is not King Panu! They have no king. They are defeated and are under our government. Do not call him King again."`
+			`	"My point is that they have made their own arrangements, and you would need to talk to the Yuhavi about those arrangements. Panu is the most logical person for you to ask, since until recently he was their king."`
+			goto end
+			label safe
+			`The monopods look deeply offended and upset, but can hardly argue with your statement. They seem at a loss for words.`
+			label end
+			`	"I am not working against you" you explain. "I am doing exactly what you asked - helping to get the Yuhavi off Imatai and onto Uca cevata. You never specified how I should do that. Why are you angry at me for doing exactly what you asked me to do?"`
+			`	A messenger enters the room. After a brief discussion, Tocani says "The spaceships have taken off from Imatai already, and they are accompanied by the space-plane. We are pleased they are using that now."`
+			`	"You will now take a small delegation to Uca cevata to see what the Yuhavi are doing and discuss the situation with them."`
+			`	It is clear you have no choice in this.`
+				accept
 		
