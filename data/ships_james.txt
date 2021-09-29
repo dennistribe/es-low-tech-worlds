@@ -19,7 +19,8 @@ ship "Kateni"
 	# The sprite path is relative to the "images" directory, and does not
 	# include the file extension, animation frame, etc. For example, if the
 	# sprite uses ships/exemplar-0.png and ships/exemplar-1.png, just put this:
-	sprite "ship/box3"
+	sprite "ship/kateni"
+	thumbnail "ship/kateni-thumbnail"
 	attributes
 		category "Light Freighter"
 		"cost" 500000
@@ -64,7 +65,6 @@ ship "Kateni"
 
 ship "Line"
 	sprite "ship/line"
-	
 	attributes
 		category "Light Freighter"
 		"cost" 7800000
@@ -131,11 +131,43 @@ ship "Space-plane"
 	engine -46.5 9.5
 	explode "big explosion" 20
 	description "This is a plane! It is a space-plane!"
-		
+	
+ship "Suicide-Drone"
+	sprite "ship/Boom-drone"
+	thumbnail "ship/Boom-drone"
+	attributes
+		category "Drone"
+		"cost" 50000
+		"hull" 100
+		"automation" 1
+		"mass" 30
+		"drag" .9
+		"heat dissipation" 9
+		"outfit space" 60
+		"weapon capacity" 20
+		"engine capacity" 20
+		weapon
+			"blast radius" 400
+			"shield damage" 2000
+			"hull damage" 950
+			"hit force" 4000
+	outfits
+		"Z01 Bouncer Engines" 1
+		"A52 Generator" 1
+		"G35 Energy Box" 1
+		"Shield Defier Ammo" 3000
+		"Shield Defier" 1
+	gun 0 -20.5
+	engine 0.5 17
+	explode "small explosion" 10
+	explode "medium explosion" 5
+	explode "big explosion" 10
+	explode "nuke explosion" 4
+	description "This is a plane! It is a space-plane!"
 # This line expands the "Basic Ships" shipyard to also include the Exemplar. If
 # instead you want to replace all the existing ships, the first line of your new
 # shipyard definition should be the keyword "clear".
 shipyard "Basic Ships"
-	"Line"
 	"Kateni"
 	"Space-plane"
+	"Suicide-Drone"
