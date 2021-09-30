@@ -851,66 +851,75 @@ event "MP9 War won"
 mission "MP13"
 	name "War revealed"
 	source "Imatai"
+	infiltrating
 	passengers 1
 	to offer
 		has "event: MP9 War won"
-	conversation
-		`There appears to be a party happening all over the spaceport today. There are brightly coloured streamers everwhere, and a band playing music on the tarmac. Everybody appears to be excited and overjoyed - although some are crying.`
-		choice
-			`	Find someone to ask what is happening.`
-			`	Contact Tokani.`
-				goto tokani
-		`You try to talk to a few people with your limited knowledge of their language. They give fast, excited responses, but you cannot understand most of it. You can only gather that something bad has ended.
-			`	Contact Tokani.`
-		label tokani
-		`You call Tokani using the communications system, and find he is not available. However a few minutes later you get a call back from him.`
-		`	"<first>, so glad you are here today! It's so exciting!"`
-		`	"What's so exciting?"`
-		`	Tokani stops talking suddenly. "Oh, I forgot you didn't know. Sorry. There is something rather big that I have, until today, been forbidden to discuss with you. But I am sure it doesn't matter now. I will come to the airport immediately and explain everything."`
-		`	Tokani takes longer than expected, and when he finally arrives he is accompanied by one of the planet leaders and a military officer.`
-		choice
-			`"What is the party about?"`
-			`"Why have you been forbidden to tell me about something that is clearly very serious?"`
-		`"We have a lot to explain, and I am very sorry that I had to keep this a secret, I hope it does not damage our friendship." says Tokani. "I will explain from the beginning."`
-		`	"Our planet used to be divided into many different countries, with their own governments. Wars were frequent. Over time, small countries joined together to become larger countries, through conquest or peaceful agreements, until eventually the majority of the world was ruled by one government - our own". Tokani motions towards the government leader who is with him. "But there were still some small countries not under this government."`
-		`	"As long as the planet was divided, there was a risk of war. Because we are a democracy, we had a global vote on whether to have a single, global government. The vote was open to everybody, although some independent countries prevented their people from voting. Fortunately 80% of the world's population were already under our government and were able to vote, and 75% of those voted for a global government. That meant that 60% of the world's population had voted to have a single global government - a very clear democratic result."`
-		`	"From that day forward, all 'countries' ceased to exist by the will of the people, and our government has officially ruled the entire world, democratically."`
-		`	"Unfortunately, some of the rulers of those former countries refused to accept the new government, and fought against the people of the world. They have committed terrible acts. Thousands of innocent civilians died. Some of these groups were quickly defeated, but one - the Yuhavi - has been fighting the people for years."`
-		`	"The evil Yuhavi have finally been defeated, and the people are celebrating, because now we can finally have a world without war."`
-		choice
-			`	"What gave you the authority to take over these other countries?"`
-				goto democracy
-			`	"How did you win the war?`
-				goto weapons
-			`	"Why did you not tell me this earlier?`
-				goto secret
-			`	"Well I'm just glad it's over."`
-				goto next
-		label democracy
-		`Tokani discusses this with the leader for a minute, both look confused by the question.`
-		`	"We did not take over anybody. We had a vote, and the people of the planet voted to dissolve all countries and have a global government. Our government simply organised what the people had chosen to do."`
-		`	"But what about the 40% of the world who did not want global government?"`
-		`	"We expect many of them would have actually wanted global government also, but their governments refused to let them vote. We rescued them from these oppressive governments and gave them democracy, so they can have a say in the future of the planet. Yes, there were some people who genuinely disagreed and did not want global government, but they were outvoted. That is how democracy works."`
-			goto more
-		label weapons
-		`"The cowardly Yuhavi were not just fighting our soldiers, but were fighting innocent civilians. One of their most common ways to attack was to send unmanned drones, filled with explosives, and use them to blow up anything - military facilities, or even shopping centres. We had no effecive way of stopping this. We have energy shields, and used those to protect the most important military targets, but could not put shields around every shopping centre. So the murder continued."`
-		`	"But when you brought us laser weapons, we could finally build anti-drone defence systems. Taking the anti-missile defence turrets you provided as a model, we built our own turrets. We then mounted the laser rifles you brought us onto these turrets, resulting in low-powered but very fast defence systems that were powerful enough to shoot down drones. I understand you brought over 50 laser rifles - a small number were used for research, but most were actually used to make these anti-drone defences."`
-		`	"These turrets were placed on mobile, shield-protected vehicles, and suddenly deployed to surround any site the rebels were sending drones from. With this we were able to elimininate their main weapon."`
-		`	"Our brave army was then able to quickly defeat them before they had recovered and developed a new strategy. The fighting was still fierce and many soldiers died, but it was worth it, as this was the last war, that will end all war on this planet. We can now look forward to peace."`
-			goto more
-		label secret
-		`"We needed your help to advance our technology, and we could see you were willing to help us. We did not know if this situation would make you more or less willing to help us, so we decided not to mention it."`
-			goto more
-		label next
-		`"It's not quite over yet. We do have a major problem that we will need your help with."`
-		`	"The Yuhavi are an easily recognised ethnic group. Over this war, the level of hatred between the rest of the planet and them has grown, to the point where it is impossible to imagine co-existing with them. They cannot disappear into society, but will always be recognised. If we tried to live alongside them, individuals would try and take revenge for the death of their relatives, and the planet would have many years of murderous acts that our security forces would struggle to prevent. This could even turn into another war."`
-		`	"But the government has found a brilliant solution. We will deport them all - to Uca Cevata. This will save their lives from revenge attacks, and give us global peace."`
-		`	"Colonising a planet is a massive undertaking when we have only just started space flight. We will need your assistance in many ways. Are you willing to help us achieve peace?"`
-		choice
-			`	"I'd like to meet with the Yuhavi first before I could give an answer."`
-			`	"No, I do not want to have anything to do with this."`
-				decline
-		`"We thought you would say that, and you would have to work with them to make this happen anyway. There is a Yuhavi woman who I have been secretly giving language lessons to, with the government's agreement, so that we had a translator we could send with you if we ever needed you to interact with them. I will not bring her here openly - the crowd might harm her - but I can send her to your ship later in disguise. `
-		`	"She can guide you to their former capital city, where their king is under house arrest in his palace. You can land at the king's private airfield on the palace grounds." Tokani says the last sentance with a sarcastic tone, obviously disgusted at the unnecessary luxury of having a palace with a private airfield.`
-		`	Some hours after you return to your ship, a small hooded figure hops up to the ship. You quietly open the door and let her in. When she drops her hood, she looks almost identical to any other monopod woman - you cannot see why her ethnic group is so recognisable. But you are not a monopod. "My name Huasi" she says quietly and sadly.`
-		`	You prepare to take off and fly around the planet, to land at the palace on the other side of Imatai.`
+	landing
+	on offer
+		conversation
+			`There appears to be a party happening all over the spaceport today. There are brightly coloured streamers everwhere, and a band playing music on the tarmac. Everybody appears to be excited and overjoyed - although some are crying.`
+			choice
+				`	Find someone to ask what is happening.`
+				`	Contact Tokani.`
+					goto tokani
+			`You try to talk to a few people with your limited knowledge of their language. They give fast, excited responses, but you cannot understand most of it. You can only gather that something bad has ended.`
+			choice
+				`	Contact Tokani.`
+			label tokani
+			`You call Tokani using the communications system, and find he is not available. However a few minutes later you get a call back from him.`
+			`	"<first>, so glad you are here today! It's so exciting!"`
+			`	"What's so exciting?"`
+			`	Tokani stops talking suddenly. "Oh, I forgot you didn't know. Sorry. There is something rather big that I have, until today, been forbidden to discuss with you. But I am sure it doesn't matter now. I will come to the airport immediately and explain everything."`
+			`	Tokani takes longer than expected, and when he finally arrives he is accompanied by one of the planet leaders and a military officer.`
+			choice
+				`"What is the party about?"`
+				`"Why have you been forbidden to tell me about something that is clearly very serious?"`
+			`"We have a lot to explain, and I am very sorry that I had to keep this a secret, I hope it does not damage our friendship." says Tokani. "I will explain from the beginning."`
+			`	"Our planet used to be divided into many different countries, with their own governments. Wars were frequent. Over time, small countries joined together to become larger countries, through conquest or peaceful agreements, until eventually the majority of the world was ruled by one government - our own". Tokani motions towards the government leader who is with him. "But there were still some small countries not under this government."`
+			`	"As long as the planet was divided, there was a risk of war. Because we are a democracy, we had a global vote on whether to have a single, global government. The vote was open to everybody, although some independent countries prevented their people from voting. Fortunately 80% of the world's population were already under our government and were able to vote, and 75% of those voted for a global government. That meant that 60% of the world's population had voted to have a single global government - a very clear democratic result."`
+			`	"From that day forward, all 'countries' ceased to exist by the will of the people, and our government has officially ruled the entire world, democratically."`
+			`	"Unfortunately, some of the rulers of those former countries refused to accept the new government, and fought against the people of the world. They have committed terrible acts. Thousands of innocent civilians died. Some of these groups were quickly defeated, but one - the Yuhavi - has been fighting the people for years."`
+			`	"The evil Yuhavi have finally been defeated, and the people are celebrating, because now we can finally have a world without war."`
+			label more
+			choice
+				`	"What gave you the authority to take over these other countries?"`
+					goto democracy
+				`	"How did you win the war?`
+					goto weapons
+				`	"Why did you not tell me this earlier?`
+					goto secret
+				`	"Well I'm just glad it's over."`
+					goto next
+			label democracy
+			`Tokani discusses this with the leader for a minute, both look confused by the question.`
+			`	"We did not take over anybody. We had a vote, and the people of the planet voted to dissolve all countries and have a global government. Our government simply organised what the people had chosen to do."`
+			`	"But what about the 40% of the world who did not want global government?"`
+			`	"We expect many of them would have actually wanted global government also, but their governments refused to let them vote. We rescued them from these oppressive governments and gave them democracy, so they can have a say in the future of the planet. Yes, there were some people who genuinely disagreed and did not want global government, but they were outvoted. That is how democracy works."`
+				goto more
+			label weapons
+			`"The cowardly Yuhavi were not just fighting our soldiers, but were fighting innocent civilians. One of their most common ways to attack was to send unmanned drones, filled with explosives, and use them to blow up anything - military facilities, or even shopping centres. We had no effecive way of stopping this. We have energy shields, and used those to protect the most important military targets, but could not put shields around every shopping centre. So the murder continued."`
+			`	"But when you brought us laser weapons, we could finally build anti-drone defence systems. Taking the anti-missile defence turrets you provided as a model, we built our own turrets. We then mounted the laser rifles you brought us onto these turrets, resulting in low-powered but very fast defence systems that were powerful enough to shoot down drones. I understand you brought over 50 laser rifles - a small number were used for research, but most were actually used to make these anti-drone defences."`
+			`	"These turrets were placed on mobile, shield-protected vehicles, and suddenly deployed to surround any site the rebels were sending drones from. With this we were able to elimininate their main weapon."`
+			`	"Our brave army was then able to quickly defeat them before they had recovered and developed a new strategy. The fighting was still fierce and many soldiers died, but it was worth it, as this was the last war, that will end all war on this planet. We can now look forward to peace."`
+				goto more
+			label secret
+			`"We needed your help to advance our technology, and we could see you were willing to help us. We did not know if this situation would make you more or less willing to help us, so we decided not to mention it."`
+				goto more
+			label next
+			`"It's not quite over yet. We do have a major problem that we will need your help with."`
+			`	"The Yuhavi are an easily recognised ethnic group. Over this war, the level of hatred between the rest of the planet and them has grown, to the point where it is impossible to imagine co-existing with them. They cannot disappear into society, but will always be recognised. If we tried to live alongside them, individuals would try and take revenge for the death of their relatives, and the planet would have many years of murderous acts that our security forces would struggle to prevent. This could even turn into another war."`
+			`	"But the government has found a brilliant solution. We will deport them all - to Uca Cevata. This will save their lives from revenge attacks, and give us global peace."`
+			`	"Colonising a planet is a massive undertaking when we have only just started space flight. We will need your assistance in many ways. Are you willing to help us achieve peace?"`
+			choice
+				`	"I'd like to meet with the Yuhavi first before I could give an answer."`
+				`	"No, I do not want to have anything to do with this."`
+					decline
+			`"We thought you would say that, and you would have to work with them to make this happen anyway. There is a Yuhavi woman who I have been secretly giving language lessons to, with the government's agreement, so that we had a translator we could send with you if we ever needed you to interact with them. I will not bring her here openly - the crowd might harm her - but I can send her to your ship later in disguise. `
+			`	"She can guide you to their former capital city, where their king is under house arrest in his palace. You can land at the king's private airfield on the palace grounds." Tokani says the last sentance with a sarcastic tone, obviously disgusted at the unnecessary luxury of having a palace with a private airfield.`
+			`	Some hours after you return to your ship, a small hooded figure hops up to the ship. You quietly open the door and let her in. When she drops her hood, she looks almost identical to any other monopod woman - you cannot see why her ethnic group is so recognisable. But you are not a monopod. "My name Huasi" she says quietly and sadly.`
+			`	You prepare to take off and fly around the planet, to land at the palace on the other side of Imatai.`
+				accept
+
+
+
