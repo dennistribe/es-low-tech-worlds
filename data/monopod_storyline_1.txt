@@ -796,6 +796,7 @@ mission "MP11f"
 mission "MP12"
 	name "Kidnap attempt"
 	source "Imatai"
+	minor
 	to offer
 		has "MP6 Laser Rifle a: done"
 		has "MP10 Educational Materials a: offered"
@@ -818,7 +819,7 @@ mission "MP12"
 				`	Go with the monopod.`
 					goto go
 				`	Refuse.`
-			`The monopod calls over several others, who all aim their weapons at you and make it very clear that you have no choice.`
+			`The monopod calls over several others, who seize your arms and make it very clear that you have no choice.`
 			label go
 			`	You get into their truck, and are carried back to the airport. When you arrive, Tokani is there, in his teaching clothes and looking flustered and worried.`
 			`	"<first>, very happy you are safe" he calls as soon as he sees you.`
@@ -828,18 +829,12 @@ mission "MP12"
 			`	"I have been told the woman you went with was a criminal. She was being watched by the authorities, but they did not expect her to kidnap you. An airport security guard noticed you leaving out the back entrance, and raised an alert because that appeared unusual. The authorities quickly worked out what was happening and sent the army to rescue you."`
 			choice
 				`	"Why would she kidnap me?"`
-					goto whykidnap
-				`	"Why did the soldiers point their guns at me and force me to come with them?"`
-			`Tokani glares at the soldiers and has a quick, angry discussion.`
-			`	"Sorry <first>, they shouldn't have been doing that. They were in a hurry, they wanted to get going as soon as possible and it seemed the fastest way to get you to do what they wanted. They don't speak your language. They were not going to actually shoot you."`
-			`	"Why did they shoot the driver?"`
-			goto endkidnap
-			label whykidnap
 			`	Tokani has a brief conversation with the military officer, who seems somewhat nervous about this question. Eventually, Tokani replies "Maybe she wanted money. Maybe she wanted you to do a job for her. I do not know, and she is dead now so we cannot ask her."`
 			`	"Why did they think it was serious enough to kill her?"`
 			label endkidnap
 			`	"Sorry <first>, I really have to get back to my lecture. Goodbye."`
 			`	Tokani hurries out the door.`
+				decline
 			
 			
 mission "MP9 War"
