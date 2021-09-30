@@ -1,4 +1,3 @@
-example-plugin
-An example of how to create plugins.
+es-low-tech-worlds plugin
 
-Adding a ship to Endless Sky is easy: just create a picture using your favorite graphics program, copy one of the existing ship definitions, and modify it to work with your new ship!
+Adds a new alien species that has lower technology than humans. Intended as early game content to be submitted to endless-sky for inclusion in the game.
