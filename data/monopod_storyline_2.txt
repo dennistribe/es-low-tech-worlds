@@ -523,6 +523,16 @@ mission "MP25b"
 	on complete
 		dialog `The government delegation looked very concerned and talked among themselves for the entire trip. They get off the <ship> and hop away without speaking to you further or offering you any payment.`
 		
+mission "MP26"
+	name "Uca cevata settled"
+	invisible
+	to offer
+		has "MP24: done"
+		has "MP23b: offered"
+	on offer
+		event "MP26 Uca cevata settled" 30
 
-			
+event "MP26 Uca cevata settled"
+	planet "Uca cevata"
+	spaceport `The spaceport is a flat area of ice surrounded by prefabricated buildings. There are buried tanks of hyperspace fuel, a precious commodity regularly imported from Zug. Many monopods hop around busily, and the sound of construction is everywhere. A small hut is set aside for socialising, around an electrically heated device that resembles a fireplace.`
 			
