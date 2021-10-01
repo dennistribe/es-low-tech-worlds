@@ -467,6 +467,7 @@ mission "MP4b"
 	destination "Imatai"
 	to offer
 		has "MP4a: done"
+		not "event: MP26 Uca cevata settled"
 	on offer
 		conversation
 			`You trade the gold the monopods gave you to purchase the shuttles with for credits, and purchase two shuttles. You also purchase flight training manuals. You are pleased to find you have 28000 credits left over.`
@@ -478,17 +479,9 @@ mission "MP4b"
 		fleet 2
 			names "civilian"
 			variant
-				"Shuttle (keystone)"
+				"Shuttle keystone"
 
-ship "Shuttle" "Shuttle (keystone)"
-	outfits
-		"nGVF-AA Fuel Cell"
-		"LP036a Battery Pack"
-		"D14-RN Shield Generator"
-		"X2700 Ion Thruster"
-		"X2200 Ion Steering"
-		"Hyperdrive"
-		"Quantum Keystone"
+
 
 mission "MP4c"
 	name "Exchange gold"

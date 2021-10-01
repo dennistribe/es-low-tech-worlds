@@ -523,16 +523,100 @@ mission "MP25b"
 	on complete
 		dialog `The government delegation looked very concerned and talked among themselves for the entire trip. They get off the <ship> and hop away without speaking to you further or offering you any payment.`
 		
-mission "MP26"
+mission "MP27"
 	name "Uca cevata settled"
 	invisible
 	to offer
 		has "MP24: done"
 		has "MP23b: offered"
 	on offer
-		event "MP26 Uca cevata settled" 30
+		event "MP27 Uca cevata settled" 30
 
-event "MP26 Uca cevata settled"
+event "MP27 Uca cevata settled"
 	planet "Uca cevata"
-	spaceport `The spaceport is a flat area of ice surrounded by prefabricated buildings. There are buried tanks of hyperspace fuel, a precious commodity regularly imported from Zug. Many monopods hop around busily, and the sound of construction is everywhere. A small hut is set aside for socialising, around an electrically heated device that resembles a fireplace.`
+	spaceport `The spaceport is a flat area of ice surrounded by prefabricated buildings. There are buried tanks of hyperspace fuel, a precious commodity regularly imported from Zug. Many monopods hop around busily, and the sound of construction is everywhere. A small hut is set aside for socialising, containing an electrically heated device that resembles a fireplace.`
 			
+mission "MP28a"
+	name "Collect ships from Zug"
+	source "Uca cevata"
+	destination "Zug"
+	passengers 5
+	to offer
+		has "event: MP26 Uca cevata settled"
+	landing
+	on offer
+		payment 500000
+		conversation
+			`As you come in for a landing, you look around the landing site and see considerably more buildings than the last time you visited. To one side there is a large factory with a roof of solar panels, one end still under construction, and many containers sitting around it. There are trucks and forklifts moving around. To the other side are a line-up of what look like aeroplane fuselages, with no wings, and paths between them. Some distance away is a structure with steam rising from it, which looks like some sort of small nuclear reactor.`
+			`	After you land you are soon greeted by Pagu, and one of the pilots you transported to Zug, acting as an interpreter.`
+			`	"Welcome Captain <last>! Come and see! What see first?"`
+			label more
+			choice
+				`	"The factory."`
+				`	"The spaceport."`
+					goto spaceport
+				`	"Those aeroplanes"`
+					goto aeroplanes
+				`	"Sorry, I'm in a hurry, I don't have time for a tour"`
+					goto pay
+			`Pagu and the pilot slowly hop over towards the factory, and you walk beside them. Despite walking slowly, by the time you reach the factory you are already gasping for breath in the thin air.`
+			`	"Come in" says the pilot, and leads you through an airtight door, into an entranceway that appears to function as a crude airlock. When opening the second door into the factory proper, your ears pop with a sudden increase in pressure, and breathing is considerably easier. "Pressurised. Also raised oxygen." explains Pagu.`
+			`	The factory floor is filled with rows of machinery, and conveyer belts with small components moving along them. Monopods move between the equipment inspecting things. To one side is a row of benches with monopods engaged in detailed work.`
+			`	"Small today, bigger soon. But production begin." Pagu says, clearly proud of how much they have achieved in a short time. "What see next?"`
+				goto more
+			label spaceport
+			`At the spaceport, Pagu shows you a pressurised building containing seats designed for both monopods and humans. There is a central glowing heater that looks like a fireplace, some cupboards to one side containing food and drinks with price labels, and an honesty box for paying for food in cash. Some monopods are sitting around a table having a discussion.`
+			`	"Meeting space. Small, simple, warm. Come any time. I pay your food - leave note in box and I pay." says Pagu generously.`
+			`	Pagu also shows you a self-serve hyperspace refuelling station, fed from underground tanks. Finally he shows you a large hanger under construction. "Soon shipyard. What see next?"`
+				goto more
+			label aeroplanes
+			`Pagu chuckles as he leads you over to the lineup of aeroplane fuselages. "These homes" he says. "First my home". He leads you to a fuselage that looks suspiciously like the space-plane you tested earlier for the government. Through the door there is now a second room that functions as an airlock. Next is a room with a table, looking like a boardroom. "Office, meeting space.". Beyond that is a combined kitchen / dining / lounge room. Pagu motions for you to sit. "Next door, bedroom, bathroom."`
+			`	"Is this the space-plane I brought you?" you ask.`
+			`	"Yes. Don't tell government! Many old aeroplane on Imatai. Rubbish - but pressurise for high air. Perfect Uca cevata air. Government give three space-plane. We fill supply, fly here, remove engine and controls, take engines Imatai, put on different plane, fill with supply, fly here. Government not notice plane change. Cheap pressurised home. This mine, rest bunkroom, house worker. Build family home later."`
+				goto more
+			label pay
+			`"Important thing Captain <last>. Bank set up. Pay you now. Great friend Yuhavi, many jobs no pay. Now we pay. 500,000 credits in bank account soon."`
+			`	"Soon spaceport, sell ships. Outfitter too. Building now. Hope sell ships government. But need example ships."`
+			`	"You take 5 pilots Zug, escort ships for shipyard? One each type not have. We use, learn, hope sell."`
+				`	"Yes, I would be glad to escort these ships for you."`
+					accept
+				`	"No, I am too busy."`
+					decline
+
+mission "MP28b"
+	name "Escort ships for Yuhavi shipyard"
+	source "Zug"
+	destination "Uca cevata"
+	to offer
+		has "MP28a: done"
+	landing
+	on offer
+		conversation
+			`You land at the private hanger, and are met by Edward. He tells you the ships are ready for departure, and are loaded with supplies and example outfits for the new outfitter. His staff just need to explain the new ships to the pilots first - they have all been trained on star barges and clippers. The controls are however similar between all the ships, and they will be ready to depart shortly.`
+	npc accompany save
+		government "Yuhavi"
+		personality escort timid
+		fleet
+			names "civilian"
+			variant
+				"Shuttle keystone"
+			variant
+				"Sparrow keystone"
+			variant
+				"Argosy keystone"
+			variant
+				"Fury keystone"
+			variant
+				"Hauler keystone"
+	npc
+		government "Pirate"
+		personality nemesis harvests plunders
+			confusion 30
+		system Katuba
+		fleet "Large Southern Pirates"
+		fleet "Small Southern Pirates"
+	on complete
+		dialog `You watch the new ships all land safely outside the hanger (now almost complete) that will house the shipyard and outfitter. You then land yourself. Pagu meets you and says through an interpreter "Thankyou, this very exciting. You will find 120,000 credits in your account."`
+		payment 120000
+
+
