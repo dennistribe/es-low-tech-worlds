@@ -13,3 +13,5 @@ government "Pirate"
 	"attitude toward"
 		"Monopod" -.1
 		"Yuhavi" -.1
+		
+

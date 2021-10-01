@@ -135,6 +135,7 @@ ship "Space-plane"
 ship "Suicide-Drone"
 	sprite "ship/Boom-drone"
 	thumbnail "ship/Boom-drone"
+	"never disabled"
 	attributes
 		category "Drone"
 		"cost" 50000

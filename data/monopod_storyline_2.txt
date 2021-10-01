@@ -463,6 +463,7 @@ mission "MP25a"
 	landing
 	to offer
 		has "MP23b: offered"
+		not "event: MP27 Uca cevata settled"
 	on offer
 		conversation
 			`Soon after you exit your ship, you are approached by a grim-faced military officer who says "Come with me". You try to talk to him, but he clearly does not know your language. He just keeps repeating one memorised phrase: "Come with me".` 
@@ -534,6 +535,7 @@ mission "MP27"
 
 event "MP27 Uca cevata settled"
 	planet "Uca cevata"
+	description `This planet is mostly covered in snow and ice, but is in the process of being settled by the Yuhavi. They have one settlement, and are beginning to prospect the planet for mineral resources. The atmosphere of the planet is breatheable but thin, so buildings and vehicles are partially pressurised to compensate.`
 	spaceport `The spaceport is a flat area of ice surrounded by prefabricated buildings. There are buried tanks of hyperspace fuel, a precious commodity regularly imported from Zug. Many monopods hop around busily, and the sound of construction is everywhere. A small hut is set aside for socialising, containing an electrically heated device that resembles a fireplace.`
 			
 mission "MP28a"
@@ -600,13 +602,9 @@ mission "MP28b"
 			names "civilian"
 			variant
 				"Shuttle keystone"
-			variant
 				"Sparrow keystone"
-			variant
 				"Argosy keystone"
-			variant
 				"Fury keystone"
-			variant
 				"Hauler keystone"
 	npc
 		government "Pirate"
@@ -618,5 +616,139 @@ mission "MP28b"
 	on complete
 		dialog `You watch the new ships all land safely outside the hanger (now almost complete) that will house the shipyard and outfitter. You then land yourself. Pagu meets you and says through an interpreter "Thankyou, this very exciting. You will find 120,000 credits in your account."`
 		payment 120000
+		event "Uca cevata shipyard" 10
 
+event "Uca cevata shipyard"
+	planet "Uca cevata"
+		shipyard "Basic Ships"
+		shipyard "Southbound Basics"
+		outfitter "Basic Outfits"
+		outfitter "Kraz Basics"
 
+mission "MP29a"
+	name "Test monopod drone"
+	source "Imatai"
+	to offer
+		has "event: MP27 Uca cevata settled"
+		not "event: Uca cevata shipyard"
+	on offer
+		conversation
+			`On landing at the airport you receive a message to wait for Tokani. When he arrives, he says "Good to see you again <first>. Many things to discuss."`
+			`	"The government is worried about how strong the Yuhavi are becoming, and are concerned that they could easily destroy all our satellites and our few spaceships very quickly, if they wanted war. We need some defences, just in case. We hope to not need them.`
+			`	"Our engineers have quickly put together some simple drones. We would like you to test them out. I am sure that with your experience you will be able to defeat them, but it is dangerous. Can you test them for us?"`
+			choice
+				`	"Yes, I can test the drones."`
+				`	"No, I don't want to endanger my ship."`
+					decline
+			`"Thankyou" says Tokani. "There will be three drones in orbit shortly. Please try to destroy all three, record the fight, and report back here when you are finished.`
+				accept
+	npc kill
+		government "Test Dummy"
+		personality nemesis
+			confusion 5
+		system Itikotiko
+		ship "Suicide-Drone" 
+	npc kill
+		government "Test Dummy"
+		personality nemesis
+			confusion 5
+		system Itikotiko
+		ship "Suicide-Drone" 
+	npc kill
+		government "Test Dummy"
+		personality nemesis
+			confusion 5
+		system Itikotiko
+		ship "Suicide-Drone" 
+	on complete
+		conversation
+			`"What did you think of our new drones?" asks Tokani.`
+			choice
+				`	"The weapon was very effective."`
+					goto weapon
+				`	"They are very easy to kill."`
+					goto kill
+				`	"You don't want to be near them when they blow up."`
+			`"Exactly. They are designed to self-destruct and take out ships much bigger than themselves."`
+			goto end
+			label weapon
+			`"It is the same shield-penetrating gun that you were shot down with back when you first landed on Imatai. We have simply adapted it to fit into a spaceship. It's mainly intended to annoy the enemy until they destroy the drone - when it will explode and hopefully take them down with it."`
+			goto end
+			label kill
+			`"That is intentional. They are a trap, packed with explosives. We want the enemy to try to destroy them - and then die in the resulting explosion."`
+			label end
+			`	Tokani smiles grimly. "Our engineers would never admit it, but I think they're simply copying the tactics the Yuhavi used in our recent war. It is amazing that so quickly we find ourselves technologically inferior to our old enemy. And I must point out we do have you to blame for that."`
+			`	Your conversation is interrupted by shouting outside the window. You look outside to see an angry protest mob moving down the street, waving placards. "The people are upset about the Yuhavi having so much technology, and our government giving them an entire planet. Many are already saying the war was pointless, and asking what their relatives died for. The government is worried. You are not popular either."`
+			`	"Still, thankyou for testing the drones." Tokani hands you a bag of gold.`
+			`	You can probably exchange the gold for credits at Uca cevata now.` 
+
+mission "MP29b"
+	name "Exchange gold"
+	description "Exchange the gold you received as payment for testing the drones."
+	source Imatai
+	destination "Uca cevata"
+	to offer
+		has "MP29a: done"
+	landing
+	on complete
+		payment 50000
+		dialog `A Yuhavi official in the spaceport is very pleased to buy your gold for 50,000 credits. "Pagu would be glad of any gold you can bring us, we need it for trading with people on Imatai."` 
+		
+mission "MP30"
+	name "King Pagu"
+	source "Uca cevata"
+	destination Imatai
+	landing
+	to offer
+		has "event: Uca cevata shipyard"
+	on offer
+		conversation
+			`When you land, you see a large number of ships assembled at the spaceport and on the bare land surrounding the settlement. There is a crowd of people present, and Pagu comes forward with an interpreter to greet you.`
+			`	"Captain <last>! We not expect you, but very glad you come. Today great day. Come see ceremony. I must go, interpreter stay."`
+			`	Pagu hurries back into the crowd. You follow, and find tables of food and drink, crowds of excited monopods, and camera crews from news organisations at Imatai.`
+			choice
+				`	Ask the interpreter what is going on.`
+				`	Ask a reporter (through the interpreter) why they are here.`
+					goto reporter
+			`"Important day, important ceremony. Cannot say more." says the interpreter with a big smile.`
+				goto announcer
+			label reporter
+			`"I don't actually know. I was sent here to report on what is happening. We haven't been told what it is, only that we will want to report it." says the reporter. The interpreter smiles broadly as he repeats this to you.`
+			label announcer
+			`	Suddenly a voice comes over the loudspeakers. You all pay attention to a stage set at the side of the spaceport. The interpreter quietly whispers a translation to you.`
+			`	"Attention people Imatai and Uca cevata. Today great day in history. New day."`
+			`	"Monopods great people, fill Imatai and achieve many great things. And now expand beyond. Now space people. Yuhavi lead way to space."`
+			`	"Today announce Yuhavi home no longer Imatai. Today Yuhavi home Uca cevata. Today Yuhavi government Uca cevata". The last words cause a murmer of excitement through the crowd.`
+			`	Old King Panu walks onto the stage, accompanied by Pagu. An attendant brings the royal crown of the Yuhavi, and Panu picks it up and places it upon his head, with a defiant expression. The murmers in the crowd grow louder. The interpreter whispers "Illegal Panu wear crown. Government not like this.".`
+			`	"Today I Panu King once again. But I wear crown last time. Today I abdicate throne." Panu takes off the crown again. "I abdicate in favour of Pagu". Panu lifts the crown and places it upon Pagu's head. A great cheer goes up from the crowd. The reporters look very uncomfortable.`
+			`	"I present to you Pagu King. King of Uca cevata." The crowd roars again.`
+			choice
+				`	continue`
+			`King Pagu steps forward, and the crowd goes silent. "Long journey ahead to settle Uca cevata. But I will lead that journey. Today I have two announcements.`
+			`	"One: Today, my family move to Uca cevata. We first family settle here. I not send you anywhere I not go." A woman whom you assume is Pagu's wife comes onto the stage, accompanied by several children - the first children you have seen on Uca cevata. The royal family stand together for the cameras, and the crowd cheers.`
+			`	"Two: Today, I announce opening of Uca cevata shipyard, outfitter, and flight training school. We ready supply spaceships anybody on Imatai, and train pilot. In celebration, and demonstrate ship available, we fly convoy every ship type to Imatai, right now. Free spaceship rides 100 people random from crowd. See you soon!" he announces to the news cameras, before hopping off the stage arm-in-arm with the new queen.`
+			choice
+				`	Travel to Imatai with King Pagu's convoy.`
+					accept
+				`	Stay out of this. There might be trouble.`
+					decline
+	npc accompany save
+		government "Yuhavi"
+		personality escort timid
+		fleet
+			names "civilian"
+			variant
+				"Shuttle"
+				"Sparrow"
+				"Argosy"
+				"Fury"
+				"Hauler"
+				"Clipper"
+				"Star Barge"
+	npc 
+		government "Monopod"
+		planet Imatai
+		fleet
+			names "civilian"
+			variant
+				"Suicide-Drone" 7
