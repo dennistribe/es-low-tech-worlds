@@ -1,0 +1,37 @@
+# MAIN MONOPOD GOVERNMENT - FULL HUMAN INTERACTION AND NEW TECHNOLOGY DEVELOPMENT
+
+mission "MP50"
+	name "Monopod diplomacy"
+	description "Help the monopod government establish diplomatic and banking relationships with human space."
+	source Imatai
+	destination Bourne
+	passengers 3
+	cargo 5
+	to offer
+		has "event: Monopod revolution"
+	landing
+	on offer
+		conversation
+			`Upon landing, you receive a message asking you to meet with a government delegation.`
+			choice
+				`	Meet with them.`
+				`	Not now.`
+					defer
+			`You go to the room indicated, and are met by a group of monopods who are all unfamiliar to you, except for Tokani.`
+			`	"Much has happened since your last visit <first>. We have a new government. These are new members of parliament and their staff.`
+			`	"You may have noticed protestors around the airport when you last visited. When the war was won, most people were very happy with the idea of banishing the Yuhavi to Uca cevata. The people saw this as a fair punishment for what the Yuhavi had done.`
+			`	"But when the Yuhavi suddenly had alien spaceships, many people began to question this. Many said it was a rash, arrogant decision. Uca cevata should not have been given away. The Yuhavi should not have been pushed to align with aliens.`
+			`	"After Yuhavi bold visit to airport with new ships, and coronation of King Pagu, protests became riots. Lots of anger. Government would not admit they had done anything wrong, proud and arrogant. But they were forced to call a snap election, and lost."`
+			choice
+				`	Continue`
+			`"New government believe we cannot isolate ourselves. Must interact with aliens, like Yuhavi. Must become space people also. And need peace with Yuhavi as equals, not as victors.`
+			`	"Government want to ask your help, as you have helped Yuhavi. Will you help us?"` 
+			choice
+				`	"I would be glad to."`
+				`	"No, I just support the Yuhavi."`
+					decline
+			`"Thankyou. Please take a small delegation to the nearest human government so we can establish secret diplomatic relations. 
+			`	"The delegation will also seek to establish a banking relationship so we can trade in credits, to pay you and interact with other humans. The new government has already approved the use of credits for inter-planetary trade."`
+				accept
+	
+				

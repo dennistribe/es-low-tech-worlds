@@ -624,6 +624,7 @@ event "Uca cevata shipyard"
 		shipyard "Southbound Basics"
 		outfitter "Basic Outfits"
 		outfitter "Kraz Basics"
+		government "Yuhavi"
 
 mission "MP29a"
 	name "Test monopod drone"
@@ -694,14 +695,16 @@ mission "MP29b"
 		payment 50000
 		dialog `A Yuhavi official in the spaceport is very pleased to buy your gold for 50,000 credits. "Pagu would be glad of any gold you can bring us, we need it for trading with people on Imatai."` 
 		
-mission "MP30"
-	name "King Pagu"
+mission "MP30a"
+	name "King Pagu convoy"
+	description "Accompany the new King Pagu's convoy to Imatai."
 	source "Uca cevata"
 	destination Imatai
 	landing
 	to offer
 		has "event: Uca cevata shipyard"
 	on offer
+		event "Monopod revolution" 30
 		conversation
 			`When you land, you see a large number of ships assembled at the spaceport and on the bare land surrounding the settlement. There is a crowd of people present, and Pagu comes forward with an interpreter to greet you.`
 			`	"Captain <last>! We not expect you, but very glad you come. Today great day. Come see ceremony. I must go, interpreter stay."`
@@ -726,7 +729,7 @@ mission "MP30"
 				`	continue`
 			`King Pagu steps forward, and the crowd goes silent. "Long journey ahead to settle Uca cevata. But I will lead that journey. Today I have two announcements.`
 			`	"One: Today, my family move to Uca cevata. We first family settle here. I not send you anywhere I not go." A woman whom you assume is Pagu's wife comes onto the stage, accompanied by several children - the first children you have seen on Uca cevata. The royal family stand together for the cameras, and the crowd cheers.`
-			`	"Two: Today, I announce opening of Uca cevata shipyard, outfitter, and flight training school. We ready supply spaceships anybody on Imatai, and train pilot. In celebration, and demonstrate ship available, we fly convoy every ship type to Imatai, right now. Free spaceship rides 100 people random from crowd. See you soon!" he announces to the news cameras, before hopping off the stage arm-in-arm with the new queen.`
+			`	"Two: Today, I announce opening of Uca cevata shipyard, outfitter, and flight training school. We ready supply spaceships anybody on Imatai, and train pilot. In celebration, and demonstrate ship available, we fly convoy every ship type to Imatai, right now. Free spaceship rides 100 people random from crowd. See you soon!" he announces to the news cameras, before hopping off the stage towards the Argosy arm-in-arm with the new queen.`
 			choice
 				`	Travel to Imatai with King Pagu's convoy.`
 					accept
@@ -752,3 +755,107 @@ mission "MP30"
 			names "civilian"
 			variant
 				"Suicide-Drone" 7
+				
+event "Monopod revolution"
+			
+# If tested the suicide drone previously	
+mission "MP30b suicidedrone"
+	name "King Pagu"
+	landing
+	source Imatai
+	to offer
+		has "MP30a: done"
+		or
+			has "MP29a: done"
+			has "MP21a: fail"
+	on offer
+		conversation
+			`As you approach Imatai, you see a fleet of the new suicide drones circling the planet. They take up positions close to the fleet, but do not attack.`
+			`	The Argosy, Hauler, Clipper and Star Barge land directly at the airport. You watch the defensive gun turrets tracking them, but they do not open fire. The Yuhavi are clearly watching the gun turrets carefully too - the Fury and Sparrow stay circling above the airport for some time, until it is clear no fighting is going to break out. The Fury and Sparrow then land also, but their engines keep running and the pilots stay in the cockpits. The turrets on the Argosy and Hauler move sometimes also, showing they are manned.`
+			`	A crowd is present, and appears to include a wide variety of people. Some are children who seem excited and completely focussed on watching the spaceships, accompanied by parents who look more nervous. Some protestors wave anti-government placards. Some small fights break out in places in the crowd.`
+			`	The crowd is corralled behind a temporary fence, to keep them off the tarmac. Armed soldiers stand along the fence, gripping their weapons and looking nervously at both the crowd on one side and the Yuhavi spaceships on the other.`
+			choice
+				`	Continue.`
+			`You exit the <ship>, but stay close to the door. Huasi steps out of the Clipper, and bounds over to stand with you and translate.`
+			`	A group of Yuhavi exit the Argosy and assemble around the entrance. King Pagu then appears at the top of the steps, and the small group beside him starts a cheer. A few voices in the crowd join in, and then quickly stop. Pagu speaks through a microphone.`
+			`	"Peace. We come for peace, for business, for celebration. Do not fear. Our war over. Our future great."`
+			`	Then he shouts loudly "Who wants fly in space?!". The children in the crowd cheer and shriek in excitement.`
+			`	Pagu points to the Clipper. "Form line beside this ship. Cargo hold full of seats. Anybody wants space, go to space! Free today only."`
+			`	Pagu then points to the other ships "Businessmen, pilots, engineers. Come see our ships!"`
+			`	As the crowd starts to move, organised by others, Pagu comes to see you. "What those new ships in orbit?" he asks quietly.`
+			choice
+				`	"Armed defence drones."`
+					goto armed
+				`	"I cannot say."`
+					goto secret
+				`	"I do not know."`
+			`Pagu looks at you for a while silently, then says. "Government space technology only made your help. Could they make spaceship without you help? You must know something."`
+			choice
+				`	"You are right, I will tell you about them."`
+					goto armed
+				`	"Yes, I know what they are, but I will not reveal government secrets to you."`
+					goto secret
+				`	"Honestly I have no idea."`
+			`Pagu looks frustrated. "Probably drones. Not surveillance, would not need so many. Must be armed. Need be careful."`
+				fail
+			label armed
+			`"Each drone is armed with a shield-penetrating machine gun, and a massive explosive charge. Alone they are fairly weak, but a swarm of them is powerful."`
+			`	Pagu looks at you with a strange expression on his face. "Thankyou very helpful information. But government trust you with military secret. Why you share secret with me? Will you tell our secret them too?"`
+			`	You are now not sure whether you did the right thing.`
+				fail
+			label secret
+			`"I did test these spaceships for the government. I will not tell you anything about them because they trusted me with this secret, and I do not want to take sides in your dispute."`
+			`	Pagu looks at you approvingly. "Disappointed you not tell us, but pleased you keep secret. Trust you keep our secret too. Honest Captain <last>."`
+				decline
+			
+
+# If did not test the suicide drone
+mission "MP30b nodrone"
+	name "King Pagu"
+	landing
+	source Imatai
+	to offer
+		has "MP30a: done"
+		or
+			has "MP29a: decline"
+			not "MP21a: offer"
+	on offer
+		conversation
+			`As you approach Imatai, you see a fleet of spaceships you have not seen before circling the planet. They look like a smaller version of the Kateni. They take up positions close to the fleet, but do not attack.`
+			`	The Argosy, Hauler, Clipper and Star Barge land directly at the airport. You watch the defensive gun turrets tracking them, but they do not open fire. The Yuhavi are clearly watching the gun turrets carefully too - the Fury and Sparrow stay circling above the airport for some time, until it is clear no fighting is going to break out. The Fury and Sparrow then land also, but their engines keep running and the pilots stay in the cockpits. The turrets on the Argosy and Hauler move sometimes also, showing they are manned.`
+			`	A crowd is present, and appears to include a wide variety of people. Some are children who seem excited and completely focussed on watching the spaceships, accompanied by parents who look more nervous. Some protestors wave anti-government placards. Some small fights break out in places in the crowd.`
+			`	The crowd is corralled behind a temporary fence, to keep them off the tarmac. Armed soldiers stand along the fence, gripping their weapons and looking nervously at both the crowd on one side and the Yuhavi spaceships on the other.`
+			choice
+				`	Continue.`
+			`You exit the <ship>, but stay close to the door. Huasi steps out of the Clipper, and bounds over to stand with you and translate.`
+			`	A group of Yuhavi exit the Argosy and assemble around the entrance. King Pagu then appears at the top of the steps, and the small group beside him starts a cheer. A few voices in the crowd join in, and then quickly stop. Pagu speaks through a microphone.`
+			`	"Peace. We come for peace, for business, for celebration. Do not fear. Our war over. Our future great."`
+			`	Then he shouts loudly "Who wants fly in space?!". The children in the crowd cheer and shriek in excitement.`
+			`	Pagu points to the Clipper. "Form line beside this ship. Cargo hold full of seats. Anybody wants space, go to space! Free today only."`
+			`	Pagu then points to the other ships "Businessmen, pilots, engineers. Come see our ships!"`
+			`	As the crowd starts to move, organised by others, Pagu comes to see you. "What those new ships in orbit?" he asks quietly.`
+			choice
+				`	"I do not know."`
+			`Pagu looks at you for a while silently, then says. "Government space technology only made your help. If make spaceship without you help, getting skilled. More skill than we thought. Must be careful."`
+				fail
+				
+
+# PIRATE DEFENCE
+# Small pirate raid in Itikotiko, attacking Yuhavi transport ships, and seek to land on Imatai. Fought off by you, drones & Yuhavi ships.
+# Result = tentative defence agreement between government and Yuhavi. Permanent patrol of wormhole by drones and Furies.
+# Add random pirate raids inside wormhole, fighting with defence ships.
+
+
+# TERRAFORMING MISSIONS
+# Atmosphere limitations - thin, low CO2, limit to plant growth possible so cannot solve O2 just by growing plants. Slow O2 replenishment by algaes etc, already depleting with monopod breathing.
+# Early steps: 
+# - O2 generation by electrolysis, use in buildings.
+# - Greenhouse food production - coal imported to boost CO2 in greenhouses & heat.
+# Once terraforming university established - student to university
+# Eventual plan:
+# - Blacken surface with coal dust / soot, reduce reflection & boost heat.
+# - Orbital mirrors focus on specific spots, boil ice -> water vapour, greenhouse effect & clouds. Also clearing areas of ice for agriculture.
+# - Raise O2 with massively upscaled electrolysis of ice. Export H2 as product.
+# - Raise CO2 with coal burned with this O2
+# - Introduce cold-tolerant mountain-dwelling plants, grown from this CO2, to boost natural oxygen cycle.
+# - Always thin atmosphere unless import masses of nitrogen, but can have high O2 so easily breathable despite thinness.
