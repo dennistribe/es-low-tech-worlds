@@ -2,9 +2,9 @@
 
 mission "MP50"
 	name "Monopod diplomacy"
-	description "Help the monopod government establish diplomatic and banking relationships with human space."
+	description "Help the monopod government establish diplomatic and banking relationships with the Free Worlds."
 	source Imatai
-	destination Bourne
+	stopover Bourne
 	passengers 3
 	cargo 5
 	to offer
@@ -33,5 +33,47 @@ mission "MP50"
 			`"Thankyou. Please take a small delegation to the nearest human government so we can establish secret diplomatic relations. 
 			`	"The delegation will also seek to establish a banking relationship so we can trade in credits, to pay you and interact with other humans. The new government has already approved the use of credits for inter-planetary trade."`
 				accept
-	
-				
+	on stopover
+		conversation
+			`During the trip, you contacted the Free Worlds parliament and requested a private diplomatic audience. After delicately explaining the situation while giving away as little information as possible, it was agreed a delegation would meet you in a private hanger at the spaceport.`
+			`	You land outside the pre-arranged hanger, and the <ship> is pulled inside. Once inside you exit your ship and confirm the arrangements for the meeting. After being assured nobody will see, you call the monopod delegation to leave the <ship> and hop across to a private meeting room.` 
+			choice
+				`	Continue.`
+			`	The Free Worlds representatives are clearly both surprised and (embarrassingly) amused at the appearance of the monopods. They spend several hours in discussions on a wide range of topics. The situation is complicated by the Yuhavi's pre-existing relationship with Southbound and Kraz.`
+			`	Finally the Free Worlds agree to exchange ambassadors, who will investigate the potential for a trading relationship, and banking arrangements are made also. The Free Worlds agree with the Monopod insistance upon secrecy.`
+			`	A diplomat from the monopod delegation, already trained in the human language, will stay in Bourne as ambassador. Tokani gives him his old wheelchair disguise, and the Free Worlds promise to provide him a house with a large private gymnasium for exercise purposes.`
+			`	A Free Worlds ambassador will travel back with you in his place, bringing a communication device that will utilise the relays already installed by the Kraz for the Yuhavi.`
+	on complete
+		conversation
+			`On landing, the Free Worlds ambassador hands you a credit chip for 50,000 credits, saying "Regular banking services will be established shortly, allowing you to be paid in credits."`
+			`	Tokani adds "When pay on Imatai in gold, gold still on planet. But when pay you, gold lost. Better trade in made-up money and keep our gold." He laughs heartily at how silly this all seems to him.`
+		event "Monopod trading" 30
+		payment 50000
+			
+event "Monopod trading"
+	system "Itikotiko"
+		trade Food 311
+		trade "Heavy Metals" 924
+		trade Metal 451
+		trade Plastic 384
+		
+mission "MP51"
+	name "Monopod trading"
+	landing
+	source
+		system Itikotiko
+	to offer
+		has "event: Monopod trading"
+	on offer
+		conversation
+			`A monopod approaches you in the spaceport and introduces himself as a commodity trader. "Glad finally meet Captain <last>! Good news for you.`
+			`	"After long negotiations with Imatai and Uca cevata governments, traders finally permission sell aliens. May buy sell food, metal and plastic now. Captain <last> want buy metal from honest trader?"`
+			choice
+				`	"Why can I only trade food, metal and plastic?"`
+			`The trader shakes his head in frustration. "Both governments very worry security, want hide from aliens. Not allow us trade manufactured goods, as monopod goods different to alien, maybe suspicious. May trade raw materials - food, metal and plastic. And only simple processed foods - flour, sugar, oil - not unique fruit. But better nothing!"`
+			`	"Most welcome trading post any time. See Captain <last> soon?"`
+			`	He hops away across the spaceport towards a group of warehouses.`
+				decline
+
+
+			
