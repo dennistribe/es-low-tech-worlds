@@ -1,3 +1,5 @@
+# STORY SUMMARY - 3
+# Political revolution on Imatai, establishes more open government. Trading begins on both Imatai and Uca cevata.
 # MAIN MONOPOD GOVERNMENT - FULL HUMAN INTERACTION AND NEW TECHNOLOGY DEVELOPMENT
 
 mission "MP50"
@@ -42,11 +44,11 @@ mission "MP50"
 			`	The Free Worlds representatives are clearly both surprised and (embarrassingly) amused at the appearance of the monopods. They spend several hours in discussions on a wide range of topics. The situation is complicated by the Yuhavi's pre-existing relationship with Southbound and Kraz.`
 			`	Finally the Free Worlds agree to exchange ambassadors, who will investigate the potential for a trading relationship, and banking arrangements are made also. The Free Worlds agree with the Monopod insistance upon secrecy.`
 			`	A diplomat from the monopod delegation, already trained in the human language, will stay in Bourne as ambassador. Tokani gives him his old wheelchair disguise, and the Free Worlds promise to provide him a house with a large private gymnasium for exercise purposes.`
-			`	A Free Worlds ambassador will travel back with you in his place, bringing a communication device that will utilise the relays already installed by the Kraz for the Yuhavi.`
+			`	A Free Worlds ambassador will travel back with you in his place, bringing a communication device that will utilise the relays already installed by Kraz for the Yuhavi.`
 	on complete
 		conversation
 			`On landing, the Free Worlds ambassador hands you a credit chip for 50,000 credits, saying "Regular banking services will be established shortly, allowing you to be paid in credits."`
-			`	Tokani adds "When pay on Imatai in gold, gold still on planet. But when pay you, gold lost. Better trade in made-up money and keep our gold." He laughs heartily at how silly this all seems to him.`
+			`	Tokani adds "When pay on Imatai in gold, gold still on planet. But when pay you, gold lost. Better trade in pretend money and keep our gold." He laughs heartily at how silly this all seems to him.`
 		event "Monopod trading" 30
 		payment 50000
 			
@@ -70,7 +72,7 @@ mission "MP51"
 			`	"After long negotiations with Imatai and Uca cevata governments, traders finally permission sell aliens. May buy sell food, metal and plastic now. Captain <last> want buy metal from honest trader?"`
 			choice
 				`	"Why can I only trade food, metal and plastic?"`
-			`The trader shakes his head in frustration. "Both governments very worry security, want hide from aliens. Not allow us trade manufactured goods, as monopod goods different to alien, maybe suspicious. May trade raw materials - food, metal and plastic. And only simple processed foods - flour, sugar, oil - not unique fruit. But better nothing!"`
+			`The trader shakes his head in frustration. "Both governments very worry security, want hide from aliens. Not allow us trade manufactured goods, as monopod goods different to alien, maybe suspicious. May trade raw materials - food, metal and plastic. And only simple processed foods - flour, sugar, oil - not unique fruit. But better than nothing!"`
 			`	"Most welcome trading post any time. See Captain <last> soon?"`
 			`	He hops away across the spaceport towards a group of warehouses.`
 				decline

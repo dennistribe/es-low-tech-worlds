@@ -1,3 +1,7 @@
+# STORY SUMMARY - 2
+# Yuhavi commercial arrangements with Southbound and Kraz. Colonisation of Uca cevata. Establishment of shipyard and outfitter.
+# Political unrest on Imatai, which will lead to storyline 3.
+
 mission "MP20"
 	name "Yuhavi to Uca Cevata"
 	description "Take the Yuhavi to visit Uca Cevata"
@@ -11,7 +15,7 @@ mission "MP20"
 		has "MP13: done"
 	on offer
 		conversation
-			`During your short flight, Huasi says very little. She is clearly very nervous around you, and not confident with your language. She also appears grief-stricken, presumably at the entire sitaution.`
+			`During your short flight, Huasi says very little. She is clearly very nervous around you, and not confident with your language. She also appears grief-stricken.`
 			`	You land on a flat, grass airstrip clearly designed only for small aeroplanes. Your spaceship barely fits. You are greeted by a group of monopods, some armed and in the military uniforms of the central government, and some unarmed in civilian clothing. Huasi points to one monopod who is standing tall in the centre with a grim expression on his face. "Paru King" she says.`
 			`	Huasi says something to the king, and is yelled at by one of the armed guards. She turns to you with a tear in her eye, and says "Told not call Paru King. Just Paru."`
 			choice
@@ -35,7 +39,7 @@ mission "MP20"
 			`	"Government tell you story first, you believe them. Listen our story."`
 			label next
 			`	"We peaceful country. People happy. Central government grow, we worry, but keep peace. Then government say king not king, land not our land, they rule us. This not true.`
-			`	"For 200 year, Yuhavi live here. Defend land. Nobody take land from Yuhavi. Proud. Try to take land, we fight. We win.`
+			`	"For 1000 year, Yuhavi live here. Defend land. Nobody take land from Yuhavi. Proud. Try to take land, we fight. We win.`
 			`	"New government army come in, we fight back. But army too big, we too small. Too few people. Hard.`
 			`	"Smart scientist say, fight with robot. Save people. Make driving robot, flying robot, swimming robot. Boom!`
 			`	"When army come in, boom. Nobody know where boom next, surprise. So army not come in. Peace."`
@@ -165,11 +169,11 @@ mission "MP22a spaceplane"
 				`	Go to meeting`
 			`"Pagu say cannot trust government. Nobody Imatai know how colonise planet. Also, Yuhavi no money."`
 			`	"Yuhavi smart, strong, hard workers. Can build factories, great machines. Make factories Uca Cevata. But build what? Sell to who?"`
-			`	After a long discussion, it becomes clear that the Yuhasi could be very good at manufacturing high-tech components for spaceships and other equipment. Their war "robots" were able to hold off the much larger government army for years after all.`
+			`	After a long discussion, it becomes clear that the Yuhasi could be very good at manufacturing high-tech components for spaceships and other equipment. After all, their war "robots" were able to hold off the much larger government army for years.`
 			choice
 				`	"Would you like to trade with other humans?"`
 			`The Yuhavi, like the government, fear that it is dangerous to have contact with 'aliens', because the more contact they have the more likely it is that 'bad aliens' find them. But they feel they have no choice. They ask whether you could suggest some trustworthy humans who may be able to help them. `
-			`	After considering the question, you decide that the smaller human shipyards are probably more trustworthy than the Syndicate. Southbound Shipyards is quite near monopod space, and would be the best option to talk to initially. `
+			`	After considering the question, you decide that the smaller human shipyards are probably more trustworthy than the Syndicate. Southbound Shipyards is quite near this system, and would be the best option to talk to initially. `
 			choice
 				`	"I know a spaceship manufacturer who may be interested in working with you, would you like me to take you to meet with them?"`
 				`	"Sorry, I cannot help you further."`
@@ -412,7 +416,7 @@ mission "MP23b"
 				`	"I am sure you can make it there on your own."`
 					decline
 	on complete
-		dialog `You land at the chosen first settlement site, which is still completely empty, and help the pilots and Huasi unload the supplies. It is strange to leave so much expensive equipment lying in the open unguarded. The pilots can make their way to Imatai on their own. You should probably visit Tokani and the central government on Imatai.`
+		dialog `You land at the chosen first settlement site, which is still completely empty, and help the pilots and Huasi unload the supplies. It is strange to leave so much expensive equipment lying in the open unguarded. The pilots can make their way to the Yuhavi capital on their own. You should probably visit Tokani and the central government on Imatai.`
 			
 mission "MP24"
 	name "Hyperspace communications links"
@@ -535,8 +539,9 @@ mission "MP27"
 
 event "MP27 Uca cevata settled"
 	planet "Uca cevata"
-	description `This planet is mostly covered in snow and ice, but is in the process of being settled by the Yuhavi. They have one settlement, and are beginning to prospect the planet for mineral resources. The atmosphere of the planet is breatheable but thin, so buildings and vehicles are partially pressurised to compensate.`
-	spaceport `The spaceport is a flat area of ice surrounded by prefabricated buildings. There are buried tanks of hyperspace fuel, a precious commodity regularly imported from Zug. Many monopods hop around busily, and the sound of construction is everywhere. A small hut is set aside for socialising, containing an electrically heated device that resembles a fireplace.`
+		description `This planet is mostly covered in snow and ice, but is in the process of being settled by the Yuhavi. They have one settlement, and are beginning to prospect the planet for mineral resources. The atmosphere of the planet is breatheable but thin, so buildings and vehicles are partially pressurised to compensate.`
+		spaceport `The spaceport is a flat area of ice surrounded by prefabricated buildings. There are buried tanks of hyperspace fuel, a precious commodity regularly imported from Zug. Many monopods hop around busily, and the sound of construction is everywhere. A small hut is set aside for socialising, containing an electrically heated device that resembles a fireplace.`
+		government "Yuhavi"
 			
 mission "MP28a"
 	name "Collect ships from Zug"
@@ -549,7 +554,7 @@ mission "MP28a"
 	on offer
 		payment 500000
 		conversation
-			`As you come in for a landing, you look around the landing site and see considerably more buildings than the last time you visited. To one side there is a large factory with a roof of solar panels, one end still under construction, and many containers sitting around it. There are trucks and forklifts moving around. To the other side are a line-up of what look like aeroplane fuselages, with no wings, and paths between them. Some distance away is a structure with steam rising from it, which looks like some sort of small nuclear reactor.`
+			`As you come in for a landing, you look around the landing site and see considerably more buildings than the last time you visited. To one side there is a large factory with a roof of solar panels, one end still under construction, and many containers sitting around it. There are trucks and forklifts moving around. To the other side are a line-up of what look like aeroplane fuselages, with no wings, and paths between them. Some distance away is a structure with steam rising from it, which looks like a small nuclear reactor.`
 			`	After you land you are soon greeted by Pagu, and one of the pilots you transported to Zug, acting as an interpreter.`
 			`	"Welcome Captain <last>! Come and see! What see first?"`
 			label more
@@ -574,11 +579,11 @@ mission "MP28a"
 			label aeroplanes
 			`Pagu chuckles as he leads you over to the lineup of aeroplane fuselages. "These homes" he says. "First my home". He leads you to a fuselage that looks suspiciously like the space-plane you tested earlier for the government. Through the door there is now a second room that functions as an airlock. Next is a room with a table, looking like a boardroom. "Office, meeting space.". Beyond that is a combined kitchen / dining / lounge room. Pagu motions for you to sit. "Next door, bedroom, bathroom."`
 			`	"Is this the space-plane I brought you?" you ask.`
-			`	"Yes. Don't tell government! Many old aeroplane on Imatai. Rubbish - but pressurise for high air. Perfect Uca cevata air. Government give three space-plane. We fill supply, fly here, remove engine and controls, take engines Imatai, put on different plane, fill with supply, fly here. Government not notice plane change. Cheap pressurised home. This mine, rest bunkroom, house worker. Build family home later."`
+			`	"Yes. Don't tell government! Many old aeroplane on Imatai. Rubbish - but pressurise for high air. Perfect Uca cevata air. Government give three space-plane. We fill supply, fly here, remove engine and controls, take engines Imatai, put on different plane, fill with supply, fly here. Government not notice plane change. Cheap pressurised home. This home mine, others bunkroom, house worker. Build family home later."`
 				goto more
 			label pay
 			`"Important thing Captain <last>. Bank set up. Pay you now. Great friend Yuhavi, many jobs no pay. Now we pay. 500,000 credits in bank account soon."`
-			`	"Soon spaceport, sell ships. Outfitter too. Building now. Hope sell ships government. But need example ships."`
+			`	"Soon spaceport, sell ships. Outfitter too. Building now. Hope sell ships to government. But need example ships."`
 			`	"You take 5 pilots Zug, escort ships for shipyard? One each type not have. We use, learn, hope sell."`
 				`	"Yes, I would be glad to escort these ships for you."`
 					accept
@@ -624,7 +629,6 @@ event "Uca cevata shipyard"
 		shipyard "Southbound Basics"
 		outfitter "Basic Outfits"
 		outfitter "Kraz Basics"
-		government "Yuhavi"
 
 mission "MP29a"
 	name "Test monopod drone"
@@ -729,7 +733,7 @@ mission "MP30a"
 				`	continue`
 			`King Pagu steps forward, and the crowd goes silent. "Long journey ahead to settle Uca cevata. But I will lead that journey. Today I have two announcements.`
 			`	"One: Today, my family move to Uca cevata. We first family settle here. I not send you anywhere I not go." A woman whom you assume is Pagu's wife comes onto the stage, accompanied by several children - the first children you have seen on Uca cevata. The royal family stand together for the cameras, and the crowd cheers.`
-			`	"Two: Today, I announce opening of Uca cevata shipyard, outfitter, and flight training school. We ready supply spaceships anybody on Imatai, and train pilot. In celebration, and demonstrate ship available, we fly convoy every ship type to Imatai, right now. Free spaceship rides 100 people random from crowd. See you soon!" he announces to the news cameras, before hopping off the stage towards the Argosy arm-in-arm with the new queen.`
+			`	"Two: Today, I announce opening of Uca cevata shipyard, outfitter, and flight training school. We ready supply spaceships anybody on Imatai, and train pilot. In celebration, and demonstrate ships, we fly convoy every ship type to Imatai, right now. Free spaceship rides 100 people random from crowd. See you soon!" he announces to the news cameras, before hopping off the stage towards the Argosy arm-in-arm with the new queen.`
 			choice
 				`	Travel to Imatai with King Pagu's convoy.`
 					accept

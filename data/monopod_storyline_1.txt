@@ -1,3 +1,6 @@
+# STORY SUMMARY - 1
+# From first contact with Skiapode, to initial technology exchanges, to revealing and end of war with Yuhavi.
+
 
 mission "MP1"
 	name "Scientist to Jeon"
@@ -766,7 +769,7 @@ mission "MP11e"
 	on waypoint
 		dialog `The Kateni flies into orbit and the pilot carefully performs his tests. You are very nervous following the disastrous last test flight, but this time everything seems safe. Finally the pilot signals that he is ready to land again.`
 	on complete
-		dialog `When the Kateni safely lands, a scientist hands you another bag of gold. "Ship seems safe now" she says.`
+		dialog `When the Kateni safely lands, a scientist hands you another bag of gold. "Ship look safe now" she says.`
 
 mission "MP11f"
 	name "Exchange gold"
@@ -868,7 +871,7 @@ mission "MP13"
 			`	Tokani takes longer than expected, and when he finally arrives he is accompanied by one of the planet leaders and a military officer.`
 			choice
 				`"What is the party about?"`
-				`"Why have you been forbidden to tell me about something that is clearly very serious?"`
+				`"Why have you been forbidden to tell me about something that is so important to all your people?"`
 			`"We have a lot to explain, and I am very sorry that I had to keep this a secret, I hope it does not damage our friendship." says Tokani. "I will explain from the beginning."`
 			`	"Our planet used to be divided into many different countries, with their own governments. Wars were frequent. Over time, small countries joined together to become larger countries, through conquest or peaceful agreements, until eventually the majority of the world was ruled by one government - our own". Tokani motions towards the government leader who is with him. "But there were still some small countries not under this government."`
 			`	"As long as the planet was divided, there was a risk of war. Because we are a democracy, we had a global vote on whether to have a single, global government. The vote was open to everybody, although some independent countries prevented their people from voting. Fortunately 80% of the world's population were already under our government and were able to vote, and 75% of those voted for a global government. That meant that 60% of the world's population had voted to have a single global government - a very clear democratic result."`
@@ -889,10 +892,10 @@ mission "MP13"
 			`Tokani discusses this with the leader for a minute, both look confused by the question.`
 			`	"We did not take over anybody. We had a vote, and the people of the planet voted to dissolve all countries and have a global government. Our government simply organised what the people had chosen to do."`
 			`	"But what about the 40% of the world who did not want global government?"`
-			`	"We expect many of them would have actually wanted global government also, but their governments refused to let them vote. We rescued them from these oppressive governments and gave them democracy, so they can have a say in the future of the planet. Yes, there were some people who genuinely disagreed and did not want global government, but they were outvoted. That is how democracy works."`
+			`	"We expect many of them would have actually wanted global government also, but their local governments refused to let them vote. We rescued them from these oppressive governments and gave them democracy, so they can have a say in the future of the planet. Yes, there were some people who genuinely disagreed and did not want global government, but they were outvoted. That is how democracy works."`
 				goto more
 			label weapons
-			`"The cowardly Yuhavi were not just fighting our soldiers, but were fighting innocent civilians. One of their most common ways to attack was to send unmanned drones, filled with explosives, and use them to blow up anything - military facilities, or even shopping centres. We had no effecive way of stopping this. We have energy shields, and used those to protect the most important military targets, but could not put shields around every shopping centre. So the murder continued."`
+			`"The cowardly Yuhavi were not just fighting our soldiers, but were fighting innocent civilians. One of their most common ways to attack was to send unmanned drones, filled with explosives, and use them to blow up anything - military facilities, or even shopping centres. We had no effective way of stopping this. We have energy shields, and used those to protect the most important military targets, but could not put shields around every shopping centre. So the murder continued."`
 			`	"But when you brought us laser weapons, we could finally build anti-drone defence systems. Taking the anti-missile defence turrets you provided as a model, we built our own turrets. We then mounted the laser rifles you brought us onto these turrets, resulting in low-powered but very fast defence systems that were powerful enough to shoot down drones. I understand you brought over 50 laser rifles - a small number were used for research, but most were actually used to make these anti-drone defences."`
 			`	"These turrets were placed on mobile, shield-protected vehicles, and suddenly deployed to surround any site the rebels were sending drones from. With this we were able to elimininate their main weapon."`
 			`	"Our brave army was then able to quickly defeat them before they had recovered and developed a new strategy. The fighting was still fierce and many soldiers died, but it was worth it, as this was the last war, that will end all war on this planet. We can now look forward to peace."`
@@ -902,7 +905,7 @@ mission "MP13"
 				goto more
 			label next
 			`"It's not quite over yet. We do have a major problem that we will need your help with."`
-			`	"The Yuhavi are an easily recognised ethnic group. Over this war, the level of hatred between the rest of the planet and them has grown, to the point where it is impossible to imagine co-existing with them. They cannot disappear into society, but will always be recognised. If we tried to live alongside them, individuals would try and take revenge for the death of their relatives, and the planet would have many years of murderous acts that our security forces would struggle to prevent. This could even turn into another war."`
+			`	"The Yuhavi are an easily recognised ethnic group. Over this war, the level of hatred between the rest of the planet and them has grown, to the point where it is impossible to imagine co-existing with them. They cannot disappear into society, as they will always be recognised. If we tried to live alongside them, individuals would try and take revenge for the death of their relatives, and the planet would have many years of murderous acts that our security forces would struggle to prevent. This could even turn into another war."`
 			`	"But the government has found a brilliant solution. We will deport them all - to Uca Cevata. This will save their lives from revenge attacks, and give us global peace."`
 			`	"Colonising a planet is a massive undertaking when we have only just started space flight. We will need your assistance in many ways. Are you willing to help us achieve peace?"`
 			choice
