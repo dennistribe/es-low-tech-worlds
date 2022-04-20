@@ -8,7 +8,7 @@
 
 mission "MP wormhole 1: Lock on enter"
 	source 
-		attributes "monopod1"
+		attributes "skiapode"
 	landing
 	invisible
 	on offer
@@ -27,7 +27,7 @@ event "MP wormhole: Lock1"
 	
 mission "MP wormhole 2: Unlock and return"
 	source
-		attributes "monopod1"
+		attributes "skiapode"
 	destination Zug
 	landing
 	to offer
@@ -152,7 +152,7 @@ event "MP wormhole: Unlock3"
 
 mission "MP wormhole 4: Lock on enter"
 	source 
-		attributes "monopod1"
+		attributes "skiapode"
 	landing
 	invisible
 	to offer
@@ -173,7 +173,7 @@ event "MP wormhole: Lock4"
 	
 mission "MP wormhole 5: Unlock and return"
 	source
-		attributes "monopod1"
+		attributes "skiapode"
 	destination Zug
 	landing
 	to offer
