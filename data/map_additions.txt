@@ -311,7 +311,6 @@ planet Imatai
 	attributes skiapode
 	landscape land/canyon1
 	description `This is the monopod's home.`
-	outfitter "Monopod advanced"
 
 planet Kata
 	landscape land/canyon5

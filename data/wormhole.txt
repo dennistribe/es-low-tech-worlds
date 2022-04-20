@@ -109,10 +109,10 @@ mission "MP wormhole 2b: Investigate"
 			`	"But if it was how they worked, how would you unlock it?"`
 			`	Paul looks at you angrily. "With a key, of course".`
 			`	You excitedly pull out a notebook and ask "What kind of a key?"`
-			`	"A sciency sounding key. A quantum key. Put quantum before anything and it sounds scientific. Yeah, you need a quantum key."`
+			`	"A sciency sounding key. A nano key, or a quantum key. Put nano or quantum before anything and it sounds scientific. Yeah, you need one of those."`
 			`	"Where would I find one?"`
-			`	"In your toilet. Go stick your head down it and see what you can see."`
-			`	Paul pushes his way through the door and slams it in your face. You are unsure whether to pay any attention to what he said.`
+			`	"In your lavatory. Go stick your head down it and see what you can see."`
+			`	Paul pushes his way through the door and slams it in your face. You are unsure whether to pay any attention to what he said, he seems to be just trying to send you on a wild goose chase to punish you for taking him on one.`
 
 
 # Once user lands on any human planet, lock wormhole again for over a month (should be long enough for the player to notice)

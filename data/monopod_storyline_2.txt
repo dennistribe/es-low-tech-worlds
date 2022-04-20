@@ -407,9 +407,10 @@ mission "MP23b"
 	on offer
 		conversation
 			`On landing, you visit the hanger the Yuhavi pilots are using to see how they are getting on.`
-			`	The monopod pilots you left here last time greet you in your own language (hesitantly). Huasi tells you they have finished their flight training and are very confident in the new ships. The ships are loaded with supplies from Kraz Cybernetics for the first settlement on Uca cevati, and they are ready to travel back there as soon as keystones have been installed in their ships. This should only take a few hours.`
+			`	A pilot comes to greet you, looking through a phrasebook. "My hovercraft is full of eels" he says slowly and carefully, looking very proud of himself. ` 
+			`	Huasi walks over, trying to hide her laughter. "All pilots finish flight training, good with ships. Not so good talking! Ships loaded with supplies from Kraz for Uca cevati settlement, ready fly once keystones installed." This should only take a few hours.`
 			`	Edward comes to greet you also. "We are initially providing the Yuhavi with three star barges to establish a regular cargo service between Imatai and Uca cevata, and one clipper as a flagship. The clipper gives them a fast, armed transport to and from Zug and Kraz, and can function for planetary defence if needed. All four pilots are familiar with both types of ship."`
-			`	"Grateful if you escort us home Captain <last>." says one of the pilots.`
+			`	"Grateful escort hovercraft Captain <last>." says one of the pilots.`
 			choice
 				`	"I would be glad to escort you."`
 					accept
