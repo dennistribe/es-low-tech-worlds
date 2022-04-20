@@ -165,10 +165,12 @@ ship "Suicide-Drone"
 	explode "big explosion" 10
 	explode "nuke explosion" 4
 	description "This is a plane! It is a space-plane!"
-# This line expands the "Basic Ships" shipyard to also include the Exemplar. If
+
+
+# This line expands the "Basic Ships" shipyard to also include the above ships. If
 # instead you want to replace all the existing ships, the first line of your new
 # shipyard definition should be the keyword "clear".
-shipyard "Basic Ships"
-	"Kateni"
-	"Space-plane"
-	"Suicide-Drone"
+#shipyard "Basic Ships"
+#	"Kateni"
+#	"Space-plane"
+#	"Suicide-Drone"

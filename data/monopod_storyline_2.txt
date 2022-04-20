@@ -103,7 +103,7 @@ mission "MP21a"
 					decline
 	passengers 1
 	npc accompany save
-		government "Monopod"
+		government "Skiapode"
 		personality escort timid
 		ship "Space-plane hyperdrive" "Space-plane"
 	on waypoint
@@ -140,7 +140,7 @@ mission "MP21c"
 				`	You should visit Pagu again anyway, you may as well escort the space-plane on your way there. You are handed a bag of gold as payment in advance.
 					accept
 		npc accompany save
-			government "Monopod"
+			government "Skiapode"
 			personality escort timid
 			ship "Space-plane hyperdrive" "Space-plane"
 		
@@ -749,7 +749,7 @@ mission "MP30a"
 				"Clipper"
 				"Star Barge"
 	npc 
-		government "Monopod"
+		government "Skiapode"
 		planet Imatai
 		fleet
 			names "civilian"

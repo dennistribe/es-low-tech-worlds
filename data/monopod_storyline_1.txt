@@ -1,7 +1,7 @@
 
 mission "MP1"
-	name "Monopod first contact"
-	description "First contact with the monopods."
+	name "Scientist to Jeon"
+	description "Take a Skiapode scientist to their moon Jeon."
 	landing
 	source "Imatai"
 	destination "Imatai"
@@ -36,7 +36,7 @@ mission "MP1"
 				`	Continue`
 			`Diary entry, day 3: `
 			`	When I woke up today, six of these strange aliens were sitting in a circle outside my ship, as if waiting for something. They looked a lot like the picture I left in the basket yesterday.`
-			`	When I opened the door and left the ship, they all appeared frightened to see a creature twice as tall as them. They eyed me suspiciously, especially my legs. We attempted to talk to each other using sign language. I think I was able to give them the impression that I was peaceful. I think they intend to return tomorrow. But they may have meant something quite different.`
+			`	When I opened the door and left the ship, they all appeared frightened to see a creature much taller than them. They eyed me suspiciously, especially my legs. We attempted to talk to each other using sign language. I think I was able to give them the impression that I was peaceful. I think they intend to return tomorrow. But they may have meant something quite different.`
 			`	These aliens are about two thirds the height of a human, and each have one very muscular leg. They travel by jumping, and appear to travel at a similar speed to a human, but look very peculiar while they do so. Their upper body is quite similar to a human. They look like the monopods of old human stories. `
 			`	The remainder of the day was spent beginning to dismantle my engine.`
 			`	I have realised that I have another problem - hyperspace fuel. I will need to refuel before I can return to human space. I do not know whether this is available on this planet.`
@@ -52,8 +52,8 @@ mission "MP1"
 					goto end
 			`Day 15:`
 			`	I have worked out that the main monopod speaking to me is named Tokani. We are beginning to be able to communicate with a few phrases - he seems to be learning my language faster than I am learning his. He appears to have a great sense of humour, and is fun to spend time with, despite the communication barrier.`
-			`	Today I raced Tokani from one side of the clearing to the other. He is faster than I am, however he takes some time to get up to speed. I can accelerate faster than him, and can turn at each end much easier - with only one leg he has to slow down and turn very carefully. As a result we are both a similar speed. He can however jump over my head almost effortlessly.`
-			`	I have been able to repair most of the damage now, however there is one solid metal component that I simply need to have a replacement manufactured. The monopods use various vehicles including aircraft, and clearly have reasonably advanced weapons systems, so no doubt have the ability to manufacture the component that I need. Unfortunately I will need to have a greater grasp of their language before I can communicate what I require and try to persuade them to help me. They are probably going to be nervous about helping me in case I prove dangerous to them. `
+			`	Today I raced Tokani from one side of the clearing to the other. He has a higher top speed than me, however I can accelerate and turn faster, so overall we are evenly matched. Except that he can jump over my head almost effortlessly.`
+			`	I have been able to repair most of the damage now, however there is one solid metal part that is beyond repair, and I will need to have a replacement manufactured. The monopods use various vehicles including aircraft, so no doubt have the ability to manufacture the component that I need. Unfortunately I will need to have a greater grasp of their language before I can communicate what I require and try to persuade them to help me. 
 			`	I have decided my primary need is to build my ability to communicate with the monopods, and to ensure that they see me as a friend and will be willing to help me.`
 			choice
 				`	Keep flicking through the diary`
@@ -62,16 +62,16 @@ mission "MP1"
 			`Day 30:`
 			`I have now spent two weeks completely focussed on building my relationship with Tokani and learning to communicate, without working on my ship. Although I still know only a few phrases of his language, he is able to talk to me in mine as well as a human toddler would. I am amazed at his language ability. `
 			`	I have been living with Tokani and his family for the past few days. His children were very scared of me at first (only one is taller than my knee), but soon came to accept me as normal. The real breakthrough came when one of the children kicked a ball up a tree, and was very upset. I climbed the tree to get it down, and they were all amazed to see somebody climbing a tree. Although they can jump well, they find climbing extremely difficult and almost never even attempt it. The children now look at me like I am some sort of superhero. `
-			`	But I do look ridiculous when climbing the stairs - or what I call the stairs. The ceilings in monopod houses are about the same height as human ceilings, because although they are short they jump instead of walking, and their heads would hit the ceiling if it was any shorter. Their houses usually have two or more floors, but they do not use stairs as humans do. They can jump, they don't need stairs. Instead, they have a single large step about my chest height (or their head height), halfway between the floor and ceiling. They simply jump up onto this step, then straight onto the next floor. I have to haul myself up onto this step using my arms, and then repeat the process to get onto the second floor. It looks ridiculous and the children laugh hysterically and tease me by seeing how many times they can jump past me up and down the stairs before I have got to the top.` 
+			`	But I do look ridiculous when climbing the stairs - or what I call the stairs. The ceilings in monopod houses are about the same height as human ceilings, because although they are short they jump instead of walking, and their heads would hit the ceiling if it was any lower. Their houses usually have two or more floors, but instead of stairs they have a single large step about my chest height (or their head height), halfway between the floor and ceiling. They simply jump up onto this step, then straight onto the next floor. I have to haul myself up onto this step using my arms, and then repeat the process to get onto the second floor. It looks ridiculous and the children laugh hysterically and compete to see how many times they can jump past me up and down the stairs before I have reached the top.` 
 			`	Tonight I think we are going out to some sort of formal dinner. I do not know what it is for or who will be there.`
 			choice
 				`	Keep flicking through the diary`
 				`	Skip to the last diary entry`
 					goto end
 			`Day 31a:`
-			`	We did go to a formal dinner last night. Many monopods were there, some of whom I had never seen before and appeared to be in authority, possibly some sort of government leaders - the few locals present were very nervous around them anyway. I was seated with them, at a seat and table that appeared to have been specially made for the occasion to allow me to sit at the same level as them. `
-			`	After the meal Tokani and myself had a long, slow conversation with these leaders, mostly communicating using diagrams. I was able to explain that I came from a long way away, and point out my home star Rutilicus on a star map. They indicated that they could travel on the land, and in the atmosphere, and had put unmanned satellites in orbit around their planet. But they had never even travelled to their own moon. They indicated that they were the rulers of this entire planet. Afterwards they had a long conversation with Tokani. `
-			`	They appear to have no collective name for their people. They are just "the people". They have names for individual ethnic and regional groups, but not for the people as a whole, as they have never needed one. I will call them the Monopods in this diary.`
+			`	We did go to a formal dinner last night. Many monopods were there, some of whom I had never seen before and appeared to be in authority. I was seated with them, at a seat and table that appeared to have been specially made for the occasion to allow me to sit at the same level as them. `
+			`	After the meal Tokani and myself had a long, slow conversation with these leaders, mostly communicating using diagrams. They confirmed that they were the rulers of this planet. I was able to explain that I came from a long way away, and point out my home star Rutilicus on a star map. They indicated that they could travel on the land, sea, and in the atmosphere, and had put unmanned satellites in orbit around their planet. But they had never even travelled to their own moon. `
+			`	They appear to have no collective name for their people. They are just "the people", which they pronounce "Skiapode". They have names for individual ethnic and regional groups, but not for the people as a whole, as they have never needed one.`
 			`	They want to visit the <ship> today. I really need their help to get it working again, so agreed to this. I am hoping they will be bringing an engineer to look at the ship, and I can show them the part I need repaired.`
 			`	At the start of the meal I was presented with another one of the star fruits that I had received on my first day at the ship. This appeared to be a very special honour, as nobody else had one, and everybody watched me to see what I would do with it. I very carefully ate a small corner of it, which appeared to please everyone, and they started eating their own food after that. Tokani's older children were nervously moving around helping serve the food, and I saw them eyeing my uneaten star fruit. When nobody seemed to be looking I sneakily passed the fruit to one of them, and he looked very surprised and excited. He hid it in his clothing and raced off to a small table in the corner which the children were sitting at when they were not busy helping. I later saw all the children sneakily eating something. When we returned home, the child I had given the fruit to brought out some small, carefully cut pieces, and gave them to his smaller siblings who had not been at the meal - and to Tokani and his mother. Tokani was very surprised, and managed to explain to me that these fruits were extremely rare and valuable, the children had never tasted them before, and he had only eaten one once. I indicated that they made me feel sick, and he first looked offended, and then started laughing uncontrollably.`
 			choice
@@ -143,25 +143,25 @@ mission "MP3"
 	source "Imatai"
 	on offer
 		conversation
-			`A group of 5 monopods is waiting for you in the spaceport: Tokani, one of the planet leaders you met earlier, and three you do not recognise. Tokani translates "Before you arrived on our planet, we believed we were alone in space. Space aliens like yourself were always thought to be just stories. Your landing was a big surprise, which is why our army shot down your ship (which we apologise for). We are very happy that you are friendly, and are grateful for how you have already helped us.`
-			`	"We would very much like to be able to build ships like yours. If you bring us technology we can use, and learn from, we will pay you well. `
-			`	"But we know that there must be many more aliens like yourself. There are good people and bad people, so there must be good aliens and bad aliens. We do not want the bad aliens to know about us.`
-			`	"Can you keep our existance a secret?"`
+			`A group of 5 monopods is waiting for you in the spaceport: Tokani, one of the planet leaders you met earlier, and three you do not recognise. Tokani translates "Before you arrived on planet, believed we alone in space. Space aliens like yourself thought to be just stories. Your landing was big surprise, which is why army shot down your ship (which we sorry for). We very happy that you friendly, and thank for how you already help us.`
+			`	"We want build ships like yours. If you bring technology we can use, and learn from, we pay you well. `
+			`	"But know that there must be many more aliens like you. There are good people and bad people, so there must be good aliens and bad aliens. We do not want the bad aliens to know about us.`
+			`	"Can you keep our planet a secret?"`
 			choice
 				`	"I can certainly keep you a secret, but I cannot guarantee my crew will."`
 				`	"I am very excited about discovering these planets, and do not think I will be able to keep it a secret, I am sorry."`
-			`Tokani translates your reply, and the other monopods look worried and frustrated. After some discussion among themselves, Tokani says "That is very disappointing, but we are pleased you were honest. Now we really need to get more technology, to be prepared in case others find us and want to harm us."`
+			`Tokani translates your reply, and the other monopods look worried and frustrated. After some discussion among themselves, Tokani says "That is very disappointing, but we pleased you were honest. Now we really need get more technology, to be prepare in case others find us, try harm us."`
 			`	Tokani asks about simple human ships, and you describe shuttles, sparrows and star barges to him. You also discuss engine systems. Finally, you discuss weaponry, and the monopods are extremely interested in lasers. They already have shield-penetrating projectile weapons, but have not been able to master weapons-strength lasers, which they see as being most useful for defence, especially for anti-missile and anti-drone systems. They settle on a list of equipment that they would like to acquire initially, and place it in your job board.`
-			`	"Please remember we will usually want two of each outfit" says Tokani. "One to test, and one to dismantle and study.". You do not have to install these on your ship, if you click the "Show outfits in cargo" checkbox in the outfitter you can buy outfits directly into your cargo hold.`
+			`	"Please remember we will usually want two of each outfit" says Tokani. "One to test, one to pull apart and study.". You do not have to install these on your ship, if you click the "Show outfits in cargo" checkbox in the outfitter you can buy outfits directly into your cargo hold.`
 			`	"How would you like to be paid for these jobs?"`
 			choice
 				`	"In credits"`
-			`You explain the credits that are used for interplanetary commerce in the remainder of the galaxy.`
+			`You explain the electronic credits that are used for interplanetary commerce in the remainder of the galaxy.`
 			`	"What are credits based upon?" asks Tokani.`
-			`	"They are just credits. They are themselves. I am not sure what you mean." you reply.`
-			`	"Here, we use gold and silver as money" Tokani explains. "We have electronic money also, but this simply represents the amount of silver you have in the bank. The real money is silver, the electronic version is just easier to carry around without it being stolen. Credits seem to be what we would call a 'fiat' currency, a currency that is based on nothing. Many years ago our planet used fiat currencies, and we found they were too easily manipulated by corrupt banks and governments. Fiat currencies are now completely illegal here, and we can only trade in things of real value - gold, silver, and other precious items."`
+			`	"They are just credits. I really don't know much about them, we've just always used them and I have never thought about it deeply." you reply.`
+			`	"Here, use gold and silver as money" Tokani explains. "We have electronic money also, but this simply represents the silver you have in the bank. Real money is silver, the electronic version just saves carrying heavy bags around. If credits represent nothing, they must be 'fiat' currency. Many years ago we used fiat currencies, but found too easily manipulated by bad banks and governments. Fiat currencies are now illegal. We can only trade things of real value - gold, silver, and other precious items."`
 			`	After further discussion among themselves, Tokani informs you that they cannot use credits, because they are not set up to use them, but also because it would be illegal, and this would need to be discussed in their parliament. Even if their parliament wanted to make an exception for you, this would not happen quickly.`
-			`	"For now, when you do a job for us, we will pay you in gold or precious stones, or sometimes by giving you other goods you can sell" Tokani finally tells you. "Please tell us what these are worth in credits, so we can find a fair payment for you. You can then exchange them for credits when you return to alien space."` 
+			`	"For now, when you do job, we pay gold or precious stones, or sometimes give you other goods you can sell" Tokani finally tells you. "You can then sell them for credits when you return to alien space."` 
 			`	Remember to check the job board.`
 			
 			
@@ -510,9 +510,9 @@ mission "MP4d"
 			`	"Where is Tokani?" you reply.`
 			`	"Tokani ... work." she responds. "Tokani teach me. Sorry not speak well. I pilot. He pilot. We fly fast aeroplane. We fly new spaceships."`
 			`	You watch while the two pilots inspect the shuttles carefully and expertly, both outside and inside. You start to try and explain the control systems to them, and are having great difficulty, when to your relief Tokani looks in the door.`
-			`	"I left work as soon as I heard you had landed <first>. It is great to see you again. How are you getting on with Tirano and Ruan?"`
+			`	"I left work as soon as heard you landed <first>. It great see you again. How you getting on with Tirano and Ruan?"`
 			`	"I can see they are very experienced pilots" you reply, "but I am having great difficulty even explaining the simplest details of how to fly these spaceships, because of the language barrier. I am impressed they can speak to me at all though."`
-			`	"Tirano and Ruan are in my language class, but it takes most people a lot of time to learn a new language. I can translate today to help."`
+			`	"Tirano and Ruan in my language class, but takes most people much time learn a new language. I translate today to help."`
 			`	After several hours of instruction, the two pilots are already feeling confident enough to try and fly the shuttles.`
 			`	"Captain <last>, come with us?" asks Ruan.`
 			choice
@@ -527,11 +527,11 @@ mission "MP4d"
 			`	Ruan and Tirano thank you for helping them so far, but still look quite nervous. You're sure they'll be fine though.`
 				decline
 	npc accompany save
-		government "Monopod"
+		government "Skiapode"
 		personality escort timid
 		ship "Shuttle" "Tirano"
 	npc accompany save
-		government "Monopod"
+		government "Skiapode"
 		personality escort timid
 		ship "Shuttle" "Ruan"
 	waypoint "Itikotiko"
@@ -574,18 +574,18 @@ mission "MP10 Educational Materials a"
 			choice
 				`	Go with him`
 			`	The young monopod leads you to a vehicle, similar to a van, which you awkwardly get into the back of as the front seat is too small for you. He drives you to the university where Tokani works. You meet with Tokani in his office.`
-			`	"Hello <first>, it is good to see you again. I see Firtad managed to explain that I wanted to see you. How did you find his speaking ability?"`
+			`	"Hello <first>, good to see you again. I see Firtad explained I want see you. What you think his speaking?"`
 			choice
 				`	"Basic, but functional."`
 				`	"He understands the key words he needs, but has little understanding of the correct grammar"`
-			`"I agree. I am currently teaching your language to a some of our best pilots, engineers, scientists and diplomats, so that there will soon be more people who can talk to you, and to any other aliens that may visit us. Firtad is one of our top, um, scientists (sorry I do not know the word for his speciality), but he is finding learning your language a difficult. He did not want to meet you at the spaceport today, but I thought the job would be good for him.`
-			`	"The problem is that I do not know your language well myself. I am good at learning how to speak from talking to people, but I don't really know the rules of the language. I also know only basic conversational words, from things you and I have talked about - I do not know the words to discuss science. I need books and other teaching resources.`
-			`	"Also, our scientists are finding the things you have brought very interesting, but there is only so much you can learn from pulling things apart. They want to have books and educational material also."`
+			`"Yes. I am teaching your language to some of our best pilots, engineers, scientists and, um, diplomats, so soon more people who talk to you, and to other aliens if visit us. Firtad is one of top scientists, but finds language difficult. He not want meet you at spaceport today, but I thought the job good for him.`
+			`	"The problem is that I do not know your language well myself. I am good at learning how speak from talking to people, but I don't really know the rules of the language. I also know only basic words, from things you and I have talked about - I do not know words to discuss science. I need books and other teaching resources.`
+			`	"Also, our scientists are finding things you have brought very interesting, but there is only so much you can learn from pulling things apart. They want books and educational material also."`
 			choose
 				`	"Would you like me to buy you some books?"`
-			`"Actually, I was wondering if you could take me to an alien planet, and help me to find the things that I need." Tokani looks very excited. "I have managed to persuade the authorities here that I really must go myself to get this, and they have agreed I can do that, but they could change their minds any day as they are very worried about secrecy. Can you take me?"`
+			`"Actually, I think you take me to alien planet, and help me find things I need." Tokani looks very excited. "I have managed to persuade authorities here that I must go myself to get this, and they have agreed I can do that, but they could change their minds any day as very worried about secrecy. Can you take me?"`
 			`	"Do you really need to go? Could you not ask me to just pick up what you want?"`
-			`	"Maybe" Tokani says, with a wink. "But the authorities don't know that, they think I need to go myself. Will you take me?"`
+			`	"Maybe" Tokani says, with a wink. "But the authorities don't know that, they think I need go myself. Will you take me?"`
 			choice
 				`	"Of course I'll take you"`
 					accept
@@ -600,7 +600,7 @@ mission "MP10 Educational Materials a"
 			`	Once back on the ship, Tokani gets into the electric wheelchair, conceals his one leg using the blankets and cushions, and puts on the human clothing. After this he looks just like a little old man - his long beard helping with the disguise.`
 			`	You leave the shipyard and head straight to the university bookshop. Tokani is excitedly looking all around himself, clearly elated with being the first monopod to explore an "alien" planet. Everything is a distraction, and it is hard to get him to the shop. 
 			`	Once there however he settles directly into his task of finding educational material, and is very efficient at it. He purchases curriculum for learning the human common tongue as a second language, and various dictionaries and encyclopaedias. He goes through a list of requests from the scientists, and is able to find most of what they are looking for also. Some of what he purchases is printed, and some is electronic. Finally, he purchases several human computers, to ensure he can access the electronic materials in case the file formats are incompatible with their own systems.`
-			`	After making all his purchases, there are 79,540 credits left over. "Keep the change, that's your pay <first>. You may as well have it now, it's easier that way. I trust you'll take me home. But can we stop and see those animals on the way?" Tokani is pointing at a poster entitled "Come to Skymoot, see the dragons".`
+			`	After making all his purchases, there are 79,540 credits left over. "Keep the change, that's your pay <first>. You may as well have it now, it's easier that way. I trust you'll take me home. But can we stop see those animals on the way?" Tokani is pointing at a poster entitled "Come to Skymoot, see the dragons".`
 		payment 78540
 		
 mission "MP10 Educational Materials b"
@@ -648,7 +648,7 @@ mission "MP11a"
 				`	"Sorry, I am too busy right now.:`
 					defer
 	npc accompany save
-		government "Monopod"
+		government "Skiapode"
 		personality escort timid
 		ship "Kateni hyperdrive" "Kateni"
 	waypoint "Itikotiko"
@@ -697,7 +697,7 @@ mission "MP11c"
 	on waypoint
 		dialog `Soon after takeoff you receive an urgent message from the Kateni pilot - clearly so agitated he is struggling to remember how to speak to you. "Help! Fire. Geruda bila. Off!" You had better find where he is and board the ship.`
 	npc assist
-		government "Monopod"
+		government "Skiapode"
 		personality timid
 		ship "Kateni dead" "Kateni"
 		conversation
@@ -759,7 +759,7 @@ mission "MP11e"
 					defer
 			`You make the same arrangements as before, and prepare to watch the Kateni during its test. Remember to rescue the pilot if anything goes wrong.`
 	npc accompany save
-		government "Monopod"
+		government "Skiapode"
 		personality escort timid
 		ship "Kateni hyperdrive" "Kateni"
 	waypoint "Itikotiko"
