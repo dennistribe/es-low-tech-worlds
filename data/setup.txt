@@ -1,4 +1,4 @@
-government "Monopod"
+government "Skiapode"
 	swizzle 6
 	color .3 1 1
 	"attitude toward"
@@ -11,7 +11,7 @@ government "Yuhavi"
 
 government "Pirate"
 	"attitude toward"
-		"Monopod" -.1
+		"Skiapode" -.1
 		"Yuhavi" -.1
 		
 

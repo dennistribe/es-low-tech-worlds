@@ -3,7 +3,7 @@
 # -------------
 system Itikotiko
 	pos -237.549 740.338
-	government Monopod1
+	government Skiapode
 	habitable 625
 	belt 1228
 	link "Ka vou"
@@ -308,7 +308,7 @@ system Vakacurumau
 #   PLANETS
 # -----------
 planet Imatai
-	attributes monopod1
+	attributes skiapode
 	landscape land/canyon1
 	description `This is the monopod's home.`
 	outfitter "Monopod advanced"
@@ -320,6 +320,7 @@ planet Kata
 planet "Na yava Wormhole"
 
 planet "Uca cevata"
+	government Uninhabited
 	landscape land/mountain8
 	description `This planet's surface is covered with snow and ice.`
 
@@ -332,6 +333,7 @@ planet Wasa
 	description `this planet is mostly sea.`
 
 planet Jeon
+	government Uninhabited
 	landscape land/canyon1
 	
 # ------------
