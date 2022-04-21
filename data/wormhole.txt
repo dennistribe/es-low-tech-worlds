@@ -8,9 +8,12 @@
 
 mission "MP wormhole 1: Lock on enter"
 	source 
-		attributes "skiapode"
+		# attributes "skiapode"
+		system Itikotiko
 	landing
 	invisible
+	to offer
+		not "event: MP wormhole: Lock7"
 	on offer
 		event "MP wormhole: Lock1"
 	waypoint Vakacurumau
@@ -27,11 +30,13 @@ event "MP wormhole: Lock1"
 	
 mission "MP wormhole 2: Unlock and return"
 	source
-		attributes "skiapode"
+		# attributes "skiapode"
+		system Itikotiko
 	destination Zug
 	landing
 	to offer
 		has "MP wormhole 1: Lock on enter: done"
+		not "event: MP wormhole: Lock7"
 	invisible
 	on offer
 		event "MP wormhole: Unlock2"
@@ -55,6 +60,7 @@ mission "MP wormhole 2a: Investigate"
 	destination Zug
 	to offer
 		has "MP wormhole 2: Unlock and return: done"
+		not "event: MP wormhole: Lock7"
 	passengers 1
 	landing
 	on offer
@@ -126,6 +132,7 @@ mission "MP wormhole 3: Lock"
 	invisible
 	to offer
 		has "MP wormhole 2: Unlock and return: offered"
+		not "event: MP wormhole: Lock7"
 	on offer
 		event "MP wormhole: Lock3"
 
@@ -139,6 +146,7 @@ mission "MP wormhole 3a: Unlock after a month"
 	landing
 	to offer
 		has "MP wormhole 2a: Investigate: done"
+		not "event: MP wormhole: Lock7"
 	invisible
 	on offer
 		event "MP wormhole: Unlock3" 40
@@ -152,11 +160,13 @@ event "MP wormhole: Unlock3"
 
 mission "MP wormhole 4: Lock on enter"
 	source 
-		attributes "skiapode"
+		# attributes "skiapode"
+		system Itikotiko
 	landing
 	invisible
 	to offer
 		has "event: MP wormhole: Unlock3"
+		not "event: MP wormhole: Lock7"
 	on offer
 		event "MP wormhole: Lock4"
 	waypoint Vakacurumau
@@ -173,11 +183,13 @@ event "MP wormhole: Lock4"
 	
 mission "MP wormhole 5: Unlock and return"
 	source
-		attributes "skiapode"
+		# attributes "skiapode"
+		system Itikotiko
 	destination Zug
 	landing
 	to offer
 		has "MP wormhole 4: Lock on enter: done"
+		not "event: MP wormhole: Lock7"
 	invisible
 	on offer
 		event "MP wormhole: Unlock5"
@@ -203,11 +215,30 @@ mission "MP wormhole 6: Lock permanently"
 	invisible
 	to offer
 		has "MP wormhole 5: Unlock and return: offered"
+		not "event: MP wormhole: Lock7"
 	on offer
 		event "MP wormhole: Lock6"
 
 event "MP wormhole: Lock6"
 	planet "Na yava Wormhole"
 		attributes add "requires: quantum keystone"
+		
+# If the player has found a quantum keystone before going through all of the above, all the above should be disabled and the wormhole permanently locked for simplicity
+# This wil occur only if the player lands on a planet in Itikotiko with a keystone. A player may acquire one elsewhere but not know its usefulness yet. But if they arrive in Itikotiko they have most likely used it to get there.
 
-
+mission "MP wormhole 7: Disable with keystone"
+	source
+		system Itikotiko 
+	landing
+	invisible
+	to offer
+		or
+			has "Quantum Keystone"
+			has "Quantum Key Stone"
+		not "event: MP wormhole: Lock6"
+	on offer
+		event "MP wormhole: Lock7"
+		
+event "MP wormhole: Lock7"
+	planet "Na yava Wormhole"
+		attributes add "requires: quantum keystone"
