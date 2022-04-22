@@ -632,7 +632,7 @@ event "Uca cevata shipyard"
 		outfitter "Kraz Basics"
 
 mission "MP29a"
-	name "Test monopod drone"
+	name "Test Skiapode drone"
 	source "Imatai"
 	to offer
 		has "event: MP27 Uca cevata settled"
@@ -725,7 +725,7 @@ mission "MP30a"
 			label announcer
 			`	Suddenly a voice comes over the loudspeakers. You all pay attention to a stage set at the side of the spaceport. The interpreter quietly whispers a translation to you.`
 			`	"Attention people Imatai and Uca cevata. Today great day in history. New day."`
-			`	"Monopods great people, fill Imatai and achieve many great things. And now expand beyond. Now space people. Yuhavi lead way to space."`
+			`	"Skiapode great people, fill Imatai and achieve many great things. And now expand beyond. Now space people. Yuhavi lead way to space."`
 			`	"Today announce Yuhavi home no longer Imatai. Today Yuhavi home Uca cevata. Today Yuhavi government Uca cevata". The last words cause a murmer of excitement through the crowd.`
 			`	Old King Panu walks onto the stage, accompanied by Pagu. An attendant brings the royal crown of the Yuhavi, and Panu picks it up and places it upon his head, with a defiant expression. The murmers in the crowd grow louder. The interpreter whispers "Illegal Panu wear crown. Government not like this.".`
 			`	"Today I Panu King once again. But I wear crown last time. Today I abdicate throne." Panu takes off the crown again. "I abdicate in favour of Pagu". Panu lifts the crown and places it upon Pagu's head. A great cheer goes up from the crowd. The reporters look very uncomfortable.`
@@ -810,7 +810,7 @@ mission "MP30b suicidedrone"
 				fail
 			label secret
 			`"I did test these spaceships for the government. I will not tell you anything about them because they trusted me with this secret, and I do not want to take sides in your dispute."`
-			`	Pagu looks at you approvingly. "Disappointed you not tell us, but pleased you keep secret. Trust you keep our secret too. Honest Captain <last>."`
+			`	Pagu looks at you approvingly. "Good you keep secret. Trust you keep our secrets too. Honest Captain <last>. My spies can investigate."`
 				decline
 			
 

@@ -3,8 +3,8 @@
 # MAIN MONOPOD GOVERNMENT - FULL HUMAN INTERACTION AND NEW TECHNOLOGY DEVELOPMENT
 
 mission "MP50"
-	name "Monopod diplomacy"
-	description "Help the monopod government establish diplomatic and banking relationships with the Free Worlds."
+	name "Skiapode diplomacy"
+	description "Help the Skiapode government establish diplomatic and banking relationships with the Free Worlds."
 	source Imatai
 	stopover Bourne
 	passengers 3
