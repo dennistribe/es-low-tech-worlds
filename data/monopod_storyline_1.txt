@@ -226,7 +226,8 @@ mission "MP5 Chipmunk Plasma Steering a"
 	job
 	source "Imatai"
 	to offer
-		has "MP5 X1200a: done"
+		has "MP5 X1200a: offered" 
+		has "event: MP wormhole: Disable" # The ion steering job may be failed due to wormhole fluctuations, plasma steering is a second chance to complete it. Offer once have keystone.
 	on visit
 		dialog `You have returned to <planet>, but you don't have the two Chipmunk Plasma Steering modules the monopods are looking for. Go and buy two of these modules before returning.`
 	on complete
@@ -251,7 +252,8 @@ mission "MP5 Chipmunk Plasma Thruster a"
 	job
 	source "Imatai"
 	to offer
-		has "MP5 X1700a: done"
+		has "MP5 X1700a: offered" 
+		has "event: MP wormhole: Disable" # The ion thruster job may be failed due to wormhole fluctuations, plasma thruster is a second chance to complete it. Offer once have keystone.
 	on visit
 		dialog `You have returned to <planet>, but you don't have the two Chipmunk Plasma Thrusters the monopods are looking for. Go and buy two of these thrusters before returning.`
 	on complete
@@ -270,34 +272,22 @@ mission "MP5 Chipmunk Plasma Thruster b"
 		payment 120000
 		dialog "You sell the gold to a precious metals dealer for 120,000 credits." 
 		
-mission "MP5 X1050a"
-	name "Bring two X1050 Ion Engines to monopods"
-	description "Purchase two X1050 Ion Engines and bring to the monopods. You can buy this straight into your cargo, you do not have to install it on your ship."
-	job
-	source "Imatai"
+# Trigger development of the Kateni once you have brought both thrusters and steering modules, of either type
+
+mission "MP5 trigger Kateni"
+	invisible
+	landing
 	to offer
-		has "MP5 X1700a: done"
-		has "MP5 X1200a: done"
-	on visit
-		dialog `You have returned to <planet>, but you don't have the two X1050 Ion Engines the monopods are looking for. Go and buy two of these engines before returning.`
-	on complete
-		outfit "X1050 Ion Engines" -2
-		dialog `The monopod scientists are clearly very pleased to receive these engines, and quickly load them into a waiting truck. One hands you a small bag of gold.`
+		or
+			has "MP5 X1700a: done"
+			has "MP5 Chipmunk Plasma Thruster a: done"
+		or
+			has "MP5 X1200a: done"
+			has "MP5 Chipmunk Plasma Steering a: done"
+	on offer
 		event "MP5 Kateni" 60
 
 event "MP5 Kateni"
-		
-mission "MP5 X1050b"
-	name "Exchange gold"
-	description "Exchange the gold you received as payment for the engines."
-	source Imatai
-	destination Mere
-	to offer
-		has "MP5 X1050a: done"
-	landing
-	on complete
-		payment 120000
-		dialog "You sell the gold to a precious metals dealer for 120,000 credits." 
 
 mission "MP6 Laser Rifle a"
 	name "Bring two Laser Rifles to monopods"
@@ -323,6 +313,36 @@ mission "MP6 Laser Rifle b"
 	on complete
 		payment 40000
 		dialog "You sell the gold to a precious metals dealer for 40,000 credits." 
+
+# The above is a crucial mission. In case the player missed it, offer again once they have a keystone if they have not already been offered the next job in the series.
+
+mission "MP6 Laser Rifle aa"
+	name "Bring two Laser Rifles to monopods"
+	description "Purchase two Laser Rifles and bring to the monopods. You can buy this straight into your cargo, you do not have to install it on your ship."
+	job
+	source "Imatai"
+	to offer
+		or    								# Has previously been offered this job, but either declined or failed it
+			has "MP6 Laser Rifle a: decline"   
+			has "MP6 Laser Rifle c: failed"	
+		has "event: MP wormhole: Disable"	# But now has a quantum keystone so has no reason they cannot complete it.
+	on visit
+		dialog `You have returned to <planet>, but you don't have the two Laser Rifles the monopods are looking for. Go and buy two of these rifles before returning.`
+	on complete
+		outfit "Laser Rifle" -2
+		dialog `The monopod scientists are clearly very pleased to receive these rifles, and quickly load them into a waiting truck. One hands you a small bag of gold.`
+		
+mission "MP6 Laser Rifle bb"
+	name "Exchange gold"
+	description "Exchange the gold you received as payment for the rifles."
+	source Imatai
+	destination Mere
+	to offer
+		has "MP6 Laser Rifle aa: done"
+	landing
+	on complete
+		payment 40000
+		dialog "You sell the gold to a precious metals dealer for 40,000 credits." 
 		
 mission "MP6 Laser Rifle c"
 	name "Bring ten Laser Rifles to monopods"
@@ -330,7 +350,9 @@ mission "MP6 Laser Rifle c"
 	landing
 	source "Imatai"
 	to offer
-		has "MP6 Laser Rifle b: done"
+		or
+			has "MP6 Laser Rifle b: done"
+			has "MP6 Laser Rifle bb: done"
 	on offer
 		conversation
 			`On landing, you receive a message from the monopod weapons scientists.`
@@ -398,7 +420,9 @@ mission "MP7 Anti-Missile Turret a"
 	job
 	source "Imatai"
 	to offer
-		has "MP6 Laser Rifle b: done"
+		or
+			has "MP6 Laser Rifle a: done"
+			has "MP6 Laser Rifle aa: done"
 	on visit
 		dialog `You have returned to <planet>, but you don't have the two Anti-Missile Turrets the monopods are looking for. Go and buy two of these turrets before returning.`
 	on complete
@@ -423,7 +447,9 @@ mission "MP8 Beam Laser a"
 	job
 	source "Imatai"
 	to offer
-		has "MP6 Laser Rifle b: done"
+		or
+			has "MP6 Laser Rifle a: done"
+			has "MP6 Laser Rifle aa: done"
 	on visit
 		dialog `You have returned to <planet>, but you don't have the two Beam Lasers the monopods are looking for. Go and buy two of these lasers before returning.`
 	on complete
@@ -564,9 +590,12 @@ mission "MP10 Educational Materials a"
 	destination "Rust"
 	to offer
 		or
-			has "MP5 X1700b: done"
-			has "MP5 X1200b: done"
-			has "MP6 Laser Rifle b: done"
+			has "MP5 X1700a: done"
+			has "MP5 X1200a: done"
+			has "MP6 Laser Rifle a: done"
+			has "MP6 Laser Rifle aa: done"
+			has "MP5 Chipmunk Plasma Thruster a: done"
+			has "MP5 Chipmunk Plasma Steering a: done"
 	on offer
 		conversation
 			`You are approached by a young monopod who approaches you and nervously pronounces your name by way of a greeting "Captain <last>?"`
@@ -793,7 +822,9 @@ mission "MP12"
 	source "Imatai"
 	minor
 	to offer
-		has "MP6 Laser Rifle a: done"
+		or
+			has "MP6 Laser Rifle a: done"
+			has "MP6 Laser Rifle aa: done"
 		has "MP10 Educational Materials a: offered"
 		not
 			has "event: MP9 War won"
