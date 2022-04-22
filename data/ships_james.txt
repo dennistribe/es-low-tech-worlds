@@ -61,6 +61,47 @@ ship "Kateni"
 	description "The kateni is an alien ship."
 
 
+ship "Kateni armed"
+	sprite "ship/kateni armed"
+	thumbnail "ship/kateni-thumbnail"
+	attributes
+		category "Light Freighter"
+		"cost" 500000
+		"shields" 357
+		"hull" 600
+		"required crew" 1
+		"automaton" 0
+		"bunks" 1
+		"mass" 50
+		"drag" 1.5
+		"heat dissipation" 1
+		"fuel capacity" 0
+		"cargo space" 15
+		"outfit space" 140
+		"weapon capacity" 0
+		"engine capacity" 80
+		weapon
+			"blast radius" 12
+			"shield damage" 120
+			"hull damage" 60
+			"hit force" 180
+	outfits
+		outfits
+		"Z01 Bouncer Engines"
+		"G35 Energy Box"
+		"A52 Generator"
+		"Shield Defier" 2
+		"Shield Defier Ammo" 3000
+	engine 0 42.5
+	gun -17 -42 "Shield Defier"
+	gun 17 -42 "Shield Defier"
+	explode "tiny explosion" 15
+	explode "small explosion" 25
+	description "The kateni is an alien ship."
+
+
+
+
 ship "Line"
 	sprite "ship/line"
 	attributes
@@ -168,7 +209,8 @@ ship "Suicide-Drone"
 # This line expands the "Basic Ships" shipyard to also include the above ships. If
 # instead you want to replace all the existing ships, the first line of your new
 # shipyard definition should be the keyword "clear".
-#shipyard "Basic Ships"
+shipyard "Basic Ships"
+	"Kateni armed"
 #	"Kateni"
 #	"Space-plane"
 #	"Suicide-Drone"
