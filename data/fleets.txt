@@ -1,6 +1,7 @@
 fleet "Small Yuhavi Merchants"
 	government "Yuhavi"
 	names "civilian"
+	cargo 3
 	personality
 		confusion 40
 		timid frugal appeasing
@@ -20,6 +21,7 @@ fleet "Small Yuhavi Merchants"
 fleet "Large Yuhavi Merchants"
 	government "Yuhavi"
 	names "civilian"
+	cargo 4
 	personality
 		confusion 30
 		timid frugal appeasing
@@ -37,9 +39,26 @@ fleet "Large Yuhavi Merchants"
 		"Argosy"
 		"Fury" 2
 		
+fleet "Yuhavi defence"
+	government "Yuhavi"
+	names "militia"
+	cargo 1
+	personality
+		heroic frugal
+		confusion 20
+	variant 1
+		"Fury Armoured" 2
+	variant 1
+		"Fury Armoured"
+		"Fury"
+	variant 1
+		"Fury Armoured"
+		"Sparrow"
+		
 fleet "Small Skiapode Merchants"
 	government "Skiapode"
 	names "civilian"
+	cargo 3
 	personality
 		confusion 40
 		timid frugal appeasing

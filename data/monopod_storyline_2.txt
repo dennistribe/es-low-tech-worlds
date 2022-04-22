@@ -543,6 +543,8 @@ event "MP27 Uca cevata settled"
 		description `This planet is mostly covered in snow and ice, but is in the process of being settled by the Yuhavi. They have one settlement, and are beginning to prospect the planet for mineral resources. The atmosphere of the planet is breatheable but thin, so buildings and vehicles are partially pressurised to compensate.`
 		spaceport `The spaceport is a flat area of ice surrounded by prefabricated buildings. There are buried tanks of hyperspace fuel, a precious commodity regularly imported from Zug. Many monopods hop around busily, and the sound of construction is everywhere. A small hut is set aside for socialising, containing an electrically heated device that resembles a fireplace.`
 		government "Yuhavi"
+	system "Itikotiko"
+		fleet "Small Yuhavi Merchants" 120
 			
 mission "MP28a"
 	name "Collect ships from Zug"
