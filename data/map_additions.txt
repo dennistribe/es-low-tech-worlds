@@ -308,6 +308,7 @@ system Vakacurumau
 #   PLANETS
 # -----------
 planet Imatai
+	government Skiapode
 	attributes skiapode
 	landscape land/canyon1
 	description `This is the monopod's home.`
