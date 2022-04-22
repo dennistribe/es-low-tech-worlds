@@ -61,8 +61,6 @@ ship "Kateni"
 	description "The kateni is an alien ship."
 
 
-
-
 ship "Line"
 	sprite "ship/line"
 	attributes
@@ -100,8 +98,8 @@ ship "Line"
 	description ""
 
 ship "Space-plane"
-	sprite "ship/Aeroplane
-	
+	sprite "ship/Aeroplane"
+	thumbnail "ship/Aeroplane"
 	attributes
 		category "Transport"
 		"cost" 100000

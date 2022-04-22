@@ -770,9 +770,7 @@ mission "MP30b suicidedrone"
 	source Imatai
 	to offer
 		has "MP30a: done"
-		or
-			has "MP29a: done"
-			has "MP21a: fail"
+		has "MP29a: done"
 	on offer
 		conversation
 			`As you approach Imatai, you see a fleet of the new suicide drones circling the planet. They take up positions close to the fleet, but do not attack.`
@@ -821,9 +819,7 @@ mission "MP30b nodrone"
 	source Imatai
 	to offer
 		has "MP30a: done"
-		or
-			has "MP29a: decline"
-			not "MP21a: offer"
+		not "MP29a: done"
 	on offer
 		conversation
 			`As you approach Imatai, you see a fleet of spaceships you have not seen before circling the planet. They look like a smaller version of the Kateni. They take up positions close to the fleet, but do not attack.`
@@ -844,14 +840,20 @@ mission "MP30b nodrone"
 			`Pagu looks at you for a while silently, then says. "Government space technology only made your help. If make spaceship without you help, getting skilled. More skill than we thought. Must be careful."`
 				fail
 				
+# ARMS RACE
+# Yuhavi discover government has installed shield-penetrating guns on drones.
+# No access to materials for shield-penetrating munitions - mined on Imatai only. Develop armoured Fury to offset this.
+# Both have armed patrols around their planets for defence.
+
 
 # PIRATE DEFENCE
-# Small pirate raid in Itikotiko, attacking Yuhavi transport ships, and seek to land on Imatai. Fought off by you, drones & Yuhavi ships.
+# Pirate raid in Itikotiko, attacking Yuhavi transport ships, and seek to land on Imatai. Fought off by you, drones & Yuhavi ships.
+# Probably best to be one large pirate ship - more plausible than getting multiple ships through wormhole.
 # Result = tentative defence agreement between government and Yuhavi. Permanent patrol of wormhole by drones and Furies.
 # Add random pirate raids inside wormhole, fighting with defence ships.
 
 
-# TERRAFORMING MISSIONS
+# TERRAFORMING MISSIONS (shift to a later storyline document)
 # Atmosphere limitations - thin, low CO2, limit to plant growth possible so cannot solve O2 just by growing plants. Slow O2 replenishment by algaes etc, already depleting with monopod breathing.
 # Early steps: 
 # - O2 generation by electrolysis, use in buildings.

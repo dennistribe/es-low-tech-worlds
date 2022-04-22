@@ -1,0 +1,68 @@
+fleet "Small Yuhavi Merchants"
+	government "Yuhavi"
+	names "civilian"
+	personality
+		confusion 40
+		timid frugal appeasing
+	variant 3
+		"Star Barge"
+	variant 2
+		"Star Barge" 2
+	variant 1
+		"Star Barge" 3
+	variant 1
+		"Star Barge"
+		"Clipper"
+	variant 1
+		"Star Barge"
+		"Space-plane hyperdrive"
+
+fleet "Large Yuhavi Merchants"
+	government "Yuhavi"
+	names "civilian"
+	personality
+		confusion 30
+		timid frugal appeasing
+	variant 3
+		"Clipper"
+	variant 3
+		"Argosy"
+	variant 3
+		"Hauler"
+	variant 2
+		"Hauler"
+		"Fury"
+	variant 1
+		"Hauler"
+		"Argosy"
+		"Fury" 2
+		
+fleet "Small Skiapode Merchants"
+	government "Skiapode"
+	names "civilian"
+	personality
+		confusion 40
+		timid frugal appeasing
+	variant 2
+		"Kateni"
+	variant 2
+		"Shuttle"
+	variant 1
+		"Kateni"
+		"Shuttle"
+	variant 1
+		"Kateni" 2
+
+fleet "Skiapode defence"
+	government "Skiapode"
+	names "civilian"
+	personality
+		confusion 5
+		nemesis
+	variant 1
+		"Suicide-Drone" 5
+	variant 3
+		"Suicide-Drone" 3
+	variant 2
+		"Suicide-Drone" 2
+		
