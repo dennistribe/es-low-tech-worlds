@@ -457,9 +457,7 @@ mission "MP4a"
 	destination "Zug"
 	to offer
 		has "MP2: done"
-		or
-			has "Quantum Keystone"
-			has "Quantum Key Stone"
+		has "MP wormhole: Disable"
 	on complete
 		payment "28000"
 
