@@ -618,9 +618,9 @@ mission "MP10 Educational Materials b"
 		has "MP10 Educational Materials a: done"
 	landing
 	on stopover
-		dialog `Tokani trundles around in his wheelchair looking at everything he can see. There is an observation point over a dragon nest site, which it is almost impossible to drag him away from. But once back in the <ship>, Tokani gets out of the wheelchair and jumps all around the cargo hold in excitement. "I've been wanting to do that all day" he exclaims.`
+		dialog `Tokani trundles around in his wheelchair looking at everything he can see. There is an observation point over a dragon nest site, which it is almost impossible to drag him away from. But once back in the <ship>, Tokani gets out of the wheelchair and jumps all around the cargo hold in excitement. "I've been wanting to do that all day!" he exclaims.`
 	on complete
-		dialog `Tokani thanks you repeatedly for the exciting trip, and then leaves with his cargo. He keeps the wheelchair also - "I hope I need it again soon" he says!`
+		dialog `Tokani thanks you repeatedly for the exciting trip, and then leaves with his cargo. He keeps the wheelchair also - "I hope I need it again soon!" he says!`
 	
 
 # SPACE FLIGHT
