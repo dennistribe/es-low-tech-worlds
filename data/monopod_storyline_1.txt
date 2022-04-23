@@ -597,6 +597,7 @@ mission "MP10 Educational Materials a"
 	source "Imatai"
 	destination "Rust"
 	to offer
+		has "event: MP wormhole: Disable"	
 		or
 			has "MP5 X1700a: done"
 			has "MP5 X1200a: done"
@@ -619,7 +620,7 @@ mission "MP10 Educational Materials a"
 			`"Yes. I am teaching your language to some of our best pilots, engineers, scientists and, um, diplomats, so soon more people who talk to you, and to other aliens if visit us. Firtad is one of top scientists, but finds language difficult. He not want meet you at spaceport today, but I thought the job good for him.`
 			`	"The problem is that I do not know your language well myself. I am good at learning how speak from talking to people, but I don't really know the rules of the language. I also know only basic words, from things you and I have talked about - I do not know words to discuss science. I need books and other teaching resources.`
 			`	"Also, our scientists are finding things you have brought very interesting, but there is only so much you can learn from pulling things apart. They want books and educational material also."`
-			choose
+			choice
 				`	"Would you like me to buy you some books?"`
 			`"Actually, I think you take me to alien planet, and help me find things I need." Tokani looks very excited. "I have managed to persuade authorities here that I must go myself to get this, and they have agreed I can do that, but they could change their minds any day as very worried about secrecy. Can you take me?"`
 			`	"Do you really need to go? Could you not ask me to just pick up what you want?"`

@@ -116,7 +116,7 @@ mission "MP wormhole 2a: Investigate"
 			`	"It felt like travelling through a hyperspace jump, but when I came out the other end I was in a system I had never seen before and which did not appear on any map I have seen."`
 			`	"If this is correct, it is an incredible discovery. Can we go and see it immediately?"`
 			`	"I thought you had a class to teach."`
-			`	"They'll just think I broke my leg or something, they'll manage. Let's go!. Oh, my name's Paul by the way"`
+			`	"They'll just think I broke my leg or something, they'll manage. Let's go! Oh, my name's Paul by the way."`
 			`	"Mine is <first>."`
 			`	You take Paul immediately to your ship.`
 				accept
