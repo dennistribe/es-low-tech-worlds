@@ -1,0 +1,90 @@
+fleet "Small Yuhavi Merchants"
+	government "Yuhavi"
+	names "civilian"
+	cargo 3
+	personality
+		confusion 40
+		timid frugal appeasing staying
+	variant 3
+		"Star Barge"
+	variant 2
+		"Star Barge" 2
+	variant 1
+		"Star Barge" 3
+	variant 1
+		"Star Barge"
+		"Clipper"
+	variant 1
+		"Star Barge"
+		"Space-plane hyperdrive"
+
+fleet "Large Yuhavi Merchants"
+	government "Yuhavi"
+	names "civilian"
+	cargo 4
+	personality
+		confusion 30
+		timid frugal appeasing
+	variant 3
+		"Clipper"
+	variant 3
+		"Argosy"
+	variant 3
+		"Hauler"
+	variant 2
+		"Hauler"
+		"Fury"
+	variant 1
+		"Hauler"
+		"Argosy"
+		"Fury" 2
+		
+fleet "Yuhavi defence"
+	government "Yuhavi"
+	names "militia"
+	cargo 1
+	personality
+		heroic frugal
+		confusion 20
+	variant 1
+		"Fury Armoured" 2
+	variant 1
+		"Fury Armoured"
+		"Fury"
+	variant 1
+		"Fury Armoured"
+		"Sparrow"
+		
+fleet "Small Skiapode Merchants"
+	government "Skiapode"
+	names "civilian"
+	cargo 3
+	personality
+		confusion 40
+		timid frugal appeasing staying
+	variant 2
+		"Kateni"
+	variant 2
+		"Shuttle"
+	variant 1
+		"Kateni"
+		"Shuttle"
+	variant 1
+		"Kateni" 2
+
+fleet "Skiapode defence"
+	government "Skiapode"
+	names "militia"
+	personality
+		confusion 5
+		heroic staying
+	variant 1
+		"Suicide-Drone" 5
+	variant 3
+		"Suicide-Drone" 3
+	variant 2
+		"Suicide-Drone" 2
+		"Kateni armed"
+		
+
+
