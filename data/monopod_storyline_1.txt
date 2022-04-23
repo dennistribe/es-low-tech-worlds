@@ -473,6 +473,7 @@ mission "MP8 Beam Laser b"
 			
 # Many users could take on the below job series, but be unable to complete it as the wormhole has closed on them. This job will then be failed.
 # This is complex, so must only be offered once the user has obtained a quantum keystone (this is now a condition in MP4a). 
+# It is also now only offered once the user has brought a thruster and a steering module.
 # Language class discussion needs to be shifted to a job that is more likely to be taken earlier.
 
 mission "MP4a"
