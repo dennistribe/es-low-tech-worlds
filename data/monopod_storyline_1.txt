@@ -483,7 +483,8 @@ mission "MP4a"
 	destination "Zug"
 	to offer
 		has "MP2: done"
-		has "MP wormhole: Disable"
+		has "event: MP wormhole: Disable"
+		not "event: MP26 Uca cevata settled"
 	on complete
 		payment "28000"
 
@@ -495,7 +496,6 @@ mission "MP4b"
 	destination "Imatai"
 	to offer
 		has "MP4a: done"
-		not "event: MP26 Uca cevata settled"
 	on offer
 		conversation
 			`You trade the gold the monopods gave you to purchase the shuttles with for credits, and purchase two shuttles. You also purchase flight training manuals. You are pleased to find you have 28000 credits left over.`
