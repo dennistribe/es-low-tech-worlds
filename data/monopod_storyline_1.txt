@@ -478,15 +478,25 @@ mission "MP8 Beam Laser b"
 mission "MP4a"
 	name "Bring two shuttles to the monopods"
 	description "Collect two shuttles from Zug (the monopods will give you gold to pay for these), and escort them to <source>."
-	job
+	spaceport
 	source "Imatai"
 	destination "Zug"
 	to offer
 		has "MP2: done"
 		has "event: MP wormhole: Disable"
+		has "MP5 trigger Kateni: offered"
 		not "event: MP26 Uca cevata settled"
+	on offer
+		`You are met in the spaceport by a polite monopod who cannot speak your language but indicates that you should wait. Soon Tokani appears with some others.`
+		`	"Thankyou for the engines you have brought us <first>. We are working on our own spaceships, but would like to have a couple of complete human ships to learn from, and use for exploration of our solar system. Could you bring us some spaceships? What would you recommend?"`
+		`	After some discussion, you all agree that shuttles would be the simplest, most useful and cheapest ships for the monopods to purchase initially.`
+		`	The monopods will give you gold to pay for the shuttles.`
+			`	Collect the shuttles.`
+				accept
+			`	Decline.`
+				decline
 	on complete
-		payment "28000"
+		payment 28000
 
 mission "MP4b"
 	name "Bring two shuttles to the monopods"
