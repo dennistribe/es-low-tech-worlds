@@ -451,9 +451,10 @@ mission "MP7 Anti-Missile Turret b"
 
 mission "MP4a"
 	name "Bring two shuttles to the monopods"
-	description "Collect two shuttles from Zug (the monopods will give you gold to pay for these), and escort them to <source>."
+	description "Collect two shuttles from Zug (the monopods will give you gold to pay for these), and escort them to Imatai."
 	source "Imatai"
 	destination "Zug"
+	minor
 	to offer
 		has "MP2: done"
 		has "event: MP wormhole: Disable"
@@ -473,7 +474,7 @@ mission "MP4a"
 
 mission "MP4b"
 	name "Bring two shuttles to the monopods"
-	description "Collect two shuttles from Zug (the monopods will give you gold to pay for these), and escort them to <destination>."
+	description "Collect two shuttles from Zug, and escort them to Imatai."
 	landing
 	source "Zug"
 	destination "Imatai"
@@ -512,6 +513,8 @@ mission "MP4d"
 	source Imatai
 	to offer
 		has "MP4b: done"
+		not "MP11a: active"
+		not "MP11c: active" # This mission will severely interfere with the Kateni flight testing mission.
 	landing
 	on offer
 		conversation
@@ -571,6 +574,7 @@ mission "MP10 Educational Materials a"
 	passengers 1
 	source "Imatai"
 	destination "Rust"
+	minor
 	to offer
 		has "event: MP wormhole: Disable"	
 		or
@@ -640,11 +644,13 @@ mission "MP11a"
 	name "Kateni test flight"
 	description "Accompany the monopod's first reusable spaceship on its maiden flight"
 	source "Imatai"
+	minor
 	to offer
 		has "event: MP5 Kateni"
+		not "MP4d: active"  #If accompanying shuttles that mission may interfere in several ways.
 	on offer
 		conversation
-			`On landing you receive a message from the space flight research team, asking you to meet with them at the earliest opportunity.`
+			`On landing you receive a message from the Skiapode space flight research team, asking you to meet with them at the earliest opportunity.`
 			choice
 				`	Visit the researchers.`
 				`	Not now.`
@@ -652,7 +658,7 @@ mission "MP11a"
 			`You walk to the hanger that is being used by the researchers, and are greeted by the head of the research team, who looks very cheerful.`
 			`	"Hello Captain <last>!" he calls. "Happy you here! Come see our work."`
 			`	He excitedly hops over to the doors of the hanger, and shouts something in his own language. The hanger doors open, revealing a box-shaped spaceship, about the size of a shuttle.`
-			`	"Simple for you, new happy for us!" he exclaims, and hops quickly over to the rear of the ship. "Our engine! Learn from X1050. More simple but working!"`
+			`	"Simple for you, new happy for us!" he exclaims, and hops quickly over to the rear of the ship. "Our engine! Learn from human. More simple but working!"`
 			`	The engine compartment is separated from the main body of the ship, and attached using an interesting series of clamps. "For testing. Drop engine if danger." explains the scientist.`
 			`	The body of the ship is a cube. Inside is an empty space, with a pilot's seat and controls to one side. "Easy change inside. Cargo or people. Many use."`
 			`	"No fly yet. You follow when fly. Safety. If break, pilot drop engine, you rescue pilot. Agree?"`
@@ -689,8 +695,10 @@ mission "MP11b"
 mission "MP11c"
 	name "Kateni second test flight"
 	description "Accompany the monopod's first reusable spaceship on its second flight"
+	minor
 	to offer
 		has "event: MP11 Kateni2"
+		not "MP4d: active"  #If accompanying shuttles that mission will interfere in several ways - including that the shuttles fix Kateni so it doesn't blow up.
 	source "Imatai"
 	waypoint "Itikotiko"
 	landing
@@ -760,6 +768,7 @@ mission "MP11d"
 mission "MP11e"
 	name "Kateni test flight"
 	description "Accompany the monopod's first reusable spaceship on its third flight"
+	minor
 	source "Imatai"
 	landing
 	to offer
