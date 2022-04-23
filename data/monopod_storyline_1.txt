@@ -657,7 +657,7 @@ mission "MP11a"
 	description "Accompany the monopod's first reusable spaceship on its maiden flight"
 	source "Imatai"
 	to offer
-		has "MP5 Kateni"
+		has "event: MP5 Kateni"
 	on offer
 		conversation
 			`On landing you receive a message from the space flight research team, asking you to meet with them at the earliest opportunity.`
