@@ -4,7 +4,7 @@ fleet "Small Yuhavi Merchants"
 	cargo 3
 	personality
 		confusion 40
-		timid frugal appeasing
+		timid frugal appeasing staying
 	variant 3
 		"Star Barge"
 	variant 2
@@ -61,7 +61,7 @@ fleet "Small Skiapode Merchants"
 	cargo 3
 	personality
 		confusion 40
-		timid frugal appeasing
+		timid frugal appeasing staying
 	variant 2
 		"Kateni"
 	variant 2
@@ -74,14 +74,15 @@ fleet "Small Skiapode Merchants"
 
 fleet "Skiapode defence"
 	government "Skiapode"
-	names "civilian"
+	names "militia"
 	personality
 		confusion 5
-		nemesis
+		heroic staying
 	variant 1
 		"Suicide-Drone" 5
 	variant 3
 		"Suicide-Drone" 3
 	variant 2
 		"Suicide-Drone" 2
-		
+
+

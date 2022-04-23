@@ -711,7 +711,7 @@ mission "MP30a"
 	to offer
 		has "event: Uca cevata shipyard"
 	on offer
-		event "Monopod revolution" 30
+#		event "Monopod revolution" 30
 		conversation
 			`When you land, you see a large number of ships assembled at the spaceport and on the bare land surrounding the settlement. There is a crowd of people present, and Pagu comes forward with an interpreter to greet you.`
 			`	"Captain <last>! We not expect you, but very glad you come. Today great day. Come see ceremony. I must go, interpreter stay."`
@@ -763,7 +763,7 @@ mission "MP30a"
 			variant
 				"Suicide-Drone" 7
 				
-event "Monopod revolution"
+#event "Monopod revolution"
 			
 # If tested the suicide drone previously	
 mission "MP30b suicidedrone"
@@ -802,7 +802,7 @@ mission "MP30b suicidedrone"
 					goto secret
 				`	"Honestly I have no idea."`
 			`Pagu looks frustrated. "Probably drones. Not surveillance, would not need so many. Must be armed. Need be careful."`
-				fail
+				decline
 			label armed
 			`"Each drone is armed with a shield-penetrating machine gun, and a massive explosive charge. Alone they are fairly weak, but a swarm of them is powerful."`
 			`	Pagu looks at you with a strange expression on his face. "Thankyou very helpful information. But government trust you with military secret. Why you share secret with me? Will you tell our secret them too?"`
@@ -812,7 +812,11 @@ mission "MP30b suicidedrone"
 			`"I did test these spaceships for the government. I will not tell you anything about them because they trusted me with this secret, and I do not want to take sides in your dispute."`
 			`	Pagu looks at you approvingly. "Good you keep secret. Trust you keep our secrets too. Honest Captain <last>. My spies can investigate."`
 				decline
-			
+	on decline
+		event "MP Armoured Fury a" 10
+	on fail
+		event "MP Yuhavi lose trust"
+		event "MP Armoured Fury b" 20		
 
 # If did not test the suicide drone
 mission "MP30b nodrone"
@@ -823,6 +827,7 @@ mission "MP30b nodrone"
 		has "MP30a: done"
 		not "MP29a: done"
 	on offer
+		event "MP Armoured Fury a" 10
 		conversation
 			`As you approach Imatai, you see a fleet of spaceships you have not seen before circling the planet. They look like a smaller version of the Kateni. They take up positions close to the fleet, but do not attack.`
 			`	The Argosy, Hauler, Clipper and Star Barge land directly at the airport. You watch the defensive gun turrets tracking them, but they do not open fire. The Yuhavi are clearly watching the gun turrets carefully too - the Fury and Sparrow stay circling above the airport for some time, until it is clear no fighting is going to break out. The Fury and Sparrow then land also, but their engines keep running and the pilots stay in the cockpits. The turrets on the Argosy and Hauler move sometimes also, showing they are manned.`
@@ -842,10 +847,105 @@ mission "MP30b nodrone"
 			`Pagu looks at you for a while silently, then says. "Government space technology only made your help. If make spaceship without you help, getting skilled. More skill than we thought. Must be careful."`
 				fail
 				
+event "MP Armoured Fury a"
+
+event "MP Yuvahi lose trust"
+
+event "MP Armoured Fury b"
+	planet "Uca cevata"
+		shipyard "Yuhavi"
+	system "Itikotiko"
+		fleet "Large Yuhavi Merchants" 300
+		fleet "Yuhavi defence" 150
+		fleet "Skiapode defence" 150
+				
 # ARMS RACE
 # Yuhavi discover government has installed shield-penetrating guns on drones.
 # No access to materials for shield-penetrating munitions - mined on Imatai only. Develop armoured Fury to offset this.
 # Both have armed patrols around their planets for defence.
+
+mission "MP31a Armoured Fury Testing"
+	name "Test Fury Armoured"
+	landing
+	source "Uca cevata"
+	waypoint Katuba
+	to offer
+		has "event: MP Armoured Fury a"
+	on offer
+		conversation
+			`Upon landing, you are called to a meeting with King Pagu, his engineers and Huasi.`
+			`	"Our spies have found that the government drones are armed with shield penetrating guns. This is a serious risk to our ships."`
+			choice
+				`	Ask if they have shield penetrating guns also.`
+				goto guns
+				`	Warn them about the explosive charge on the suicide drones.`
+			`"Your spies are correct, but that is not the primary weapon. Those drones are also armed with a massive explosive charge, which will detonate when the drone is destroyed, disabling any ship in the vicinity."`
+			`	King Pagu looks shocked at this information, and starts an urgent discussion with the engineers, which you can understand few words of. Finally Huasi turns to you.`
+			`	"Thankyou for this information Captain <last>. It is very helpful. However, it will be top-secret information which the government shared with you in confidence. If you are willing to tell their secrets to their enemy, we cannot trust that you will keep our secrets safe from our enemy. So thankyou, but you now need to leave this meeting, we will continue without your help."`
+			`	You are hurridly sent out the door, which is closed and locked behind you. Everyone remains silent until you are out of the room.`
+				decline
+			label guns
+			`	"Possibly... But the ammunition is made from a metal that is only found on Imatai. We no longer have access to our old mines, so cannot make more. We will have to manage with human weapons.`
+			`	"As a short-term measure, our engineers have added armour plating to a Fury. This should allow it to be strong enough to avoid destruction until it can disable these drones. However it does make the ship slower and less maneouverable.`
+			`	"We need to test how it performs in combat. We understand there is a pirate fleet in Katuba, just outside the wormhole. We need you to escort an armoured Fury and a regular Fury to this system, and help them destroy the pirate fleet. Then safely return both of our ships to Uca cevata. Can you do this?"`
+				`	"Yes, I would be glad to help."`
+					accept
+				`	"No, I am not equipped for a fight."`
+					fail
+	on decline
+		event "MP Yuhavi lose trust"
+		event "MP Armoured Fury b" 10
+	npc accompany save
+		personality escort heroic
+		fleet
+			names "militia"
+			variants 
+				"Fury Armoured keystone" 
+				"Fury keystone"
+	npc disable
+		system Katuba
+		government "Pirate"
+		personality heroic staying target harvests plunders
+		fleet "Small Southern Pirates"
+	on complete
+		payment 100000
+		dialog `The pilots confirm that the armoured Fury performed adequately, and with a few modifications should be suitable for use.`
+		event "MP Armoured Fury b" 5
+	on fail
+		event "MP Armoured Fury b" 15
+	
+		
+mission "MP31b Armoured Fury completion"
+	name "Fury Armoured has been completed"
+	landing
+	source "Uca cevata"
+	to offer
+		has "event: MP Armoured Fury b"
+		has "MP31a Armoured Fury testing: complete"
+	on offer
+		dialog `"Captain <last>, the Fury Armoured has now finished development and is available in our shipyard. Thankyou for your help in developing this."`	
+
+mission "MP31c Armoured Fury completion anyway"
+	name "Fury Armoured has been completed"
+	landing
+	source "Uca cevata"
+	to offer
+		has "event: MP Armoured Fury b"
+		has "MP31a Armoured Fury testing: failed"
+	on offer
+		dialog `"Captain <last>, despite the setback incurred by the Fury Armoured failing initial testing, it has now finished development and is available in our shipyard. Thankyou for your help in developing this."`		
+		
+mission "MP31d Armoured Fury no testing"
+	name "Told of Fury Armoured"
+	landing
+	source "Uca cevata"
+	to offer
+		has "event: MP Armoured Fury b"
+		has "event: MP Yuhavi lose trust"
+	on offer
+		conversation
+			`Once you land, a message appears in your comm system.`
+			`	"Captain <last>, in order to counter the shield-penetrating guns our spies have confirmed the government has installed on their drones, we have added additional armour plating to some Furies, and tested them with Southbound because unfortunately we no longer trust that you will keep our military secrets safe. However, now that they are finished, you are welcome to buy the final version from our shipyard.`
 
 
 # PIRATE DEFENCE
@@ -854,6 +954,141 @@ mission "MP30b nodrone"
 # Result = tentative defence agreement between government and Yuhavi. Permanent patrol of wormhole by drones and Furies.
 # Add random pirate raids inside wormhole, fighting with defence ships.
 
+mission "MP32 Pirate Raid"
+	name "Defend against pirate raid"
+	description "A large pirate warship has suddenly appeared in Itikotiko, attacking Yuhavi transports and attempting to land on Imatai."
+	source
+		system "Itikotiko"
+	landing
+	to offer
+		has "event: MP Armoured Fury b"
+		random <30
+	on offer
+		conversation
+			`There is suddenly panic in the spaceport, shouted conversations and pilots running to the few ships and guns available. A monopod you have not met before races over to you and starts desperately talking to you in broken Human and Skiapode phrases. You gather that a large unknown warship has suddenly appeared in orbit around Imatai, and has been shooting at both Yuhavi and Skiapode ships. The monopod is clearly desperate for your help.`
+				`	Help fight off this warship.`
+					accept
+				`	Refuse to help.`
+					decline
+	npc kill
+		system "Itikotiko"
+		government "Pirate"
+		personality heroic staying target harvests plunders
+		ship "Bastion" "Adventurous Brigand"
+	npc
+		government "Yuhavi"
+		fleet "Yuhavi defence"
+		fleet "Small Yuhavi Merchants"
+		fleet "Large Yuhavi Merchants"
+	npc
+		government "Skiapode"
+		fleet "Skiapode defence"
+		fleet "Small Skiapode Merchants"
+	on complete
+		payment 100000
+		dialog `There is considerable confusion when you land. Eventually you receive a message that there will be an urgent meeting between the Yuhavi and Skiapode leadership at the spaceport on Imatai as soon as everyone can get there. You are asked to attend, and assured that a payment of 100,000 credits has been deposited into your account, although it is unclear which government is paying you.`
+		
+mission "MP33 Negotiations (before southern carriers)"
+	name "Collect drone carrier from Zug"
+	description "Collect a drone carrier from Southbound Shipyards for the Yuhavi, to be used to transport Skiapode drones."
+	source Imatai
+	destination Zug
+	passengers 1
+	landing
+	to offer
+		has "event: MP32 Pirate Raid: offered"
+		not "event: southern carriers 2"
+	on offer
+		event "Monopod revolution" 30
+		conversation
+			`On landing, you are quickly invited to an urgent meeting at the spaceport. Armed soldiers escort you past an angry crowd of shouting protestors. You are surprised to see both King Pagu and several key members of the Skiapode government in the room (albeit at opposite ends of a long table), along with what appears to be a fairly random assortment of military and diplomatic persons from either side. The atmosphere is tense. Tokani steps forward.`
+			`	"We are all very grateful you are here Captain <last>. As you know, tensions between the Skiapode and Yuhavi governments have been rising, and both have been preparing warships. We have all been afraid of war beginning again.`
+			`	"But the recent raid by a large human pirate ship has really shaken us. It has shown that pirates now know we exist, and have discovered the secret of how to enter the wormhole. This means that not only are we afraid of war between each other, we now fear an invasion by humans.`
+			`	"That warship was far more powerful than any of our own, and we suffered very heavy casualties. It was very fortunate that there was only one. A fleet of ships like that would quickly overwhelm us.`
+			`	"The people are also scared and angry, as you will have seen from the protest outside. Violence has been reported in some places."`
+				`	"What do you intend to do?"`
+				continue
+			`	"The Yuhavi have agreed to immediately station a warship in Vakacurumau to watch the wormhole and provide early warning of any incursion. But we need a defence force, and the Yuhavi do not have enough ships for that. The fastest option is for our engineers to quickly build a large number of our drones to guard the wormhole. Our intention is to place a force of Skiapode drones just inside the wormhole, with a control station mounted in a Yuhavi warship but operated by Skiapode troops.`
+			`	"Not everyone is happy with this, and nobody trusts each other, but it is the best plan we can come up with at short notice.` 
+				`	"Why do you need me?"`
+			`"We have no way to deliver Skiapode drones to Vakacurumau. The Yuhavi have already spoken to Southbound Shipyards, who believe they can put together a one-off drone carrier based on their Hauler transport ships. Their engineers on Zug are working on it urgently, and hope to have it ready by the time you arrive. We need you to take a Yuhavi pilot and a Skiapode drone operator to Zug, collect this ship and deliver it to Imatai."
+				`	"I would be glad to help"`
+				`	"I am sure the Yuhavi can manage this themselves"`
+					goto manage
+			`"Thankyou <first>. We all really appreciate your help." Tokani tells everyone you have agreed, the members of the meeting nod at you, and immediately start arguing about something else. You are no longer needed here.`
+				accept
+			label manage
+			`"That is disappointing, as they are rather short of ships and were hoping you could do this so they could use their resources elsewhere. But they will hopefully find a way."`
+				decline
+
+mission "MP33 Negotiations (after southern carriers)"
+	name "Collect drone carrier from Zug"
+	description "Collect a drone carrier from Southbound Shipyards for the Yuhavi, to be used to transport Skiapode drones."
+	source Imatai
+	destination Zug
+	passengers 1
+	landing
+	to offer
+		has "event: MP32 Pirate Raid: offered"
+		has "event: southern carriers 2"
+	on offer
+		event "Monopod revolution" 30
+		conversation
+			`On landing, you are quickly invited to an urgent meeting at the spaceport. Armed soldiers escort you past an angry crowd of shouting protestors. You are surprised to see both King Pagu and several key members of the Skiapode government in the room (albeit at opposite ends of a long table), along with what appears to be a fairly random assortment of military and diplomatic persons from either side. The atmosphere is tense. Tokani steps forward.`
+			`	"We are all very grateful you are here Captain <last>. As you know, tensions between the Skiapode and Yuhavi governments have been rising, and both have been preparing warships. We have all been afraid of war beginning again.`
+			`	"But the recent raid by a large human pirate ship has really shaken us. It has shown that pirates now know we exist, and have discovered the secret of how to enter the wormhole. This means that not only are we afraid of war between each other, we now fear an invasion by humans.`
+			`	"That warship was far more powerful than any of our own, and we suffered very heavy casualties. It was very fortunate that there was only one. A fleet of ships like that would quickly overwhelm us.`
+			`	"The people are also scared and angry, as you will have seen from the protest outside. Violence has been reported in some places."`
+				`	"What do you intend to do?"`
+				continue
+			`	"The Yuhavi have agreed to immediately station a warship in Vakacurumau to watch the wormhole and provide early warning of any incursion. But we need a defence force, and the Yuhavi do not have enough ships for that. The fastest option is for our engineers to quickly build a large number of our drones to guard the wormhole. Our intention is to place a force of Skiapode drones just inside the wormhole, with a control station mounted in a Yuhavi warship but operated by Skiapode troops.`
+			`	"Not everyone is happy with this, and nobody trusts each other, but it is the best plan we can come up with at short notice.` 
+				`	"Why do you need me?"`
+			`"We have no way to deliver Skiapode drones to Vakacurumau. The Yuhavi have already spoken to Southbound Shipyards, who have developed a large fighter carrier based on their Hauler transport ships. They are urgently modifying one to carry drones, and hope to have it ready by the time you arrive. We need you to take a Yuhavi pilot to Zug, collect this ship and deliver it to Imatai."
+				`	"I would be glad to help"`
+				`	"I am sure the Yuhavi can manage this themselves"`
+					goto manage
+			`"Thankyou <first>. We all really appreciate your help." Tokani tells everyone you have agreed, the members of the meeting nod at you, and immediately start arguing about something else. You are no longer needed here.`
+				accept
+			label manage
+			`"That is disappointing, as they are rather short of ships and were hoping you could do this so they could use their resources elsewhere. But they will hopefully find a way."`
+				decline
+				
+event "Monopod revolution"
+
+mission "MP33b Roost delivery"
+	name "Deliver drone carrier to Imatai"
+	description "Escort a drone carrier from Southbound Shipyards to Imatai."
+	source Zug
+	destination Imatai
+	landing
+	to offer
+		or
+			has "MP33 Negotiations (before southern carriers): done"
+			has "MP33 Negotiations (after southern carriers): done"
+	dialog `You deliver the Yuhavi pilot and Skiapode drone operator to Southbound Shipyards. After a brief familiarisation with the new ship, they are ready to return with you to Imatai.`
+	npc accompany save
+		personality escort
+		ship "Skein drone keystone" "Drone nest"
+	on complete
+		payment 100000
+		dialog `The new ship lands outside a hanger, and is met by Yuhavi and Skiapode military personnel. They immediately start loading drones onto the ship.`
+		event "MP drone defence"
+
+event "MP drone defence"
+	system Vakacurumau
+		fleet
+			government "Yuhavi"
+			personality staying heroic
+			ship "Skein drone keystone" "Drone nest"
+		fleet
+			government "Skiapode"
+			names "militia"
+			personality 
+				confusion 5
+				staying heroic
+			ship "Suicide-Drone" 6
+	
 
 # TERRAFORMING MISSIONS (shift to a later storyline document)
 # Atmosphere limitations - thin, low CO2, limit to plant growth possible so cannot solve O2 just by growing plants. Slow O2 replenishment by algaes etc, already depleting with monopod breathing.
