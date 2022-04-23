@@ -84,5 +84,7 @@ fleet "Skiapode defence"
 		"Suicide-Drone" 3
 	variant 2
 		"Suicide-Drone" 2
+		"Kateni armed"
+		
 
 
