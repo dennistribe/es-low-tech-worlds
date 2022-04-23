@@ -88,7 +88,7 @@ mission "MP21a"
 			`	"But we do have a job for you we will pay you for. The Yuhavi will need people-carrying spaceships to transport them to Uca Cevata. Our engineers have spent the last two weeks building a suitable spaceship, and we would like you to help test it."`
 			choice
 				` "What sort of a spaceship can you build in two weeks?"`
-			`"We have high altitude aeroplanes that are already pressurised. We have taken an obsolete aeroplane, sealed it better for operation in a full vacuum, and installed the engines we built for the Katani. With these engines it should only take a day to travel to Uca cevata, so the travellers need only seats, not bunks."`
+			`"We have high altitude aeroplanes that are already pressurised. We have taken an obsolete aeroplane, sealed it better for operation in a full vacuum, and installed the engines we built for the Kateni. With these engines it should only take a day to travel to Uca cevata, so the travellers need only seats, not bunks."`
 			`	They take you to a hanger, where you see the scariest looking "spaceship" you have ever seen. It is simply a large aeroplane with the wings chopped off past the engines, and a patchwork of plates welded on to strategic parts that must have needed strengthening.`
 			`	You enter the plane, and find that every emergency exit has been welded shut, leaving only one door, which has been replaced with a heavier duty sealed door. There is no airlock - the one door opens directly into the main cabin.`
 			choice

@@ -859,8 +859,9 @@ mission "MP12"
 			
 mission "MP9 War"
 	invisible
+	landing
 	to offer
-		has "MP6 Anti-Missile Turret a: done"
+		has "MP7 Anti-Missile Turret a: done"
 		has "MP6 Laser Rifle e: done"
 		has "MP11a: done"
 	on offer
