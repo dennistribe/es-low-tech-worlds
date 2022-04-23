@@ -585,8 +585,9 @@ mission "MP28a"
 			`	"Yes. Don't tell government! Many old aeroplane on Imatai. Rubbish - but pressurise for high air. Perfect Uca cevata air. Government give three space-plane. We fill supply, fly here, remove engine and controls, take engines Imatai, put on different plane, fill with supply, fly here. Government not notice plane change. Cheap pressurised home. This home mine, others bunkroom, house worker. Build family home later."`
 				goto more
 			label pay
-			`"Important thing Captain <last>. Bank set up. Pay you now. Great friend Yuhavi, many jobs no pay. Now we pay. 500,000 credits in bank account soon."`
-			`	"Soon spaceport, sell ships. Outfitter too. Building now. Hope sell ships to government. But need example ships."`
+			`"Important thing Captain <last>. Bank set up. Pay you now. Great friend Yuhavi, many jobs no pay. Now we pay. 500,000 credits in bank account soon.`
+			`	"Very suspicious of credits at first, but I understand they not fiat money, but are a decentralised cryptocurrency, not controlled by anybody. Hard to understand, but almost as safe as silver and gold. Good enough for Yuhavi.`
+			`	"Soon spaceport, sell ships. Outfitter too. Building now. Hope sell ships to Skiapode government and businesses. But need example ships.`
 			`	"You take 5 pilots Zug, escort ships for shipyard? One each type not have. We use, learn, hope sell."`
 				`	"Yes, I would be glad to escort these ships for you."`
 					accept
