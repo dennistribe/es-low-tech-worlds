@@ -479,7 +479,6 @@ mission "MP8 Beam Laser b"
 mission "MP4a"
 	name "Bring two shuttles to the monopods"
 	description "Collect two shuttles from Zug (the monopods will give you gold to pay for these), and escort them to <source>."
-	spaceport
 	source "Imatai"
 	destination "Zug"
 	to offer
