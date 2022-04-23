@@ -439,32 +439,7 @@ mission "MP7 Anti-Missile Turret b"
 		payment 300000
 		dialog "You sell the gold to a precious metals dealer for 300,000 credits."
 		
-mission "MP8 Beam Laser a"
-	name "Bring two Beam Lasers to monopods"
-	description "Purchase two Beam Lasers and bring to the monopods. You can buy these straight into your cargo, you do not have to install them on your ship."
-	job
-	source "Imatai"
-	to offer
-		or
-			has "MP6 Laser Rifle a: done"
-			has "MP6 Laser Rifle aa: done"
-	on visit
-		dialog `You have returned to <planet>, but you don't have the two Beam Lasers the monopods are looking for. Go and buy two of these lasers before returning.`
-	on complete
-		outfit "Beam Laser" -2
-		dialog `You are met by a scientist accompanied by several armed soldiers, who quickly load the lasers into a waiting truck. One hands you a bag of gold.`
-		
-mission "MP8 Beam Laser b"
-	name "Exchange gold"
-	description "Exchange the gold you received as payment for the beam lasers."
-	source Imatai
-	destination Mere
-	to offer
-		has "MP6 Beam Laser a: done"
-	landing
-	on complete
-		payment 140000
-		dialog "You sell the gold to a precious metals dealer for 140,000 credits."
+
 		
 
 # SHUTTLE COLLECTION
