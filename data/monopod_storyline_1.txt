@@ -548,8 +548,8 @@ mission "MP4d"
 		personality escort timid
 		ship "Shuttle" "Ruan"
 	waypoint "Itikotiko"
-	on waypoint
-		dialog `Tirano and Ruan carefully fly a long distance from each other for safety, before executing a number of simple maneouvers to become familiar with the new ships, asking you a range of questions as they do so. They then tell you they are ready to land back on Imatai.
+	on enter Itikotiko
+		dialog `Tirano and Ruan carefully fly a long distance from each other for safety, before executing a number of simple maneouvers to become familiar with the new ships, asking you a range of questions as they do so. They then tell you they are ready to land back on Imatai.`
 	on complete
 		dialog	`As you expected, Tirano and Ruan managed their shuttles acceptably well, and landed safely. It helps that the autopilot systems on modern ships are so advanced. After landing, Tirano hands you two gold coins, which you add into the money bag she gave you earlier.`
 	
@@ -672,7 +672,7 @@ mission "MP11a"
 		personality escort timid
 		ship "Kateni hyperdrive" "Kateni"
 	waypoint "Itikotiko"
-	on waypoint
+	on enter Itikotiko
 		dialog `The Kateni flies into orbit and the pilot carefully performs a series of maneuvers evidently planned beforehand in order to test the function of the engine. Everything works well, but the ship appears fairly slow. After the pilot has finished his tests, he signals that it is time to land again.`
 	on complete
 		dialog `When the Kateni safely lands, a large crowd of monopods rush out of the hanger and surround the ship, greeting the pilot enthusiastically when he exits. One approaches you and hands you a bag of gold, telling you "Make changes, test again, tell you when ready".`
@@ -716,7 +716,7 @@ mission "MP11c"
 					accept
 				`	"Not today"`
 					defer
-	on waypoint
+	on enter Itikotiko
 		dialog `Soon after takeoff you receive an urgent message from the Kateni pilot - clearly so agitated he is struggling to remember how to speak to you. "Help! Fire. Geruda bila. Off!" You had better find where he is and board the ship.`
 	npc assist
 		government "Skiapode"
@@ -781,12 +781,13 @@ mission "MP11e"
 				`	Not now.`
 					defer
 			`You make the same arrangements as before, and prepare to watch the Kateni during its test. Remember to rescue the pilot if anything goes wrong.`
+					accept
 	npc accompany save
 		government "Skiapode"
 		personality escort timid
 		ship "Kateni hyperdrive" "Kateni"
 	waypoint "Itikotiko"
-	on waypoint
+	on enter Itikotiko
 		dialog `The Kateni flies into orbit and the pilot carefully performs his tests. You are very nervous following the disastrous last test flight, but this time everything seems safe. Finally the pilot signals that he is ready to land again.`
 	on complete
 		dialog `When the Kateni safely lands, a scientist hands you another bag of gold. "Ship look safe now" she says.`
