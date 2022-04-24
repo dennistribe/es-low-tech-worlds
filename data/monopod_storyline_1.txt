@@ -822,8 +822,7 @@ mission "MP12"
 			has "MP6 Laser Rifle a: done"
 			has "MP6 Laser Rifle aa: done"
 		has "MP10 Educational Materials a: offered"
-		not
-			has "event: MP9 War won"
+		not "event: MP9 War won"
 	on offer
 		conversation
 			`While wandering around the airport, you are approached by a monopod you have not seen before.`
