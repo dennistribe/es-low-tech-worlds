@@ -609,6 +609,7 @@ mission "MP28b"
 	on offer
 		conversation
 			`You land at the private hanger, and are met by Edward. He tells you the ships are ready for departure, and are loaded with supplies and example outfits for the new outfitter. His staff just need to explain the new ships to the pilots first - they have all been trained on star barges and clippers. The controls are however similar between all the ships, and they will be ready to depart shortly.`
+				accept
 	npc accompany save
 		government "Yuhavi"
 		personality escort timid
@@ -705,7 +706,6 @@ mission "MP30a"
 	to offer
 		has "event: Uca cevata shipyard"
 	on offer
-#		event "Monopod revolution" 30
 		conversation
 			`When you land, you see a large number of ships assembled at the spaceport and on the bare land surrounding the settlement. There is a crowd of people present, and Pagu comes forward with an interpreter to greet you.`
 			`	"Captain <last>! We not expect you, but very glad you come. Today great day. Come see ceremony. I must go, interpreter stay."`
@@ -756,20 +756,20 @@ mission "MP30a"
 			names "civilian"
 			variant
 				"Suicide-Drone" 7
-				
-#event "Monopod revolution"
-			
-# If tested the suicide drone previously	
+
+# If tested the suicide drone previously					
 mission "MP30b suicidedrone"
 	name "King Pagu"
 	landing
 	source Imatai
 	to offer
-		has "MP30a: done"
+		or
+			has "MP30a: done"
+			has "MP30a: active"
 		has "MP29a: done"
 	on offer
 		conversation
-			`As you approach Imatai, you see a fleet of the new suicide drones circling the planet. They take up positions close to the fleet, but do not attack.`
+			`one As you approach Imatai, you see a fleet of the new suicide drones circling the planet. They take up positions close to the fleet, but do not attack.`
 			`	The Argosy, Hauler, Clipper and Star Barge land directly at the airport. You watch the defensive gun turrets tracking them, but they do not open fire. The Yuhavi are clearly watching the gun turrets carefully too - the Fury and Sparrow stay circling above the airport for some time, until it is clear no fighting is going to break out. The Fury and Sparrow then land also, but their engines keep running and the pilots stay in the cockpits. The turrets on the Argosy and Hauler move sometimes also, showing they are manned.`
 			`	A crowd is present, and appears to include a wide variety of people. Some are children who seem excited and completely focussed on watching the spaceships, accompanied by parents who look more nervous. Some protestors wave anti-government placards. Some small fights break out in places in the crowd.`
 			`	The crowd is corralled behind a temporary fence, to keep them off the tarmac. Armed soldiers stand along the fence, gripping their weapons and looking nervously at both the crowd on one side and the Yuhavi spaceships on the other.`
@@ -796,21 +796,25 @@ mission "MP30b suicidedrone"
 					goto secret
 				`	"Honestly I have no idea."`
 			`Pagu looks frustrated. "Probably drones. Not surveillance, would not need so many. Must be armed. Need be careful."`
-				decline
+				accept
+				goto end
 			label armed
 			`"Each drone is armed with a shield-penetrating machine gun, and a massive explosive charge. Alone they are fairly weak, but a swarm of them is powerful."`
 			`	Pagu looks at you with a strange expression on his face. "Thankyou very helpful information. But government trust you with military secret. Why you share secret with me? Will you tell our secret them too?"`
 			`	You are now not sure whether you did the right thing.`
-				fail
+				decline
+				goto end
 			label secret
 			`"I did test these spaceships for the government. I will not tell you anything about them because they trusted me with this secret, and I do not want to take sides in your dispute."`
 			`	Pagu looks at you approvingly. "Good you keep secret. Trust you keep our secrets too. Honest Captain <last>. My spies can investigate."`
-				decline
-	on decline
+				accept
+			label end
+	on accept
 		event "MP Armoured Fury a" 10
-	on fail
+	on decline
 		event "MP Yuhavi lose trust"
-		event "MP Armoured Fury b" 20		
+		event "MP Armoured Fury b" 20
+	
 
 # If did not test the suicide drone
 mission "MP30b nodrone"
@@ -818,7 +822,9 @@ mission "MP30b nodrone"
 	landing
 	source Imatai
 	to offer
-		has "MP30a: done"
+		or
+			has "MP30a: done"
+			has "MP30a: active"
 		not "MP29a: done"
 	on offer
 		event "MP Armoured Fury a" 10
@@ -839,11 +845,13 @@ mission "MP30b nodrone"
 			choice
 				`	"I do not know."`
 			`Pagu looks at you for a while silently, then says. "Government space technology only made your help. If make spaceship without you help, getting skilled. More skill than we thought. Must be careful."`
-				fail
+				decline
+	on decline
+		event "MP Armoured Fury a" 10
 				
 event "MP Armoured Fury a"
 
-event "MP Yuvahi lose trust"
+event "MP Yuhavi lose trust"
 
 event "MP Armoured Fury b"
 	planet "Uca cevata"
