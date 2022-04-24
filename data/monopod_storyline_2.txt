@@ -571,7 +571,7 @@ mission "MP28a"
 					goto spaceport
 				`	"Those aeroplanes"`
 					goto aeroplanes
-				`	"Sorry, I'm in a hurry, I don't have time for a tour"`
+				`	"Did you want to talk to me about something?"`
 					goto pay
 			`Pagu and the pilot slowly hop over towards the factory, and you walk beside them. Despite walking slowly, by the time you reach the factory you are already gasping for breath in the thin air.`
 			`	"Come in" says the pilot, and leads you through an airtight door, into an entranceway that appears to function as a crude airlock. When opening the second door into the factory proper, your ears pop with a sudden increase in pressure, and breathing is considerably easier. "Pressurised. Also raised oxygen." explains Pagu.`
@@ -593,6 +593,7 @@ mission "MP28a"
 			`	"Very suspicious of credits at first, but I understand they not fiat money, but are a decentralised cryptocurrency, not controlled by anybody. Hard to understand, but almost as safe as silver and gold. Good enough for Yuhavi.`
 			`	"Soon spaceport, sell ships. Outfitter too. Building now. Hope sell ships to Skiapode government and businesses. But need example ships.`
 			`	"You take 5 pilots Zug, escort ships for shipyard? One each type not have. We use, learn, hope sell."`
+			choice
 				`	"Yes, I would be glad to escort these ships for you."`
 					accept
 				`	"No, I am too busy."`
@@ -648,25 +649,13 @@ mission "MP29a"
 		conversation
 			`On landing at the airport you receive a message to wait for Tokani. When he arrives, he says "Good to see you again <first>. Many things to discuss."`
 			`	"The government is worried about how strong the Yuhavi are becoming, and are concerned that they could easily destroy all our satellites and our few spaceships very quickly, if they wanted war. We need some defences, just in case. We hope to not need them.`
-			`	"Our engineers have quickly put together some simple drones. We would like you to test them out. I am sure that with your experience you will be able to defeat them, but it is dangerous. Can you test them for us?"`
+			`	"Our engineers have quickly put together some simple drones. We would like you to test one out. I am sure that with your experience you will be able to defeat it, but it is dangerous. Can you test it for us?"`
 			choice
-				`	"Yes, I can test the drones."`
+				`	"Yes, I can test the drone."`
 				`	"No, I don't want to endanger my ship."`
 					decline
-			`"Thankyou" says Tokani. "There will be three drones in orbit shortly. Please try to destroy all three, record the fight, and report back here when you are finished.`
+			`"Thankyou" says Tokani. "There will be a drone in orbit shortly. Please try to destroy it, record the fight, and report back here when you are finished.`
 				accept
-	npc kill
-		government "Test Dummy"
-		personality nemesis
-			confusion 5
-		system Itikotiko
-		ship "Suicide-Drone" 
-	npc kill
-		government "Test Dummy"
-		personality nemesis
-			confusion 5
-		system Itikotiko
-		ship "Suicide-Drone" 
 	npc kill
 		government "Test Dummy"
 		personality nemesis
@@ -675,24 +664,24 @@ mission "MP29a"
 		ship "Suicide-Drone" 
 	on complete
 		conversation
-			`"What did you think of our new drones?" asks Tokani.`
+			`"What did you think of our new drone?" asks Tokani.`
 			choice
 				`	"The weapon was very effective."`
 					goto weapon
-				`	"They are very easy to kill."`
+				`	"It is quite easy to kill."`
 					goto kill
-				`	"You don't want to be near them when they blow up."`
+				`	"You don't want to be near it when it blows up."`
 			`"Exactly. They are designed to self-destruct and take out ships much bigger than themselves."`
-			goto end
+				goto end
 			label weapon
 			`"It is the same shield-penetrating gun that you were shot down with back when you first landed on Imatai. We have simply adapted it to fit into a spaceship. It's mainly intended to annoy the enemy until they destroy the drone - when it will explode and hopefully take them down with it."`
-			goto end
+				goto end
 			label kill
 			`"That is intentional. They are a trap, packed with explosives. We want the enemy to try to destroy them - and then die in the resulting explosion."`
 			label end
 			`	Tokani smiles grimly. "Our engineers would never admit it, but I think they're simply copying the tactics the Yuhavi used in our recent war. It is amazing that so quickly we find ourselves technologically inferior to our old enemy. And I must point out we do have you to blame for that."`
 			`	Your conversation is interrupted by shouting outside the window. You look outside to see an angry protest mob moving down the street, waving placards. "The people are upset about the Yuhavi having so much technology, and our government giving them an entire planet. Many are already saying the war was pointless, and asking what their relatives died for. The government is worried. You are not popular either."`
-			`	"Still, thankyou for testing the drones." Tokani hands you a bag of gold.`
+			`	"Still, thankyou for testing the drone." Tokani hands you a bag of gold.`
 			`	You can probably exchange the gold for credits at Uca cevata now.` 
 
 mission "MP29b"

@@ -28,7 +28,7 @@ outfit "Shield Defier"
 		sound "gatling"
 		ammo "Shield Defier Ammo"
 		icon "icon/gat"
-		"inaccuracy" 1
+		"inaccuracy" 2
 		"velocity" 16
 		"lifetime" 1
 		"reload" 3
@@ -60,7 +60,7 @@ outfit "debullet"
 		"lifetime" 20
 		"random lifetime" 5
 		"shield damage" 0
-		"hull damage" 3
+		"hull damage" 2
 		"piercing" 1.
 		"hit force" 2
 		"hit effect" "bullet impact"
