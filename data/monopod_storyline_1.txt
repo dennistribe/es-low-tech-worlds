@@ -461,14 +461,16 @@ mission "MP4a"
 		has "MP5 trigger Kateni: offered"
 		not "event: MP26 Uca cevata settled"
 	on offer
-		`You are met in the spaceport by a polite monopod who cannot speak your language but indicates that you should wait. Soon Tokani appears with some others.`
-		`	"Thankyou for the engines you have brought us <first>. We are working on our own spaceships, but would like to have a couple of complete human ships to learn from, and use for exploration of our solar system. Could you bring us some spaceships? What would you recommend?"`
-		`	After some discussion, you all agree that shuttles would be the simplest, most useful and cheapest ships for the monopods to purchase initially.`
-		`	The monopods will give you gold to pay for the shuttles.`
-			`	Collect the shuttles.`
-				accept
-			`	Decline.`
-				decline
+		conversation
+			`You are met in the spaceport by a polite monopod who cannot speak your language but indicates that you should wait. Soon Tokani appears with some others.`
+			`	"Thankyou for the engines you have brought us <first>. We have started testing our own spaceship designs, but would like to have a couple of complete human ships to learn from, and use for exploration of our solar system. Could you bring us some spaceships? What would you recommend?"`
+			`	After some discussion, you all agree that shuttles would be the simplest, most useful and cheapest ships for the monopods to purchase initially.`
+			`	The monopods will give you gold to pay for the shuttles.`
+			choice
+				`	Collect the shuttles.`
+					accept
+				`	Decline.`
+					decline
 	on complete
 		payment 28000
 
@@ -820,8 +822,7 @@ mission "MP12"
 			has "MP6 Laser Rifle a: done"
 			has "MP6 Laser Rifle aa: done"
 		has "MP10 Educational Materials a: offered"
-		not
-			has "event: MP9 War won"
+		not "event: MP9 War won"
 	on offer
 		conversation
 			`While wandering around the airport, you are approached by a monopod you have not seen before.`
