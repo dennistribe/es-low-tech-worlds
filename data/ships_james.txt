@@ -93,8 +93,8 @@ ship "Kateni armed"
 		"Shield Defier" 2
 		"Shield Defier Ammo" 3000
 	engine 0 42.5
-	gun -17 -42 "Shield Defier"
-	gun 17 -42 "Shield Defier"
+	gun -17 -41 "Shield Defier"
+	gun 17 -41 "Shield Defier"
 	explode "tiny explosion" 15
 	explode "small explosion" 25
 	description "The kateni is an alien ship."
@@ -209,8 +209,8 @@ ship "Suicide-Drone"
 # This line expands the "Basic Ships" shipyard to also include the above ships. If
 # instead you want to replace all the existing ships, the first line of your new
 # shipyard definition should be the keyword "clear".
-shipyard "Basic Ships"
-	"Kateni armed"
+#shipyard "Basic Ships"
+#	"Kateni armed"
 #	"Kateni"
 #	"Space-plane"
 #	"Suicide-Drone"
