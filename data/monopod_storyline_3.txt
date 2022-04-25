@@ -1,5 +1,5 @@
 # STORY SUMMARY - 3
-# Political revolution on Imatai, establishes more open government. Trading begins on both Imatai and Uca cevata.
+# Political revolution on Imatai, establishes more open government. Trading begins on both Imatai and Uca cevata.lllll
 # MAIN MONOPOD GOVERNMENT - FULL HUMAN INTERACTION AND NEW TECHNOLOGY DEVELOPMENT
 
 mission "MP50"

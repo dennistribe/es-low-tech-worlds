@@ -41,7 +41,7 @@ fleet "Large Yuhavi Merchants"
 		
 fleet "Yuhavi defence"
 	government "Yuhavi"
-	names "militia"
+	names "civilian"
 	cargo 1
 	personality
 		heroic frugal
@@ -74,17 +74,28 @@ fleet "Small Skiapode Merchants"
 
 fleet "Skiapode defence"
 	government "Skiapode"
-	names "militia"
+	names "civilian"
 	personality
 		confusion 5
 		heroic staying
-	variant 1
-		"Suicide-Drone" 5
 	variant 3
-		"Suicide-Drone" 3
-	variant 2
 		"Suicide-Drone" 2
+	variant 2
+		"Suicide-Drone" 1
 		"Kateni armed"
 		
-
+fleet "Wormhole Yuhavi"
+	government "Yuhavi"
+	personality staying heroic
+	variant
+		"Skein drone keystone" "Drone nest"
+		
+fleet "Wormhole Skiapode"
+	government "Skiapode"
+	names "civilian"
+	personality 
+		confusion 5
+		staying heroic
+	variant
+		"Suicide-Drone" 6
 
