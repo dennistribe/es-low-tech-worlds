@@ -340,6 +340,6 @@ planet Jeon
 #   OVERRIDE
 # ------------
 
-system Ildaria
+system Minkar
 	add link Katuba
 

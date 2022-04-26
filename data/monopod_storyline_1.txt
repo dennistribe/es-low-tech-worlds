@@ -185,7 +185,7 @@ mission "MP5 X1700b"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for the ion thrusters."
 	source Imatai
-	destination Mere
+	destination Starcross
 	to offer
 		has "MP5 X1700a: done"
 	landing
@@ -210,7 +210,7 @@ mission "MP5 X1200b"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for the ion steering modules."
 	source Imatai
-	destination Mere
+	destination Starcross
 	to offer
 		has "MP5 X1200a: done"
 	landing
@@ -236,7 +236,7 @@ mission "MP5 Chipmunk Plasma Steering b"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for the plasma steering modules."
 	source Imatai
-	destination Mere
+	destination Starcross
 	to offer
 		has "MP5 Chipmunk Plasma Steering a: done"
 	landing
@@ -262,7 +262,7 @@ mission "MP5 Chipmunk Plasma Thruster b"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for the plasma thrusters."
 	source Imatai
-	destination Mere
+	destination Starcross
 	to offer
 		has "MP5 Chipmunk Plasma Thruster a: done"
 	landing
@@ -304,7 +304,7 @@ mission "MP6 Laser Rifle b"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for the rifles."
 	source Imatai
-	destination Mere
+	destination Starcross
 	to offer
 		has "MP6 Laser Rifle a: done"
 	landing
@@ -334,7 +334,7 @@ mission "MP6 Laser Rifle bb"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for the rifles."
 	source Imatai
-	destination Mere
+	destination Starcross
 	to offer
 		has "MP6 Laser Rifle aa: done"
 	landing
@@ -370,7 +370,7 @@ mission "MP6 Laser Rifle d"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for the rifles."
 	source Imatai
-	destination Mere
+	destination Starcross
 	to offer
 		has "MP6 Laser Rifle c: done"
 	landing
@@ -431,7 +431,7 @@ mission "MP7 Anti-Missile Turret b"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for the anti-missile turrets."
 	source Imatai
-	destination Mere
+	destination Starcross
 	to offer
 		has "MP6 Anti-Missile Turret a: done"
 	landing
@@ -501,7 +501,7 @@ mission "MP4c"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for escorting the shuttles."
 	source Imatai
-	destination Mere
+	destination Starcross
 	to offer
 		has "MP4b: done"
 	landing
@@ -559,7 +559,7 @@ mission "MP4e"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for training Tirano and Ruan."
 	source Imatai
-	destination Mere
+	destination Starcross
 	to offer
 		has "MP4d: done"
 	landing
@@ -686,7 +686,7 @@ mission "MP11b"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for monitoring the Kateni on its maiden voyage."
 	source Imatai
-	destination Mere
+	destination Starcross
 	to offer
 		has "MP11a: done"
 	landing
@@ -759,7 +759,7 @@ mission "MP11d"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for monitoring the Kateni and rescuing the pilot."
 	source Imatai
-	destination Mere
+	destination Starcross
 	to offer
 		has "MP11c: done"
 	landing
@@ -798,7 +798,7 @@ mission "MP11f"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for monitoring the Kateni."
 	source Imatai
-	destination Mere
+	destination Starcross
 	to offer
 		has "MP11e: done"
 	landing

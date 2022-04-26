@@ -118,7 +118,7 @@ mission "MP21b"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for monitoring and delivering the Space-plane."
 	source Imatai
-	destination Mere
+	destination Starcross
 	to offer
 		has "MP21a: done"
 	landing

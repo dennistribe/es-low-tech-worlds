@@ -57,7 +57,7 @@ event "MP wormhole: Lock1"
 mission "MP wormhole 2: Unlock and return"
 	source
 		system Itikotiko
-	destination Zug
+	destination Starcross
 	landing
 	to offer
 		has "MP wormhole 1: Lock on enter: done"
@@ -70,7 +70,7 @@ mission "MP wormhole 2: Unlock and return"
 		dialog "When entering the system, your sensors detect that the wormhole appears to be open again. It might be a good idea to go through it before it closes."
 	waypoint Katuba
 	on enter Katuba
-		dialog "You are very relieved to be back in human space. You realise you need to know a lot more about wormholes. Maybe you can find out more information on Zug."
+		dialog "You are very relieved to be back in human space. You realise you need to know a lot more about wormholes."
 	
 event "MP wormhole: Unlock2"
 	planet "Na yava Wormhole"
@@ -81,16 +81,16 @@ event "MP wormhole: Unlock2"
 mission "MP wormhole 2a: Investigate"
 	name "Investigate wormhole with Paul"
 	description "Take Paul to the Katuba system to investigate the wormhole."
-	source Zug
-	destination Zug
+	source 
+		government "Free Worlds" "Republic"
 	to offer
-		has "MP wormhole 2: Unlock and return: done"
+		has "MP wormhole 2: Unlock and return: offered"
 		not "event: MP wormhole: Disable"
 	passengers 1
 	landing
 	on offer
 		conversation
-			`	You are very excited about your discoveries through the Katuba wormhole, but feel lucky to have made it back to human space, since the wormhole is so unstable. Would you like to try and find somebody on Zug who could help you to understand this wormhole?`
+			`	You are very excited about your discoveries through the Katuba wormhole, but feel lucky to have made it back to human space, since the wormhole is so unstable. Would you like to try and find somebody on <origin> who could help you to understand this wormhole?`
 			choice
 				`	Yes`
 				`	No`
@@ -123,14 +123,8 @@ mission "MP wormhole 2a: Investigate"
 				depart
 	waypoint Katuba
 	on enter Katuba
-		dialog "When entering the system, your sensors are unable to detect the wormhole. Paul spends some time studying the sensors, then becomes noticeably angry. 'Take me back to Zug' he growls, and goes straight back to his bunk."
-		
-mission "MP wormhole 2b: Investigate"
-	to offer
-		has "MP wormhole 2a: Investigate: done"
-	source Zug
-	landing
-	on offer
+		dialog "When entering the system, your sensors are unable to detect the wormhole. Paul spends some time studying the sensors, then becomes noticeably angry. 'Take me back to <origin>' he growls, and goes straight back to his bunk."
+	on complete
 		conversation
 			`	Paul angrily shouts at you "You were lying the whole time. You made me cancel days of classes and head off on a wild goose chase with you, all for no reason. Do you think this is funny? Did one of my students put you up to this? I should have you arrested."`
 			`	"I was not lying. I really did pass through the wormhole. However, it seems to be unstable. Sometimes it works and sometimes it doesn't. Maybe it would be working if we returned again."`
