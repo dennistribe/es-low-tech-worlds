@@ -650,7 +650,7 @@ mission "MP29a"
 		conversation
 			`On landing at the airport you receive a message to wait for Tokani. When he arrives, he says "Good to see you again <first>. Many things to discuss."`
 			`	"The government is worried about how strong the Yuhavi are becoming, and are concerned that they could easily destroy all our satellites and our few spaceships very quickly, if they wanted war. We need some defences, just in case. We hope to not need them.`
-			`	"Our engineers have quickly put together some simple drones. We would like you to test one out. I am sure that with your experience you will be able to defeat it, but it is dangerous. Can you test it for us?"`
+			`	"Our engineers have mounted guns on our Katuba spaceships, however these are experimental ships, very weakly armoured and quite unsuitable for warships. So they have also quickly put together some simple defensive drones. We would like you to test one out. I am sure that with your experience you will be able to defeat it, but it is dangerous. Can you test it for us?"`
 			choice
 				`	"Yes, I can test the drone."`
 				`	"No, I don't want to endanger my ship."`
