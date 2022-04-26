@@ -48,11 +48,13 @@ fleet "Yuhavi defence"
 		confusion 20
 	variant 1
 		"Fury Armoured" 2
-	variant 1
-		"Fury Armoured"
 		"Fury"
 	variant 1
 		"Fury Armoured"
+		"Fury" 2
+	variant 1
+		"Fury Armoured"
+		"Fury"
 		"Sparrow"
 		
 fleet "Small Skiapode Merchants"
@@ -79,9 +81,9 @@ fleet "Skiapode defence"
 		confusion 5
 		heroic staying
 	variant 3
-		"Suicide-Drone" 2
+		"Suicide-Drone" 4
 	variant 2
-		"Suicide-Drone" 1
+		"Suicide-Drone" 3
 		"Kateni armed"
 		
 fleet "Wormhole Yuhavi"
