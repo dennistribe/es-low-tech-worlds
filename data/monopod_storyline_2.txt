@@ -430,7 +430,7 @@ mission "MP24"
 	stopover "Uca cevata"
 	destination "Imatai"
 	passengers 2
-	cargo 6
+	cargo 5
 	landing
 	infiltrating
 	to offer
@@ -439,7 +439,7 @@ mission "MP24"
 		conversation
 			`You land at the private hanger you used previously, and are greeted by the Yuhavi diplomat (whose language is much improved) and engineer.`
 			`	"Hello Captain <last>. Many discussions, many plans. Good visit. Have job for you."`
-			`	"Must install hyperspace talking system. Kraz build small satellites. We install between Zug, Uca cevata, Imatai."`
+			`	"Must install hyperspace talking system. Kraz build small satellites. We install between here and Itikotiko."`
 			`	"You take us home, install satellites on way?"`
 			`	"Soon set up bank. Pay you credits then."`
 			choice
@@ -447,12 +447,9 @@ mission "MP24"
 					accept
 				`	"Later, I am busy with another job"`
 					defer
-	waypoint Ildaria
-	on enter Ildaria
-		dialog `You place the tiny satellite in the airlock and release it into space at the intended location. Soon it is impossible to see, but the engineer confirms it is transmitting correctly.`
 	waypoint Katuba
 	on enter Katuba
-		dialog `You place the tiny satellite in the airlock and release it into space at the intended location. The engineer confirms it is transmitting correctly.`
+		dialog `You place the tiny satellite in the airlock and release it into space at the intended location. Soon it is impossible to see, but the engineer confirms it is transmitting correctly.`
 	waypoint Vakacurumau
 	on enter Vakacurumau
 		dialog `You place the tiny satellite in the airlock and release it into space at the intended location. The engineer confirms it is transmitting correctly.`
@@ -650,7 +647,7 @@ mission "MP29a"
 		conversation
 			`On landing at the airport you receive a message to wait for Tokani. When he arrives, he says "Good to see you again <first>. Many things to discuss."`
 			`	"The government is worried about how strong the Yuhavi are becoming, and are concerned that they could easily destroy all our satellites and our few spaceships very quickly, if they wanted war. We need some defences, just in case. We hope to not need them.`
-			`	"Our engineers have mounted guns on our Katuba spaceships, however these are experimental ships, very weakly armoured and quite unsuitable for warships. So they have also quickly put together some simple defensive drones. We would like you to test one out. I am sure that with your experience you will be able to defeat it, but it is dangerous. Can you test it for us?"`
+			`	"Our engineers have mounted guns on our Kateni spaceships, however these are experimental ships, very weakly armoured and quite unsuitable for warships. So they have also quickly put together some simple defensive drones. We would like you to test one out. I am sure that with your experience you will be able to defeat it, but it is dangerous. Can you test it for us?"`
 			choice
 				`	"Yes, I can test the drone."`
 				`	"No, I don't want to endanger my ship."`

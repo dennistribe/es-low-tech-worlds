@@ -192,11 +192,11 @@ system "Kai nona"
 			offset 45.8205
 
 system Katuba
-	pos -665.259 325.49
+	pos -770 150
 	government Uninhabited
 	habitable 486.68
 	belt 1862
-	link Ildaria
+	link Minkar
 	asteroids "small rock" 4 0.988
 	asteroids "medium rock" 5 0.715
 	asteroids "large rock" 9 1.391
