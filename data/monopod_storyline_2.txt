@@ -818,6 +818,7 @@ mission "MP30b suicidedrone"
 mission "MP30b nodrone"
 	name "King Pagu"
 	landing
+	invisible
 	source Imatai
 	to offer
 		or
