@@ -311,11 +311,11 @@ planet Imatai
 	government Skiapode
 	attributes skiapode
 	landscape land/canyon1
-	description `This is the monopod's home.`
+	description `This earth-like planet is populated by a race of monopods. They have a similar level of technology to Earth in the 20th century, but have not yet developed space flight beyond putting up communications satellites.`
 
 planet Kata
 	landscape land/canyon5
-	description `this planet is like africa.`
+	description `This planet is like Africa.`
 
 planet "Na yava Wormhole"
 
@@ -326,15 +326,16 @@ planet "Uca cevata"
 
 planet Vura
 	landscape land/feilds6
-	description `this planet is like earth.`
+	description `This planet is like Earth.`
 
 planet Wasa
 	landscape land/beach1
-	description `this planet is mostly sea.`
+	description `This planet is mostly sea.`
 
 planet Jeon
 	government Uninhabited
-	landscape land/canyon1
+	landscape land/mars0
+	description `This is a featureless rocky moon, with no atmosphere and many craters.`
 	
 # ------------
 #   OVERRIDE
