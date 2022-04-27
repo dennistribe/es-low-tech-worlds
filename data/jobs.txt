@@ -261,3 +261,19 @@ mission "MP: Yuhavi settlers"
 	on complete
 		payment 2000 150
 		dialog "You wish the settlers the best of luck on <planet>, and collect your payment of <payment>."
+
+mission "MP: Keystones repeat"
+	name "Fetch keystones for Southbound"
+	description "Bring 10 Quantum Keystones to Southbound Shipyards, to equip ships that need to access monopod space. Payment is <payment>."
+	source Zug
+	job
+	repeat
+	to offer
+		has "event: MP27 Uca cevata settled"
+		random <5
+	on visit
+		dialog `You have returned to <planet> but don't have the 10 quantum keystones Southbound Shipyards is looking for.`
+	on complete
+		outfit "Quantum Keystone" -10
+		dialog `A Southbound Shipyards representative thanks you for delivering the keystones. You find that 500,000 credits has been added to your account.`
+		payment 500000
