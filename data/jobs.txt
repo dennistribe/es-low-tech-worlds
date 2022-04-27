@@ -1,0 +1,208 @@
+mission "MP: Escort to Yuhavi"
+	name "Escort to <planet>"
+	description "Escort the <npc> to Uca cevata with supplies for the Yuhavi settlement."
+	repeat
+	job
+	deadline 14
+	to offer
+		has "event: MP27 Uca cevata settled"
+		random <40
+	source Zug Rust
+	destination "Uca cevata"
+	npc
+		government "Pirate"
+		personality nemesis staying harvests plunders
+			confusion 30
+		system "Minkar" "Katuba"
+		fleet "Small Southern Pirates"
+	npc accompany save
+		government "Merchant"
+		personality escort timid
+		fleet
+			names "civilian"
+			variant
+				"Clipper"
+			variant
+				"Hauler"
+			variant
+				"Argosy"
+	on complete
+		payment 30000
+		dialog phrase "generic safe escort completion dialog"
+	on visit
+		dialog phrase "generic arrived-without-npc dialog"
+
+mission "MP: Escort from Yuhavi"
+	name "Escort to <planet>"
+	description "Escort the <npc>, carrying equipment manufactured in the new Yuhavi factories, to <planet>."
+	repeat
+	job
+	deadline 14
+	to offer
+		has "event: MP27 Uca cevata settled"
+		random <40
+	source "Uca cevata"
+	destination Zug Rust
+	npc
+		government "Pirate"
+		personality nemesis staying harvests plunders
+			confusion 30
+		system "Minkar" "Katuba"
+		fleet "Small Southern Pirates"
+	npc accompany save
+		government "Merchant"
+		personality escort timid
+		fleet
+			names "civilian"
+			variant
+				"Clipper"
+			variant
+				"Hauler"
+			variant
+				"Argosy"
+	on complete
+		payment 30000
+		dialog phrase "generic safe escort completion dialog"
+	on visit
+		dialog phrase "generic arrived-without-npc dialog"
+		
+mission "MP: Cargo to Yuhavi"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	cargo random 5 2 .1
+	to offer
+		has "event: MP27 Uca cevata settled"
+		random <90
+	source Zug Rust Imatai
+	destination "Uca cevata"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment
+		dialog phrase "generic cargo delivery payment"
+		
+mission "MP: Cargo from Yuhavi"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	cargo random 5 2 .1
+	to offer
+		has "event: MP27 Uca cevata settled"
+		random <95
+	source "Uca cevata" 
+	destination Zug Rust
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment
+		payment 2000
+		dialog phrase "generic cargo delivery payment"
+
+mission "MP: Bulk cargo to Yuhavi"
+	name "Bulk delivery to <planet>"
+	job
+	repeat
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	cargo random 25 2 .05
+	to offer
+		has "event: MP27 Uca cevata settled"
+		random <60
+	source Zug Rust Imatai
+	destination "Uca cevata"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment
+		dialog phrase "generic cargo delivery payment"
+		
+mission "MP: Bulk cargo from Yuhavi"
+	name "Bulk delivery to <planet>"
+	job
+	repeat
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	cargo random 25 2 .05
+	to offer
+		has "event: MP27 Uca cevata settled"
+		random <90
+	source "Uca cevata" 
+	destination Zug Rust
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment
+		payment 5000
+		dialog phrase "generic cargo delivery payment"
+
+mission "MP: Rush Delivery to Yuhavi"
+	name "Rush delivery to <planet>"
+	job
+	repeat
+	deadline
+	description "Deliver <cargo> to <destination> by <date>. Payment is <payment>."
+	cargo random 5 2 .1
+	to offer
+		has "event: MP27 Uca cevata settled"
+		random < 30
+	source Zug Rust
+	destination "Uca cevata"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment
+		payment 16000
+		dialog phrase "generic cargo delivery payment"
+		
+mission "MP: Rush Delivery from Yuhavi"
+	name "Rush delivery to <planet>"
+	job
+	repeat
+	deadline
+	description "Deliver <cargo> to <destination> by <date>. Payment is <payment>."
+	cargo random 5 2 .1
+	to offer
+		has "event: MP27 Uca cevata settled"
+		random < 40
+	source "Uca cevata"
+	destination Zug Rust
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment
+		payment 25000
+		dialog phrase "generic cargo delivery payment"
+		
+mission "MP: Yuhavi family"
+	job
+	repeat
+	description "This family of <bunks> settlers is emigrating to Uca Cevata, the Yuhavi government will pay you 2000 credits to take them there."
+	passengers 2 2 .8
+	to offer
+		has "event: MP27 Uca cevata settled"
+		random < 50
+	source "Imatai"
+	destination "Uca cevata"
+	on visit
+		dialog phrase "generic passenger on visit"
+	on complete
+		payment 2000
+		dialog "You wish the family the best of luck on <planet>, and collect your payment of <payment>."
+
+mission "MP: Yuhavi settlers"
+	job
+	repeat
+	description "This group of <bunks> settlers is emigrating to Uca Cevata, the Yuhavi government will will pay you <payment> credits to take them there."
+	passengers 10 4 .1
+	to offer
+		has "event: MP27 Uca cevata settled"
+		random < 50
+		passenger space >30
+	source "Imatai"
+	destination "Uca cevata"
+	on visit
+		dialog phrase "generic passenger on visit"
+	on complete
+		payment 
+		dialog "You wish the settlers the best of luck on <planet>, and collect your payment of <payment>."
