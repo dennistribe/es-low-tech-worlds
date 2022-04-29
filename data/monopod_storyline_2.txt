@@ -633,6 +633,7 @@ mission "MP28b"
 event "Uca cevata shipyard"
 	planet "Uca cevata"
 		shipyard "Basic Ships"
+		shipyard "Kateni"
 		shipyard "Southbound Basics"
 		outfitter "Basic Outfits"
 		outfitter "Kraz Basics"
@@ -883,7 +884,7 @@ mission "MP31a Armoured Fury Testing"
 			`Upon landing, you are called to a meeting with King Pagu, his engineers and Huasi.`
 			`	"Our spies have found that the government drones are armed with shield penetrating guns. This is a serious risk to our ships."`
 			choice
-				`	Ask if the Yuhavi have shield penetrating guns also.`
+				`	Ask if they have shield penetrating guns also.`
 					goto guns
 				`	Warn them about the explosive charge on the suicide drones.`
 			apply
@@ -905,11 +906,17 @@ mission "MP31a Armoured Fury Testing"
 	on decline
 		event "MP Armoured Fury b" 10
 	npc accompany save
+		government "Yuhavi"
 		personality escort heroic
 		ship "Fury Armoured keystone" "Armoured Knight"
 	npc accompany save
 		personality escort heroic
 		ship "Fury keystone" "Mounted Archer"m
+		fleet
+			names "militia"
+			variant
+				"Fury Armoured keystone" 
+				"Fury keystone"
 	npc disable
 		system Katuba
 		government "Pirate"
@@ -921,6 +928,9 @@ mission "MP31a Armoured Fury Testing"
 		event "MP Armoured Fury b" 5
 	on fail
 		event "MP Armoured Fury b" 15
+	on decline
+		event "MP Yuhavi lose trust"
+		event "MP Armoured Fury b" 10
 	
 		
 mission "MP31b Armoured Fury completion"
@@ -1021,6 +1031,7 @@ mission "MP33 Negotiations (before southern carriers)"
 	landing
 	to offer
 		has "MP32 Pirate Raid: offered"
+		has "mission: MP32 Pirate Raid: offered"
 		not "event: southern carriers 2"
 	on offer
 		event "Monopod revolution" 30
@@ -1030,10 +1041,12 @@ mission "MP33 Negotiations (before southern carriers)"
 			`	"But the recent raid by a large human pirate ship has really shaken us. It has shown that pirates now know we exist, and have discovered the secret of how to enter the wormhole. This means that not only are we afraid of war between each other, we now fear an invasion by humans.`
 			`	"That warship was far more powerful than any of our own, and we suffered heavy casualties. It was very fortunate that there was only one. A fleet of ships like that would quickly overwhelm us.`
 			`	"The people are also scared and angry, as you will have seen from the protest outside. Violence has been reported in some places."`
+			choice
 				`	"What do you intend to do?"`
 				continue
 			`	"The Yuhavi have agreed to immediately station a warship in Vakacurumau to watch the wormhole and provide early warning of any incursion. But we need a defence force, and the Yuhavi do not have enough ships for that. The fastest option is for our engineers to quickly build a large number of our drones to guard the wormhole. Our intention is to place a force of Skiapode drones just inside the wormhole, with a control station mounted in a Yuhavi warship but operated by Skiapode troops.`
 			`	"Not everyone is happy with this, and nobody trusts each other, but it is the best plan we can come up with at short notice.` 
+			choice
 				`	"Why do you need me?"`
 			`"We have no way to deliver Skiapode drones to Vakacurumau. The Yuhavi have already spoken to Southbound Shipyards, who believe they can put together a one-off drone carrier based on their Hauler transport ships. Their engineers on Zug are working on it urgently, and hope to have it ready by the time you arrive. We need you to take a Yuhavi pilot and a Skiapode drone operator to Zug, collect this ship and deliver it to Imatai."`
 			choice
@@ -1064,12 +1077,13 @@ mission "MP33 Negotiations (after southern carriers)"
 			`	"But the recent raid by a large human pirate ship has really shaken us. It has shown that pirates now know we exist, and have discovered the secret of how to enter the wormhole. This means that not only are we afraid of war between each other, we now fear an invasion by humans.`
 			`	"That warship was far more powerful than any of our own, and we suffered heavy casualties. It was very fortunate that there was only one. A fleet of ships like that would quickly overwhelm us.`
 			`	"The people are also scared and angry, as you will have seen from the protest outside. Violence has been reported in some places."`
+			choice	
 				`	"What do you intend to do?"`
-				continue
 			`	"The Yuhavi have agreed to immediately station a warship in Vakacurumau to watch the wormhole and provide early warning of any incursion. But we need a defence force, and the Yuhavi do not have enough ships for that. The fastest option is for our engineers to quickly build a large number of our drones to guard the wormhole. Our intention is to place a force of Skiapode drones just inside the wormhole, with a control station mounted in a Yuhavi warship but operated by Skiapode troops.`
 			`	"Not everyone is happy with this, and nobody trusts each other, but it is the best plan we can come up with at short notice.` 
+			choice
 				`	"Why do you need me?"`
-			`"We have no way to deliver Skiapode drones to Vakacurumau. The Yuhavi have already spoken to Southbound Shipyards, who have developed a large fighter carrier based on their Hauler transport ships. They are urgently modifying one to carry drones, and hope to have it ready by the time you arrive. We need you to take a Yuhavi pilot to Zug, collect this ship and deliver it to Imatai."`
+			`"We have no way to deliver Skiapode drones to Vakacurumau. The Yuhavi have already spoken to Southbound Shipyards, who have developed a large fighter carrier based on their Hauler transport ships. They are urgently modifying one to carry drones, and hope to have it ready by the time you arrive. We need you to take a Yuhavi pilot to Zug, collect this ship and deliver it to Imatai."
 			choice
 				`	"I would be glad to help"`
 				`	"I am sure the Yuhavi can manage this themselves"`

@@ -54,8 +54,7 @@ ship "Kateni"
 		"A52 Generator"
 	# These coordinates are relative to the center of the image, and are in
 	# image pixels (which are scaled down to half a screen pixel when drawing).
-	engine 0.5 40
-	engine 0.5 40
+	engine 0 25
 	explode "tiny explosion" 15
 	explode "small explosion" 25
 	description "The kateni is an alien ship."
@@ -92,9 +91,9 @@ ship "Kateni armed"
 		"A52 Generator"
 		"Shield Defier" 2
 		"Shield Defier Ammo" 3000
-	engine 0 42.5
-	gun -17 -41 "Shield Defier"
-	gun 17 -41 "Shield Defier"
+	engine 0 26
+	gun -10 -25 "Shield Defier"
+	gun 10 -25 "Shield Defier"
 	explode "tiny explosion" 15
 	explode "small explosion" 25
 	description "The kateni is an alien ship."
@@ -166,8 +165,8 @@ ship "Space-plane"
 		"Z01 Bouncer Engines"
 		"A52 Generator"
 		"G35 Energy Box"
-	engine 47.5 10
-	engine -46.5 9.5
+	engine -30 6
+	engine 30 6
 	explode "big explosion" 20
 	description "This is a plane! It is a space-plane!"
 	
@@ -209,8 +208,8 @@ ship "Suicide-Drone"
 # This line expands the "Basic Ships" shipyard to also include the above ships. If
 # instead you want to replace all the existing ships, the first line of your new
 # shipyard definition should be the keyword "clear".
-#shipyard "Basic Ships"
-#	"Kateni armed"
-#	"Kateni"
-#	"Space-plane"
+shipyard "Basic Ships"
+	"Kateni armed"
+	"Kateni"
+	"Space-plane"
 #	"Suicide-Drone"
