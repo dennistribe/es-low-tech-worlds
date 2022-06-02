@@ -339,7 +339,6 @@ mission "MP22f"
 	name "Retrieve Yuhavi from Rust"
 	description "Travel to Rust to collect the Yuhavi who were having further discussions with Kraz Cybernetics, and see if they have further tasks for you."
 	random < 15
-	minor
 	source
 		government "Free Worlds" "Republic" "Syndicate"
 	destination Rust
@@ -1083,7 +1082,7 @@ mission "MP33 Negotiations (after southern carriers)"
 			`	"Not everyone is happy with this, and nobody trusts each other, but it is the best plan we can come up with at short notice.`
 			choice
 				`	"Why do you need me?"`
-			`"We have no way to deliver Skiapode drones to Vakacurumau. The Yuhavi have already spoken to Southbound Shipyards, who have developed a large fighter carrier based on their Hauler transport ships. They are urgently modifying one to carry drones, and hope to have it ready by the time you arrive. We need you to take a Yuhavi pilot to Zug, collect this ship and deliver it to Imatai."
+			`"We have no way to deliver Skiapode drones to Vakacurumau. The Yuhavi have already spoken to Southbound Shipyards, who have developed a large fighter carrier based on their Hauler transport ships. They are urgently modifying one to carry drones, and hope to have it ready by the time you arrive. We need you to take a Yuhavi pilot to Zug, collect this ship and deliver it to Imatai."`
 			choice
 				`	"I would be glad to help"`
 				`	"I am sure the Yuhavi can manage this themselves"`
