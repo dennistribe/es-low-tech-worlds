@@ -69,7 +69,7 @@ mission "MP20"
 		event `MP20 continue` 1
 
 event `MP20 continue`
-		
+
 mission "MP21a"
 	name "Space plane testing"
 	description "Test space plane"
@@ -112,7 +112,7 @@ mission "MP21a"
 		ship "Space-plane hyperdrive" "Space-plane"
 	on waypoint
 		dialog `The Space-plane flies around extremely slowly. You have never before seen a spaceship with such terrible performance. However, nothing explodes, and the engineer finally tells you the tests are complete and it is time to land.`
-	
+
 
 mission "MP21b"
 	name "Exchange gold"
@@ -125,7 +125,7 @@ mission "MP21b"
 	on complete
 		payment 20000
 		dialog "You sell the gold to a precious metals dealer for 20,000 credits."
-	
+
 mission "MP21c"
 		name "Space plane delivery"
 		description "Deliver space plane to Yuhavi"
@@ -141,13 +141,13 @@ mission "MP21c"
 					`	"Are you sure one test flight is enough?"`
 				`"It will have a second test flight when you deliver it to the Yuhavi. If it reaches them safely, it is ready for them to use."`
 				`	Although nobody actually says it aloud, it is clear they would not mind too much if the space-plane blew up and killed a few Yuhavi.`
-				`	You should visit Pagu again anyway, you may as well escort the space-plane on your way there. You are handed a bag of gold as payment in advance.
+				`	You should visit Pagu again anyway, you may as well escort the space-plane on your way there. You are handed a bag of gold as payment in advance.`
 					accept
 		npc accompany save
 			government "Skiapode"
 			personality escort timid
 			ship "Space-plane hyperdrive" "Space-plane"
-		
+
 mission "MP22a spaceplane"
 	name "Yuhavi travel to Southbound Shipyards"
 	description "Take a delegation of Yuhavi to investigate a commercial relationship with Southbound Shipyards."
@@ -182,7 +182,7 @@ mission "MP22a spaceplane"
 			`Pagu discusses this with his aides, and decides to send a small delegation with you to Southbound Shipyards. "We cannot pay you yet, but hope to pay you well in future."`
 			`	Pagu, Huasi, and three specialists (an engineer, an accountant, and one of King Paru's most experienced political advisers) board your spaceship to travel to Zug.`
 				launch
-		
+
 mission "MP22a nospaceplane"
 	name "Yuhavi travel to Southbound Shipyards"
 	description "Take a delegation of Yuhavi to investigate a commercial relationship with Southbound Shipyards."
@@ -312,7 +312,7 @@ mission "MP22d"
 				accept
 	on complete
 		dialog `Edward meets you and thanks you for trusting them with the knowledge of the Yuhavi, and facilitating such a historic agreement. He is well aware they are taking a large commercial risk, but is excited and optimistic. He informs you that 50,000 credits will be credited to your account for transporting Sheree and Daniel.`
-		payment 50000	
+		payment 50000
 
 mission "MP22e"
 	name "Pilots to Zug"
@@ -334,22 +334,22 @@ mission "MP22e"
 					defer
 	on complete
 		dialog `You land at a private hanger at Southbound Shipyards, which has been set up as a secret facility for interacting with the Yuhavi. Some rooms on the side of the hanger have been converted into living quarters for monopods while visiting Zug. Huasi says "Thankyou Captain <last>, hope see again soon."`
-		
+
 mission "MP22f"
 	name "Retrieve Yuhavi from Rust"
 	description "Travel to Rust to collect the Yuhavi who were having further discussions with Kraz Cybernetics, and see if they have further tasks for you."
-	random <15
+	random < 15
 	minor
-	source 
+	source
 		government "Free Worlds" "Republic" "Syndicate"
 	destination Rust
 	landing
 	to offer
-		has "MP23a: done" 
+		has "MP23a: done"
 	on offer
 		dialog `You receive a message in your comms system asking you to collect the Yuhavi representatives who stayed on Rust for further discussions with Kraz Cybernetics. They may have more jobs for you. Ensure you have two empty bunks and some free cargo space.`
 
-		
+
 mission "MP23a"
 	name "Fetch keystones for Southbound"
 	description "Southbound Shipyards needs 10 quantum keystones in order to access the wormhole to monopod space."
@@ -377,7 +377,7 @@ mission "MP23a"
 		outfit "Quantum Keystone" -10
 		dialog `Sheree thanks you for delivering the keystones. You find that 500,000 credits has been added to your account.`
 		payment 500000
-		
+
 mission "MP23b"
 	name "Escort convoy to Uca Cevata and Imatai"
 	description "Escort the four monopod pilots back to Uca cevata and Imatai with the ships Southbound is providing to the Yuhavi."
@@ -411,7 +411,7 @@ mission "MP23b"
 	on offer
 		conversation
 			`On landing, you visit the hanger the Yuhavi pilots are using to see how they are getting on.`
-			`	A pilot comes to greet you, looking through a phrasebook. "My hovercraft is full of eels" he says slowly and carefully, looking very proud of himself. ` 
+			`	A pilot comes to greet you, looking through a phrasebook. "My hovercraft is full of eels" he says slowly and carefully, looking very proud of himself. `
 			`	Huasi walks over, trying to hide her laughter. "All pilots finish flight training, good with ships. Not so good talking! Ships loaded with supplies from Kraz for Uca cevati settlement, ready fly once keystones installed." This should only take a few hours.`
 			`	Edward comes to greet you also. "We are initially providing the Yuhavi with three star barges to establish a regular cargo service between Imatai and Uca cevata, and one clipper as a flagship. The clipper gives them a fast, armed transport to and from Zug and Kraz, and can function for planetary defence if needed. All four pilots are familiar with both types of ship."`
 			`	"Grateful escort hovercraft Captain <last>." says one of the pilots.`
@@ -422,7 +422,7 @@ mission "MP23b"
 					decline
 	on complete
 		dialog `You land at the chosen first settlement site, which is still completely empty, and help the pilots and Huasi unload the supplies. It is strange to leave so much expensive equipment lying in the open unguarded. The pilots can make their way to the Yuhavi capital on their own. You should probably visit Tokani and the central government on Imatai.`
-			
+
 mission "MP24"
 	name "Hyperspace communications links"
 	description "Install hyperspace communications relay microsatellites in the uninhabited systems linking the monopods with human space."
@@ -472,7 +472,7 @@ mission "MP25a"
 		not "event: MP27 Uca cevata settled"
 	on offer
 		conversation
-			`Soon after you exit your ship, you are approached by a grim-faced military officer who says "Come with me". You try to talk to him, but he clearly does not know your language. He just keeps repeating one memorised phrase: "Come with me".` 
+			`Soon after you exit your ship, you are approached by a grim-faced military officer who says "Come with me". You try to talk to him, but he clearly does not know your language. He just keeps repeating one memorised phrase: "Come with me".`
 			choice
 				`	Go with him.`
 					goto go
@@ -509,7 +509,7 @@ mission "MP25a"
 			`	"You will now take a small delegation to Uca cevata to see what the Yuhavi are doing and discuss the situation with them."`
 			`	It is clear you have no choice in this.`
 				accept
-		
+
 mission "MP25b"
 	name "Return monopod government delegation to Imatai"
 	source "Uca cevata"
@@ -522,14 +522,14 @@ mission "MP25b"
 		conversation
 			`When you land on Uca cevata, the settlement site is a hive of activity. There are piles of building materials and other equipment, small forklifts moving around busily, and many monopods beginning construction of a structure of some sort. The space-plane and one star barge are parked and being unloaded, the other spaceships are presumably in transit to or from Imatai.`
 			`	Pagu is soon notified of your arrival, and comes to meet you with Huasi. He is clearly frustrated to see the government delegation get out of the <ship>.`
-			`	Although you cannot understand the entire conversation, you can tell that Pagu greets the government delegation coldly and formally. They angrily ask him many rapid questions, which he answers calmly. They are obviously very worried about 'aliens', and are slightly relieved to hear that there are no aliens here other than yourself - the spaceships are piloted by Yuhavi.` 
+			`	Although you cannot understand the entire conversation, you can tell that Pagu greets the government delegation coldly and formally. They angrily ask him many rapid questions, which he answers calmly. They are obviously very worried about 'aliens', and are slightly relieved to hear that there are no aliens here other than yourself - the spaceships are piloted by Yuhavi.`
 			`	They ask Pagu many questions about where the spaceships came from and what agreement he has made with the 'aliens' who provided them. He gives short answers that clearly do not satisfy them.`
 			`	Eventually Pagu states deliberately (and Huasi translates for your benefit) "Thankyou for your time, but I am very busy. I have to get back to work now." Then he turns around and hops away without waiting for a response.`
 			`	The government delegation get back in your ship and tell you to return them to Imatai.`
 				accept
 	on complete
 		dialog `The government delegation looked very concerned and talked among themselves for the entire trip. They get off the <ship> and hop away without speaking to you further or offering you any payment.`
-		
+
 mission "MP27"
 	name "Uca cevata settled"
 	invisible
@@ -546,7 +546,7 @@ event "MP27 Uca cevata settled"
 		government "Yuhavi"
 	system "Itikotiko"
 		fleet "Small Yuhavi Merchants" 3000
-			
+
 mission "MP28a"
 	name "Collect ships from Zug"
 	source "Uca cevata"
@@ -660,7 +660,7 @@ mission "MP29a"
 		personality nemesis
 			confusion 5
 		system Itikotiko
-		ship "Suicide-Drone" 
+		ship "Suicide-Drone"
 	on complete
 		conversation
 			`"What did you think of our new drone?" asks Tokani.`
@@ -681,7 +681,7 @@ mission "MP29a"
 			`	Tokani smiles grimly. "Our engineers would never admit it, but I think they're simply copying the tactics the Yuhavi used in our recent war. It is amazing that so quickly we find ourselves technologically inferior to our old enemy. And I must point out we do have you to blame for that."`
 			`	Your conversation is interrupted by shouting outside the window. You look outside to see an angry protest mob moving down the street, waving placards. "The people are upset about the Yuhavi having so much technology, and our government giving them an entire planet. Many are already saying the war was pointless, and asking what their relatives died for. The government is worried. You are not popular either."`
 			`	"Still, thankyou for testing the drone." Tokani hands you a bag of gold.`
-			`	You can probably exchange the gold for credits at Uca cevata now.` 
+			`	You can probably exchange the gold for credits at Uca cevata now.`
 
 mission "MP29b"
 	name "Exchange gold"
@@ -693,8 +693,8 @@ mission "MP29b"
 	landing
 	on complete
 		payment 50000
-		dialog `A Yuhavi official in the spaceport is very pleased to buy your gold for 50,000 credits. "Pagu would be glad of any gold you can bring us, we need it for trading with people on Imatai."` 
-		
+		dialog `A Yuhavi official in the spaceport is very pleased to buy your gold for 50,000 credits. "Pagu would be glad of any gold you can bring us, we need it for trading with people on Imatai."`
+
 mission "MP30a"
 	name "King Pagu convoy"
 	description "Accompany the new King Pagu's convoy to Imatai."
@@ -747,7 +747,7 @@ mission "MP30a"
 				"Hauler"
 				"Clipper"
 				"Star Barge"
-	npc 
+	npc
 		government "Skiapode"
 		planet Imatai
 		fleet
@@ -755,7 +755,7 @@ mission "MP30a"
 			variant
 				"Suicide-Drone" 7
 
-# If tested the suicide drone previously					
+# If tested the suicide drone previously
 mission "MP30b suicidedrone"
 	name "King Pagu"
 	landing
@@ -810,7 +810,7 @@ mission "MP30b suicidedrone"
 	on decline
 		event "MP Armoured Fury a" 10
 		event "MP Armoured Fury b" 60 # Happen eventually even without testing
-	
+
 
 # If did not test the suicide drone
 mission "MP30b nodrone"
@@ -845,7 +845,7 @@ mission "MP30b nodrone"
 			`Pagu looks at you for a while silently, then says. "Government space technology only made your help. If make spaceship without you help, getting skilled. More skill than we thought. Must be careful."`
 				decline
 
-				
+
 event "MP Armoured Fury a"
 
 event "MP Armoured Fury b"
@@ -855,7 +855,7 @@ event "MP Armoured Fury b"
 		fleet "Large Yuhavi Merchants" 6000
 		fleet "Yuhavi defence" 6000
 		fleet "Skiapode defence" 6000
-				
+
 # ARMS RACE
 # Yuhavi discover government has installed shield-penetrating guns on drones.
 # No access to materials for shield-penetrating munitions - mined on Imatai only. Develop armoured Fury to offset this.
@@ -915,7 +915,7 @@ mission "MP31a Armoured Fury Testing"
 		fleet
 			names "militia"
 			variant
-				"Fury Armoured keystone" 
+				"Fury Armoured keystone"
 				"Fury keystone"
 	npc disable
 		system Katuba
@@ -931,20 +931,20 @@ mission "MP31a Armoured Fury Testing"
 	on decline
 		event "MP Yuhavi lose trust"
 		event "MP Armoured Fury b" 10
-	
-		
+
+
 mission "MP31b Armoured Fury completion"
 	name "Fury Armoured has been completed"
 	landing
-	source 
+	source
 		government "Yuhavi" "Skiapode" "Free Worlds" "Republic" "Syndicate"
 	to offer
 		has "event: MP Armoured Fury b"
 		has "MP31a Armoured Fury Testing: done"
 	on offer
-		conversation 
+		conversation
 			`On landing, a message appears in your comm system from the Yuhavi.`
-			`	"Captain <last>, the Fury Armoured has now finished development and is available in our shipyard. Thankyou for your help in developing this."`	
+			`	"Captain <last>, the Fury Armoured has now finished development and is available in our shipyard. Thankyou for your help in developing this."`
 				decline
 
 mission "MP31c Armoured Fury completion anyway"
@@ -958,9 +958,9 @@ mission "MP31c Armoured Fury completion anyway"
 	on offer
 		conversation
 			`On landing, a message appears in your comm system from the Yuhavi.`
-			`	"Captain <last>, despite the setback incurred by the Fury Armoured failing initial testing, it has now finished development and is available in our shipyard. Thankyou for your help in developing this."`	
+			`	"Captain <last>, despite the setback incurred by the Fury Armoured failing initial testing, it has now finished development and is available in our shipyard. Thankyou for your help in developing this."`
 					decline
-		
+
 mission "MP31d Armoured Fury no testing"
 	name "Told of Fury Armoured"
 	landing
@@ -993,7 +993,7 @@ mission "MP32 Pirate Raid"
 			has "MP31b Armoured Fury completion: offered"
 			has "MP31c Armoured Fury completion anyway: offered"
 			has "MP31d Armoured fury no testing: offered"
-		random <20
+		random < 20
 	on offer
 		conversation
 			`There is suddenly panic in the spaceport, shouted conversations and pilots running to the few ships and guns available. A monopod you have not met before races over to you and starts desperately talking to you in broken Human and Skiapode phrases. You gather that a large unknown warship has suddenly appeared in orbit around Imatai, and has been shooting at both Yuhavi and Skiapode ships. The monopod is clearly desperate for your help.`
@@ -1021,7 +1021,7 @@ mission "MP32 Pirate Raid"
 	on complete
 		payment 100000
 		dialog `There is considerable confusion when you land. Eventually you receive a message that there will be an urgent meeting between the Yuhavi and Skiapode leadership on Imatai as soon as everybody needed can arrive. You are asked to attend, and assured that a payment of 100,000 credits will be deposited into your account in appreciation for your help with this battle.`
-		
+
 mission "MP33 Negotiations (before southern carriers)"
 	name "Collect drone carrier from Zug"
 	description "Collect a drone carrier from Southbound Shipyards for the Yuhavi, to be used to transport Skiapode drones."
@@ -1045,7 +1045,7 @@ mission "MP33 Negotiations (before southern carriers)"
 				`	"What do you intend to do?"`
 				continue
 			`	"The Yuhavi have agreed to immediately station a warship in Vakacurumau to watch the wormhole and provide early warning of any incursion. But we need a defence force, and the Yuhavi do not have enough ships for that. The fastest option is for our engineers to quickly build a large number of our drones to guard the wormhole. Our intention is to place a force of Skiapode drones just inside the wormhole, with a control station mounted in a Yuhavi warship but operated by Skiapode troops.`
-			`	"Not everyone is happy with this, and nobody trusts each other, but it is the best plan we can come up with at short notice.` 
+			`	"Not everyone is happy with this, and nobody trusts each other, but it is the best plan we can come up with at short notice.`
 			choice
 				`	"Why do you need me?"`
 			`"We have no way to deliver Skiapode drones to Vakacurumau. The Yuhavi have already spoken to Southbound Shipyards, who believe they can put together a one-off drone carrier based on their Hauler transport ships. Their engineers on Zug are working on it urgently, and hope to have it ready by the time you arrive. We need you to take a Yuhavi pilot and a Skiapode drone operator to Zug, collect this ship and deliver it to Imatai."`
@@ -1077,10 +1077,10 @@ mission "MP33 Negotiations (after southern carriers)"
 			`	"But the recent raid by a large human pirate ship has really shaken us. It has shown that pirates now know we exist, and have discovered the secret of how to enter the wormhole. This means that not only are we afraid of war between each other, we now fear an invasion by humans.`
 			`	"That warship was far more powerful than any of our own, and we suffered heavy casualties. It was very fortunate that there was only one. A fleet of ships like that would quickly overwhelm us.`
 			`	"The people are also scared and angry, as you will have seen from the protest outside. Violence has been reported in some places."`
-			choice	
+			choice
 				`	"What do you intend to do?"`
 			`	"The Yuhavi have agreed to immediately station a warship in Vakacurumau to watch the wormhole and provide early warning of any incursion. But we need a defence force, and the Yuhavi do not have enough ships for that. The fastest option is for our engineers to quickly build a large number of our drones to guard the wormhole. Our intention is to place a force of Skiapode drones just inside the wormhole, with a control station mounted in a Yuhavi warship but operated by Skiapode troops.`
-			`	"Not everyone is happy with this, and nobody trusts each other, but it is the best plan we can come up with at short notice.` 
+			`	"Not everyone is happy with this, and nobody trusts each other, but it is the best plan we can come up with at short notice.`
 			choice
 				`	"Why do you need me?"`
 			`"We have no way to deliver Skiapode drones to Vakacurumau. The Yuhavi have already spoken to Southbound Shipyards, who have developed a large fighter carrier based on their Hauler transport ships. They are urgently modifying one to carry drones, and hope to have it ready by the time you arrive. We need you to take a Yuhavi pilot to Zug, collect this ship and deliver it to Imatai."
@@ -1094,7 +1094,7 @@ mission "MP33 Negotiations (after southern carriers)"
 			`"That is disappointing, as they are rather short of ships and were hoping you could do this so they could use their resources elsewhere. But they will hopefully find a way."`
 				decline
 
-				
+
 event "Monopod revolution"
 
 mission "MP33b Roost delivery"
@@ -1110,7 +1110,7 @@ mission "MP33b Roost delivery"
 			has "MP33 Negotiations (before southern carriers): active"
 			has "MP33 Negotiations (after southern carriers): active"
 	on offer
-		conversation 
+		conversation
 			`You deliver the Yuhavi pilot to Southbound Shipyards. After a brief familiarisation with the new ship, he is ready to return with you to Imatai.`
 				accept
 	npc accompany save
@@ -1124,7 +1124,7 @@ mission "MP33b Roost delivery"
 
 # Ideally, this should be a feature of the system, not a job.
 # Unfortunately fleets in the system come and go on a regular schedule, don't hang around.
-# This is a workaround that places the stated ships in that system directly. However if they are killed they will be gone.		
+# This is a workaround that places the stated ships in that system directly. However if they are killed they will be gone.
 mission "MP34 drone defence"
 	name "Permanent defence of wormhole"
 	invisible
@@ -1139,7 +1139,7 @@ mission "MP34 drone defence"
 	npc kill
 		system "Vakacurumau"
 		government "Skiapode"
-		personality 
+		personality
 			confusion 5
 			staying heroic
 		ship "Suicide-Drone"
@@ -1148,11 +1148,11 @@ mission "MP34 drone defence"
 		ship "Suicide-Drone"
 		ship "Suicide-Drone"
 		ship "Suicide-Drone"
-	
+
 
 # TERRAFORMING MISSIONS (shift to a later storyline document)
 # Atmosphere limitations - thin, low CO2, limit to plant growth possible so cannot solve O2 just by growing plants. Slow O2 replenishment by algaes etc, already depleting with monopod breathing.
-# Early steps: 
+# Early steps:
 # - O2 generation by electrolysis, use in buildings.
 # - Greenhouse food production - coal imported to boost CO2 in greenhouses & heat.
 # Once terraforming university established - student to university

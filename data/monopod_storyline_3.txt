@@ -32,7 +32,7 @@ mission "MP50"
 				`	"I would be glad to."`
 				`	"No, I just support the Yuhavi."`
 					decline
-			`"Thank you. Please take a small delegation to the nearest human government so we can establish secret diplomatic relations. 
+			`"Thank you. Please take a small delegation to the nearest human government so we can establish secret diplomatic relations. `
 			`	"The delegation will also seek to establish a banking relationship so we can trade in credits, to pay you and interact with other humans. The new government has already approved the use of credits for inter-planetary trade."`
 				accept
 	on stopover

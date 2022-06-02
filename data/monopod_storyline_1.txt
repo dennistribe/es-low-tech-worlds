@@ -20,7 +20,7 @@ mission "MP1"
 			`	You conduct all the investigations you can from inside the ship, not yet daring to venture outside. The engine appears to have sustained damage from the gunfire and you are unable to take off. You cannot know the precise damage without a closer inspection from outside the ship. Your sensors detect that the atmosphere of this planet is breathable, however the sun is already setting, and it may be unsafe to go out on an unknown alien planet after dark. After locking your doors you go to your bunk for a sleep.`
 			choice
 				`	Next day`
-			`You get up in the morning and look out the window. There is a basket with a type of fruit or something on the ground outside. You also see that there are some aliens peeping over the bushes.`	
+			`You get up in the morning and look out the window. There is a basket with a type of fruit or something on the ground outside. You also see that there are some aliens peeping over the bushes.`
 			`	You open the door and look carefully around for any danger. You then quickly rush to the basket, pick it up, and rush back to the safety of the <ship>. You look at the fruit. It resembles a star.`
 			choice
 				`	Eat the fruit`
@@ -64,7 +64,7 @@ mission "MP1"
 			`Day 30:`
 			`I have now spent two weeks completely focussed on building my relationship with Tokani and learning to communicate. Although I still know only a few phrases of his language, he is able to talk to me in mine as well as a human toddler would.  `
 			`	Tokani's children were very scared of me when I first met them (only one is taller than my knee), but soon came to accept me. The real breakthrough came when one of the children kicked a ball up a tree, and was very upset. I climbed the tree to get it down, and they were all amazed to see somebody climbing a tree. Although they can jump well, they find climbing extremely difficult and almost never even attempt it. The children now look at me like I am some sort of superhero. `
-			`	But I do look ridiculous when climbing the stairs - or what I call the stairs. The ceilings in monopod houses are about the same height as human ceilings, because although they are short they jump instead of walking, and their heads would hit the ceiling if it were any lower. Their houses usually have two or more floors, but instead of stairs they have a single large step halfway between the floor and ceiling. They simply jump up onto this step, then straight onto the next floor. I have to haul myself up using my arms, which looks ridiculous and the children laugh hysterically at me every time.` 
+			`	But I do look ridiculous when climbing the stairs - or what I call the stairs. The ceilings in monopod houses are about the same height as human ceilings, because although they are short they jump instead of walking, and their heads would hit the ceiling if it were any lower. Their houses usually have two or more floors, but instead of stairs they have a single large step halfway between the floor and ceiling. They simply jump up onto this step, then straight onto the next floor. I have to haul myself up using my arms, which looks ridiculous and the children laugh hysterically at me every time.`
 			`	Tonight I think we are going out to some sort of formal dinner.`
 			choice
 				`	Keep flicking through the diary`
@@ -115,16 +115,16 @@ mission "MP2"
 	source "Imatai"
 	stopover "Uca cevata"
 	on stopover
-		event "MP2a: Spaceport" 
+		event "MP2a: Spaceport"
 		dialog `Kena is surprised to find a breathable, although thin, atmosphere. You install another large sensor array, take measurements, and return to the <ship>. Because the atmosphere is so thin, you both find you have to use the oxygen supplies from your pressure suits while working.`
 	on complete
 		dialog `Once again you are greeted by many excited monopods, and Kena describes his first impressions of the planet. There is considerable excitement about the breathable atmosphere, but this mostly disappears when they are reminded that the planet is extremely cold, in fact covered in ice, and has low gravity meaning the atmosphere is thin and hard to breathe. Tokani says "I know you are probably eager to get home, but first there is a group of important people who would like to meet with you in the spaceport to talk about more work we could do together, if you are interested."`
-		
-	
+
+
 event "MP2a: Spaceport"
 	planet "Imatai"
 		spaceport `The "spaceport" is simply a corner of a commercial airport, that is usually used by vertical-take-off aircraft similar to helicopters. You have been instructed to land here when visiting Imatai. If you require hyperspace fuel, tanker trucks will be sent from a nearby chemical storage facility, and will drive onto the tarmac to refuel your ship.`
-		
+
 # Could return to human space now - but talk to monopods first (in spaceport).
 # Discuss their interests in human technology. They lack space flight, and lack laser weaponry (only have projectile weapons).
 # - plasma engines, ion engines
@@ -162,10 +162,10 @@ mission "MP3"
 			`	"They are just credits. I really don't know much about them, we've just always used them and I have never thought about it deeply." you reply.`
 			`	"Here, use gold and silver as money" Tokani explains. "We have electronic money also, but this simply represents the silver you have in the bank. Real money is silver, the electronic version just saves carrying heavy bags around. If credits represent nothing, they must be 'fiat' currency. Many years ago we used fiat currencies, but found too easily manipulated by bad banks and governments. Fiat currencies are now illegal. We can only trade things of real value - gold, silver, and other precious items."`
 			`	After further discussion among themselves, Tokani informs you that they cannot use credits, because they are not set up to use them, but also because it would be illegal, and this would need to be discussed in their parliament. Even if their parliament wanted to make an exception for you, this would not happen quickly.`
-			`	"For now, when you do job, we pay gold or precious stones, or sometimes give you other goods you can sell" Tokani finally tells you. "You can then sell them for credits when you return to alien space."` 
+			`	"For now, when you do job, we pay gold or precious stones, or sometimes give you other goods you can sell" Tokani finally tells you. "You can then sell them for credits when you return to alien space."`
 			`	Remember to check the job board.`
-			
-			
+
+
 # OUTFIT COLLECTION
 
 mission "MP5 X1700a"
@@ -180,7 +180,7 @@ mission "MP5 X1700a"
 	on complete
 		outfit "X1700 Ion Thruster" -2
 		dialog `The monopod scientists are clearly very pleased to receive these ion thrusters, and quickly load them into a waiting truck. One hands you a small bag of gold.`
-		
+
 mission "MP5 X1700b"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for the ion thrusters."
@@ -191,8 +191,8 @@ mission "MP5 X1700b"
 	landing
 	on complete
 		payment 120000
-		dialog "You sell the gold to a precious metals dealer for 120,000 credits." 
-	
+		dialog "You sell the gold to a precious metals dealer for 120,000 credits."
+
 mission "MP5 X1200a"
 	name "Bring two X1200 Ion Steering modules to monopods"
 	description "Purchase two X1200 Ion Steering modules and bring to the monopods. You can buy this straight into your cargo, you do not have to install it on your ship."
@@ -205,7 +205,7 @@ mission "MP5 X1200a"
 	on complete
 		outfit "X1200 Ion Steering" -2
 		dialog `The monopod scientists are clearly very pleased to receive these steering modules, and quickly load them into a waiting truck. One hands you a small bag of gold.`
-		
+
 mission "MP5 X1200b"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for the ion steering modules."
@@ -216,7 +216,7 @@ mission "MP5 X1200b"
 	landing
 	on complete
 		payment 100000
-		dialog "You sell the gold to a precious metals dealer for 100,000 credits." 
+		dialog "You sell the gold to a precious metals dealer for 100,000 credits."
 
 mission "MP5 Chipmunk Plasma Steering a"
 	name "Bring two Chipmunk Plasma Steering modules to monopods"
@@ -224,14 +224,14 @@ mission "MP5 Chipmunk Plasma Steering a"
 	job
 	source "Imatai"
 	to offer
-		has "MP5 X1200a: offered" 
+		has "MP5 X1200a: offered"
 		has "event: MP wormhole: Disable" # The ion steering job may be failed due to wormhole fluctuations, plasma steering is a second chance to complete it. Offer once have keystone.
 	on visit
 		dialog `You have returned to <planet>, but you don't have the two Chipmunk Plasma Steering modules the monopods are looking for. Go and buy two of these modules before returning.`
 	on complete
 		outfit "Chipmunk Plasma Steering" -2
 		dialog `The monopod scientists are clearly very pleased to receive these steering modules, and quickly load them into a waiting truck. One hands you a small bag of gold.`
-		
+
 mission "MP5 Chipmunk Plasma Steering b"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for the plasma steering modules."
@@ -242,22 +242,22 @@ mission "MP5 Chipmunk Plasma Steering b"
 	landing
 	on complete
 		payment 100000
-		dialog "You sell the gold to a precious metals dealer for 100,000 credits." 
-		
+		dialog "You sell the gold to a precious metals dealer for 100,000 credits."
+
 mission "MP5 Chipmunk Plasma Thruster a"
 	name "Bring two Chipmunk Plasma Thrusters to monopods"
 	description "Purchase two Chipmunk Plasma Thrusters and bring to the monopods. You can buy this straight into your cargo, you do not have to install it on your ship."
 	job
 	source "Imatai"
 	to offer
-		has "MP5 X1700a: offered" 
+		has "MP5 X1700a: offered"
 		has "event: MP wormhole: Disable" # The ion thruster job may be failed due to wormhole fluctuations, plasma thruster is a second chance to complete it. Offer once have keystone.
 	on visit
 		dialog `You have returned to <planet>, but you don't have the two Chipmunk Plasma Thrusters the monopods are looking for. Go and buy two of these thrusters before returning.`
 	on complete
 		outfit "Chipmunk Plasma Thruster" -2
 		dialog `The monopod scientists are clearly very pleased to receive these thrusters, and quickly load them into a waiting truck. One hands you a small bag of gold.`
-		
+
 mission "MP5 Chipmunk Plasma Thruster b"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for the plasma thrusters."
@@ -268,8 +268,8 @@ mission "MP5 Chipmunk Plasma Thruster b"
 	landing
 	on complete
 		payment 120000
-		dialog "You sell the gold to a precious metals dealer for 120,000 credits." 
-		
+		dialog "You sell the gold to a precious metals dealer for 120,000 credits."
+
 # Trigger development of the Kateni once you have brought both thrusters and steering modules, of either type
 
 mission "MP5 trigger Kateni"
@@ -299,7 +299,7 @@ mission "MP6 Laser Rifle a"
 	on complete
 		outfit "Laser Rifle" -2
 		dialog `The monopod scientists are clearly very pleased to receive these rifles, and quickly load them into a waiting truck. One hands you a small bag of gold.`
-		
+
 mission "MP6 Laser Rifle b"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for the rifles."
@@ -310,7 +310,7 @@ mission "MP6 Laser Rifle b"
 	landing
 	on complete
 		payment 40000
-		dialog "You sell the gold to a precious metals dealer for 40,000 credits." 
+		dialog "You sell the gold to a precious metals dealer for 40,000 credits."
 
 # The above is a crucial mission. In case the player missed it, offer again once they have a keystone if they have not already been offered the next job in the series.
 
@@ -321,15 +321,15 @@ mission "MP6 Laser Rifle aa"
 	source "Imatai"
 	to offer
 		or    								# Has previously been offered this job, but either declined or failed it
-			has "MP6 Laser Rifle a: decline"   
-			has "MP6 Laser Rifle c: failed"	
+			has "MP6 Laser Rifle a: decline"
+			has "MP6 Laser Rifle c: failed"
 		has "event: MP wormhole: Disable"	# But now has a quantum keystone so has no reason they cannot complete it.
 	on visit
 		dialog `You have returned to <planet>, but you don't have the two Laser Rifles the monopods are looking for. Go and buy two of these rifles before returning.`
 	on complete
 		outfit "Laser Rifle" -2
 		dialog `The monopod scientists are clearly very pleased to receive these rifles, and quickly load them into a waiting truck. One hands you a small bag of gold.`
-		
+
 mission "MP6 Laser Rifle bb"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for the rifles."
@@ -340,8 +340,8 @@ mission "MP6 Laser Rifle bb"
 	landing
 	on complete
 		payment 40000
-		dialog "You sell the gold to a precious metals dealer for 40,000 credits." 
-		
+		dialog "You sell the gold to a precious metals dealer for 40,000 credits."
+
 mission "MP6 Laser Rifle c"
 	name "Bring ten Laser Rifles to monopods"
 	description "Purchase ten Laser Rifles and bring to the monopods. You can buy this straight into your cargo, you do not have to install it on your ship."
@@ -365,7 +365,7 @@ mission "MP6 Laser Rifle c"
 	on complete
 		outfit "Laser Rifle" -10
 		dialog `A scientist and a uniformed military officer collect the rifles from you, and quickly load them into a waiting truck. One hands you a bag of gold.`
-		
+
 mission "MP6 Laser Rifle d"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for the rifles."
@@ -376,8 +376,8 @@ mission "MP6 Laser Rifle d"
 	landing
 	on complete
 		payment 200000
-		dialog "You sell the gold to a precious metals dealer for 200,000 credits." 
-		
+		dialog "You sell the gold to a precious metals dealer for 200,000 credits."
+
 mission "MP6 Laser Rifle e"
 	name "Bring fifty Laser Rifles to monopods"
 	description "Purchase fifty Laser Rifles and bring to the monopods. You can buy this straight into your cargo, you do not have to install it on your ship."
@@ -399,7 +399,7 @@ mission "MP6 Laser Rifle e"
 	on complete
 		outfit "Laser Rifle" -50
 		dialog `You are met by a truck of armed soldiers. Two soldiers carefully transfer the rifles into their truck, while the others stand guard. Once the officer has checked and counted the rifles, he hands you a bag of gemstones.`
-		
+
 mission "MP6 Laser Rifle f"
 	name "Exchange gold"
 	description "Exchange the gemstones you received as payment for the rifles."
@@ -410,8 +410,8 @@ mission "MP6 Laser Rifle f"
 	landing
 	on complete
 		payment 1000000
-		dialog "You sell the gemstones to a jeweler for 1,000,000 credits." 
-		
+		dialog "You sell the gemstones to a jeweler for 1,000,000 credits."
+
 mission "MP7 Anti-Missile Turret a"
 	name "Bring two Anti-Missile Turrets to monopods"
 	description "Purchase two Anti-Missile Turrets and bring to the monopods. You can buy these straight into your cargo, you do not have to install it on your ship."
@@ -426,7 +426,7 @@ mission "MP7 Anti-Missile Turret a"
 	on complete
 		outfit "Anti-Missile Turret" -2
 		dialog `You are met by a scientist accompanied by several armed soldiers, who quickly load the turrets into a waiting truck. One hands you a bag of gold.`
-		
+
 mission "MP7 Anti-Missile Turret b"
 	name "Exchange gold"
 	description "Exchange the gold you received as payment for the anti-missile turrets."
@@ -438,8 +438,8 @@ mission "MP7 Anti-Missile Turret b"
 	on complete
 		payment 300000
 		dialog "You sell the gold to a precious metals dealer for 300,000 credits."
-		
-		
+
+
 
 # EDUCATIONAL MATERIALS
 
@@ -451,7 +451,7 @@ mission "MP10 Educational Materials a"
 	destination "Rust"
 	minor
 	to offer
-		has "event: MP wormhole: Disable"	
+		has "event: MP wormhole: Disable"
 		or
 			has "MP5 X1700a: done"
 			has "MP5 X1200a: done"
@@ -463,7 +463,7 @@ mission "MP10 Educational Materials a"
 		conversation
 			`You are approached by a young monopod who approaches you and nervously pronounces your name by way of a greeting "Captain <last>?"`
 			`	"Yes?"`
-			`	"I learn speak Tokani. Come Tokani please?"` 
+			`	"I learn speak Tokani. Come Tokani please?"`
 			choice
 				`	Go with him`
 			`	The young monopod leads you to a vehicle, similar to a van, which you awkwardly get into the back of as the front seat is too small for you. He drives you to the university where Tokani works. You meet with Tokani in his office.`
@@ -491,11 +491,11 @@ mission "MP10 Educational Materials a"
 		conversation
 			`You leave Tokani in the ship, exchange the gold he has brought as spending money for credits, and purchase an electric wheelchair, some blankets and cushions, and a human shirt and hat in Tokani's size.`
 			`	Once back on the ship, Tokani gets into the electric wheelchair, conceals his one leg using the blankets and cushions, and puts on the human clothing. After this he looks just like a little old man - his long beard helping with the disguise.`
-			`	You leave the shipyard and head straight to the university bookshop. Tokani is excitedly looking all around himself, clearly elated with being the first monopod to explore an "alien" planet. Everything is a distraction, and it is hard to get him to the shop. 
+			`	You leave the shipyard and head straight to the university bookshop. Tokani is excitedly looking all around himself, clearly elated with being the first monopod to explore an "alien" planet. Everything is a distraction, and it is hard to get him to the shop.
 			`	Once there however he settles directly into his task of finding educational material, and is very efficient at it. He purchases curriculum for learning the human common tongue as a second language, and various dictionaries and encyclopaedias. He goes through a list of requests from the scientists, and is able to find most of what they are looking for also. Some of what he purchases is printed, and some is electronic. Finally, he purchases several human computers, to ensure he can access the electronic materials in case the file formats are incompatible with their own systems.`
 			`	After making all his purchases, there are 79,540 credits left over. "Keep the change, that's your pay <first>. You may as well have it now, it's easier that way. I trust you'll take me home. But can we stop see those animals on the way?" Tokani is pointing at a poster entitled "Come to Skymoot, see the dragons".`
 		payment 78540
-		
+
 mission "MP10 Educational Materials b"
 	name "Teaching materials"
 	description "Take Tokani to Skymoot to see the dragons, and then home to Imatai."
@@ -511,7 +511,7 @@ mission "MP10 Educational Materials b"
 		dialog `Tokani trundles around in his wheelchair looking at everything he can see. There is an observation point over a dragon nest site, which it is almost impossible to drag him away from. But once back in the <ship>, Tokani gets out of the wheelchair and jumps all around the cargo hold in excitement. "I've been wanting to do that all day!" he exclaims.`
 	on complete
 		dialog `Tokani thanks you repeatedly for the exciting trip, and then leaves with his cargo. He keeps the wheelchair also - "I hope I need it again soon!" he says!`
-	
+
 
 # SPACE FLIGHT
 
@@ -566,7 +566,7 @@ mission "MP11b"
 	on complete
 		payment 10000
 		dialog "You sell the gold to a precious metals dealer for 10,000 credits."
-		
+
 mission "MP11c"
 	name "Kateni second test flight"
 	description "Accompany the monopod's first reusable spaceship on its second flight"
@@ -601,7 +601,7 @@ mission "MP11c"
 			`As you approach the ship, you see the engine looks extremely hot and is starting to melt in places, but is still attached to the ship - the pilot has not released it. Something is seriously wrong and this ship could explode any minute.`
 			`	You dock with the Kateni, and the pilot immediately bounds through the airlock, yelling "Go! Go!"`
 			`	You immediately detach from the Kateni and start flying away.`
-	on accept 
+	on accept
 		event "MP11 hazard on"
 	on complete
 		event "MP11 hazard off"
@@ -610,7 +610,7 @@ mission "MP11c"
 			`On landing, you are surrounded by the research team, who are very relieved to see the pilot safe in your ship. After a long conversation among themselves, the team leader approaches you to explain.`
 			`	"During flight, data transmit our computer. With data and pilot words, we see two problem. Engine caught fire - but release system fail. Engine heat maybe damaged release. Very thankyou rescue pilot. Dangerous with engine fire."`
 			`	He hands you another bag of gold. "More. Thankyou."`
-		
+
 hazard "Kateni killer"
 	"constant strength"
 	"period" 1
@@ -625,7 +625,7 @@ event "MP11 hazard on"
 event "MP11 hazard off"
 	system "Itikotiko"
 		remove hazard "Kateni killer"
-			
+
 event "MP11 Kateni3"
 
 mission "MP11d"
@@ -639,11 +639,10 @@ mission "MP11d"
 	on complete
 		payment 20000
 		dialog "You sell the gold to a precious metals dealer for 20,000 credits."
-		
+
 mission "MP11e"
 	name "Kateni test flight"
 	description "Accompany the monopod's first reusable spaceship on its third flight"
-	minor
 	source "Imatai"
 	landing
 	to offer
@@ -677,8 +676,8 @@ mission "MP11f"
 	landing
 	on complete
 		payment 10000
-		dialog "You sell the gold to a precious metals dealer for 10,000 credits."	
-		
+		dialog "You sell the gold to a precious metals dealer for 10,000 credits."
+
 
 
 
@@ -729,8 +728,8 @@ mission "MP12"
 			`	"Sorry <first>, I really have to get back to my lecture. Goodbye."`
 			`	Tokani hurries out the door.`
 				decline
-			
-			
+
+
 mission "MP9 War"
 	invisible
 	landing
@@ -740,7 +739,7 @@ mission "MP9 War"
 		has "MP11a: done"
 	on offer
 		event "MP9 War won" 50
-		
+
 event "MP9 War won"
 
 mission "MP13"
@@ -815,6 +814,3 @@ mission "MP13"
 			`	Some hours after you return to your ship, a small hooded figure hops up to the ship. You quietly open the door and let her in. When she drops her hood, she looks almost identical to any other monopod woman - you cannot see why her ethnic group is so recognisable. But you are not a monopod. "My name Huasi" she says quietly and sadly.`
 			`	You prepare to take off and fly around the planet, to land at the palace on the other side of Imatai.`
 				accept
-
-
-
