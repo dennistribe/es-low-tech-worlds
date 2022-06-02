@@ -24,16 +24,16 @@ ship "Fury Armoured"
 			"hit force" 380
 	outfits
 		"Energy Blaster" 4
-		
+
 		"nGVF-CC Fuel Cell"
 		"LP036a Battery Pack"
 		"D14-RN Shield Generator"
 		"Small Radar Jammer" 2
-		
+
 		"X2700 Ion Thruster"
 		"X2200 Ion Steering"
 		"Hyperdrive"
-		
+
 	engine -11 35 0.8
 	engine 11 35 0.8
 	engine -18 37 0.6
@@ -81,11 +81,11 @@ ship "Fury Armoured keystone"
 		"LP036a Battery Pack"
 		"D14-RN Shield Generator"
 		"Small Radar Jammer" 2
-		
+
 		"X2700 Ion Thruster"
 		"X2200 Ion Steering"
 		"Hyperdrive"
-		
+
 	engine -11 35 0.8
 	engine 11 35 0.8
 	engine -18 37 0.6
@@ -117,7 +117,7 @@ ship "Skein drone keystone"
 		"heat dissipation" .71
 		"fuel capacity" 700
 		"cargo space" 120
-		"outfit space" 500
+		"outfit space" 501
 		"weapon capacity" 140
 		"engine capacity" 80
 		weapon
@@ -137,7 +137,7 @@ ship "Skein drone keystone"
 		"Large Radar Jammer"
 		"Tactical Scanner"
 		"Laser Rifle" 4
-		
+
 		"Greyhound Plasma Thruster"
 		"Impala Plasma Steering"
 		"Hyperdrive"
@@ -164,4 +164,4 @@ ship "Skein drone keystone"
 	explode "large explosion" 20
 	explode "huge explosion" 5
 	"final explode" "final explosion large"
-	description `This is a one-off drone carrier produced specifically for the Yuhavi and Skiapode governments, for transporting defensive drones.`
+	description `This is a one-off drone carrier produced specifically by the Yuhavi and Skiapode governments for transporting defensive drones.`
