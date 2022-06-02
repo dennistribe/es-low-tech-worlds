@@ -27,18 +27,18 @@ mission "MP50"
 			choice
 				`	Continue`
 			`"New government believe we cannot isolate ourselves. Must interact with aliens, like Yuhavi. Must become space people also. And need peace with Yuhavi as equals, not as victors.`
-			`	"Government want to ask your help, as you have helped Yuhavi. Will you help us?"` 
+			`	"Government want to ask your help, as you have helped Yuhavi. Will you help us?"`
 			choice
 				`	"I would be glad to."`
 				`	"No, I just support the Yuhavi."`
 					decline
-			`"Thankyou. Please take a small delegation to the nearest human government so we can establish secret diplomatic relations. 
+			`"Thank you. Please take a small delegation to the nearest human government so we can establish secret diplomatic relations. 
 			`	"The delegation will also seek to establish a banking relationship so we can trade in credits, to pay you and interact with other humans. The new government has already approved the use of credits for inter-planetary trade."`
 				accept
 	on stopover
 		conversation
 			`During the trip, you contacted the Free Worlds parliament and requested a private diplomatic audience. After delicately explaining the situation while giving away as little information as possible, it was agreed a delegation would meet you in a private hanger at the spaceport.`
-			`	You land outside the pre-arranged hanger, and the <ship> is pulled inside. Once inside you exit your ship and confirm the arrangements for the meeting. After being assured nobody will see, you call the monopod delegation to leave the <ship> and hop across to a private meeting room.` 
+			`	You land outside the pre-arranged hanger, and the <ship> is pulled inside. Once inside you exit your ship and confirm the arrangements for the meeting. After being assured nobody will see, you call the monopod delegation to leave the <ship> and hop across to a private meeting room.`
 			choice
 				`	Continue.`
 			`	The Free Worlds representatives are clearly both surprised and (embarrassingly) amused at the appearance of the monopods. They spend several hours in discussions on a wide range of topics. The situation is complicated by the Yuhavi's pre-existing relationship with Southbound and Kraz.`
@@ -51,14 +51,14 @@ mission "MP50"
 			`	Tokani adds "When pay on Imatai in gold, gold still on planet. But when pay you, gold lost. Better trade in pretend money and keep our gold." He laughs heartily at how silly this all seems to him.`
 		event "Monopod trading" 30
 		payment 50000
-			
+
 event "Monopod trading"
 	system "Itikotiko"
 		trade Food 311
 		trade "Heavy Metals" 924
 		trade Metal 451
 		trade Plastic 384
-		
+
 mission "MP51"
 	name "Monopod trading"
 	landing
@@ -76,6 +76,3 @@ mission "MP51"
 			`	"Most welcome trading post any time. See Captain <last> soon?"`
 			`	He hops away across the spaceport towards a group of warehouses.`
 				decline
-
-
-			
