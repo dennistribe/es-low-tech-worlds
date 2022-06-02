@@ -495,11 +495,11 @@ mission "MP25a"
 				`	"To emigrate, they need transport ships. Those spaceships are just transports, not warships, and very basic transports by human standards."`
 			`"So those ships are not armed? Just transports?"`
 			`	"Well, one is armed, for protection from pirates. That is normal for human transports. The smaller ships would not have made it here safely without an armed escort. Most of the ships are unarmed."`
-			goto end
+			"goto end"
 			label king
 			`"He is not King Panu! They have no king. They are defeated and are under our government. Do not call him King again."`
 			`	"My point is that they have made their own arrangements, and you would need to talk to the Yuhavi about those arrangements. Panu is the most logical person for you to ask, since until recently he was their king."`
-			goto end
+			"goto end"
 			label safe
 			`The monopods look deeply offended and upset, but can hardly argue with your statement. They seem at a loss for words.`
 			label end

@@ -80,7 +80,7 @@ ship "Fury Armoured keystone"
 		"nGVF-CC Fuel Cell"
 		"LP036a Battery Pack"
 		"D14-RN Shield Generator"
-		"Small Radar Jammer" 2
+		"Small Radar Jammer"
 
 		"X2700 Ion Thruster"
 		"X2200 Ion Steering"

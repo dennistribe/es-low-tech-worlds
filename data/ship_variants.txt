@@ -9,6 +9,7 @@ ship "Kateni" "Kateni dead"
 	attributes
 		"hull" 200
 		"shields" 0
+		"drag" 12.5
 	outfits
 		"Z01 Bouncer Engines"
 		"G35 Energy Box"
