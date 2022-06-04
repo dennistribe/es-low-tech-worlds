@@ -354,14 +354,14 @@ mission "MP6 Laser Rifle c"
 	on offer
 		conversation
 			`On landing, you receive a message from the monopod weapons scientists.`
-			`	"Thankyou for the laser rifles you brought us last time. We would like to study them in considerably more detail. Would you be willing to fetch us ten more?"`
+			`	"Thank you for the laser rifles you brought us last time. We would like to study them in considerably more detail. Would you be willing to fetch us ten more?"`
 			choice
-				`	Yes`
+				`	"Yes"`
 					accept
-				`	Not now`
+				`	"Not now"`
 					defer
 	on visit
-		dialog `You have returned to <planet>, but you don't have the ten Laser Rifles the monopods are looking for. Go and buy two of these rifles before returning.`
+		dialog `You have returned to <planet>, but you don't have the ten Laser Rifles the monopods are looking for. Go and buy ten of these rifles before returning.`
 	on complete
 		outfit "Laser Rifle" -10
 		dialog `A scientist and a uniformed military officer collect the rifles from you, and quickly load them into a waiting truck. One hands you a bag of gold.`
