@@ -366,7 +366,6 @@ mission "MP23a"
 				`	"From an alien race"`
 				`	"I cannot tell you"`
 			`"I understand you not wanting to tell me precisely where - it is clear that the secret of the wormhole must be preserved for the safety of the Yuhavi and the other monopods. Nevertheless, we obviously cannot help them without these keystones. Can you fetch 10 of these for us please, to equip those ships that need to interact with the Yuhavi? We can pay you 500,000 credits for these on your return."`
-			`	This should be a very generous payment. If it seems insufficient, you need to find a cheaper source of keystones, as you are likely to have more of these jobs in future.`
 			choice
 				`	"Certainly I can."`
 					accept
