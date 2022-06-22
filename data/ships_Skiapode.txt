@@ -35,7 +35,7 @@ ship "Kateni"
 		"fuel capacity" 0
 		"cargo space" 15
 		"outfit space" 140
-		"weapon capacity" 0
+		"weapon capacity" 16
 		"engine capacity" 80
 		weapon
 			# Rule of thumb for explosion strength:
@@ -77,7 +77,7 @@ ship "Kateni armed"
 		"fuel capacity" 0
 		"cargo space" 15
 		"outfit space" 140
-		"weapon capacity" 0
+		"weapon capacity" 16
 		"engine capacity" 80
 		weapon
 			"blast radius" 12
@@ -96,7 +96,7 @@ ship "Kateni armed"
 	gun 10 -25 "Shield Defier"
 	explode "tiny explosion" 15
 	explode "small explosion" 25
-	description "The kateni is an alien ship."
+	description "The kateni is an alien ship. This version comes with some weapons"
 
 
 ship "Space-plane"
@@ -131,7 +131,7 @@ ship "Space-plane"
 	engine 30 6
 	explode "big explosion" 20
 	description "This is a plane! It is a space-plane!"
-	
+
 ship "Suicide-Drone"
 	sprite "ship/Boom-drone"
 	thumbnail "ship/Boom-drone"

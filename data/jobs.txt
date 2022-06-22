@@ -10,8 +10,8 @@ mission "MP: Escort to Yuhavi"
 	deadline 14
 	to offer
 		has "event: MP27 Uca cevata settled"
-		random <40
-	source 
+		random < 40
+	source
 		planet Zug Rust
 	destination "Uca cevata"
 	npc
@@ -45,9 +45,9 @@ mission "MP: Escort from Yuhavi"
 	deadline 14
 	to offer
 		has "event: MP27 Uca cevata settled"
-		random <40
+		random < 40
 	source "Uca cevata"
-	destination 
+	destination
 		planet Zug Rust
 	npc
 		government "Pirate"
@@ -71,11 +71,11 @@ mission "MP: Escort from Yuhavi"
 		dialog phrase "generic safe escort completion dialog"
 	on visit
 		dialog phrase "generic arrived-without-npc dialog"
-		
-		
-		
+
+
+
 # PAYMENTS PROBLEM
-# Payments are not calculated correctly using the usual formula of multiplier * jumps * passengers & cargo, when crossing wormhole. Works fine within Itikotiko. 
+# Payments are not calculated correctly using the usual formula of multiplier * jumps * passengers & cargo, when crossing wormhole. Works fine within Itikotiko.
 # Possibly the game is unable to calculate the number of jumps due to the wormhole, so makes an error?
 # Temporary workaround: Making the base payment (first number) enough to be reasonable for any job. Not a good solution as payment doesn't differ with different sized cargos.
 
@@ -88,16 +88,16 @@ mission "MP: Cargo to Yuhavi"
 	cargo random 5 2 .1
 	to offer
 		has "event: MP27 Uca cevata settled"
-		random <90
-	source 
-		planet Zug Rust 
+		random < 90
+	source
+		planet Zug Rust
 	destination "Uca cevata"
 	on visit
 		dialog phrase "generic cargo on visit"
 	on complete
-		payment 15000 150 
+		payment 15000 150
 		dialog phrase "generic cargo delivery payment"
-		
+
 mission "MP: Cargo from Imatai to Yuhavi"
 	name "Delivery to <planet>"
 	job
@@ -106,15 +106,15 @@ mission "MP: Cargo from Imatai to Yuhavi"
 	cargo random 5 2 .1
 	to offer
 		has "event: MP27 Uca cevata settled"
-		random <90
+		random < 90
 	source Imatai
 	destination "Uca cevata"
 	on visit
 		dialog phrase "generic cargo on visit"
 	on complete
-		payment 1000 150 
+		payment 1000 150
 		dialog phrase "generic cargo delivery payment"
-		
+
 mission "MP: Cargo from Yuhavi"
 	name "Delivery to <planet>"
 	job
@@ -123,9 +123,9 @@ mission "MP: Cargo from Yuhavi"
 	cargo random 5 2 .1
 	to offer
 		has "event: MP27 Uca cevata settled"
-		random <95
-	source "Uca cevata" 
-	destination 
+		random < 95
+	source "Uca cevata"
+	destination
 		planet Zug Rust
 	on visit
 		dialog phrase "generic cargo on visit"
@@ -142,16 +142,16 @@ mission "MP: Bulk cargo to Yuhavi"
 	cargo random 25 2 .05
 	to offer
 		has "event: MP27 Uca cevata settled"
-		random <60
-	source 
-		planet Zug Rust 
+		random < 60
+	source
+		planet Zug Rust
 	destination "Uca cevata"
 	on visit
 		dialog phrase "generic cargo on visit"
 	on complete
 		payment 40000 150
 		dialog phrase "generic cargo delivery payment"
-		
+
 mission "MP: Bulk cargo from Imatai to Yuhavi"
 	name "Bulk delivery to <planet>"
 	job
@@ -160,7 +160,7 @@ mission "MP: Bulk cargo from Imatai to Yuhavi"
 	cargo random 25 2 .05
 	to offer
 		has "event: MP27 Uca cevata settled"
-		random <60
+		random < 60
 	source Imatai
 	destination "Uca cevata"
 	on visit
@@ -168,7 +168,7 @@ mission "MP: Bulk cargo from Imatai to Yuhavi"
 	on complete
 		payment 5000 150
 		dialog phrase "generic cargo delivery payment"
-		
+
 mission "MP: Bulk cargo from Yuhavi"
 	name "Bulk delivery to <planet>"
 	job
@@ -177,9 +177,9 @@ mission "MP: Bulk cargo from Yuhavi"
 	cargo random 25 2 .05
 	to offer
 		has "event: MP27 Uca cevata settled"
-		random <90
-	source "Uca cevata" 
-	destination 
+		random < 90
+	source "Uca cevata"
+	destination
 		planet Zug Rust
 	on visit
 		dialog phrase "generic cargo on visit"
@@ -197,7 +197,7 @@ mission "MP: Rush Delivery to Yuhavi"
 	to offer
 		has "event: MP27 Uca cevata settled"
 		random < 30
-	source 
+	source
 		planet Zug Rust
 	destination "Uca cevata"
 	on visit
@@ -206,7 +206,7 @@ mission "MP: Rush Delivery to Yuhavi"
 #		payment
 		payment 32000 150
 		dialog phrase "generic cargo delivery payment"
-		
+
 mission "MP: Rush Delivery from Yuhavi"
 	name "Rush delivery to <planet>"
 	job
@@ -218,7 +218,7 @@ mission "MP: Rush Delivery from Yuhavi"
 		has "event: MP27 Uca cevata settled"
 		random < 40
 	source "Uca cevata"
-	destination 
+	destination
 		planet Zug Rust
 	on visit
 		dialog phrase "generic cargo on visit"
@@ -226,7 +226,7 @@ mission "MP: Rush Delivery from Yuhavi"
 #		payment
 		payment 36000 150
 		dialog phrase "generic cargo delivery payment"
-		
+
 mission "MP: Yuhavi family"
 	name "Family to <planet>"
 	job
@@ -253,7 +253,7 @@ mission "MP: Yuhavi settlers"
 	to offer
 		has "event: MP27 Uca cevata settled"
 		random < 50
-		passenger space >30
+		passenger space > 30
 	source "Imatai"
 	destination "Uca cevata"
 	on visit
@@ -270,7 +270,7 @@ mission "MP: Keystones repeat"
 	repeat
 	to offer
 		has "event: MP27 Uca cevata settled"
-		random <5
+		random < 5
 	on visit
 		dialog `You have returned to <planet> but don't have the 10 quantum keystones Southbound Shipyards is looking for.`
 	on complete
