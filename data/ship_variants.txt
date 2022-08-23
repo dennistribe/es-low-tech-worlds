@@ -4,34 +4,33 @@ ship "Kateni" "Kateni hyperdrive"
 		"G35 Energy Box"
 		"A52 Generator"
 		"Hyperdrive"
-		
+
 ship "Kateni" "Kateni dead"
 	attributes
 		"hull" 200
 		"shields" 0
+		"drag" 12.5
 	outfits
 		"Z01 Bouncer Engines"
 		"G35 Energy Box"
 		"A52 Generator"
 		"Hyperdrive"
-		
+
 ship "Space-plane" "Space-plane hyperdrive"
 	outfits
 		"Z01 Bouncer Engines"
 		"A52 Generator"
 		"G35 Energy Box"
 		"Hyperdrive"
-		
+
 ship "Clipper" "Clipper keystone"
 	outfits
 		"Beam Laser" 2
 		"Javelin Mini Pod" 2
 		"Javelin" 80
-		
 		"nGVF-DD Fuel Cell"
 		"LP072a Battery Pack"
 		"D23-QP Shield Generator"
-		
 		"Greyhound Plasma Thruster"
 		"Greyhound Plasma Steering"
 		"Hyperdrive"
@@ -40,11 +39,9 @@ ship "Clipper" "Clipper keystone"
 ship "Star Barge" "Star Barge keystone"
 	outfits
 		"Anti-Missile Turret"
-
 		"nGVF-BB Fuel Cell"
 		"LP036a Battery Pack"
 		"D14-RN Shield Generator"
-		
 		"X1700 Ion Thruster"
 		"X1200 Ion Steering"
 		"Hyperdrive"
@@ -54,17 +51,15 @@ ship "Star Barge" "Star Barge keystone"
 ship "Sparrow" "Sparrow keystone"
 	outfits
 		"Energy Blaster" 2
-		
 		"nGVF-BB Fuel Cell"
 		"LP036a Battery Pack"
 		"D14-RN Shield Generator"
-		
 		"Chipmunk Plasma Thruster"
 		"Chipmunk Plasma Steering"
 		"Hyperdrive"
 		"Fuel Pod"
 		"Quantum Keystone"
-		
+
 ship "Shuttle" "Shuttle keystone"
 	outfits
 		"nGVF-AA Fuel Cell"
@@ -74,21 +69,19 @@ ship "Shuttle" "Shuttle keystone"
 		"X2200 Ion Steering"
 		"Hyperdrive"
 		"Quantum Keystone"
-		
+
 ship "Fury" "Fury keystone"
 	outfits
 		"Energy Blaster" 4
-		
 		"nGVF-CC Fuel Cell"
 		"LP036a Battery Pack"
 		"D14-RN Shield Generator"
-		"Small Radar Jammer" 2
-		
+		"Small Radar Jammer"
 		"X2700 Ion Thruster"
 		"X2200 Ion Steering"
 		"Hyperdrive"
 		"Quantum Keystone"
-		
+
 ship "Argosy" "Argosy keystone"
 	outfits
 		"Energy Blaster" 2
@@ -96,28 +89,24 @@ ship "Argosy" "Argosy keystone"
 		"Meteor Missile" 60
 		"Blaster Turret"
 		"Anti-Missile Turret"
-		
 		"RT-I Radiothermal"
 		"LP072a Battery Pack"
 		"D23-QP Shield Generator"
-		
 		"Greyhound Plasma Thruster"
 		"Greyhound Plasma Steering"
 		"Hyperdrive"
 		"Quantum Keystone"
-		
+
 ship "Hauler" "Hauler keystone"
 	outfits
 		"Meteor Missile Launcher" 2
 		"Meteor Missile" 60
 		"Quad Blaster Turret" 2
 		"Heavy Anti-Missile Turret" 2
-		
 		"S3 Thermionic"
 		"LP072a Battery Pack"
 		"D23-QP Shield Generator"
 		"Small Radar Jammer"
-		
 		"Greyhound Plasma Thruster"
 		"Impala Plasma Steering"
 		"Hyperdrive"

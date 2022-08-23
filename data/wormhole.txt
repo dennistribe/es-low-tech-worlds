@@ -7,22 +7,22 @@
 
 mission "MP wormhole: Disable with keystone"
 	source
-		system Itikotiko 
+		system Itikotiko
 	landing
 	invisible
 	on offer
 		require "Quantum Keystone"
 		event "MP wormhole: Disable"
-		
+
 mission "MP wormhole: Disable with key stone"
 	source
-		system Itikotiko 
+		system Itikotiko
 	landing
 	invisible
 	on offer
 		require "Quantum Key Stone"
 		event "MP wormhole: Disable"
-		
+
 event "MP wormhole: Disable"
 	planet "Na yava Wormhole"
 		attributes add "requires: quantum keystone"
@@ -33,7 +33,7 @@ event "MP wormhole: Disable"
 # When visit the system with the wormhole in it, alert player that the wormhole is now closed.
 
 mission "MP wormhole 1: Lock on enter"
-	source 
+	source
 		system Itikotiko
 	landing
 	invisible
@@ -53,7 +53,7 @@ event "MP wormhole: Lock1"
 # When player lands again on a monopod planet, reopen wormhole
 # On return to the wormhole's system, alert user that the wormhole is open again
 # Mission completes when the user lands on Zug. This mission may not complete for some time if the user does not land there.
-	
+
 mission "MP wormhole 2: Unlock and return"
 	source
 		system Itikotiko
@@ -71,17 +71,17 @@ mission "MP wormhole 2: Unlock and return"
 	waypoint Katuba
 	on enter Katuba
 		dialog "You are very relieved to be back in human space. You realise you need to know a lot more about wormholes."
-	
+
 event "MP wormhole: Unlock2"
 	planet "Na yava Wormhole"
 		attributes ""
-		
+
 # On landing on Zug, try to find information on the wormhole
 
 mission "MP wormhole 2a: Investigate"
 	name "Investigate wormhole with Paul"
 	description "Take Paul to the Katuba system to investigate the wormhole."
-	source 
+	source
 		government "Free Worlds" "Republic"
 	to offer
 		has "MP wormhole 2: Unlock and return: offered"
@@ -120,7 +120,7 @@ mission "MP wormhole 2a: Investigate"
 			`	"Mine is <first>."`
 			`	You take Paul immediately to your ship.`
 				accept
-				depart
+			depart
 	waypoint Katuba
 	on enter Katuba
 		dialog "When entering the system, your sensors are unable to detect the wormhole. Paul spends some time studying the sensors, then becomes noticeably angry. 'Take me back to <origin>' he growls, and goes straight back to his bunk."
@@ -158,10 +158,10 @@ mission "MP wormhole 3: Lock"
 event "MP wormhole: Lock3"
 	planet "Na yava Wormhole"
 		attributes add "requires: quantum keystone"
-		
+
 mission "MP wormhole 3a: Unlock after a month"
 	source
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"	
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
 	landing
 	to offer
 		has "MP wormhole 2a: Investigate: done"
@@ -178,7 +178,7 @@ event "MP wormhole: Unlock3"
 # Repeat same procedure of unreliable behaviour once
 
 mission "MP wormhole 4: Lock on enter"
-	source 
+	source
 		system Itikotiko
 	landing
 	invisible
@@ -198,7 +198,7 @@ event "MP wormhole: Lock4"
 # When player lands again on a monopod planet, reopen wormhole
 # On return to the wormhole's system, alert user that the wormhole is open again
 # Mission completes when the user lands on Zug. This mission may not complete for some time if the user does not land there.
-	
+
 mission "MP wormhole 5: Unlock and return"
 	source
 		system Itikotiko
@@ -216,7 +216,7 @@ mission "MP wormhole 5: Unlock and return"
 	waypoint Katuba
 	on enter Katuba
 		dialog "You are very relieved to be back in human space. You really need to find some way to stabilise this wormhole."
-	
+
 event "MP wormhole: Unlock5"
 	planet "Na yava Wormhole"
 		attributes ""
@@ -239,5 +239,3 @@ mission "MP wormhole 6: Lock permanently"
 event "MP wormhole: Lock6"
 	planet "Na yava Wormhole"
 		attributes add "requires: quantum keystone"
-		
-
